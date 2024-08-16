@@ -1,0 +1,42 @@
+How to Use
+├ 1. Go to "Activate" menu and toggle "ON/OFF" to activate PCS.
+└ 2. Select any sound option you want to use.
+
+Expression Menu Explaining
+│
+[Activate] (Submenu)
+│
+[ON/OFF]
+├ This is the main enablement of PCS. Disabling this option means completely shutting down PCS.
+│
+[Oral, Boobs, Vaginal, Anal]
+├ Here are the audio options. Only one item can be selected at a time. (You might ask why there can't be multiple sounds at the same time, that's because VRChat limits audio to 3 instances.)
+│
+[Custom]
+├ This option will cause the audio position to change to the position you set. You must select the sound you want to use while turning on this option.
+│
+[Auto-mode]
+└ Using this mode will automatically turn on/off each sound option for you. Depends on the location where it was inserted, the first penetrator will be prioritized.
+
+[Satisfaction] (Submenu)
+│
+[Mute - Moan]
+├ Mute all moaning sounds.
+│
+[Squirt on Insert]
+├ Makes every insertion creates squirt particles. This option will turn on automatically when you are about to orgasm.
+│
+[Force Orgasm]
+├ Instantly fill up your Lust Points and make your avatar reach orgasm.
+│
+[Reset]
+└ Reset all Lust Points and states.
+
+[Edging (Pause Events)]
+├ Temporary freeze Lust Points so you won't gain any during insertion. This is great when you only want to hear Random Moans but not Event Moans (long moan).
+│
+[Mute - Smash]
+├ Mute all smash hit sounds.
+│
+[Self-service]
+└ This mode allows you to trigger sounds based on your own movements, regardless of the Penetrator. Work best in the situation that your partner doesn't have a penetrator installed or you are on the top.

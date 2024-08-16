@@ -1,0 +1,34 @@
+!? Please note that PCS will generate special local parameters used to calculate audio duration on your VRC Parameter, please do not touch or delete any one of them by mistake. They will be removed automatically when you remove PCS.
+
+!? I'm also new to C# coding. If you found any PCS script red errors please tell me.
+
+[How to Install]
+│
+1. Open PCS Configurator Tool, located at "Tools/Dismay Custom/Penetration Contact System".
+│
+2. Drag and drop your avatar into the box and setup your preferences.
+
+[Setting Options]
+│
+Setup Tools
+├ Select your installer tool. There are only Modular Avatar and VRCFury.
+│
+Alignment Preset
+├ Select your alignment preset. If there is no available preset for your avatar, please use "Generic" option and do manual adjustment, or select "Reference" to reference target positions from your existing object like SPS sockets.
+│
+Satisfaction Feature
+├ Check to use this feature. Satisfaction Feature comes with Lust Point and Moan Randomizer.
+│
+Voice Pack
+├ Select your voice pack. Choose "Custom" to use your custom prefab  (located inside "/Editor/Resources/Voice Pack/").
+│
+Lust Multiplier
+├ Adjust lust point multiplier. More value = reach orgasm quicker.
+│
+Custom Target
+└ Set your custom target for PCS. This will be the location where PCS attach to when using custom mode. (After applying, you may need to make a little adjustment and correct rotation.)
+
+3. Hit "Apply" to create a PCS prefab. Hit "Replace" to replace an existing PCS prefab with a new one. Hit "Remove" to remove PCS from your avatar.
+
+[P.S.]
+└ If you have questions, please join my Discord.

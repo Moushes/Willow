@@ -1,0 +1,475 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1506855854, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Parameters
+  m_EditorClassIdentifier: 
+  parameters:
+  - name: Skin/Bodysuit
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Bracers
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Ears Lower | Akalii's E&T
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Socks
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Hoddie
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Leather High Boots
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Shorts
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Facial Piercings
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Harness
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Rings
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Bikini
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Choker
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Tail
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin/Top
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Skin_Tone
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Skin_Tattoos
+    valueType: 1
+    saved: 1
+    defaultValue: 0.26
+    networkSynced: 1
+  - name: Eye_L_HUE
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Eye_R_HUE
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Eye_L_Iris
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Eye_R_Iris
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Hair_Hue
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Hair_Brightness
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+    networkSynced: 1
+  - name: Hair_Emission_Hue
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Hair_Emimssion_Brightness
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Glitter
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+    networkSynced: 1
+  - name: Sweatshirt_Hue
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Sweatshirt_Brightnes
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Bodysuit_Brightness
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Bodysuit_Hue
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Hair_Back
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Bodysuit_Opacity
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+    networkSynced: 1
+  - name: Eye_Shape
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Chest_Size
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+    networkSynced: 1
+  - name: HornsHue
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Ears
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Skin_Tattoos_Hue
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Freckles
+    valueType: 1
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Jeans
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: noTail
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: topStar
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: CollarBell
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: LatexDress
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: ShortsCup
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Skirt
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Sweater
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Bell
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: pcs/clipSpeed/em1
+    valueType: 1
+    saved: 0
+    defaultValue: 0.38476956
+    networkSynced: 0
+  - name: pcs/clipSpeed/em2
+    valueType: 1
+    saved: 0
+    defaultValue: 0.5
+    networkSynced: 0
+  - name: pcs/clipSpeed/em3
+    valueType: 1
+    saved: 0
+    defaultValue: 0.33333334
+    networkSynced: 0
+  - name: pcs/clipSpeed/em4
+    valueType: 1
+    saved: 0
+    defaultValue: 0.31270358
+    networkSynced: 0
+  - name: pcs/clipSpeed/em5
+    valueType: 1
+    saved: 0
+    defaultValue: 0.21744053
+    networkSynced: 0
+  - name: pcs/clipSpeed/em6
+    valueType: 1
+    saved: 0
+    defaultValue: 0.31270358
+    networkSynced: 0
+  - name: pcs/clipSpeed/em7
+    valueType: 1
+    saved: 0
+    defaultValue: 0.2580645
+    networkSynced: 0
+  - name: pcs/clipSpeed/em8
+    valueType: 1
+    saved: 0
+    defaultValue: 0.2630137
+    networkSynced: 0
+  - name: pcs/clipSpeed/em9
+    valueType: 1
+    saved: 0
+    defaultValue: 0.2630137
+    networkSynced: 0
+  - name: pcs/clipSpeed/em10
+    valueType: 1
+    saved: 0
+    defaultValue: 0.27785817
+    networkSynced: 0
+  - name: pcs/clipSpeed/em11
+    valueType: 1
+    saved: 0
+    defaultValue: 0.29402757
+    networkSynced: 0
+  - name: pcs/clipSpeed/em12
+    valueType: 1
+    saved: 0
+    defaultValue: 0.27785817
+    networkSynced: 0
+  - name: pcs/clipSpeed/em13
+    valueType: 1
+    saved: 0
+    defaultValue: 0.29402757
+    networkSynced: 0
+  - name: pcs/clipSpeed/em14
+    valueType: 1
+    saved: 0
+    defaultValue: 0.83478266
+    networkSynced: 0
+  - name: pcs/clipSpeed/em15
+    valueType: 1
+    saved: 0
+    defaultValue: 0.83478266
+    networkSynced: 0
+  - name: pcs/clipSpeed/em16
+    valueType: 1
+    saved: 0
+    defaultValue: 0.5549133
+    networkSynced: 0
+  - name: pcs/clipSpeed/em17
+    valueType: 1
+    saved: 0
+    defaultValue: 0.38476956
+    networkSynced: 0
+  - name: pcs/clipSpeed/em18
+    valueType: 1
+    saved: 0
+    defaultValue: 0.43935925
+    networkSynced: 0
+  - name: pcs/clipSpeed/em19
+    valueType: 1
+    saved: 0
+    defaultValue: 0.31270358
+    networkSynced: 0
+  - name: pcs/clipSpeed/em20
+    valueType: 1
+    saved: 0
+    defaultValue: 0.31270358
+    networkSynced: 0
+  - name: pcs/clipSpeed/em21
+    valueType: 1
+    saved: 0
+    defaultValue: 0.53333336
+    networkSynced: 0
+  - name: pcs/clipSpeed/em22
+    valueType: 1
+    saved: 0
+    defaultValue: 0.38476956
+    networkSynced: 0
+  - name: pcs/clipSpeed/em23
+    valueType: 1
+    saved: 0
+    defaultValue: 0.51891893
+    networkSynced: 0
+  - name: pcs/clipSpeed/em24
+    valueType: 1
+    saved: 0
+    defaultValue: 0.43735763
+    networkSynced: 0
+  - name: pcs/clipSpeed/em25
+    valueType: 1
+    saved: 0
+    defaultValue: 0.20824294
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm1
+    valueType: 1
+    saved: 0
+    defaultValue: 0.26322582
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm2
+    valueType: 1
+    saved: 0
+    defaultValue: 0.1773913
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm3
+    valueType: 1
+    saved: 0
+    defaultValue: 0.18545455
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm4
+    valueType: 1
+    saved: 0
+    defaultValue: 0.19428572
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm5
+    valueType: 1
+    saved: 0
+    defaultValue: 0.2914286
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm6
+    valueType: 1
+    saved: 0
+    defaultValue: 0.31384614
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm7
+    valueType: 1
+    saved: 0
+    defaultValue: 0.17
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm8
+    valueType: 1
+    saved: 0
+    defaultValue: 0.19428572
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm9
+    valueType: 1
+    saved: 0
+    defaultValue: 0.255
+    networkSynced: 0
+  - name: pcs/clipSpeed/sm10
+    valueType: 1
+    saved: 0
+    defaultValue: 0.19428572
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm1
+    valueType: 1
+    saved: 0
+    defaultValue: 0.51
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm2
+    valueType: 1
+    saved: 0
+    defaultValue: 0.48000002
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm3
+    valueType: 1
+    saved: 0
+    defaultValue: 0.42947367
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm4
+    valueType: 1
+    saved: 0
+    defaultValue: 0.68
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm5
+    valueType: 1
+    saved: 0
+    defaultValue: 0.3709091
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm6
+    valueType: 1
+    saved: 0
+    defaultValue: 0.7418182
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm7
+    valueType: 1
+    saved: 0
+    defaultValue: 0.48000002
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm8
+    valueType: 1
+    saved: 0
+    defaultValue: 0.42947367
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm9
+    valueType: 1
+    saved: 0
+    defaultValue: 0.38857144
+    networkSynced: 0
+  - name: pcs/clipSpeed/rm10
+    valueType: 1
+    saved: 0
+    defaultValue: 0.48000002
+    networkSynced: 0
+  - name: pcs/lustMultiplier
+    valueType: 1
+    saved: 0
+    defaultValue: 0.27
+    networkSynced: 0

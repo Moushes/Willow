@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: TOGGLE_CLOTHES
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Bodysuit
+    icon: {fileID: 2800000, guid: de56ac64d147bdb4a862d756387aa3d0, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Bodysuit
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Sock
+    icon: {fileID: 2800000, guid: af9f68bad4a08234f8d98432dbdac80e, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Socks
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Hoodie
+    icon: {fileID: 2800000, guid: 67dae852855f97340b445f2c7397a13a, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Hoddie
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Boots
+    icon: {fileID: 2800000, guid: de56ac64d147bdb4a862d756387aa3d0, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Leather High Boots
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Shorts
+    icon: {fileID: 2800000, guid: af9f68bad4a08234f8d98432dbdac80e, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Shorts
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Bikini
+    icon: {fileID: 2800000, guid: 67dae852855f97340b445f2c7397a13a, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Bikini
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Harness
+    icon: {fileID: 2800000, guid: de56ac64d147bdb4a862d756387aa3d0, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Harness
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Top
+    icon: {fileID: 2800000, guid: af9f68bad4a08234f8d98432dbdac80e, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Top
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

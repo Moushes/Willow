@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: PCS Menu (wLust)
+  m_EditorClassIdentifier: 
+  controls:
+  - name: <b>Activate</b>
+    icon: {fileID: 2800000, guid: c854a71129c6a3b4389a54be653e8a5f, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 2c0a057300579bd4fb8d685fbac1247a, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b>Satisfaction</b>
+    icon: {fileID: 2800000, guid: b612404aa4036b241b262297da0b1000, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: f52a30a39fa544145929aef3e62de847, type: 2}
+    subParameters: []
+    labels: []
+  - name: Edging (Pause Events)
+    icon: {fileID: 2800000, guid: 8b5387c4a7125144aab983ab87b760e3, type: 3}
+    type: 102
+    parameter:
+      name: pcs/edging-sync
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Mute - Samsh
+    icon: {fileID: 2800000, guid: b07469bcee905ca4f85721e64d4e27a4, type: 3}
+    type: 102
+    parameter:
+      name: pcs/smash/mute-sync
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Self-service
+    icon: {fileID: 2800000, guid: 343a4005765d48148b9b2bae7b27c555, type: 3}
+    type: 102
+    parameter:
+      name: pcs/selfService-sync
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

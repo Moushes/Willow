@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: TOGGLE ANIMAL
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Horns and Tail
+    icon: {fileID: 2800000, guid: de56ac64d147bdb4a862d756387aa3d0, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Tail
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 09fad077df780a844a77ca0730cb7230, type: 2}
+    subParameters: []
+    labels: []
+  - name: Ears
+    icon: {fileID: 2800000, guid: af9f68bad4a08234f8d98432dbdac80e, type: 3}
+    type: 102
+    parameter:
+      name: Skin/Ears Lower | Akalii's E&T
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 1f28ebfbb914be24eb979c65f00c0db1, type: 2}
+    subParameters: []
+    labels: []
+  - name: No tail
+    icon: {fileID: 2800000, guid: af9f68bad4a08234f8d98432dbdac80e, type: 3}
+    type: 102
+    parameter:
+      name: noTail
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

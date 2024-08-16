@@ -1,0 +1,27 @@
+[Modify Voice Pack (Moans)]
+├ There is a pre-made voice pack prefab named "$PCS - Voice Pack (Custom)" located inside "/Editor/Resources/Voice Pack/". You can put your own audio files by replacing each audio clips for both "Event Moans" and "Random Moans".
+│
+└ *Please don't leave the audio source slot empty. This will cause the animation state to get stuck. For example, in case you have only 8 audio files but PCS requires 10, you can fill in the any existing files in the empty slot.
+
+[Modify Sound Effect]
+├ There is a sound effect prefab named "SFX" located inside "/Assets/Prefabs/". You can put your own audio files by replacing each audio clips.
+│
+└ *Don't forget to check "Load in Background", "Force to Mono", and "Normalize" (optional).
+
+[Smash Sensitivity (force to trigger "Plap")]
+└ To change smash hit sensitivity, you will need to find the object name "Sensitivity" inside "/PCS Contacts/Receiver/Receiver Local Position/Smash Hit/", and change its Z position around (0 - 0.05). (More value = more force needed. Default = 0.)
+
+[Advenced Usage of Lust Points]
+│
+1. Make some things happen on each events
+├ If you go to "Editor/Resources/FX Layer/" folder, you will see a "FX - PCS (wLust)" animator controller.
+│
+├ Open "FX - PCS (wLust)" and select the layer named "Moan & Events". Double click and go inside "EVENTS" Sub-State Machine.
+│
+├ Now you will see all "Event[x]" animation states. Select the event you want something to happen and "Add Behavior" named "VRC Avatar Parameter Driver" to set your parameters when this event reached. (For example, make a boolean "hat" to true on Event10.)
+│
+2. Use "pcs/lustPoint-sync" parameter
+├ You can use this value for any transition conditions for your FX or any Blentree. (Please add this parameters with exact name "pcs/lustPoint-sync" on your fx first.) Please note that this Lust Point parameters run from -1.0 to 1.0.
+
+[P.S.]
+└ If you have questions, please join my Discord.
