@@ -1,50 +1,50 @@
 {
   "dependencies": {
-    "vrchat.blackstartx.gesture-manager": {
-      "version": "3.8.5"
-    },
-    "com.vrcfury.vrcfury": {
-      "version": "1.753.0"
-    },
-    "wholesomevr.sps-configurator": {
-      "version": "2.0.6"
-    },
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29"
     },
+    "wholesomevr.sps-configurator": {
+      "version": "2.0.9"
+    },
+    "vrchat.blackstartx.gesture-manager": {
+      "version": "3.9.1"
+    },
+    "com.vrcfury.vrcfury": {
+      "version": "1.1003.0"
+    },
     "com.vrchat.avatars": {
-      "version": "3.6.1"
+      "version": "3.7.0"
     }
   },
   "locked": {
-    "vrchat.blackstartx.gesture-manager": {
-      "version": "3.8.5",
-      "dependencies": {
-        "com.vrchat.avatars": "3.2.x"
-      }
-    },
-    "com.vrcfury.vrcfury": {
-      "version": "1.753.0",
-      "dependencies": {}
-    },
-    "wholesomevr.sps-configurator": {
-      "version": "2.0.6",
-      "dependencies": {
-        "com.vrchat.avatars": "3.*"
-      }
-    },
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29",
       "dependencies": {}
     },
-    "com.vrchat.avatars": {
-      "version": "3.6.1",
+    "wholesomevr.sps-configurator": {
+      "version": "2.0.9",
       "dependencies": {
-        "com.vrchat.base": "3.6.1"
+        "com.vrchat.avatars": "3.*"
+      }
+    },
+    "vrchat.blackstartx.gesture-manager": {
+      "version": "3.9.1",
+      "dependencies": {
+        "com.vrchat.avatars": ">=3.5.2 < 3.7.X"
+      }
+    },
+    "com.vrcfury.vrcfury": {
+      "version": "1.1003.0",
+      "dependencies": {}
+    },
+    "com.vrchat.avatars": {
+      "version": "3.7.0",
+      "dependencies": {
+        "com.vrchat.base": "3.7.0"
       }
     },
     "com.vrchat.base": {
-      "version": "3.6.1",
+      "version": "3.7.0",
       "dependencies": {}
     }
   }

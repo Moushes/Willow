@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: '!PCS Main Menu WL'
   m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
   controls:
   - name: <b>PCS</b>
     icon: {fileID: 2800000, guid: d49ed22e221e3f649a60d216ea22b662, type: 3}

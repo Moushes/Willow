@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: HUE HAIR
   m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
   controls:
   - name: Hair Hue
     icon: {fileID: 2800000, guid: 66e1864ba98c6c54e8eea141f2a83fb4, type: 3}

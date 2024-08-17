@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: TOGGLE ANIMAL
   m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
   controls:
   - name: Horns and Tail
     icon: {fileID: 2800000, guid: de56ac64d147bdb4a862d756387aa3d0, type: 3}

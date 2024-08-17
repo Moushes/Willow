@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: OtherClothes
   m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
   controls:
   - name: Sweater
     icon: {fileID: 2800000, guid: 857b3556751255a47b53e74e26a41148, type: 3}

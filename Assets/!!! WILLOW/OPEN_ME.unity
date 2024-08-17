@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -30718,7 +30718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -37116,7 +37116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -37165,7 +37165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 3
   name: Special/Titjob
   enableHandTouchZone2: 0
@@ -37186,7 +37186,6 @@ MonoBehaviour:
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -42650,7 +42649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -42699,7 +42698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 1
   name: Pussy
   enableHandTouchZone2: 0
@@ -42720,19 +42719,16 @@ MonoBehaviour:
   - state:
       actions:
       - rid: 0
-      ResetMePlease2: 0
     startDistance: 0.05
     endDistance: 0
     enableSelf: 1
     smoothingSeconds: 0
-    ResetMePlease2: 0
     minDepth: 0
     maxDepth: 0
     smoothing: 0
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -100396,7 +100392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -100791,7 +100787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -100840,7 +100836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 2
   name: Special/Assjob
   enableHandTouchZone2: 0
@@ -100861,7 +100857,6 @@ MonoBehaviour:
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -122703,7 +122698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -139325,7 +139320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -140949,7 +140944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features: []
@@ -140995,7 +140990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 1
   name: Blowjob
   enableHandTouchZone2: 0
@@ -141016,19 +141011,16 @@ MonoBehaviour:
   - state:
       actions:
       - rid: 0
-      ResetMePlease2: 0
     startDistance: 0.05
     endDistance: 0
     enableSelf: 1
     smoothingSeconds: 0
-    ResetMePlease2: 0
     minDepth: 0
     maxDepth: 0
     smoothing: 0
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -165336,7 +165328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -165385,7 +165377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 1
   name: Anal
   enableHandTouchZone2: 0
@@ -165406,19 +165398,16 @@ MonoBehaviour:
   - state:
       actions:
       - rid: 0
-      ResetMePlease2: 0
     startDistance: 0.05
     endDistance: 0
     enableSelf: 1
     smoothingSeconds: 0
-    ResetMePlease2: 0
     minDepth: 0
     maxDepth: 0
     smoothing: 0
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -165517,7 +165506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -165566,7 +165555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 3
   name: Handjob/Handjob Left
   enableHandTouchZone2: 0
@@ -165587,7 +165576,6 @@ MonoBehaviour:
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -165706,7 +165694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 3
   name: Handjob/Double Handjob
   enableHandTouchZone2: 0
@@ -165727,7 +165715,6 @@ MonoBehaviour:
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -176927,7 +176914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:
@@ -176976,7 +176963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 3
   name: Handjob/Handjob Right
   enableHandTouchZone2: 0
@@ -176997,7 +176984,6 @@ MonoBehaviour:
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -180026,7 +180012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   addLight: 3
   name: Special/Thighjob
   enableHandTouchZone2: 0
@@ -180047,7 +180033,6 @@ MonoBehaviour:
   enableActiveAnimation: 0
   activeActions:
     actions: []
-    ResetMePlease2: 0
   useHipAvoidance: 1
   enablePlugLengthParameter: 0
   plugLengthParameterName: 
@@ -212952,7 +212937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.753.0
+  vrcfuryVersion: 1.1003.0
   somethingIsBroken: 0
   config:
     features:

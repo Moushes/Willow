@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: HUE Body
   m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
   controls:
   - name: Horns
     icon: {fileID: 2800000, guid: df97f9de06044c24db537d22d367ec49, type: 3}

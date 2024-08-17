@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: STAR
   m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
   controls:
   - name: Jeans
     icon: {fileID: 2800000, guid: eb68abfb20aaa8447ab47d86148c6118, type: 3}
