@@ -341,7 +341,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1335877026}
   - {fileID: 426493938}
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -25056,6 +25056,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6072736349637477515, guid: e763c5da24accbe45913febb33346e3c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6849237422460296753, guid: e763c5da24accbe45913febb33346e3c,
         type: 3}
       propertyPath: m_Name
@@ -30718,7 +30723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -30746,6 +30751,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -37116,7 +37124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -37144,6 +37152,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -37165,7 +37176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 3
   name: Special/Titjob
   enableHandTouchZone2: 0
@@ -37181,9 +37192,7 @@ MonoBehaviour:
   enableAuto: 0
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  enableDepthAnimations: 0
-  depthActions: []
-  enableActiveAnimation: 0
+  depthActions2: []
   activeActions:
     actions: []
   useHipAvoidance: 1
@@ -37191,6 +37200,9 @@ MonoBehaviour:
   plugLengthParameterName: 
   enablePlugWidthParameter: 0
   plugWidthParameterName: 
+  enableDepthAnimations: 0
+  depthActions: []
+  enableActiveAnimation: 0
   references:
     version: 2
     RefIds: []
@@ -42649,7 +42661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -42677,6 +42689,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -42698,7 +42713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 1
   name: Pussy
   enableHandTouchZone2: 0
@@ -42714,6 +42729,14 @@ MonoBehaviour:
   enableAuto: 1
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
+  depthActions2: []
+  activeActions:
+    actions: []
+  useHipAvoidance: 1
+  enablePlugLengthParameter: 0
+  plugLengthParameterName: 
+  enablePlugWidthParameter: 0
+  plugWidthParameterName: 
   enableDepthAnimations: 1
   depthActions:
   - state:
@@ -42727,13 +42750,6 @@ MonoBehaviour:
     maxDepth: 0
     smoothing: 0
   enableActiveAnimation: 0
-  activeActions:
-    actions: []
-  useHipAvoidance: 1
-  enablePlugLengthParameter: 0
-  plugLengthParameterName: 
-  enablePlugWidthParameter: 0
-  plugWidthParameterName: 
   references:
     version: 2
     RefIds:
@@ -42743,6 +42759,8 @@ MonoBehaviour:
         version: 0
         desktopActive: 0
         androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
         blendShape: Coochy Open
         blendShapeValue: 100
         renderer: {fileID: 0}
@@ -87683,6 +87701,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1109243430}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2019177136}
     - targetCorrespondingSourceObject: {fileID: 3742407835892290726, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       insertIndex: -1
@@ -100107,6 +100129,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6319774615050646657, guid: c301fcc7336af7c4f953fde1cb000069,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6701225591618645563, guid: c301fcc7336af7c4f953fde1cb000069,
         type: 3}
       propertyPath: m_Name
@@ -100392,7 +100419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -100420,6 +100447,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -100787,7 +100817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -100815,6 +100845,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -100836,7 +100869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 2
   name: Special/Assjob
   enableHandTouchZone2: 0
@@ -100852,9 +100885,7 @@ MonoBehaviour:
   enableAuto: 0
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  enableDepthAnimations: 0
-  depthActions: []
-  enableActiveAnimation: 0
+  depthActions2: []
   activeActions:
     actions: []
   useHipAvoidance: 1
@@ -100862,6 +100893,9 @@ MonoBehaviour:
   plugLengthParameterName: 
   enablePlugWidthParameter: 0
   plugWidthParameterName: 
+  enableDepthAnimations: 0
+  depthActions: []
+  enableActiveAnimation: 0
   references:
     version: 2
     RefIds: []
@@ -112577,6 +112611,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8708124880766737963, guid: 333b52724fff85e4f9befb02ee2607ba,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -119761,6 +119800,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1956410252595298886, guid: c19f147ac93b7914db32a43451b5b379,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3454123738141055612, guid: c19f147ac93b7914db32a43451b5b379,
         type: 3}
       propertyPath: m_Name
@@ -122698,7 +122742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -139320,7 +139364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -139348,6 +139392,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -140944,7 +140991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features: []
@@ -140969,6 +141016,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -140990,7 +141040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 1
   name: Blowjob
   enableHandTouchZone2: 0
@@ -141006,6 +141056,14 @@ MonoBehaviour:
   enableAuto: 1
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
+  depthActions2: []
+  activeActions:
+    actions: []
+  useHipAvoidance: 1
+  enablePlugLengthParameter: 0
+  plugLengthParameterName: 
+  enablePlugWidthParameter: 0
+  plugWidthParameterName: 
   enableDepthAnimations: 1
   depthActions:
   - state:
@@ -141019,13 +141077,6 @@ MonoBehaviour:
     maxDepth: 0
     smoothing: 0
   enableActiveAnimation: 0
-  activeActions:
-    actions: []
-  useHipAvoidance: 1
-  enablePlugLengthParameter: 0
-  plugLengthParameterName: 
-  enablePlugWidthParameter: 0
-  plugWidthParameterName: 
   references:
     version: 2
     RefIds:
@@ -141035,6 +141086,8 @@ MonoBehaviour:
         version: 0
         desktopActive: 0
         androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
         blendShape: vrc.v_oh
         blendShapeValue: 100
         renderer: {fileID: 0}
@@ -165328,7 +165381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -165356,6 +165409,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -165377,7 +165433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 1
   name: Anal
   enableHandTouchZone2: 0
@@ -165393,6 +165449,14 @@ MonoBehaviour:
   enableAuto: 0
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
+  depthActions2: []
+  activeActions:
+    actions: []
+  useHipAvoidance: 1
+  enablePlugLengthParameter: 0
+  plugLengthParameterName: 
+  enablePlugWidthParameter: 0
+  plugWidthParameterName: 
   enableDepthAnimations: 1
   depthActions:
   - state:
@@ -165406,13 +165470,6 @@ MonoBehaviour:
     maxDepth: 0
     smoothing: 0
   enableActiveAnimation: 0
-  activeActions:
-    actions: []
-  useHipAvoidance: 1
-  enablePlugLengthParameter: 0
-  plugLengthParameterName: 
-  enablePlugWidthParameter: 0
-  plugWidthParameterName: 
   references:
     version: 2
     RefIds:
@@ -165422,6 +165479,8 @@ MonoBehaviour:
         version: 0
         desktopActive: 0
         androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
         blendShape: 
         blendShapeValue: 100
         renderer: {fileID: 0}
@@ -165506,7 +165565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -165534,6 +165593,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -165555,7 +165617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 3
   name: Handjob/Handjob Left
   enableHandTouchZone2: 0
@@ -165571,9 +165633,7 @@ MonoBehaviour:
   enableAuto: 1
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  enableDepthAnimations: 0
-  depthActions: []
-  enableActiveAnimation: 0
+  depthActions2: []
   activeActions:
     actions: []
   useHipAvoidance: 1
@@ -165581,6 +165641,9 @@ MonoBehaviour:
   plugLengthParameterName: 
   enablePlugWidthParameter: 0
   plugWidthParameterName: 
+  enableDepthAnimations: 0
+  depthActions: []
+  enableActiveAnimation: 0
   references:
     version: 2
     RefIds: []
@@ -165694,7 +165757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 3
   name: Handjob/Double Handjob
   enableHandTouchZone2: 0
@@ -165710,9 +165773,7 @@ MonoBehaviour:
   enableAuto: 0
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  enableDepthAnimations: 0
-  depthActions: []
-  enableActiveAnimation: 0
+  depthActions2: []
   activeActions:
     actions: []
   useHipAvoidance: 1
@@ -165720,6 +165781,9 @@ MonoBehaviour:
   plugLengthParameterName: 
   enablePlugWidthParameter: 0
   plugWidthParameterName: 
+  enableDepthAnimations: 0
+  depthActions: []
+  enableActiveAnimation: 0
   references:
     version: 2
     RefIds: []
@@ -168394,6 +168458,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1935269134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1520970390
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 73181770}
+    m_Modifications:
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534519486321264441, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_Name
+      value: FairyLaceTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534519486321264441, guid: 9897a63cc1d29bf4880e832a53337a45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9897a63cc1d29bf4880e832a53337a45, type: 3}
 --- !u!1 &1521935323
 GameObject:
   m_ObjectHideFlags: 0
@@ -176914,7 +177056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -176942,6 +177084,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -176963,7 +177108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 3
   name: Handjob/Handjob Right
   enableHandTouchZone2: 0
@@ -176979,9 +177124,7 @@ MonoBehaviour:
   enableAuto: 1
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  enableDepthAnimations: 0
-  depthActions: []
-  enableActiveAnimation: 0
+  depthActions2: []
   activeActions:
     actions: []
   useHipAvoidance: 1
@@ -176989,6 +177132,9 @@ MonoBehaviour:
   plugLengthParameterName: 
   enablePlugWidthParameter: 0
   plugWidthParameterName: 
+  enableDepthAnimations: 0
+  depthActions: []
+  enableActiveAnimation: 0
   references:
     version: 2
     RefIds: []
@@ -180012,7 +180158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   addLight: 3
   name: Special/Thighjob
   enableHandTouchZone2: 0
@@ -180028,9 +180174,7 @@ MonoBehaviour:
   enableAuto: 0
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  enableDepthAnimations: 0
-  depthActions: []
-  enableActiveAnimation: 0
+  depthActions2: []
   activeActions:
     actions: []
   useHipAvoidance: 1
@@ -180038,6 +180182,9 @@ MonoBehaviour:
   plugLengthParameterName: 
   enablePlugWidthParameter: 0
   plugWidthParameterName: 
+  enableDepthAnimations: 0
+  depthActions: []
+  enableActiveAnimation: 0
   references:
     version: 2
     RefIds: []
@@ -212937,7 +213084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1003.0
+  vrcfuryVersion: 1.1134.0
   somethingIsBroken: 0
   config:
     features:
@@ -212965,6 +213112,9 @@ MonoBehaviour:
         removeBoneSuffix: 
         skinRewriteScalingFactor: 0
         scalingFactorPowersOf10Only: 1
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -213962,6 +214112,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 186818209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2019177136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1520970390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2021286226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2819176505439939925, guid: 94286fd13fb18b14b886d1406a6e910d,
