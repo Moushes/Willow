@@ -2,45 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 8
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BasicTee
-  m_Shader: {fileID: 4800000, guid: 6bed9c807542c0c4ea126f710442d4ba, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _LIGHTINGMODE_FLAT
-  - _STOCHASTICMODE_DELIOT_HEITZ
+  m_Name: Shirt
+  m_Shader: {fileID: 4800000, guid: 9496f853c819e164885b0f8fc54c60b6, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
-    AllLockedGUIDS: a3c7e36d1b3609c4cb25aa8f0e688146
-    OriginalKeywords: MOCHIE_PBR VIGNETTE_MASKED _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI
-      _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    AllLockedGUIDS: 45f3fa5b236e9f04eac225e7cdce3db7
+    OriginalKeywords: VIGNETTE_MASKED _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
+      _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon
     RenderType: Opaque
-    _MochieMetallicMaps_texPack_a_channel: 4
-    _MochieMetallicMaps_texPack_a_fallback: 1
-    _MochieMetallicMaps_texPack_a_inverted: False
-    _MochieMetallicMaps_texPack_b_channel: 4
-    _MochieMetallicMaps_texPack_b_fallback: 1
-    _MochieMetallicMaps_texPack_b_inverted: False
-    _MochieMetallicMaps_texPack_g_channel: 4
-    _MochieMetallicMaps_texPack_g_fallback: 1
-    _MochieMetallicMaps_texPack_g_guid: 0b693a2d25266b34ba50b355792494bb
-    _MochieMetallicMaps_texPack_g_inverted: true
-    _MochieMetallicMaps_texPack_lastConfirmTime: 1719407082
-    _MochieMetallicMaps_texPack_r_channel: 4
-    _MochieMetallicMaps_texPack_r_fallback: 1
-    _MochieMetallicMaps_texPack_r_inverted: False
   disabledShaderPasses: []
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -81,7 +61,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a4c17ccf38d584640b381575a311b66e, type: 3}
+        m_Texture: {fileID: 2800000, guid: cff0ca6b6593e7445a84d7b3a1f6643f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatFallback:
@@ -321,7 +301,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 046ec8f7a22f18c4e9a3ba61cca9bb4d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6c2fbcb0aa64a6b4f96d6e4b3a7134b4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -540,7 +520,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - GeometryShader_Enabled: 1
     - Instancing: 0
@@ -1835,7 +1814,7 @@ Material:
     - _MirrorColorThemeIndex: 0
     - _MirrorTextureBlendType: 0
     - _MirrorTextureUV: 0
-    - _MochieBRDF: 1
+    - _MochieBRDF: 0
     - _MochieForceFallback: 0
     - _MochieGSAAEnabled: 1
     - _MochieLitFallback: 1
@@ -1851,7 +1830,7 @@ Material:
     - _MochieMetallicMasksUV: 0
     - _MochieMetallicMultiplier: 0
     - _MochieReflectionMaskInvert: 0
-    - _MochieReflectionStrength: 0
+    - _MochieReflectionStrength: 1
     - _MochieReflectionStrengthGlobalMask: 0
     - _MochieReflectionStrengthGlobalMaskBlendType: 2
     - _MochieReflectionTintThemeIndex: 0
@@ -1861,7 +1840,7 @@ Material:
     - _MochieSmoothnessGlobalMask: 0
     - _MochieSmoothnessGlobalMaskBlendType: 2
     - _MochieSpecularMaskInvert: 0
-    - _MochieSpecularStrength: 0
+    - _MochieSpecularStrength: 1
     - _MochieSpecularStrength2: 1
     - _MochieSpecularStrengthGlobalMask: 0
     - _MochieSpecularStrengthGlobalMaskBlendType: 2
@@ -2512,7 +2491,7 @@ Material:
     - m_end_vertexGlitching: 0
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
-    - m_lightingCategory: 1
+    - m_lightingCategory: 0
     - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
@@ -2582,7 +2561,7 @@ Material:
     - m_start_Matcap3: 0
     - m_start_Matcap4: 0
     - m_start_PathAudioLink: 0
-    - m_start_PoiLightData: 0
+    - m_start_PoiLightData: 1
     - m_start_PoiShading: 1
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
@@ -2609,7 +2588,7 @@ Material:
     - m_start_backFace: 0
     - m_start_backlight: 0
     - m_start_blending: 0
-    - m_start_brdf: 1
+    - m_start_brdf: 0
     - m_start_brdfadvanced: 0
     - m_start_brdfglobalmask: 0
     - m_start_clearCoat: 0
@@ -2750,7 +2729,7 @@ Material:
     - _ClearCoatSpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _ClippingMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClothMetallicSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _CubeMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _CubeMapRotation: {r: 0, g: 0, b: 0, a: 0}
@@ -3037,4 +3016,3 @@ Material:
     - _VertexWorldTranslationALMin: {r: 0, g: 0, b: 0, a: 1}
     - _VideoMaskTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _VideoResolution: {r: 1280, g: 720, b: 0, a: 0}
-  m_BuildTextureStacks: []
