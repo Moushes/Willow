@@ -12206,7 +12206,7 @@ MonoBehaviour:
   - vrc.v_ih
   - vrc.v_oh
   - vrc.v_ou
-  unityVersion: 2019.4.31f1
+  unityVersion: 2022.3.22f1
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   networkIDs: []
@@ -25065,6 +25065,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: YogaShorts
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849237422460296753, guid: e763c5da24accbe45913febb33346e3c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82560,6 +82565,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.037766412
       objectReference: {fileID: 0}
+    - target: {fileID: -937753400721485692, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -882678065831274099, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -85898,7 +85908,7 @@ PrefabInstance:
     - target: {fileID: 5147766578139343992, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5172236380433899043, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
@@ -102140,6 +102150,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4364010554535032, guid: 2cd7c2d73a12a214b930125a1ca4ed33, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -112556,6 +112570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicTee
       objectReference: {fileID: 0}
+    - target: {fileID: 8327905430221603985, guid: 333b52724fff85e4f9befb02ee2607ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8708124880766737963, guid: 333b52724fff85e4f9befb02ee2607ba,
         type: 3}
       propertyPath: m_RootOrder
@@ -119809,6 +119828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Missehy_Underwear (with bones)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454123738141055612, guid: c19f147ac93b7914db32a43451b5b379,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -181296,7 +181320,7 @@ Transform:
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: -0.005576197, y: 1.2571216, z: -0.045076013}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
