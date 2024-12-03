@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: EXTRA
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
+  Parameters: {fileID: 11400000, guid: 1ca91cc6519bfd24d8073d8301e615e4, type: 2}
   controls:
   - name: Chest Size
     icon: {fileID: 2800000, guid: de56ac64d147bdb4a862d756387aa3d0, type: 3}
@@ -35,15 +35,4 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters:
     - name: Eye_Shape
-    labels: []
-  - name: Ear Length
-    icon: {fileID: 2800000, guid: 67dae852855f97340b445f2c7397a13a, type: 3}
-    type: 203
-    parameter:
-      name: 
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters:
-    - name: Ears
     labels: []

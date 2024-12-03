@@ -12,30 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: HUE Body
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
+  Parameters: {fileID: 11400000, guid: 1ca91cc6519bfd24d8073d8301e615e4, type: 2}
   controls:
-  - name: Horns
-    icon: {fileID: 2800000, guid: df97f9de06044c24db537d22d367ec49, type: 3}
-    type: 203
-    parameter:
-      name: 
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters:
-    - name: HornsHue
-    labels: []
-  - name: Skin Tone
-    icon: {fileID: 2800000, guid: 6a48fe0690dc85b4ab0aed009277684d, type: 3}
-    type: 203
-    parameter:
-      name: 
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters:
-    - name: Skin_Tone
-    labels: []
   - name: Freckles
     icon: {fileID: 2800000, guid: 66e1864ba98c6c54e8eea141f2a83fb4, type: 3}
     type: 203

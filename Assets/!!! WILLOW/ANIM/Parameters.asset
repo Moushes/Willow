@@ -84,35 +84,10 @@ MonoBehaviour:
     saved: 1
     defaultValue: 1
     networkSynced: 1
-  - name: Skin_Tone
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
   - name: Skin_Tattoos
     valueType: 1
     saved: 1
     defaultValue: 0.26
-    networkSynced: 1
-  - name: Eye_L_HUE
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: Eye_R_HUE
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: Eye_L_Iris
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: Eye_R_Iris
-    valueType: 1
-    saved: 1
-    defaultValue: 0
     networkSynced: 1
   - name: Hair_Hue
     valueType: 1
@@ -178,16 +153,6 @@ MonoBehaviour:
     valueType: 1
     saved: 1
     defaultValue: 0.5
-    networkSynced: 1
-  - name: HornsHue
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: Ears
-    valueType: 1
-    saved: 1
-    defaultValue: 0
     networkSynced: 1
   - name: Skin_Tattoos_Hue
     valueType: 1
