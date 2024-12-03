@@ -10,47 +10,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
-  m_Name: VRCExpressionsMenu
+  m_Name: Cupboard
   m_EditorClassIdentifier: 
   Parameters: {fileID: 11400000, guid: 1ca91cc6519bfd24d8073d8301e615e4, type: 2}
   controls:
-  - name: Toggles
-    icon: {fileID: 2800000, guid: de56ac64d147bdb4a862d756387aa3d0, type: 3}
+  - name: Tops
+    icon: {fileID: 2800000, guid: d784a1d888594ff4bbafdf755706b319, type: 3}
     type: 103
     parameter:
       name: 
     value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: 125fba714178d1c4cb56ec8e6bea49d5, type: 2}
+    subMenu: {fileID: 11400000, guid: bbd0ab61a4995644fb72f22dcfb85894, type: 2}
     subParameters: []
     labels: []
-  - name: Hue
-    icon: {fileID: 2800000, guid: af9f68bad4a08234f8d98432dbdac80e, type: 3}
+  - name: Bottoms
+    icon: {fileID: 2800000, guid: d784a1d888594ff4bbafdf755706b319, type: 3}
     type: 103
     parameter:
       name: 
     value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: 8b10b408a28cebc48bae42d0a2332a3c, type: 2}
+    subMenu: {fileID: 11400000, guid: 5f9ef0d539b10c84d8332760527983b7, type: 2}
     subParameters: []
     labels: []
-  - name: Extra
-    icon: {fileID: 2800000, guid: 67dae852855f97340b445f2c7397a13a, type: 3}
+  - name: Underwear
+    icon: {fileID: 2800000, guid: d784a1d888594ff4bbafdf755706b319, type: 3}
     type: 103
     parameter:
       name: 
     value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: b0bafe5fec3406e4f85159e0831367c8, type: 2}
+    subMenu: {fileID: 11400000, guid: e2ee9cac6514e844ab336fd0f160e7d6, type: 2}
     subParameters: []
     labels: []
-  - name: Cupboard
-    icon: {fileID: 0}
+  - name: Full body
+    icon: {fileID: 2800000, guid: d784a1d888594ff4bbafdf755706b319, type: 3}
     type: 103
     parameter:
       name: 
     value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: c15d1ed2f25196246b96e016c4f2a510, type: 2}
+    subMenu: {fileID: 11400000, guid: 16f3239e211d2d54d90078dfdcce6694, type: 2}
     subParameters: []
     labels: []

@@ -2074,7 +2074,7 @@ MonoBehaviour:
       type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 3
-        name: Willow/clothes!/Halsey/LifeSucks
+        name: Willow/Cupboard/Tops/LifeSucks
         state:
           actions:
           - rid: 1

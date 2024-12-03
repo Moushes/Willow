@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
-  m_Name: CUP
+  m_Name: Full body
   m_EditorClassIdentifier: 
   Parameters: {fileID: 11400000, guid: 1ca91cc6519bfd24d8073d8301e615e4, type: 2}
   controls:
-  - name: Shorts
-    icon: {fileID: 2800000, guid: d784a1d888594ff4bbafdf755706b319, type: 3}
+  - name: LatexDress
+    icon: {fileID: 0}
     type: 102
     parameter:
-      name: ShortsCup
+      name: LatexDress
     value: 1
     style: 0
     subMenu: {fileID: 0}

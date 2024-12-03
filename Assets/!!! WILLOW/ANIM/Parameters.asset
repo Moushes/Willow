@@ -124,16 +124,6 @@ MonoBehaviour:
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: Bodysuit_Brightness
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: Bodysuit_Hue
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
   - name: Hair_Back
     valueType: 1
     saved: 1
@@ -159,11 +149,6 @@ MonoBehaviour:
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: Freckles
-    valueType: 1
-    saved: 1
-    defaultValue: 1
-    networkSynced: 1
   - name: Jeans
     valueType: 2
     saved: 1
@@ -185,11 +170,6 @@ MonoBehaviour:
     defaultValue: 0
     networkSynced: 1
   - name: LatexDress
-    valueType: 2
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: ShortsCup
     valueType: 2
     saved: 1
     defaultValue: 0

@@ -54,3 +54,13 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
+  - name: CollarBell
+    icon: {fileID: 2800000, guid: 67dae852855f97340b445f2c7397a13a, type: 3}
+    type: 102
+    parameter:
+      name: CollarBell
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

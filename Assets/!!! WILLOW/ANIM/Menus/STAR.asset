@@ -12,25 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: STAR
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
-  controls:
-  - name: Jeans
-    icon: {fileID: 2800000, guid: eb68abfb20aaa8447ab47d86148c6118, type: 3}
-    type: 102
-    parameter:
-      name: Jeans
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Top
-    icon: {fileID: 2800000, guid: c0291589af931f4408af6c9acc818463, type: 3}
-    type: 102
-    parameter:
-      name: topStar
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
+  Parameters: {fileID: 11400000, guid: 1ca91cc6519bfd24d8073d8301e615e4, type: 2}
+  controls: []
