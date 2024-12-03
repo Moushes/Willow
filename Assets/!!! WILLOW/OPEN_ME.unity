@@ -12454,22 +12454,10 @@ MonoBehaviour:
     name: rafa booth pm
   - hash: 829578613
     name: rafacasari gumroad com
-  - hash: 1263406440
-    name: Bodysuit_Brightness
-  - hash: 2027803245
-    name: Bodysuit_Hue
   - hash: -1869651024
     name: Bodysuit_Opacity
   - hash: -1981294654
     name: Chest_Size
-  - hash: -1601762501
-    name: Eye_L_HUE
-  - hash: 1750400864
-    name: Eye_L_Iris
-  - hash: -700013086
-    name: Eye_R_HUE
-  - hash: 134085984
-    name: Eye_R_Iris
   - hash: 668898996
     name: Eye_Shape
   - hash: -1104437356
@@ -12484,22 +12472,14 @@ MonoBehaviour:
     name: Hair_Emission_Hue
   - hash: -907607673
     name: Hair_Hue
-  - hash: -615094234
-    name: Skin_Tone
   - hash: 1266067419
     name: Sweatshirt_Brightness
   - hash: 241334052
     name: Sweatshirt_Hue
-  - hash: 1621783250
-    name: HornsHue
-  - hash: -685248735
-    name: Ears
   - hash: 2106218389
     name: Skin_Tattoos_Hue
   - hash: -1639485679
     name: Skin_Tattoos
-  - hash: 909154619
-    name: Freckles
   - hash: 708434976
     name: nose 0
   - hash: 1564404918
@@ -12546,10 +12526,6 @@ MonoBehaviour:
     name: Latex OFF 0
   - hash: 36817701
     name: Latex ON
-  - hash: -880030115
-    name: Shorts OFF
-  - hash: -338941470
-    name: Shorts ON
   - hash: 199273349
     name: Skirt Off
   - hash: -428068221
@@ -38149,6 +38125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Penetration Contact System
+      objectReference: {fileID: 0}
+    - target: {fileID: 675281999189574544, guid: 6e92b02cf8356a8429f42dba9fb3dc87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 675281999189574559, guid: 6e92b02cf8356a8429f42dba9fb3dc87,
         type: 3}
@@ -82055,6 +82036,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.70710695
       objectReference: {fileID: 0}
+    - target: {fileID: -2160489020360340229, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1976856260182884662, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -87686,7 +87672,8 @@ PrefabInstance:
       value: 0.000000016162549
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -189558512958316263, guid: 72cffffd84c580d4a9e83bb9aa5158ea, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
