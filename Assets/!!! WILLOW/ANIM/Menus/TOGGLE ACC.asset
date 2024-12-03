@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: TOGGLE ACC
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
+  Parameters: {fileID: 11400000, guid: 1ca91cc6519bfd24d8073d8301e615e4, type: 2}
   controls:
   - name: Bracers
     icon: {fileID: 2800000, guid: de56ac64d147bdb4a862d756387aa3d0, type: 3}
