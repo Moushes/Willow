@@ -518,7 +518,7 @@ MonoBehaviour:
             id: 9adbc3940b0544c45b46092b45aafffd|Assets/Missehy - Underwear/Missehy
               - UnderwearMenu.asset
             objRef: {fileID: 11400000, guid: 9adbc3940b0544c45b46092b45aafffd, type: 2}
-          prefix: Willow/Cupboard/Underwear/Under
+          prefix: Willow/Cupboard/Underwear
         prms:
         - parameters:
             version: 1
