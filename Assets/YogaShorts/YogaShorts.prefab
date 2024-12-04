@@ -8423,14 +8423,14 @@ MonoBehaviour:
             guid: 
             id: 52746be6be69f274c859195476dfffbd|Assets/YogaShorts/Menus/YOGA SHORTS.asset
             objRef: {fileID: 11400000, guid: 52746be6be69f274c859195476dfffbd, type: 2}
-          prefix: Willow/Cupboard/Bottoms/YogaShorts
+          prefix: Willow/Cupboard/Bottoms
         - menu:
             version: 1
             fileID: 0
             guid: 
             id: 53eec82aec2bf0e478462dba910f5e0a|Assets/YogaShorts/Menus/TANK TOP.asset
             objRef: {fileID: 11400000, guid: 53eec82aec2bf0e478462dba910f5e0a, type: 2}
-          prefix: Willow/Cupboard/Tops/TankTop
+          prefix: Willow/Cupboard/Tops
         prms:
         - parameters:
             version: 1
