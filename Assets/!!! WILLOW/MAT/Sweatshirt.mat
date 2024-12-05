@@ -2,16 +2,31 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sweatshirt
   m_Shader: {fileID: 4800000, guid: bd6e5a38cfe6a6849a8058892cb7380e, type: 3}
-  m_ShaderKeywords: COLOR_GRADING_HDR COLOR_GRADING_HDR_3D DEPTH_OF_FIELD_COC_VIEW
-    DISTORT GEOM_TYPE_BRANCH GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
-    POI_LIGHT_DATA_ADDITIVE_ENABLE POI_VERTEXLIGHT_ON VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - COLOR_GRADING_HDR
+  - COLOR_GRADING_HDR_3D
+  - DEPTH_OF_FIELD_COC_VIEW
+  - DISTORT
+  - GEOM_TYPE_BRANCH
+  - GEOM_TYPE_BRANCH_DETAIL
+  - GEOM_TYPE_FROND
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_VERTEXLIGHT_ON
+  - VIGNETTE_MASKED
+  - _GLOSSYREFLECTIONS_OFF
+  - _LIGHTINGMODE_FLAT
+  - _RIMSTYLE_POIYOMI
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32,6 +47,7 @@ Material:
     _Matcap2MultiplyAnimated: 1
     _RimLightColorAnimated: 1
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -655,6 +671,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - DSGI: 0
     - Instancing: 0
@@ -2280,7 +2297,7 @@ Material:
     - m_start_Decal2AudioLink: 0
     - m_start_Decal3: 1
     - m_start_Decal3AudioLink: 0
-    - m_start_DecalSection: 1
+    - m_start_DecalSection: 0
     - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0
@@ -2298,14 +2315,14 @@ Material:
     - m_start_Lighting: 0
     - m_start_MainHueShift: 1
     - m_start_MainVertexColors: 0
-    - m_start_Matcap2: 1
+    - m_start_Matcap2: 0
     - m_start_Matcap3: 0
     - m_start_Matcap4: 0
     - m_start_Metallic: 0
     - m_start_OutlineStencil: 0
     - m_start_PathAudioLink: 0
     - m_start_PoiLightData: 0
-    - m_start_PoiShading: 1
+    - m_start_PoiShading: 0
     - m_start_RGBMask: 0
     - m_start_Refraction: 0
     - m_start_RimAudioLink: 0
@@ -2778,3 +2795,4 @@ Material:
     - _VoronoiRandomMinMaxBrightness: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiRandomMinMaxSaturation: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiSpeed: {r: 3, g: 3, b: 3, a: 1}
+  m_BuildTextureStacks: []

@@ -87,7 +87,7 @@ MonoBehaviour:
   - name: Skin_Tattoos
     valueType: 1
     saved: 1
-    defaultValue: 0.26
+    defaultValue: 0.5
     networkSynced: 1
   - name: Hair_Hue
     valueType: 1

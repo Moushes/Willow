@@ -212,6 +212,12 @@
         "com.unity.nuget.newtonsoft-json": "3.0.2"
       }
     },
+    "de.thryrallo.vrc.avatar-performance-tools": {
+      "version": "file:de.thryrallo.vrc.avatar-performance-tools",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "vrchat.blackstartx.gesture-manager": {
       "version": "file:vrchat.blackstartx.gesture-manager",
       "depth": 0,
