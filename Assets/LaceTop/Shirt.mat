@@ -71,7 +71,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: cff0ca6b6593e7445a84d7b3a1f6643f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 085351195f610c04f8254689ff7d7ecd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatFallback:
@@ -817,8 +817,8 @@ Material:
     - _ClothLerp: 0
     - _ClothMetallicSmoothnessMapInvert: 0
     - _ClothMetallicSmoothnessMapUV: 0
-    - _ClothReflectance: 0.5
-    - _ClothSmoothness: 0.5
+    - _ClothReflectance: 0.35
+    - _ClothSmoothness: 0
     - _ColorMask: 15
     - _ColorThemeIndex: 0
     - _ContinuousDissolve: 0
@@ -2502,7 +2502,7 @@ Material:
     - m_end_vertexGlitching: 0
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
-    - m_lightingCategory: 0
+    - m_lightingCategory: 1
     - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0

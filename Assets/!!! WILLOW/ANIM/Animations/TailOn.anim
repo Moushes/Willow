@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TailOn
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -18,20 +18,24 @@ AnimationClip:
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
     - time: 0
       value: {fileID: 2100000, guid: d18bc3527bd6a734aae8e776c05028b0, type: 2}
     attribute: m_Materials.Array.data[1]
     path: Tail
     classID: 137
     script: {fileID: 0}
-  - curve:
+    flags: 2
+  - serializedVersion: 2
+    curve:
     - time: 0
       value: {fileID: 2100000, guid: e3eadcc034f46214998aab5d535e8852, type: 2}
     attribute: m_Materials.Array.data[0]
     path: Tail
     classID: 137
     script: {fileID: 0}
+    flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -46,6 +50,8 @@ AnimationClip:
       typeID: 137
       customType: 21
       isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3691322211
       attribute: 0
@@ -53,6 +59,8 @@ AnimationClip:
       typeID: 137
       customType: 21
       isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 2100000, guid: d18bc3527bd6a734aae8e776c05028b0, type: 2}
     - {fileID: 2100000, guid: e3eadcc034f46214998aab5d535e8852, type: 2}
