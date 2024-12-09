@@ -2,14 +2,32 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Missehy - Underwear - Version 1
-  m_Shader: {fileID: 4800000, guid: 9a4cc0477cd28234fa7f0419dcf5a0b5, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 78ca4ff2c07f633449ae156e535256a5, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - GEOM_TYPE_BRANCH
+  - GEOM_TYPE_BRANCH_DETAIL
+  - MOCHIE_PBR
+  - POI_CLEARCOAT
+  - POI_ENVIRORIM
+  - POI_MATCAP0
+  - POI_STYLIZED_StylizedSpecular
+  - POI_UDIMDISCARD
+  - VIGNETTE_MASKED
+  - _GLOSSYREFLECTIONS_OFF
+  - _LIGHTINGMODE_MULTILAYER_MATH
+  - _RIM2STYLE_POIYOMI
+  - _RIMSTYLE_POIYOMI
+  - _STOCHASTICMODE_DELIOT_HEITZ
+  - _SUNDISK_SIMPLE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -38,7 +56,6 @@ Material:
     _DecalBlendAlpha1Animated: 1
     _DecalBlendAlphaAnimated: 1
     _DecalColor1Animated: 1
-    _DecalHueShift1Animated: 1
     _MatcapHueShiftAnimated: 2
     _MochieMetallicMaps_texPack_a_channel: 4
     _MochieMetallicMaps_texPack_a_fallback: 1
@@ -58,6 +75,7 @@ Material:
     _UDIMDiscardRow0_2Animated: 1
     _UDIMDiscardRow0_3Animated: 1
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -98,7 +116,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: bb93d37434c8dc04ea11f288bda52b57, type: 3}
+        m_Texture: {fileID: 2800000, guid: b0a5c928c40ab234380b39c4ca25df65, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatFallback:
@@ -398,7 +416,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MochieMetallicMaps:
-        m_Texture: {fileID: 2800000, guid: af9ebb9ea8b60ce4ca35c944bc904672, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b59f6ccbe4412d46bdae494d304fd61, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MochieReflCube:
@@ -585,6 +603,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - GeometryShader_Enabled: 1
     - Instancing: 0
@@ -1025,7 +1044,7 @@ Material:
     - _DecalHueShift2: 0
     - _DecalHueShift3: 0
     - _DecalHueShiftEnabled: 0
-    - _DecalHueShiftEnabled1: 1
+    - _DecalHueShiftEnabled1: 0
     - _DecalHueShiftEnabled2: 0
     - _DecalHueShiftEnabled3: 0
     - _DecalHueShiftSpeed: 0
@@ -2857,10 +2876,10 @@ Material:
     - m_start_backFace: 0
     - m_start_backlight: 0
     - m_start_blending: 0
-    - m_start_brdf: 0
+    - m_start_brdf: 1
     - m_start_brdfadvanced: 0
     - m_start_brdfglobalmask: 0
-    - m_start_clearCoat: 0
+    - m_start_clearCoat: 1
     - m_start_clearcoatadvanced: 0
     - m_start_clearcoatglobalmask: 0
     - m_start_depthFX: 0
@@ -2875,7 +2894,7 @@ Material:
     - m_start_flipBook: 0
     - m_start_glitter: 1
     - m_start_internalparallax: 0
-    - m_start_matcap: 0
+    - m_start_matcap: 1
     - m_start_mirrorOptions: 0
     - m_start_normalCorrect: 0
     - m_start_parallax: 0
@@ -2892,7 +2911,7 @@ Material:
     - m_start_rim2LightOptions: 0
     - m_start_rimLight1Options: 0
     - m_start_rimLightOptions: 0
-    - m_start_stylizedSpec: 0
+    - m_start_stylizedSpec: 1
     - m_start_subsurfaceScattering: 0
     - m_start_tps_penetrator: 0
     - m_start_truchet: 0
@@ -3328,3 +3347,4 @@ Material:
     - _VoronoiRandomMinMaxBrightness: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiRandomMinMaxSaturation: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiSpeed: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

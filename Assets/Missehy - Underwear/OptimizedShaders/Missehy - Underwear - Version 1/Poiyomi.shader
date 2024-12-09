@@ -3324,8 +3324,8 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon/af7e372bef01cca408e1f607
 				Decal1.m_DecalEmissionStrength 				 = (0.0 /*_DecalEmissionStrength1*/);
 				Decal1.m_DecalBlendAlpha 					 = _DecalBlendAlpha1;
 				Decal1.m_DecalOverrideAlpha 				 = (0.0 /*_DecalOverrideAlpha1*/);
-				Decal1.m_DecalHueShiftEnabled 				 = (1.0 /*_DecalHueShiftEnabled1*/);
-				Decal1.m_DecalHueShift 						 = _DecalHueShift1;
+				Decal1.m_DecalHueShiftEnabled 				 = (0.0 /*_DecalHueShiftEnabled1*/);
+				Decal1.m_DecalHueShift 						 = (0.0 /*_DecalHueShift1*/);
 				Decal1.m_DecalHueShiftSpeed 				 = (0.0 /*_DecalHueShiftSpeed1*/);
 				Decal1.m_DecalDepth 						 = (0.0 /*_Decal1Depth*/);
 				Decal1.m_DecalHueAngleStrength 				 = (0.0 /*_Decal1HueAngleStrength*/);
@@ -7518,8 +7518,8 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon/af7e372bef01cca408e1f607
 				Decal1.m_DecalEmissionStrength 				 = (0.0 /*_DecalEmissionStrength1*/);
 				Decal1.m_DecalBlendAlpha 					 = _DecalBlendAlpha1;
 				Decal1.m_DecalOverrideAlpha 				 = (0.0 /*_DecalOverrideAlpha1*/);
-				Decal1.m_DecalHueShiftEnabled 				 = (1.0 /*_DecalHueShiftEnabled1*/);
-				Decal1.m_DecalHueShift 						 = _DecalHueShift1;
+				Decal1.m_DecalHueShiftEnabled 				 = (0.0 /*_DecalHueShiftEnabled1*/);
+				Decal1.m_DecalHueShift 						 = (0.0 /*_DecalHueShift1*/);
 				Decal1.m_DecalHueShiftSpeed 				 = (0.0 /*_DecalHueShiftSpeed1*/);
 				Decal1.m_DecalDepth 						 = (0.0 /*_Decal1Depth*/);
 				Decal1.m_DecalHueAngleStrength 				 = (0.0 /*_Decal1HueAngleStrength*/);

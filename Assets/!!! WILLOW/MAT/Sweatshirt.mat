@@ -2268,7 +2268,7 @@ Material:
     - m_end_uvPolar: 0
     - m_end_vertexManipulation: 0
     - m_end_voronoiRandom: 0
-    - m_lightingCategory: 1
+    - m_lightingCategory: 0
     - m_lightingOptions: 0
     - m_mainCategory: 1
     - m_mainOptions: 1
@@ -2277,7 +2277,7 @@ Material:
     - m_postprocessing: 0
     - m_renderingCategory: 0
     - m_renderingOptions: 1
-    - m_specialFXCategory: 1
+    - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_Alpha: 0
     - m_start_Aniso: 0
@@ -2297,7 +2297,7 @@ Material:
     - m_start_Decal2AudioLink: 0
     - m_start_Decal3: 1
     - m_start_Decal3AudioLink: 0
-    - m_start_DecalSection: 0
+    - m_start_DecalSection: 1
     - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0
@@ -2307,7 +2307,7 @@ Material:
     - m_start_FlipbookAudioLink: 0
     - m_start_FresnelAlpha: 0
     - m_start_Gameboy: 0
-    - m_start_GlobalThemes: 0
+    - m_start_GlobalThemes: 1
     - m_start_GrabPass: 0
     - m_start_Hologram: 0
     - m_start_Iridescence: 0
@@ -2360,7 +2360,7 @@ Material:
     - m_start_depthFX: 0
     - m_start_depthRimLightOptions: 0
     - m_start_detailShadows: 0
-    - m_start_dissolve: 0
+    - m_start_dissolve: 1
     - m_start_dissolveAudioLink: 0
     - m_start_dissolveHueShift: 0
     - m_start_dissolveMasking: 0

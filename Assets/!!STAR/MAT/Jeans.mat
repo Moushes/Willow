@@ -2,16 +2,30 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Jeans
   m_Shader: {fileID: 4800000, guid: 43897e544795c3240b5536ae1ba4c848, type: 3}
-  m_ShaderKeywords: COLOR_GRADING_HDR DEPTH_OF_FIELD_COC_VIEW DISTORT GEOM_TYPE_BRANCH
-    GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
-    POI_LIGHT_DATA_ADDITIVE_ENABLE POI_VERTEXLIGHT_ON VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - COLOR_GRADING_HDR
+  - DEPTH_OF_FIELD_COC_VIEW
+  - DISTORT
+  - GEOM_TYPE_BRANCH
+  - GEOM_TYPE_BRANCH_DETAIL
+  - GEOM_TYPE_FROND
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_VERTEXLIGHT_ON
+  - VIGNETTE_MASKED
+  - _GLOSSYREFLECTIONS_OFF
+  - _LIGHTINGMODE_FLAT
+  - _RIMSTYLE_POIYOMI
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -27,6 +41,7 @@ Material:
     _DissolveAlphaAnimated: 2
     _MainHueShiftAnimated: 1
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -462,6 +477,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Instancing: 0
     - _1st2nd_Shades_Feather: 0.0001
@@ -2038,3 +2054,4 @@ Material:
     - _VertexRoundingRangeAL: {r: 0, g: 0, b: 0, a: 1}
     - _VertexWorldTranslationALMax: {r: 0, g: 0, b: 0, a: 1}
     - _VertexWorldTranslationALMin: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
