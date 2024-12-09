@@ -527,7 +527,7 @@ Material:
     - m_start_uvPanosphere: 0
     - m_start_uvPolar: 0
     - m_thirdpartyCategory: 0
-    - shader_is_using_thry_editor: 0
+    - shader_is_using_thry_editor: 69
     - shader_locale: 0
     - shader_master_label: 0
     m_Colors:
