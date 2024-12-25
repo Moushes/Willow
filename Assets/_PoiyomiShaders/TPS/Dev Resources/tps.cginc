@@ -25,6 +25,7 @@ float _TPS_IdleSkrinkLength;
 float _TPS_BufferedDepth;
 float _TPS_BufferedStrength;
 
+UNITY_DECLARE_SCREENSPACE_TEXTURE(_TPS_Grabpass);
 #ifdef TPS_IsSkinnedMesh
 UNITY_DECLARE_TEX2D_NOSAMPLER(_TPS_BakedMesh);
 #else

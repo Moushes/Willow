@@ -2,10 +2,9 @@
 //ifex _EnableEnvironmentalRim==0
 [HideInInspector] m_start_reflectionRim ("Environmental Rim--{reference_property:_EnableEnvironmentalRim,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/shading/environmental-rim},hover:Documentation}}", Float) = 0
 [HideInInspector][ThryToggle(POI_ENVIRORIM)]_EnableEnvironmentalRim ("Enable", Float) = 0
-[sRGBWarning]_RimEnviroMask ("Mask--{reference_properties:[_RimEnviroMaskPan, _RimEnviroMaskUV, _RimEnviroChannel]}", 2D) = "white" { }
+_RimEnviroMask ("Mask--{reference_properties:[_RimEnviroMaskPan, _RimEnviroMaskUV]}", 2D) = "white" { }
 [HideInInspector][Vector2]_RimEnviroMaskPan ("Panning", Vector) = (0, 0, 0, 0)
-[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)]_RimEnviroMaskUV ("UV", Int) = 0
-[HideInInspector][Enum(R, 0, G, 1, B, 2, A, 3)]_RimEnviroChannel ("Channel", Float) = 0
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)]_RimEnviroMaskUV ("UV", Int) = 0
 _RimEnviroBlur ("Blur", Range(0, 1)) = 0.7
 _RimEnviroWidth ("Rim Width", Range(0, 1)) = 0.45
 _RimEnviroSharpness ("Rim Sharpness", Range(0, 1)) = 0
@@ -29,7 +28,6 @@ _RimEnviroIntensity ("Intensity", Range(0, 1)) = 1
 	float4 _RimEnviroMask_ST;
 	float2 _RimEnviroMaskPan;
 	float _RimEnviroMaskUV;
-	float _RimEnviroChannel;
 
     float _RimEnviroBlur;
     float _RimEnviroMinBrightness;
@@ -70,7 +68,7 @@ _RimEnviroIntensity ("Intensity", Range(0, 1)) = 1
         
         half enviroMask = 1; 
 		#if defined(PROP_RIMENVIROMASK) || !defined(OPTIMIZER_ENABLED)
-			enviroMask = POI2D_SAMPLER_PAN(_RimEnviroMask, _MainTex, poiMesh.uv[_RimEnviroMaskUV], _RimEnviroMaskPan)[_RimEnviroChannel];
+			enviroMask = poiMax(POI2D_SAMPLER_PAN(_RimEnviroMask, _MainTex, poiMesh.uv[_RimEnviroMaskUV], _RimEnviroMaskPan).rgb);
 		#endif
         float3 envRimCol = lerp(0, max(0, (enviroRimColor - _RimEnviroMinBrightness) * poiFragData.baseColor), enviroRimAlpha).rgb * enviroMask * _RimEnviroIntensity;
 		poiFragData.finalColor += envRimCol;

@@ -2,15 +2,14 @@
 //ifex _PostProcess==0
 [HideInInspector] m_start_postprocess ("Post Processing--{reference_property:_PostProcess,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/post-processing/main},hover:Documentation}}", Float) = 0
 [HideInInspector][ThryToggle(POSTPROCESS)]_PostProcess ("Enable", Float) = 0
-[sRGBWarning][ThryTexture] _PPMask ("Mask--{reference_properties:[_PPMaskPan, _PPMaskUV, _PPMaskChannel, _PPMaskInvert]}", 2D) = "white" { }
+[ThryTexture] _PPMask ("Mask--{reference_properties:[_PPMaskPan, _PPMaskUV, _PPMaskInvert]}", 2D) = "white" { }
 [HideInInspector][Vector2]_PPMaskPan ("Panning", Vector) = (0, 0, 0, 0)
-[HideInInspector][Enum(R, 0, G, 1, B, 2, A, 3)]_PPMaskChannel ("Channel", Float) = 0
 [HideInInspector][ToggleUI]_PPMaskInvert ("Invert", Float) = 0
-[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)]_PPMaskUV ("UV", Int) = 0
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)]_PPMaskUV ("UV", Int) = 0
 
 _PPHue ("Hue", Range(0, 1)) = 0
 [HDR]_PPTint ("Tint", Color) = (1, 1, 1, 1)
-[VectorLabel(R,G,B)]_PPRGB ("RGB", Vector) = (1, 1, 1, 1)
+[Vector3]_PPRGB ("RGB", Vector) = (1, 1, 1, 1)
 _PPContrast ("Contrast", Float) = 1
 _PPSaturation ("Saturation", Float) = 1
 _PPBrightness ("Brightness", Float) = 1
@@ -37,7 +36,6 @@ _PPPosterizationAmount ("Steps--{condition_showS:(_PPPosterization==1)}", Range(
 	float4 _PPMask_ST;
 	float2 _PPMaskPan;
 	float _PPMaskUV;
-	float _PPMaskChannel;
 	float _PPMaskInvert;
 
 	float3 _PPTint;
@@ -120,7 +118,7 @@ _PPPosterizationAmount ("Steps--{condition_showS:(_PPPosterization==1)}", Range(
 
 		float ppMask = 1;
 		#if defined(PROP_PPMASK) || !defined(OPTIMIZER_ENABLED)
-			ppMask = POI2D_SAMPLER_PAN(_PPMask, _MainTex, poiUV(poiMesh.uv[_PPMaskUV], _PPMask_ST), _PPMaskPan)[_PPMaskChannel];
+			ppMask = POI2D_SAMPLER_PAN(_PPMask, _MainTex, poiUV(poiMesh.uv[_PPMaskUV], _PPMask_ST), _PPMaskPan).r;
 			ppMask = lerp(ppMask, 1 - ppMask, _PPMaskInvert);
 			col = lerp(poiFragData.finalColor, col, ppMask);
 		#endif

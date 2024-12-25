@@ -26,6 +26,7 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -2998,7 +2999,7 @@ Material:
     - m_end_voronoiRandom: 0
     - m_lightingCategory: 1
     - m_lightingOptions: 0
-    - m_mainCategory: 0
+    - m_mainCategory: 1
     - m_mainOptions: 1
     - m_modifierCategory: 0
     - m_outlineOptions: 0

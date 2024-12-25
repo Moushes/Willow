@@ -17,7 +17,14 @@ MonoBehaviour:
   Version: 1.0
   Author: Poiyomi
   Description: 
-  EnableProperties: []
+  Enabled:
+    Name: 
+    DisplayName: 
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 0
   Properties: []
   ModuleDependencies: []
   IncompatibleWith: []
@@ -45,12 +52,6 @@ MonoBehaviour:
       type: 3}
     Keywords:
     - FRAGMENT_BASE_RETURN
-    NeedsVariant: 0
-    Queue: 100
-  - Template: {fileID: 4110108277581059679, guid: 1fa59a8489d3d8645a06835869bc9be4,
-      type: 3}
-    Keywords:
-    - BASE_REALISTIC_MOD
     NeedsVariant: 0
     Queue: 100
   Functions: []

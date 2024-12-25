@@ -2,24 +2,21 @@
 //ifex _EnableAudioLink==0
 [HideInInspector] m_AudioLinkCategory (" Audio Link--{reference_property:_EnableAudioLink}", Float) = 0
 [HideInInspector] m_start_audioLink ("Audio Link", Float) = 0
-[HideInInspector][ThryToggle(POI_AUDIOLINK)] _EnableAudioLink ("Enabled", Float) = 0
+[HideInInspector][ThryToggle(POI_AUDIOLINK)] _EnableAudioLink ("Enabled?", Float) = 0
 [Helpbox(1)] _AudioLinkHelp ("This section houses the global controls for audio link. Controls for individual features are in their respective sections. (Emission, Dissolve, etc...)", Int) = 0
 [ToggleUI] _AudioLinkAnimToggle ("Anim Toggle", Float) = 1
 /*
 _AudioLinkDelay ("Delay", Range(0, 1)) = 0
 [ToggleUI]_AudioLinkCCStripY("CC Strip Y UV", Float) = 0
 */
-[ThryHeaderLabel(Smoothing)]
-_AudioLinkSmoothingBass ("Bass", Range(0, 1)) = 0
-_AudioLinkSmoothingLowMid ("Low Mid", Range(0, 1)) = 0
-_AudioLinkSmoothingHighMid ("High Mid", Range(0, 1)) = 0
-_AudioLinkSmoothingTreble ("Treble", Range(0, 1)) = 0
+//[ToggleUI]_AudioLinkAveraging ("Enable averaging", Float) = 0
+//_AudioLinkAverageRange ("Average Sampling Range", Range(0, 1)) = .5
 [HideInInspector] m_end_audioLink ("Audio Link", Float) = 0
 //endex
 #K#AUDIOLINK_PROPERTIES
 #T#PoiAudioLinkKeywords
 //ifex _EnableAudioLink==0
-#pragma shader_feature_local POI_AUDIOLINK
+#pragma shader_feature POI_AUDIOLINK
 //endex
 
 #T#PoiAudioLinkMacrosAndDefines
@@ -84,6 +81,13 @@ _AudioLinkSmoothingTreble ("Treble", Range(0, 1)) = 0
 #define COLORCHORD_NEW_NOTE_GAIN        8.0
 #define COLORCHORD_MAX_NOTES            10
 
+// We use glsl_mod for most calculations because it behaves better
+// on negative numbers, and in some situations actually outperforms
+// HLSL's modf().
+#ifndef glsl_mod
+    #define glsl_mod(x, y) (((x) - (y) * floor((x) / (y))))
+#endif
+
 uniform float4               _AudioTexture_TexelSize;
 
 #ifdef SHADER_TARGET_SURFACE_ANALYSIS
@@ -109,12 +113,6 @@ uniform float4 _Stored_TexelSize;
 #ifdef POI_AUDIOLINK
     float _AudioLinkDelay;
     float _AudioLinkAnimToggle;
-
-	float _AudioLinkSmoothingBass;
-	float _AudioLinkSmoothingLowMid;
-	float _AudioLinkSmoothingHighMid;
-	float _AudioLinkSmoothingTreble;
-
 	float _DebugWaveform;
 	float _DebugDFT;
 	float _DebugBass;
@@ -312,10 +310,11 @@ uniform float4 _Stored_TexelSize;
         {
             poiMods.audioLinkAvailable = true;
             poiMods.audioLinkVersion = AudioLinkGetVersion();
-			poiMods.audioLink[0] = _AudioLinkSmoothingBass    == 0 ? AudioLinkData(ALPASS_AUDIOLINK + float2(0, 0))[0] : AudioLinkData(ALPASS_FILTEREDAUDIOLINK + float2((1 - _AudioLinkSmoothingBass   ) * 15.95, 0))[0];
-			poiMods.audioLink[1] = _AudioLinkSmoothingLowMid  == 0 ? AudioLinkData(ALPASS_AUDIOLINK + float2(0, 1))[0] : AudioLinkData(ALPASS_FILTEREDAUDIOLINK + float2((1 - _AudioLinkSmoothingLowMid ) * 15.95, 1))[0];
-			poiMods.audioLink[2] = _AudioLinkSmoothingHighMid == 0 ? AudioLinkData(ALPASS_AUDIOLINK + float2(0, 2))[0] : AudioLinkData(ALPASS_FILTEREDAUDIOLINK + float2((1 - _AudioLinkSmoothingHighMid) * 15.95, 2))[0];
-			poiMods.audioLink[3] = _AudioLinkSmoothingTreble  == 0 ? AudioLinkData(ALPASS_AUDIOLINK + float2(0, 3))[0] : AudioLinkData(ALPASS_FILTEREDAUDIOLINK + float2((1 - _AudioLinkSmoothingTreble ) * 15.95, 3))[0];
+            poiMods.audioLink.x = AudioLinkData(ALPASS_AUDIOBASS).r;
+            poiMods.audioLink.y = AudioLinkData(ALPASS_AUDIOLOWMIDS).r;
+            poiMods.audioLink.z = AudioLinkData(ALPASS_AUDIOHIGHMIDS).r;
+            poiMods.audioLink.w = AudioLinkData(ALPASS_AUDIOTREBLE).r;
+
 /*
 			poiMods.globalColorTheme[4] = AudioLinkData( ALPASS_CCCOLORS + uint2( 0, 0 ) );
 			poiMods.globalColorTheme[5] = AudioLinkData( ALPASS_CCCOLORS + uint2( 1, 0 ) );
@@ -328,10 +327,10 @@ uniform float4 _Stored_TexelSize;
 			poiMods.globalColorTheme[7] =  float4(maximize(AudioLinkData( ALPASS_CCCOLORS + uint2( 3, 0 ) )),1.0);
 */
 
-			poiMods.globalColorTheme[4] =  float4(AudioLinkCCtoRGB(glsl_mod(AudioLinkData(ALPASS_CCINTERNAL + uint2(2, 0))[0], AUDIOLINK_EXPBINS), 1, AUDIOLINK_ROOTNOTE), 1.0);
-			poiMods.globalColorTheme[5] =  float4(AudioLinkCCtoRGB(glsl_mod(AudioLinkData(ALPASS_CCINTERNAL + uint2(3, 0))[0], AUDIOLINK_EXPBINS), 1, AUDIOLINK_ROOTNOTE), 1.0);
-			poiMods.globalColorTheme[6] =  float4(AudioLinkCCtoRGB(glsl_mod(AudioLinkData(ALPASS_CCINTERNAL + uint2(4, 0))[0], AUDIOLINK_EXPBINS), 1, AUDIOLINK_ROOTNOTE), 1.0);
-			poiMods.globalColorTheme[7] =  float4(AudioLinkCCtoRGB(glsl_mod(AudioLinkData(ALPASS_CCINTERNAL + uint2(5, 0))[0], AUDIOLINK_EXPBINS), 1, AUDIOLINK_ROOTNOTE), 1.0);
+			poiMods.globalColorTheme[4] =  float4(AudioLinkCCtoRGB(glsl_mod(AudioLinkData(ALPASS_CCINTERNAL + uint2(2, 0)).x, AUDIOLINK_EXPBINS), 1, AUDIOLINK_ROOTNOTE), 1.0);
+			poiMods.globalColorTheme[5] =  float4(AudioLinkCCtoRGB(glsl_mod(AudioLinkData(ALPASS_CCINTERNAL + uint2(3, 0)).x, AUDIOLINK_EXPBINS), 1, AUDIOLINK_ROOTNOTE), 1.0);
+			poiMods.globalColorTheme[6] =  float4(AudioLinkCCtoRGB(glsl_mod(AudioLinkData(ALPASS_CCINTERNAL + uint2(4, 0)).x, AUDIOLINK_EXPBINS), 1, AUDIOLINK_ROOTNOTE), 1.0);
+			poiMods.globalColorTheme[7] =  float4(AudioLinkCCtoRGB(glsl_mod(AudioLinkData(ALPASS_CCINTERNAL + uint2(5, 0)).x, AUDIOLINK_EXPBINS), 1, AUDIOLINK_ROOTNOTE), 1.0);
 
 			poiMods.globalColorTheme[8] = AudioLinkData(ALPASS_THEME_COLOR0);
 			poiMods.globalColorTheme[9] = AudioLinkData(ALPASS_THEME_COLOR1);

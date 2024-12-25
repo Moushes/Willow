@@ -87,11 +87,9 @@
 
 		isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords 
 
-		// Use a threshold so that there's some room for animations to be close to 0, but not exactly 0
-		const float threshold = 0.001;
-		if(isDiscarded > threshold) // Early Return skips rest of vertex shader
+		if(isDiscarded) // Early Return skips rest of vertex shader
 		{
-			return (VertexOut)POI_NAN;
+			return (v2f)0;
 		}
 	}
 #endif
@@ -100,11 +98,11 @@
 #T#PoiUDIMDiscardFragFunctions
 //ifex _EnableUDIMDiscardOptions==0
 #ifdef POI_UDIMDISCARD 
-    void applyUDIMDiscard(in VertexOut i)
+    void applyUDIMDiscard(in v2f i)
     {
 		if(_UDIMDiscardMode == 1) // Don't run if in vertex mode
 		{
-			float2 udim = floor(vertexUV(i, _UDIMDiscardUV));
+			float2 udim = floor(i.uv[(int)_UDIMDiscardUV]);
 
 			float isDiscarded = 0;
 			float4 xMask = float4(  (udim.x >= 0 && udim.x < 1), 
@@ -119,8 +117,7 @@
 
 			isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords 
 
-			const float threshold = 0.001;
-	    	clip(threshold - isDiscarded); // Clip if discarded
+	    	clip(0.01 - isDiscarded); // Clip if discarded
 		}
 
     	return;

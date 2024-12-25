@@ -9,7 +9,7 @@ _NormalCorrectAmount ("Normal Correct Amount", Range(0,1)) = 0.9
 
 #T#PoiNormalCorrectKeywords
 //ifex _NormalCorrect==0
-#pragma shader_feature_local POI_NORMALCORRECT
+#pragma shader_feature POI_NORMALCORRECT
 //endex
 
 #T#PoiNormalCorrectVariables
@@ -24,7 +24,7 @@ _NormalCorrectAmount ("Normal Correct Amount", Range(0,1)) = 0.9
 // normal correct code from https://github.com/yoship1639/UniToon (MIT)
 //ifex _NormalCorrect==0
 #ifdef POI_NORMALCORRECT
-    void applyNormalCorrect(inout VertexOut i)
+    void applyNormalCorrect(inout v2f i)
     {
         float3 normalCorrectObject = i.localPos.xyz - _NormalCorrectOrigin;
         normalCorrectObject.y = 0;

@@ -15,7 +15,7 @@ namespace Thry
             {
                 linked_materials = new Dictionary<(Material,string), List<Material>>();
                 string raw = FileHelper.ReadFileIntoString(PATH.LINKED_MATERIALS_FILE);
-                string[][] parsed = Parser.Deserialize<string[][]>(raw);
+                string[][] parsed = Parser.ParseToObject<string[][]>(raw);
                 if(parsed!=null)
                     foreach (string[] material_cloud in parsed)
                     {

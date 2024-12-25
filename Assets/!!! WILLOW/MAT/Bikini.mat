@@ -13,6 +13,16 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - COLOR_GRADING_HDR_3D
+  - DISTORT
+  - GEOM_TYPE_BRANCH
+  - GEOM_TYPE_BRANCH_DETAIL
+  - GEOM_TYPE_FROND
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_VERTEXLIGHT_ON
+  - VIGNETTE_MASKED
+  - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_FLAT
   - _RIMSTYLE_POIYOMI
   m_LightmapFlags: 4
@@ -2271,7 +2281,7 @@ Material:
     - m_start_CenterOutEmission: 0
     - m_start_CenterOutEmission1: 0
     - m_start_CubeMap: 0
-    - m_start_Decal0: 1
+    - m_start_Decal0: 0
     - m_start_Decal0AudioLink: 0
     - m_start_Decal1: 1
     - m_start_Decal1AudioLink: 0

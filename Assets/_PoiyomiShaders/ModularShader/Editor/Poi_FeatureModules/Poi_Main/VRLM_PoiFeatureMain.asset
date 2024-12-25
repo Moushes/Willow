@@ -27,13 +27,13 @@ MonoBehaviour:
     Keywords:
     - MAIN_PROPERTIES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: -4290662500990495517, guid: 8aa8bb54ef5088348acc4d7ec157ee38,
       type: 3}
     Keywords:
     - SHADER_KEYWORDS
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: -7263456333445960440, guid: 8aa8bb54ef5088348acc4d7ec157ee38,
       type: 3}
     Keywords:
@@ -44,7 +44,7 @@ MonoBehaviour:
     - OUTLINE_PROPERTY_VARIABLES
     - META_PROPERTY_VARIABLES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 5159234061367281123, guid: 8aa8bb54ef5088348acc4d7ec157ee38,
       type: 3}
     Keywords:
@@ -54,18 +54,12 @@ MonoBehaviour:
     - FRAGMENT_OUTLINE_COLOR
     - FRAGMENT_META_COLOR
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: -4233938919722665711, guid: 8aa8bb54ef5088348acc4d7ec157ee38,
       type: 3}
     Keywords:
     - FRAGMENT_NORMAL_CALCULATIION
     NeedsVariant: 0
-    Queue: 0
-  - Template: {fileID: 2832899352855863264, guid: 8aa8bb54ef5088348acc4d7ec157ee38,
-      type: 3}
-    Keywords:
-    - MAIN_TEXTURE_SAMPLE
-    NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   Functions: []
   AdditionalSerializedData: 

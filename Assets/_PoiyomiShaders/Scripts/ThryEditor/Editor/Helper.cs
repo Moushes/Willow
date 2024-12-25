@@ -218,11 +218,6 @@ namespace Thry
             return 0;
         }
 
-        public static float Mod(float a, float b)
-        {
-            return a - b * Mathf.Floor(a / b);
-        }
-
         // This code is an implementation of the pseudocode from the Wikipedia,
         // showing a naive implementation.
         // You should research an algorithm with better space complexity.
@@ -255,88 +250,6 @@ namespace Thry
             }
             return d[n, m];
         }
-
-        // Start of Detour methods
-        // Modified from: https://github.com/apkd/UnityStaticBatchingSortingPatch/blob/e83bed8cf31fc98097586c4e47af77fa79d9bed5/StaticBatchingSortingPatch.cs
-        // Modified by Behemoth/hill
-        static Dictionary<MethodInfo, byte[]> s_patchedData = new Dictionary<MethodInfo, byte[]>();
-        public static unsafe void TryDetourFromTo(MethodInfo src, MethodInfo dst)
-        {
-            try
-            {
-                if (IntPtr.Size == sizeof(Int64))
-                {
-                    // 64-bit systems use 64-bit absolute address and jumps
-                    // 12 byte destructive
-
-                    // Get function pointers
-                    long Source_Base        = src     .MethodHandle.GetFunctionPointer().ToInt64();
-                    long Destination_Base   = dst.MethodHandle.GetFunctionPointer().ToInt64();
-
-                    // Backup Source Data
-                    IntPtr Source_IntPtr    = src.MethodHandle.GetFunctionPointer();
-                    var backup = new byte[0xC];
-                    Marshal.Copy(Source_IntPtr, backup, 0, 0xC);
-                    s_patchedData.Add(src, backup);
-
-                    // Native source address
-                    byte* Pointer_Raw_Source = (byte*)Source_Base;
-
-                    // Pointer to insert jump address into native code
-                    long* Pointer_Raw_Address = (long*)( Pointer_Raw_Source + 0x02 );
-
-                    // Insert 64-bit absolute jump into native code (address in rax)
-                    // mov rax, immediate64
-                    // jmp [rax]
-                    *( Pointer_Raw_Source + 0x00 ) = 0x48;
-                    *( Pointer_Raw_Source + 0x01 ) = 0xB8;
-                    *Pointer_Raw_Address           = Destination_Base; // ( Pointer_Raw_Source + 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09 )
-                    *( Pointer_Raw_Source + 0x0A ) = 0xFF;
-                    *( Pointer_Raw_Source + 0x0B ) = 0xE0;
-                }
-                else
-                {
-                    // 32-bit systems use 32-bit relative offset and jump
-                    // 5 byte destructive
-
-                    // Get function pointers
-                    int Source_Base        = src     .MethodHandle.GetFunctionPointer().ToInt32();
-                    int Destination_Base   = dst.MethodHandle.GetFunctionPointer().ToInt32();
-
-                    // Backup Source Data
-                    IntPtr Source_IntPtr    = src.MethodHandle.GetFunctionPointer();
-                    var backup = new byte[0x5];
-                    Marshal.Copy(Source_IntPtr, backup, 0, 0x5);
-                    s_patchedData.Add(src, backup);
-
-                    // Native source address
-                    byte* Pointer_Raw_Source = (byte*)Source_Base;
-
-                    // Pointer to insert jump address into native code
-                    int* Pointer_Raw_Address = (int*)( Pointer_Raw_Source + 1 );
-
-                    // Jump offset (less instruction size)
-                    int offset = ( Destination_Base - Source_Base ) - 5;
-
-                    // Insert 32-bit relative jump into native code
-                    *Pointer_Raw_Source = 0xE9;
-                    *Pointer_Raw_Address = offset;
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"Unable to detour: {src?.Name ?? "UnknownSrc"} -> {dst?.Name ?? "UnknownDst"}\n{ex}");
-                throw;
-            }
-        }
-        
-        public static unsafe void RestoreDetour(MethodInfo src) {
-            var Source_IntPtr = src.MethodHandle.GetFunctionPointer();
-            var backup = s_patchedData[src];
-            Marshal.Copy(backup, 0, Source_IntPtr, backup.Length);
-            s_patchedData.Remove(src);
-        }
-        // End of Detour Methods
     }
 
     public class PersistentData
@@ -645,7 +558,7 @@ namespace Thry
 
         //===============TGA Loader by aaro4130 https://forum.unity.com/threads/tga-loader-for-unity3d.172291/==============
 
-        public static Texture2D LoadTGA(string TGAFile, bool displayProgressbar = false)
+        public static Texture2D LoadTGA(string TGAFile)
         {
             using (BinaryReader r = new BinaryReader(File.Open(TGAFile, FileMode.Open)))
             {
@@ -663,74 +576,60 @@ namespace Thry
                 byte ImageDescriptor = r.ReadByte();
                 if (ImageType == 0)
                 {
-                    EditorUtility.DisplayDialog("Error", "Unsupported TGA file! No image data", "OK");
-                    Debug.LogError("Unsupported TGA file! No image data");
+                    Debug.Log("Unsupported TGA file! No image data");
                 }
                 else if (ImageType == 3 | ImageType == 11)
                 {
-                    EditorUtility.DisplayDialog("Error", "Unsupported TGA file! 8-bit grayscale images are not supported", "OK");
-                    Debug.LogError("Unsupported TGA file! Not truecolor");
+                    Debug.Log("Unsupported TGA file! Not truecolor");
                 }
                 else if (ImageType == 9 | ImageType == 10)
                 {
-                    EditorUtility.DisplayDialog("Error", "Unsupported TGA file! Run-length encoded images are not supported", "OK");
-                    Debug.LogError("Unsupported TGA file! Colormapped");
+                    Debug.Log("Unsupported TGA file! Colormapped");
 
                 }
-                bool startsAtTop = (ImageDescriptor & 1 << 5) >> 5 == 1;
-                bool startsAtRight = (ImageDescriptor & 1 << 4) >> 4 == 1;
                 //     MsgBox("Dimensions are "  Width  ","  Height)
                 Texture2D b = new Texture2D(Width, Height, TextureFormat.ARGB32, false);
-                Color[] colors = new Color[Width * Height];
-                int texX = 0;
-                int texY = 0;
-                int index = 0;
-                float red = 0, green = 0, blue = 0, alpha = 0;
-                Byte[] bytes = r.ReadBytes((PixelDepth == 32 ? 4 : 3) * Width * Height);
-                
-                int byteIndex = 0;
-                for (int y = 0; y < b.height; y++)
+                for (int y = 0; y <= b.height - 1; y++)
                 {
-                    if(displayProgressbar && y % 50 == 0) EditorUtility.DisplayProgressBar("Loading Raw TGA", "Loading " + TGAFile, (float)y / b.height);
-                    for (int x = 0; x < b.width; x++)
+                    for (int x = 0; x <= b.width - 1; x++)
                     {
-                        texX = x;
-                        texY = y;
-                        if(startsAtRight) texX = b.width - x - 1;
-                        if(startsAtTop) texY = b.height - y - 1;
-                        index = texX + texY * b.width;
-
-                        blue = Convert.ToSingle(bytes[byteIndex++]);
-                        green = Convert.ToSingle(bytes[byteIndex++]);
-                        red = Convert.ToSingle(bytes[byteIndex++]);
-
-                        blue = Mathf.Pow(blue / 255, 0.45454545454f);
-                        green = Mathf.Pow(green / 255, 0.45454545454f);
-                        red = Mathf.Pow(red / 255, 0.45454545454f);
-
-                        // blue /= 255;
-                        // green /= 255;
-                        // red /= 255;
-
-                        colors[index].r = red;
-                        colors[index].g = green;
-                        colors[index].b = blue;
 
                         if (PixelDepth == 32)
                         {
-                            alpha = Convert.ToSingle(bytes[byteIndex++]);
+
+                            float red = Convert.ToSingle(r.ReadByte());
+                            float green = Convert.ToSingle(r.ReadByte());
+                            float blue = Convert.ToSingle(r.ReadByte());
+                            float alpha = Convert.ToSingle(r.ReadByte());
                             alpha /= 255;
-                            colors[index].a = alpha;
+                            green /= 255;
+                            blue /= 255;
+                            red /= 255;
+                            Color cl = new Color(blue, green, red, alpha);
+                            b.SetPixel(x, y, cl);
+
+
                         }
                         else
                         {
-                            colors[index].a = 1;
+
+                            float red = Convert.ToSingle(r.ReadByte());
+                            float green = Convert.ToSingle(r.ReadByte());
+                            float blue = Convert.ToSingle(r.ReadByte());
+
+
+                            green = Mathf.Pow(green / 255, 1 / 2.2f);
+                            blue = Mathf.Pow(blue / 255, 1 / 2.2f);
+                            red = Mathf.Pow(red / 255, 1 / 2.2f);
+                            Color cl = new Color(blue, green, red, 1);
+                            b.SetPixel(x, y, cl);
+
+
                         }
+
                     }
                 }
-                b.SetPixels(colors);
                 b.Apply();
-                if(displayProgressbar) EditorUtility.ClearProgressBar();
 
                 return b;
             }
@@ -743,13 +642,16 @@ namespace Thry
         { TextureImporterFormat.BC7 , 8 },
         { TextureImporterFormat.DXT5 , 8 },
         { TextureImporterFormat.DXT5Crunched , 8 },
+        { TextureImporterFormat.RGBA64 , 64 },
         { TextureImporterFormat.RGBA32 , 32 },
         { TextureImporterFormat.RGBA16 , 16 },
         { TextureImporterFormat.DXT1 , 4 },
         { TextureImporterFormat.DXT1Crunched , 4 },
+        { TextureImporterFormat.RGB48 , 64 },
         { TextureImporterFormat.RGB24 , 32 },
         { TextureImporterFormat.RGB16 , 16 },
         { TextureImporterFormat.BC5 , 8 },
+        { TextureImporterFormat.RG32 , 32 },
         { TextureImporterFormat.BC4 , 4 },
         { TextureImporterFormat.R8 , 8 },
         { TextureImporterFormat.R16 , 16 },
@@ -764,12 +666,7 @@ namespace Thry
         { TextureImporterFormat.PVRTC_RGB2 , 2 },
         { TextureImporterFormat.PVRTC_RGB4 , 4 },
         { TextureImporterFormat.ARGB32 , 32 },
-        { TextureImporterFormat.ARGB16 , 16 },
-        #if (UNITY_2020_1_OR_NEWER || UNITY_2019_4_23 || UNITY_2019_4_24 || UNITY_2019_4_25 || UNITY_2019_4_26 || UNITY_2019_4_27 || UNITY_2019_4_28 || UNITY_2019_4_29 || UNITY_2019_4_30 || UNITY_2019_4_31 || UNITY_2019_4_32 || UNITY_2019_4_33 || UNITY_2019_4_34 || UNITY_2019_4_35 || UNITY_2019_4_36 || UNITY_2019_4_37 || UNITY_2019_4_38 || UNITY_2019_4_39 || UNITY_2019_4_40)
-        { TextureImporterFormat.RGBA64 , 64 },
-        { TextureImporterFormat.RGB48 , 64 },
-        { TextureImporterFormat.RG32 , 32 },
-        #endif
+        { TextureImporterFormat.ARGB16 , 16 }
     };
 
             static Dictionary<RenderTextureFormat, int> RT_BPP = new Dictionary<RenderTextureFormat, int>()
@@ -894,10 +791,10 @@ namespace Thry
         public static void SetMaterialValue(string key, string value)
         {
             Material[] materials = ShaderEditor.Active.Materials;
-            if (ShaderEditor.Active.PropertyDictionary.TryGetValue(key, out ShaderProperty p))
+            MaterialProperty p = ShaderEditor.Active.GetMaterialProperty(key);
+            if (p != null)
             {
-                MaterialHelper.SetMaterialPropertyValue(p.MaterialProperty, value);
-                p.UpdateKeywordFromValue();
+                MaterialHelper.SetMaterialPropertyValue(p, value);
             }
             else if (key == "render_queue")
             {
@@ -922,8 +819,13 @@ namespace Thry
             }
             else if (p.type == MaterialProperty.PropType.Float || p.type == MaterialProperty.PropType.Range)
             {
-                prev = p.floatValue;
-                p.floatValue = Parser.ParseFloat(value, p.floatValue);
+                float f_value;
+                if (float.TryParse(Parser.GlobalizationFloat(value), out f_value))
+                {
+                    prev = p.floatValue;
+                    p.floatValue = f_value;
+                    
+                }
             }
             else if (p.type == MaterialProperty.PropType.Vector)
             {
@@ -941,7 +843,6 @@ namespace Thry
 
         public static void CopyPropertyValueFromMaterial(MaterialProperty p, Material source)
         {
-            if (!source.HasProperty(p.name)) return;
             object prev = null;
             switch (p.type)
             {
@@ -1216,45 +1117,16 @@ namespace Thry
             return new Color(col1.r - col2.r, col1.g - col2.g, col1.b - col2.b);
         }
 
-        public static Texture2D ColorToTexture(Color color, int width, int height)
+        public static Texture2D GradientToTexture(Gradient gradient, int width, int height)
         {
             width = Mathf.Max(0, Mathf.Min(8192, width));
             height = Mathf.Max(0, Mathf.Min(8192, height));
             Texture2D texture = new Texture2D(width, height);
             for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y < height; y++)
-                {
-                    texture.SetPixel(x, y, color);
-                }
+                Color col = gradient.Evaluate((float)x / width);
+                for (int y = 0; y < height; y++) texture.SetPixel(x, y, col);
             }
-            texture.Apply();
-            return texture;
-        }
-        
-        public static Texture2D GradientToTexture(Gradient gradient, int width, int height, bool vertical = false)
-        {
-            width = Mathf.Max(0, Mathf.Min(8192, width));
-            height = Mathf.Max(0, Mathf.Min(8192, height));
-            Texture2D texture = new Texture2D(width, height);
-            Color col;
-            if(vertical)
-            {
-                for (int y = 0; y < height; y++)
-                {
-                    col = gradient.Evaluate((float)y / height);
-                    for (int x = 0; x < width; x++) texture.SetPixel(x, y, col);
-                }
-            }else
-            {
-                for (int x = 0; x < width; x++)
-                {
-                    col = gradient.Evaluate((float)x / width);
-                    for (int y = 0; y < height; y++) texture.SetPixel(x, y, col);
-                }
-            }
-            texture.wrapMode = TextureWrapMode.Clamp;
-            texture.filterMode = FilterMode.Bilinear;
             texture.Apply();
             return texture;
         }
@@ -1564,122 +1436,290 @@ namespace Thry
         }
         //------------Track ShaderEditor shaders-------------------
 
-        // [MenuItem("Thry/Shader Editor/Test")]
-        // public static void Test()
-        // {
-        //     Shader shader = Shader.Find(".poiyomi/Poiyomi 8.1/Poiyomi Pro");
-        //     Debug.Log(IsShaderUsingThryEditor(shader));
-        // }
-
-        public static bool IsShaderUsingThryEditor(Shader shader)
+        public class ShaderEditorShader
         {
-            return IsShaderUsingThryEditor(new Material(shader));
-        }
-        public static bool IsShaderUsingThryEditor(Material material)
-        {
-            return IsShaderUsingThryEditor(MaterialEditor.CreateEditor(material) as MaterialEditor);
-        }
-        public static bool IsShaderUsingThryEditor(MaterialEditor materialEditor)
-        {
-            PropertyInfo shaderGUIProperty = typeof(MaterialEditor).GetProperty("customShaderGUI");
-            var gui = shaderGUIProperty.GetValue(materialEditor);
-            // gui is null for some shaders. I think it has to do with packages maybe
-            return (gui != null) && gui.GetType() == typeof(ShaderEditor);
+            public string path;
+            public string name;
+            public string version;
+            public bool isUsingEditor;
         }
 
-        internal static List<(string prop, List<string> keywords)> GetPropertyKeywordsForShader(Shader s)
+        private static List<ShaderEditorShader> shaders;
+        private static Dictionary<string, ShaderEditorShader> dictionary;
+        public static List<ShaderEditorShader> thry_editor_shaders
         {
-            List<(string prop, List<string> keywords)> list = new List<(string prop, List<string> keywords)>();
-
-            for (int i = 0; i < s.GetPropertyCount(); i++)
+            get
             {
-                if (s.GetPropertyType(i) == UnityEngine.Rendering.ShaderPropertyType.Float)
-                {
-                    string prop = s.GetPropertyName(i);
-                    List<string> keywords = null;
-                    keywords = GetKeywordsFromShaderProperty(s, prop);
+                Init();
+                return shaders;
+            }
+        }
 
-                    if(keywords.Count == 0)
-                        continue;
-                    else
-                        list.Add((prop, keywords));
+        private static void Init()
+        {
+            if (shaders == null)
+                LoadShaderEditorShaders();
+        }
+
+        private static void Add(ShaderEditorShader s)
+        {
+            Init();
+            if (dictionary == null || s == null) return;
+            if (!dictionary.ContainsKey(s.name))
+            {
+                dictionary.Add(s.name, s);
+                shaders.Add(s);
+            }
+        }
+
+        private static void RemoveAt(int i)
+        {
+            Init();
+            if (dictionary == null || i >= shaders.Count() || shaders[i] == null) return;
+            if (dictionary.ContainsKey(shaders[i].name))
+            {
+                dictionary.Remove(shaders[i].name);
+                shaders.RemoveAt(i--);
+            }
+        }
+
+        public static string[] GetShaderEditorShaderNames()
+        {
+            string[] r = new string[thry_editor_shaders.Count];
+            for (int i = 0; i < r.Length; i++)
+                r[i] = thry_editor_shaders[i].name;
+            return r;
+        }
+
+        public static bool IsShaderUsingShaderEditor(Shader shader)
+        {
+            Init();
+            return dictionary.ContainsKey(shader.name);
+        }
+
+
+        private static void LoadShaderEditorShaders()
+        {
+            string data = FileHelper.ReadFileIntoString(PATH.THRY_EDITOR_SHADERS);
+            if (data != "")
+            {
+                shaders = Parser.ParseToObject<List<ShaderEditorShader>>(data);
+                InitDictionary();
+            }
+            else
+            {
+                dictionary = new Dictionary<string, ShaderEditorShader>();
+                SearchAllShadersForShaderEditorUsage();
+            }
+            DeleteNull();
+        }
+
+        private static void InitDictionary()
+        {
+            dictionary = new Dictionary<string, ShaderEditorShader>();
+            foreach (ShaderEditorShader s in shaders)
+            {
+                if (s != null && s.name != null && dictionary.ContainsKey(s.name) == false)
+                    dictionary.Add(s.name, s);
+            }
+        }
+
+        public static void SearchAllShadersForShaderEditorUsage()
+        {
+            shaders = new List<ShaderEditorShader>();
+            string[] guids = AssetDatabase.FindAssets("t:shader");
+            foreach (string g in guids)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(g);
+                TestShaderForShaderEditor(path);
+            }
+            Save();
+        }
+
+        private static void DeleteNull()
+        {
+            bool save = false;
+            int length = shaders.Count;
+            for (int i = 0; i < length; i++)
+            {
+                if (shaders[i] == null)
+                {
+                    RemoveAt(i--);
+                    length--;
+                    save = true;
                 }
             }
-
-            return list;
+            if (save)
+                Save();
         }
 
-        // Logic Adapted from unity's reference implementation
-        /// <summary> Returns a list of keywords for a given shader property. </summary>
-        internal static List<string> GetKeywordsFromShaderProperty(Shader shader, string propertyName)
+        private static void Save()
         {
-            List<string> keywords = new List<string>();
-            if (string.IsNullOrEmpty(propertyName)) 
-                return keywords;
-            
-            int propertyIndex = shader.FindPropertyIndex(propertyName);
-            if (propertyIndex < 0) 
-                return keywords;
+            FileHelper.WriteStringToFile(Parser.ObjectToString(shaders), PATH.THRY_EDITOR_SHADERS);
+        }
 
-            string[] attributes = shader.GetPropertyAttributes(propertyIndex);
-            if (attributes.Length == 0 || attributes == null) 
-                return keywords;
+        private static string GetActiveCustomEditorParagraph(string code)
+        {
+            Match match = Regex.Match(code, @"(^|\*\/)((.|\n)(?!(\/\*)))*CustomEditor\s*\""(\w|\d)*\""((.|\n)(?!(\/\*)))*");
+            if (match.Success) return match.Value;
+            return null;
+        }
 
-            foreach (string attribute in attributes)
+        private static bool ParagraphContainsActiveShaderEditorDefinition(string code)
+        {
+            Match match = Regex.Match(code, @"\n\s+CustomEditor\s+\""ShaderEditor\""");
+            return match.Success;
+        }
+
+        private static bool ShaderUsesShaderEditor(string code)
+        {
+            string activeCustomEditorParagraph = GetActiveCustomEditorParagraph(code);
+            if (activeCustomEditorParagraph == null)
+                return false;
+            return ParagraphContainsActiveShaderEditorDefinition(activeCustomEditorParagraph);
+        }
+
+        private static bool TestShaderForShaderEditor(string path)
+        {
+            string code = FileHelper.ReadFileIntoString(path);
+            if (ShaderUsesShaderEditor(code))
             {
-                string args = "";
-                // Regex based on Unity's reference implementation: Match a string of the form Keyword(Argument) and capture its components
-                //   (\w+)    - Match a word (keyword name)
-                //   \s*\(\s* - Match an opening parenthesis, allowing whitespace before and after
-                //   ([^)]*)  - Match any number of characters that are not a closing parenthesis, and capture them into a group
-                //   \s*\)    - Match a closing parenthesis, allowing whitespace before and after
-                const string propertyDrawerRegex = @"(\w+)\s*\(\s*([^)]*)\s*\)";
+                ShaderEditorShader shader = new ShaderEditorShader();
+                shader.path = path;
+                Match name_match = Regex.Match(code, @"(?<=[Ss]hader)\s*\""[^\""]+(?=\""\s*{)");
+                if (name_match.Success) shader.name = name_match.Value.TrimStart(new char[] { ' ', '"' });
+                Match master_label_match = Regex.Match(code, @"\[HideInInspector\]\s*shader_master_label\s*\(\s*\""[^\""]*(?=\"")");
+                if (master_label_match.Success) shader.version = GetVersionFromMasterLabel(master_label_match.Value);
+                Add(shader);
+                return true;
+            }
+            return false;
+        }
 
-                Match regexMatch = Regex.Match(attribute, propertyDrawerRegex);
-                if (regexMatch.Success)
+        private static string GetVersionFromMasterLabel(string label)
+        {
+            Match match = Regex.Match(label, @"(?<=v|V)\d+(\.\d+)*");
+            if (!match.Success)
+                match = Regex.Match(label, @"\d+(\.\d+)+");
+            if (match.Success)
+                return match.Value;
+            return null;
+        }
+
+        public static void AssetsImported(string[] paths)
+        {
+            bool save = false;
+            foreach (string path in paths)
+            {
+                if (!path.EndsWith(".shader"))
+                    continue;
+                if (TestShaderForShaderEditor(path))
+                    save = true;
+            }
+            if (save)
+                Save();
+        }
+
+        public static void AssetsDeleted(string[] paths)
+        {
+            bool save = false;
+            foreach (string path in paths)
+            {
+                if (!path.EndsWith(".shader"))
+                    continue;
+                int length = thry_editor_shaders.Count;
+                for (int i = 0; i < length; i++)
                 {
-                    string className = regexMatch.Groups[1].Value;
-                    args = regexMatch.Groups[2].Value.Trim();
-
-                    // Note that we don't handle ToggleOff as it would require extra logic to differentiate
-                    if(className == "Toggle") // Unity Toggle drawer, toggles a keyword directly if provided as [Toggle(KEYWORD)] and toggles PropertyName
+                    if (thry_editor_shaders[i] != null && thry_editor_shaders[i].path == path)
                     {
-                        if(string.IsNullOrEmpty(args))
-                            keywords.Add(GetUnityKeywordName(propertyName, "ON"));
-                        else
-                            keywords.Add(args);
-                        break;
+                        RemoveAt(i--);
+                        length--;
+                        save = true;
                     }
-                    else if(className == "ThryToggle") // Thry Toggle drawer, toggles a keyword directly if provided as [Toggle(KEYWORD)]
+                }
+            }
+            if (save)
+                Save();
+        }
+
+        public static void AssetsMoved(string[] old_paths, string[] paths)
+        {
+            bool save = false;
+            for (int i = 0; i < paths.Length; i++)
+            {
+                if (!paths[i].EndsWith(".shader"))
+                    continue;
+                foreach (ShaderEditorShader s in thry_editor_shaders)
+                {
+                    if (s == null) continue;
+                    if (s.path == old_paths[i])
                     {
-                        // We only care about the first argument, the second is for UI
-                        if(args.Contains(","))
-                            args = args.Split(',')[0];
-
-                        // Ignore ThryToggle's bools, since otherwise we get keywords that have the same name as HLSL language keywords
-                        if(args != "false" && args != "true")
-                            keywords.Add(args);
-
-                        break;
+                        s.path = paths[i];
+                        save = true;
                     }
-                    else if(className == "KeywordEnum") // Keyword enum, enables one keyword out of a list of keywords provided as [KeywordEnum(KEYWORD1,KEYWORD2,KEYWORD3)]
+                }
+            }
+            if (save)
+                Save();
+        }
+
+        static Dictionary<Shader, bool> usingThryShaderEditor = new Dictionary<Shader, bool>();
+        public static bool IsShaderUsingThryShaderEditor(Shader shader)
+        {
+            if (usingThryShaderEditor.ContainsKey(shader)) return usingThryShaderEditor[shader];
+            usingThryShaderEditor[shader] = Enumerable.Range(0, shader.GetPropertyCount()).Any(i => shader.GetPropertyName(i) == ShaderEditor.PROPERTY_NAME_EDITOR_DETECT);
+            return usingThryShaderEditor[shader];
+        }
+
+        static MethodInfo getPropertyHandlerMethod;
+        static PropertyInfo drawerProperty;
+        static FieldInfo keyWordFieldUnityDefault;
+        static FieldInfo keyWordFieldThry;
+        static bool areKeywordDrawerMethodsInit = false;
+        private static void InitKeywordDrawerMethods()
+        {
+            if (areKeywordDrawerMethodsInit) return;
+            Type materialPropertyDrawerType = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.MaterialPropertyHandler");
+            getPropertyHandlerMethod = materialPropertyDrawerType.GetMethod("GetShaderPropertyHandler", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy);
+            drawerProperty = materialPropertyDrawerType.GetProperty("propertyDrawer");
+            Type materialToggleDrawerType = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.MaterialToggleDrawer");
+            keyWordFieldUnityDefault = materialToggleDrawerType.GetField("keyword", BindingFlags.Instance | BindingFlags.NonPublic);
+            keyWordFieldThry = typeof(ThryToggleDrawer).GetField("keyword");
+            areKeywordDrawerMethodsInit = true;
+        }
+
+        public static void EnableDisableKeywordsBasedOnTheirFloatValue(IEnumerable<Material> targets, Shader shader, string propertyName)
+        {
+            InitKeywordDrawerMethods();
+            //Handle keywords
+            object propertyHandler = getPropertyHandlerMethod.Invoke(null, new object[] { shader, propertyName });
+            //if has custom drawer
+            if (propertyHandler != null)
+            {
+                object propertyDrawer = drawerProperty.GetValue(propertyHandler, null);
+                //if custom drawer exists
+                if (propertyDrawer != null)
+                {
+                    // if is keyword drawer make sure all materials have the keyworkd enabled / disabled depending on their value
+                    string keyword = null;
+                    if (propertyDrawer.GetType() == typeof(ThryToggleDrawer)){
+                        keyword = (string)keyWordFieldThry.GetValue(propertyDrawer);
+                    }else if (propertyDrawer.GetType().ToString() == "UnityEditor.MaterialToggleDrawer")
                     {
-                        string[] enumArgs = args.Split(',');
-                        foreach(var enumArg in enumArgs)
+                        keyword = (string)keyWordFieldUnityDefault.GetValue(propertyDrawer);
+                    }                    if(keyword != null) {
+                        foreach (Material m in targets)
                         {
-                            keywords.Add(GetUnityKeywordName(propertyName, enumArg.Trim()));
+                            if (m.GetFloat(propertyName) == 1)
+                                m.EnableKeyword(keyword);
+                            else
+                                m.DisableKeyword(keyword);
                         }
-
-                        break;
                     }
                 }
             }
-            return keywords;
         }
 
-        // Logic from Unity defaults
-        /// <summary> Gets a formatted Keyword name from a shader property name and a keyword name. </summary>
-        private static string GetUnityKeywordName(string propertyName, string keywordName) => $"{propertyName}_{keywordName}".Replace(' ', '_').ToUpperInvariant();
     }
 
     public class StringHelper

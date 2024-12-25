@@ -120,12 +120,7 @@ namespace Poiyomi.ModularShaderSystem.UI
             for (int i = 0; i < _array.arraySize; i++)
             {
                 if (_array.GetArrayElementAtIndex(i).objectReferenceValue != null)
-                {
-                    ShaderModule shaderModule = ((ShaderModule)_array.GetArrayElementAtIndex(i).objectReferenceValue);
-                    if (shaderModule is CibbiExtensions.ModuleCollection)
-                        _loadedModules.AddRange(((CibbiExtensions.ModuleCollection)shaderModule).Modules.Where(x => x != null).Select(x => x.Id));
-                    _loadedModules.Add(shaderModule?.Id);
-                }
+                    _loadedModules.Add(((ShaderModule)_array.GetArrayElementAtIndex(i).objectReferenceValue)?.Id);
             }
 
 
@@ -152,21 +147,9 @@ namespace Poiyomi.ModularShaderSystem.UI
                     var oldValue = (ShaderModule)x.previousValue;
 
                     if (oldValue != null)
-                    {
-                        if (oldValue is CibbiExtensions.ModuleCollection)
-                        {
-                            ((CibbiExtensions.ModuleCollection)oldValue).Modules.Where(y => y != null).Select(y => _loadedModules.Remove(y.Id));
-                        }
                         _loadedModules.Remove(oldValue.Id);
-                    }
                     if (newValue != null)
-                    {
-                        if (newValue is CibbiExtensions.ModuleCollection)
-                        {
-                            _loadedModules.AddRange(((CibbiExtensions.ModuleCollection)newValue).Modules.Where(y => y != null).Select(y => y.Id));
-                        }
                         _loadedModules.Add(newValue.Id);
-                    }
 
                     for (int j = 0; j < _array.arraySize; j++)
                     {
@@ -221,21 +204,6 @@ namespace Poiyomi.ModularShaderSystem.UI
         {
 
             List<string> problems = new List<string>();
-            if (newValue is CibbiExtensions.ModuleCollection)
-            {
-                bool hasDuplicate = false;
-                foreach (var module in ((CibbiExtensions.ModuleCollection)newValue).Modules)
-                {
-                    if (module != null)
-                    {
-                        var moduleId = module.Id;
-                        if (_loadedModules.Count(y => y.Equals(moduleId)) > 1)
-                            hasDuplicate = true;
-                    }
-                }
-                if (hasDuplicate)
-                    problems.Add("The ModuleCollection contains duplicate module(s)");
-            }
 
             if (newValue != null)
             {

@@ -72,21 +72,7 @@ namespace Poiyomi.ModularShaderSystem
                 shader.LastGeneratedShaders = new List<Shader>();
                 
                 foreach (var context in contexts)
-                {
-                    string filePath = $"{path}/" + context.VariantFileName;
-                    if (File.Exists(filePath))
-                    {
-                        FileAttributes fileAttributes = File.GetAttributes(filePath) & ~FileAttributes.ReadOnly;
-                        File.SetAttributes(filePath, fileAttributes);
-                        File.WriteAllText(filePath, context.ShaderFile.ToString());
-                        File.SetAttributes(filePath, fileAttributes | FileAttributes.ReadOnly);
-                    }
-                    else
-                    {
-                        File.WriteAllText(filePath, context.ShaderFile.ToString());
-                        File.SetAttributes(filePath, File.GetAttributes(filePath) | FileAttributes.ReadOnly);
-                    }
-                }
+                    File.WriteAllText($"{path}/" + context.VariantFileName, context.ShaderFile.ToString());
             }
             finally
             {
@@ -334,7 +320,6 @@ namespace Poiyomi.ModularShaderSystem
         private static void AddFreshShaderToList(this Dictionary<TemplateAsset, TemplateAsset> dictionary, TemplateAsset asset)
         {
             if ((object)asset == null) return;
-            if (asset.Equals(null)) return;
             if (dictionary.ContainsKey(asset)) return;
             string assetName = asset.name;
             string assetPath = AssetDatabase.GetAssetPath(asset);
@@ -355,7 +340,6 @@ namespace Poiyomi.ModularShaderSystem
         private static TemplateAsset GetTemplate(this Dictionary<TemplateAsset, TemplateAsset> dictionary, TemplateAsset asset)
         {
             if ((object)asset == null) return null;
-            if (asset.Equals(null)) return null;
             return dictionary.TryGetValue(asset, out TemplateAsset result) ? result : null;
         }
 
@@ -823,28 +807,25 @@ namespace Poiyomi.ModularShaderSystem
         {
             List<ShaderModule> modules = new List<ShaderModule>();
             if (shader == null) return modules;
-            HashSet<string> collectionIDs = new HashSet<string>();
-
-            FindModules(shader.BaseModules.Where(x => x != null), modules, collectionIDs);
-            FindModules(shader.AdditionalModules.Where(x => x != null), modules, collectionIDs);
-            return modules;
+            modules.AddRange(FindModules(shader.BaseModules.Where(x => x != null)));
+            modules.AddRange(FindModules(shader.AdditionalModules.Where(x => x != null)));
+            return modules.Distinct().ToList();
         }
         
-        public static void FindModules(IEnumerable<ShaderModule> modules, List<ShaderModule> output, HashSet<string> collectionIDs)
+        public static List<ShaderModule> FindModules(IEnumerable<ShaderModule> modules)
         {
+            List<ShaderModule> output = new List<ShaderModule>();
             foreach (var module in modules)
             {
                 switch (module)
                 {
-                    case ModuleCollection collection:
-                        if (collectionIDs.Contains(collection.Id)) continue;
-                        collectionIDs.Add(collection.Id);
-                        FindModules(collection.Modules, output, collectionIDs);
+                    case ModuleCollection collection: output.AddRange(collection.Modules.Where(x => x != null)); 
                         break;
                     default: output.Add(module);
                         break;
                 }
-            }
+            } 
+            return output;
         }
 
         public static List<Property> FindAllProperties(ModularShader shader)
@@ -887,24 +868,22 @@ namespace Poiyomi.ModularShaderSystem
         {
             List<ShaderModule> modules = new List<ShaderModule>();
             if (shader == null) return modules;
-            HashSet<string> collectionIDs = new HashSet<string>();
 
-            FindActiveModules(shader.BaseModules, activeEnablers, modules, collectionIDs);
-            FindActiveModules(shader.AdditionalModules, activeEnablers, modules, collectionIDs);
+            modules.AddRange(FindActiveModules(shader.BaseModules, activeEnablers));
+            modules.AddRange(FindActiveModules(shader.AdditionalModules, activeEnablers));
 
             return modules.Distinct().ToList();
         }
 
-        private static void FindActiveModules(IEnumerable<ShaderModule> modules, Dictionary<string, int> activeEnablers, List<ShaderModule> output, HashSet<string> collectionIDs)
+        private static List<ShaderModule> FindActiveModules(IEnumerable<ShaderModule> modules, Dictionary<string, int> activeEnablers)
         {
+            List<ShaderModule> output = new List<ShaderModule>();
             foreach (var module in modules)
             {
                 if (module == null) continue;
                 if (module is ModuleCollection collection)
                 {
-                    if (collectionIDs.Contains(collection.Id)) continue;
-                    collectionIDs.Add(collection.Id);
-                    FindActiveModules(collection.Modules, activeEnablers, output, collectionIDs);
+                    output.AddRange(FindActiveModules(collection.Modules, activeEnablers));
                     continue;
                 }
                 bool hasEnabler = module.EnableProperties.Any(x => x != null && !string.IsNullOrEmpty(x.Name));
@@ -917,6 +896,8 @@ namespace Poiyomi.ModularShaderSystem
                     })))
                     output.Add(module);
             }
+
+            return output;
         }
 
         public static List<string> CheckShaderIssues(ModularShader shader)
@@ -930,25 +911,16 @@ namespace Poiyomi.ModularShaderSystem
                 for (int j = 0; j < modules.Count; j++)
                 {
                     if (modules[j].IncompatibleWith.Any(x => x.Equals(modules[i].Id))) 
-                        errors.Add($"Module \"{modules[j].Name}\" ({modules[j].Id}) is incompatible with module \"{modules[i].name}\" ({modules[i].Id}).");
+                        errors.Add($"Module \"{modules[j].Name}\" is incompatible with module \"{modules[i].name}\".");
                     
                     if (i != j && modules[i].Id.Equals(modules[j].Id))
-                        errors.Add($"Module \"{modules[i].Name}\" ({modules[i].Id}) is duplicate.");
-                    
-                    if (modules[i] is CibbiExtensions.ModuleCollection)
-                    {
-                        foreach (ShaderModule module in ((CibbiExtensions.ModuleCollection)modules[i]).Modules)
-                        {
-                            if (module.Id.Equals(modules[j].Id))
-                                errors.Add($"Module \"{modules[i].Name}\" ({modules[i].Id}) is duplicate in ModuleCollection: {modules[i]?.Name} ({modules[i].Id})");
-                        }
-                    }
+                        errors.Add($"Module \"{modules[i].Name}\" is duplicate.");
                     
                     if (dependencies.Contains(modules[j].Id))
                         dependencies.Remove(modules[j].Id);
                 }
                 foreach (string t in dependencies)
-                    errors.Add($"Module \"{modules[i].Name}\" ({modules[i].Id}) has missing dependency id \"{t}\".");
+                    errors.Add($"Module \"{modules[i].Name}\" has missing dependency id \"{t}\".");
             }
             return errors;
         }
@@ -963,16 +935,16 @@ namespace Poiyomi.ModularShaderSystem
                 for (int j = 0; j < modules.Count; j++)
                 {
                     if (modules[j].IncompatibleWith.Any(x => x.Equals(modules[i].Id))) 
-                        errors.Add($"Module \"{modules[j].Name}\" ({modules[j].Id}) is incompatible with module \"{modules[i].name}\" ({modules[i].Id}).");
+                        errors.Add($"Module \"{modules[j].Name}\" is incompatible with module \"{modules[i].name}\".");
                     
                     if (i != j && modules[i].Id.Equals(modules[j].Id))
-                        errors.Add($"Module \"{modules[i].Name}\" ({modules[i].Id}) is duplicate.");
+                        errors.Add($"Module \"{modules[i].Name}\" is duplicate.");
                     
                     if (dependencies.Contains(modules[j].Id))
                         dependencies.Remove(modules[j].Id);
                 }
                 foreach (string t in dependencies)
-                    errors.Add($"Module \"{modules[i].Name}\" ({modules[i].Id}) has missing dependency id \"{t}\".");
+                    errors.Add($"Module \"{modules[i].Name}\" has missing dependency id \"{t}\".");
             }
             return errors;
         }

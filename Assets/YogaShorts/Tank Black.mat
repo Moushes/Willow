@@ -8,10 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Tank Black
-  m_Shader: {fileID: 4800000, guid: 76a3501b6f96f874abe72562d44fcceb, type: 3}
+  m_Shader: {fileID: 4800000, guid: 06a0938bcfb8c8147991306fd131fba7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - DISTORT
   - POI_ENVIRORIM
   - POI_UDIMDISCARD
@@ -21,12 +22,12 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
+    AllLockedGUIDS: ff31c35d8f64fb642bbf44a269faca3a
     OptimizedShaderFolder: M_Shorts
     OriginalKeywords: DISTORT POI_ENVIRORIM POI_UDIMDISCARD VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF
       _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
@@ -3339,7 +3340,7 @@ Material:
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
     - _ShadeColor_StepAnimated: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -4137,10 +4138,10 @@ Material:
     - m_lightingOptions: 1
     - m_mainCategory: 1
     - m_mainOptions: 1
-    - m_modifierCategory: 0
+    - m_modifierCategory: 1
     - m_outlineOptions: 0
     - m_postprocessing: 0
-    - m_renderingCategory: 0
+    - m_renderingCategory: 1
     - m_renderingOptions: 0
     - m_specialFXCategory: 1
     - m_start_ALDecalSpectrum: 0

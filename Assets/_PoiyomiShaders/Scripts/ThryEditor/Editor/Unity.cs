@@ -14,13 +14,6 @@ namespace Thry
 {
     public class UnityHelper
     {
-        [MenuItem("Assets/Thry/Copy GUID")]
-        public static void CopyGUID()
-        {
-            string guid = AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Selection.activeObject));
-            EditorGUIUtility.systemCopyBuffer = guid;
-        }
-
         public static List<string> FindAssetsWithFilename(string filename)
         {
             string[] guids = AssetDatabase.FindAssets(Path.GetFileNameWithoutExtension(filename));
@@ -101,16 +94,6 @@ namespace Thry
             string path = AssetDatabase.GetAssetPath(Selection.activeObject);
             if (Directory.Exists(path)) return path;
             else return Path.GetDirectoryName(path);
-        }
-        
-        public static void AddShaderPropertyToSourceCode(string path, string property, string value)
-        {
-            string shaderCode = FileHelper.ReadFileIntoString(path);
-            string pattern = @"Properties.*\n?\s*{";
-            RegexOptions options = RegexOptions.Multiline;
-            shaderCode = Regex.Replace(shaderCode, pattern, "Properties \r\n  {" + " \r\n      " + property + "=" + value, options);
-
-            FileHelper.WriteStringToFile(shaderCode, path);
         }
     }
 
@@ -205,6 +188,7 @@ namespace Thry
             ShaderEditor.GetShaderEditorDirectoryPath();
 
             Config.OnCompile();
+            ModuleHandler.OnCompile();
             TrashHandler.EmptyThryTrash();
 
             UnityFixer.CheckAPICompatibility(); //check that Net_2.0 is ApiLevel
@@ -216,18 +200,34 @@ namespace Thry
     {
         static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
         {
+            if (importedAssets.Length > 0)
+                AssetsImported(importedAssets);
             if (deletedAssets.Length > 0)
                 AssetsDeleted(deletedAssets);
+            if (movedAssets.Length > 0)
+                AssetsMoved(movedAssets, movedFromAssetPaths);
+        }
+
+        private static void AssetsImported(string[] assets)
+        {
+            ShaderHelper.AssetsImported(assets);
+        }
+
+        private static void AssetsMoved(string[] movedAssets, string[] movedFromAssetPaths)
+        {
+            ShaderHelper.AssetsMoved(movedFromAssetPaths, movedAssets);
         }
 
         private static void AssetsDeleted(string[] assets)
         {
+            ShaderHelper.AssetsDeleted(assets);
             UnityFixer.OnAssetDeleteCheckDrawingDLL(assets);
             if (CheckForEditorRemove(assets))
             {
-                Debug.Log("[Thry] ShaderEditor is being deleted.");
+                Debug.Log("ShaderEditor is being deleted.");
                 Config.Singleton.verion = "0";
                 Config.Singleton.Save();
+                ModuleHandler.OnEditorRemove();
             }
         }
 

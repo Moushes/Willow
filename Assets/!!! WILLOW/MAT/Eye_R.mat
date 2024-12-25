@@ -21,9 +21,9 @@ Material:
   - _EMISSION
   - _LIGHTINGMODE_FLAT
   - _RIM2STYLE_POIYOMI
-  - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
   - _SUNDISK_SIMPLE
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

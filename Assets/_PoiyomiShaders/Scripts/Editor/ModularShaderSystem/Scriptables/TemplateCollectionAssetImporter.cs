@@ -3,19 +3,15 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-#if UNITY_2020_2_OR_NEWER
-using UnityEditor.AssetImporters;
-#else
-using UnityEditor.Experimental.AssetImporters;
-#endif
+
 using UnityEngine;
 
 namespace Poiyomi.ModularShaderSystem
 {
-    [ScriptedImporter(1, MSSConstants.TEMPLATE_COLLECTION_EXTENSION)]
-    public class TemplateColletionAssetImporter : ScriptedImporter
+    [UnityEditor.AssetImporters.ScriptedImporter(1, MSSConstants.TEMPLATE_COLLECTION_EXTENSION)]
+    public class TemplateColletionAssetImporter : UnityEditor.AssetImporters.ScriptedImporter
     {
-        public override void OnImportAsset(AssetImportContext ctx)
+        public override void OnImportAsset(UnityEditor.AssetImporters.AssetImportContext ctx)
         {
             var subAsset = ScriptableObject.CreateInstance<TemplateCollectionAsset>();
             
@@ -61,7 +57,7 @@ namespace Poiyomi.ModularShaderSystem
             ctx.SetMainObject(subAsset);
         }
 
-        private static void SaveSubAsset(AssetImportContext ctx, TemplateCollectionAsset asset, StringBuilder builder, string name)
+        private static void SaveSubAsset(UnityEditor.AssetImporters.AssetImportContext ctx, TemplateCollectionAsset asset, StringBuilder builder, string name)
         {
             var templateAsset = ScriptableObject.CreateInstance<TemplateAsset>();
             templateAsset.Template = builder.ToString();

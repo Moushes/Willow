@@ -17,7 +17,14 @@ MonoBehaviour:
   Version: 1.0
   Author: Poiyomi
   Description: 
-  EnableProperties: []
+  Enabled:
+    Name: 
+    DisplayName: 
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 0
   Properties: []
   ModuleDependencies: []
   IncompatibleWith: []
@@ -51,8 +58,8 @@ MonoBehaviour:
   - Template: {fileID: 5505961644144012038, guid: 01ea791aea70edf4ca86b6cfd7d62803,
       type: 3}
     Keywords:
-    - FRAGMENT_BASE_LIGHTING_LATE
-    - FRAGMENT_ADD_LIGHTING_LATE
+    - FRAGMENT_BASE_LIGHTING_EARLY
+    - FRAGMENT_ADD_LIGHTING_EARLY
     NeedsVariant: 0
     Queue: 100
   Functions: []

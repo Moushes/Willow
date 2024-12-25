@@ -2,15 +2,27 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Metal
-  m_Shader: {fileID: 4800000, guid: 571da8bef11821445a3e0a1721c0facf, type: 3}
-  m_ShaderKeywords: DISTORT POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE POI_LIGHT_DATA_ADDITIVE_ENABLE
-    POI_MATCAP0 POI_VERTEXLIGHT_ON VIGNETTE_MASKED _SUNDISK_SIMPLE
+  m_Shader: {fileID: 4800000, guid: 1787129096f7e4d45814aa4d2a62d45c, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - DISTORT
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_MATCAP0
+  - POI_VERTEXLIGHT_ON
+  - VIGNETTE_MASKED
+  - _LIGHTINGMODE_FLAT
+  - _RIMSTYLE_POIYOMI
+  - _SUNDISK_SIMPLE
+  m_InvalidKeywords:
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,6 +33,7 @@ Material:
     _DissolveAlphaAnimated: 2
     _DissolveEdgeHueShiftAnimated: 1
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -456,6 +469,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Instancing: 0
     - _1st2nd_Shades_Feather: 0.0001
@@ -1429,7 +1443,7 @@ Material:
     - _ScrollingEmission3: 0
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShadingEnabled: 1
     - _ShadingShadeMapBlendType: 0
     - _Shadow2ndBlur: 0.3
@@ -2032,3 +2046,4 @@ Material:
     - _VertexRoundingRangeAL: {r: 0, g: 0, b: 0, a: 1}
     - _VertexWorldTranslationALMax: {r: 0, g: 0, b: 0, a: 1}
     - _VertexWorldTranslationALMin: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

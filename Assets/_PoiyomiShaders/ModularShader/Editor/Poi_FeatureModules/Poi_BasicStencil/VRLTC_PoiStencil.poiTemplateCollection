@@ -34,14 +34,14 @@ Stencil
     Ref [_StencilRef]
     ReadMask [_StencilReadMask]
     WriteMask [_StencilWriteMask]
-//ifex _StencilType==1
+//ifex _StencilType == 0
     Comp [_StencilCompareFunction]
     Pass [_StencilPassOp]
     Fail [_StencilFailOp]
     ZFail [_StencilZFailOp]
 //endex
 
-//ifex _StencilType==0
+//ifex _StencilType == 1
     CompBack [_StencilBackCompareFunction]
     PassBack [_StencilBackPassOp]
     FailBack [_StencilBackFailOp]

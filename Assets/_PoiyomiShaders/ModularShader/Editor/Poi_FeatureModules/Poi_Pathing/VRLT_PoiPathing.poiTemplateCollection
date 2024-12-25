@@ -5,11 +5,11 @@
 [Enum(Split Channels, 0, Merged Channels, 1)]_PathGradientType ("Gradient Type", Float) = 0
 [ToggleUI]_PathingOverrideAlpha ("Override alpha", Float) = 0
 //[ThryExternalTextureToolDrawer(Flood Tool, DreadScripts.GradientFlood)]
-[sRGBWarning][ThryRGBAPacker(R Path, G Path, B Path, A Path)]_PathingMap ("RGBA Path Map--{reference_properties:[_PathingMapPan, _PathingMapUV]}", 2D) = "white" { }
-[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)]_PathingMapUV ("UV", Int) = 0
+[ThryRGBAPacker(R Path, G Path, B Path, A Path)]_PathingMap ("RGBA Path Map--{reference_properties:[_PathingMapPan, _PathingMapUV]}", 2D) = "white" { }
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)]_PathingMapUV ("UV", Int) = 0
 [HideInInspector][Vector2]_PathingMapPan ("Panning", Vector) = (0, 0, 0, 0)
-[sRGBWarning(true)][ThryRGBAPacker(1, RGB Color, A Mask, 1)]_PathingColorMap ("Color & Mask (Expand)--{reference_properties:[_PathingColorMapPan, _PathingColorMapUV]}", 2D) = "white" { }
-[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)]_PathingColorMapUV ("UV", Int) = 0
+[ThryRGBAPacker(1, RGB Color, A Mask, 1)]_PathingColorMap ("Color & Mask (Expand)--{reference_properties:[_PathingColorMapPan, _PathingColorMapUV]}", 2D) = "white" { }
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)]_PathingColorMapUV ("UV", Int) = 0
 [HideInInspector][Vector2]_PathingColorMapPan ("Panning", Vector) = (0, 0, 0, 0)
 
 [Enum(Fill, 0, Path, 1, Loop, 2)]_PathTypeR ("R Path Type", Float) = 0
@@ -26,66 +26,57 @@
 [HDR]_PathColorA ("A Color--{reference_property:_PathColorAThemeIndex}", Color) = (1, 1, 1)
 [HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _PathColorAThemeIndex ("", Int) = 0
 
-[VectorLabel(R,G,B,A)]_PathEmissionStrength ("Emission Strength", Vector) = (0.0, 0.0, 0.0, 0.0)
-[VectorLabel(R,G,B,A)]_PathSoftness ("Softness", Vector) = (1, 1, 1, 1)
-[VectorLabel(R,G,B,A)]_PathSpeed ("Speed", Vector) = (1.0, 1.0, 1.0, 1.0)
-[VectorLabel(R,G,B,A)]_PathWidth ("Length", Vector) = (0.03, 0.03, 0.03, 0.03)
+_PathEmissionStrength ("Emission Strength", Vector) = (0.0, 0.0, 0.0, 0.0)
+_PathSoftness ("Softness", Vector) = (1, 1, 1, 1)
+_PathSpeed ("Speed", Vector) = (1.0, 1.0, 1.0, 1.0)
+_PathWidth ("Length", Vector) = (0.03, 0.03, 0.03, 0.03)
 
 [Header(Timing Options)]
-[VectorLabel(R,G,B,A)]_PathTime ("Manual Timing", Vector) = (-999.0, -999.0, -999.0, -999.0)
-[VectorLabel(R,G,B,A)]_PathOffset ("Timing Offset", Vector) = (0.0, 0.0, 0.0, 0.0)
-[VectorLabel(R,G,B,A)]_PathSegments ("Path Segments", Vector) = (0.0, 0.0, 0.0, 0.0)
+_PathTime ("Manual Timing", Vector) = (-999.0, -999.0, -999.0, -999.0)
+_PathOffset ("Timing Offset", Vector) = (0.0, 0.0, 0.0, 0.0)
+_PathSegments ("Path Segments", Vector) = (0.0, 0.0, 0.0, 0.0)
 
 [HideInInspector] m_start_PathAudioLink ("Audio Link ♫--{ condition_showS:_EnableAudioLink==1}", Float) = 0
 // Time Offsets
 [ThryToggleUI(true)]_PathALTimeOffset ("<size=13><b>  Time Offset</b></size>", Float) = 0
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathTimeOffsetBandR ("Band	R--{condition_showS:(_PathALTimeOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathTimeOffsetR ("Offset	R--{condition_showS:(_PathALTimeOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathTimeOffsetR ("Offset	R--{condition_showS:(_PathALTimeOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathTimeOffsetBandG ("Band	G--{condition_showS:(_PathALTimeOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathTimeOffsetG ("Offset	G--{condition_showS:(_PathALTimeOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathTimeOffsetG ("Offset	G--{condition_showS:(_PathALTimeOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathTimeOffsetBandB ("Band	B--{condition_showS:(_PathALTimeOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathTimeOffsetB ("Offset	B--{condition_showS:(_PathALTimeOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathTimeOffsetB ("Offset	B--{condition_showS:(_PathALTimeOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathTimeOffsetBandA ("Band	A--{condition_showS:(_PathALTimeOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathTimeOffsetA ("Offset	A--{condition_showS:(_PathALTimeOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathTimeOffsetA ("Offset	A--{condition_showS:(_PathALTimeOffset==1)}", Vector) = (0, 0, 0)
 [Space(4)]
 [ThryToggleUI(true)]_PathALEmissionOffset ("<size=13><b>  Emission Offset</b></size>", Float) = 0
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathEmissionAddBandR ("Band	R--{condition_showS:(_PathALEmissionOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathEmissionAddR ("Offset	R--{condition_showS:(_PathALEmissionOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathEmissionAddR ("Offset	R--{condition_showS:(_PathALEmissionOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathEmissionAddBandG ("Band	G--{condition_showS:(_PathALEmissionOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathEmissionAddG ("Offset	G--{condition_showS:(_PathALEmissionOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathEmissionAddG ("Offset	G--{condition_showS:(_PathALEmissionOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathEmissionAddBandB ("Band	B--{condition_showS:(_PathALEmissionOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathEmissionAddB ("Offset	B--{condition_showS:(_PathALEmissionOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathEmissionAddB ("Offset	B--{condition_showS:(_PathALEmissionOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathEmissionAddBandA ("Band	A--{condition_showS:(_PathALEmissionOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathEmissionAddA ("Offset	A--{condition_showS:(_PathALEmissionOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathEmissionAddA ("Offset	A--{condition_showS:(_PathALEmissionOffset==1)}", Vector) = (0, 0, 0)
 [Space(4)]
 [ThryToggleUI(true)]_PathALWidthOffset ("<size=13><b>  Width Offset</b></size>", Float) = 0
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathWidthOffsetBandR ("Band	R--{condition_showS:(_PathALWidthOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathWidthOffsetR ("Offset	R--{condition_showS:(_PathALWidthOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathWidthOffsetR ("Offset	R--{condition_showS:(_PathALWidthOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathWidthOffsetBandG ("Band	G--{condition_showS:(_PathALWidthOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathWidthOffsetG ("Offset	G--{condition_showS:(_PathALWidthOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathWidthOffsetG ("Offset	G--{condition_showS:(_PathALWidthOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathWidthOffsetBandB ("Band	B--{condition_showS:(_PathALWidthOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathWidthOffsetB ("Offset	B--{condition_showS:(_PathALWidthOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathWidthOffsetB ("Offset	B--{condition_showS:(_PathALWidthOffset==1)}", Vector) = (0, 0, 0)
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkPathWidthOffsetBandA ("Band	A--{condition_showS:(_PathALWidthOffset==1)}", Int) = 0
-[VectorLabel(Min, Max)]_AudioLinkPathWidthOffsetA ("Offset	A--{condition_showS:(_PathALWidthOffset==1)}", Vector) = (0, 0, 0)
+[Vector2]_AudioLinkPathWidthOffsetA ("Offset	A--{condition_showS:(_PathALWidthOffset==1)}", Vector) = (0, 0, 0)
 [Space(4)]
 [ThryToggleUI(true)]_PathALHistory ("<size=13><b>  History</b></size>", Float) = 0
-[Enum(Mask, 0, Override, 1)] _PathALHistoryMode ("History Mode--{condition_showS:(_PathALHistory==1)}", Float) = 0
-
+[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathALHistoryBandR ("R Band--{condition_showS:(_PathALHistory==1)}", Int) = 0
 [ToggleUI]_PathALHistoryR ("R History--{condition_showS:(_PathALHistory==1)}", Float) = 0
-[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathALHistoryBandR ("R Band--{condition_showS:(_PathALHistory==1 && _PathALHistoryR==1)}", Int) = 0
-[MultiSlider]_PathALHistoryRangeR ("R Range--{condition_showS:(_PathALHistory==1 && _PathALHistoryR==1)}", Vector) = (0, 1, 0, 1)
-
+[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathALHistoryBandG ("G Band--{condition_showS:(_PathALHistory==1)}", Int) = 0
 [ToggleUI]_PathALHistoryG ("G History--{condition_showS:(_PathALHistory==1)}", Float) = 0
-[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathALHistoryBandG ("G Band--{condition_showS:(_PathALHistory==1 && _PathALHistoryG==1)}", Int) = 0
-[MultiSlider]_PathALHistoryRangeG ("G Range--{condition_showS:(_PathALHistory==1 && _PathALHistoryG==1)}", Vector) = (0, 1, 0, 1)
-
+[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathALHistoryBandB ("B Band--{condition_showS:(_PathALHistory==1)}", Int) = 0
 [ToggleUI]_PathALHistoryB ("B History--{condition_showS:(_PathALHistory==1)}", Float) = 0
-[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathALHistoryBandB ("B Band--{condition_showS:(_PathALHistory==1 && _PathALHistoryB==1)}", Int) = 0
-[MultiSlider]_PathALHistoryRangeB ("B Range--{condition_showS:(_PathALHistory==1 && _PathALHistoryB==1)}", Vector) = (0, 1, 0, 1)
-
+[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathALHistoryBandA ("A Band--{condition_showS:(_PathALHistory==1)}", Int) = 0
 [ToggleUI]_PathALHistoryA ("A History--{condition_showS:(_PathALHistory==1)}", Float) = 0
-[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathALHistoryBandA ("A Band--{condition_showS:(_PathALHistory==1 && _PathALHistoryA==1)}", Int) = 0
-[MultiSlider]_PathALHistoryRangeA ("A Range--{condition_showS:(_PathALHistory==1 && _PathALHistoryA==1)}", Vector) = (0, 1, 0, 1)
 [Space(4)]
 [ThryToggleUI(true)]_PathALChrono ("<size=13><b>  Chrono Time</b></size>", Float) = 0
 [Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _PathChronoBandR ("R Band--{condition_showS:(_PathALChrono==1)}", Int) = 0
@@ -102,21 +93,15 @@ _PathChronoSpeedB ("B Speed--{condition_showS:(_PathALChrono==1)}", Float) = 0
 _PathChronoSpeedA ("A Speed--{condition_showS:(_PathALChrono==1)}", Float) = 0
 [Space(4)]
 [ThryToggleUI(true)]_PathALAutoCorrelator ("<size=13><b>  Auto Correlator</b></size>", Float) = 0
-[Enum(Mask, 0, Override, 1)] _PathALAutoCorrelatorMode ("Autocorrelator Mode--{condition_showS:(_PathALAutoCorrelator==1)}", Float) = 0
 [Enum(Off, 0, On, 1, Mirrored, 2)]_PathALAutoCorrelatorR ("R Type--{condition_showS:(_PathALAutoCorrelator==1)}", Int) = 0
-[MultiSlider]_PathALAutoCorrelatorRangeR ("R Range--{condition_showS:(_PathALAutoCorrelator==1 && _PathALAutoCorrelatorR > 0)}", Vector) = (0.1, .9, 0, 1)
 [Enum(Off, 0, On, 1, Mirrored, 2)]_PathALAutoCorrelatorG ("G Type--{condition_showS:(_PathALAutoCorrelator==1)}", Int) = 0
-[MultiSlider]_PathALAutoCorrelatorRangeG ("G Range--{condition_showS:(_PathALAutoCorrelator==1 && _PathALAutoCorrelatorG > 0)}", Vector) = (0.1, .9, 0, 1)
 [Enum(Off, 0, On, 1, Mirrored, 2)]_PathALAutoCorrelatorB ("B Type--{condition_showS:(_PathALAutoCorrelator==1)}", Int) = 0
-[MultiSlider]_PathALAutoCorrelatorRangeB ("B Range--{condition_showS:(_PathALAutoCorrelator==1 && _PathALAutoCorrelatorB > 0)}", Vector) = (0.1, 0.9, 0, 1)
 [Enum(Off, 0, On, 1, Mirrored, 2)]_PathALAutoCorrelatorA ("A Type--{condition_showS:(_PathALAutoCorrelator==1)}", Int) = 0
-[MultiSlider]_PathALAutoCorrelatorRangeA ("A Range--{condition_showS:(_PathALAutoCorrelator==1 && _PathALAutoCorrelatorA > 0)}", Vector) = (0.1, 0.9, 0, 1)
 [Space(4)]
-[ThryToggleUI(true)]_PathALColorChord ("<size=13><b>  Color Chord</b></size>", Float) = 0
-[ToggleUI]_PathALCCR ("R Color Chord Strip--{condition_showS:(_PathALColorChord==1)}", Float) = 0
-[ToggleUI]_PathALCCG ("G Color Chord Strip--{condition_showS:(_PathALColorChord==1)}", Float) = 0
-[ToggleUI]_PathALCCB ("B Color Chord Strip--{condition_showS:(_PathALColorChord==1)}", Float) = 0
-[ToggleUI]_PathALCCA ("A Color Chord Strip--{condition_showS:(_PathALColorChord==1)}", Float) = 0
+[ToggleUI]_PathALCCR ("R Color Chord Strip", Float) = 0
+[ToggleUI]_PathALCCG ("G Color Chord Strip", Float) = 0
+[ToggleUI]_PathALCCB ("B Color Chord Strip", Float) = 0
+[ToggleUI]_PathALCCA ("A Color Chord Strip", Float) = 0
 [HideInInspector] m_end_PathAudioLink ("", Float) = 0
 [HideInInspector] m_end_pathing ("", Float) = 0
 //endex
@@ -170,32 +155,22 @@ _PathChronoSpeedA ("A Speed--{condition_showS:(_PathALChrono==1)}", Float) = 0
 
 	#ifdef POI_AUDIOLINK
 		float _PathALAutoCorrelator;
-		float _PathALAutoCorrelatorMode;
 		float _PathALAutoCorrelatorR;
-		float2 _PathALAutoCorrelatorRangeR;
 		float _PathALAutoCorrelatorG;
-		float2 _PathALAutoCorrelatorRangeG;
 		float _PathALAutoCorrelatorB;
-		float2 _PathALAutoCorrelatorRangeB;
 		float _PathALAutoCorrelatorA;
-		float2 _PathALAutoCorrelatorRangeA;
 
 		float _PathALHistory;
-		float _PathALHistoryMode;
 		float _PathALHistoryBandR;
-		float2 _PathALHistoryRangeR;
 		float _PathALHistoryR;
 		float _PathALHistoryBandG;
-		float2 _PathALHistoryRangeG;
 		float _PathALHistoryG;
 		float _PathALHistoryBandB;
-		float2 _PathALHistoryRangeB;
 		float _PathALHistoryB;
 		float _PathALHistoryBandA;
-		float2 _PathALHistoryRangeA;
 		float _PathALHistoryA;
 		
-		float _PathALColorChord;
+
 		float _PathALCCR;
 		float _PathALCCG;
 		float _PathALCCB;
@@ -306,13 +281,9 @@ _PathChronoSpeedA ("A Speed--{condition_showS:(_PathALChrono==1)}", Float) = 0
 			float4 chronoType = float4(_PathChronoTypeR, _PathChronoTypeG, _PathChronoTypeB, _PathChronoTypeA);
 			float4 chronoBand = float4(_PathChronoBandR, _PathChronoBandG, _PathChronoBandB, _PathChronoBandA);
 			float4 chronoSpeed = float4(_PathChronoSpeedR, _PathChronoSpeedG, _PathChronoSpeedB, _PathChronoSpeedA);
-			float3 autoCorrelator[4] = {
-				float3(_PathALAutoCorrelatorR, _PathALAutoCorrelatorRangeR[0], _PathALAutoCorrelatorRangeR[1]), float3(_PathALAutoCorrelatorG, _PathALAutoCorrelatorRangeG[0], _PathALAutoCorrelatorRangeG[1]), 
-				float3(_PathALAutoCorrelatorB, _PathALAutoCorrelatorRangeB[0], _PathALAutoCorrelatorRangeB[1]), float3(_PathALAutoCorrelatorA, _PathALAutoCorrelatorRangeA[0], _PathALAutoCorrelatorRangeA[1])
-			};
-			float4 history[4] = {
-				float4(_PathALHistoryR, _PathALHistoryBandR, _PathALHistoryRangeR[0], _PathALHistoryRangeR[1]), float4(_PathALHistoryG, _PathALHistoryBandG, _PathALHistoryRangeG[0], _PathALHistoryRangeG[1]), 
-				float4(_PathALHistoryB, _PathALHistoryBandB, _PathALHistoryRangeB[0], _PathALHistoryRangeB[1]), float4(_PathALHistoryA, _PathALHistoryBandA, _PathALHistoryRangeA[0], _PathALHistoryRangeA[1])
+			float4 autoCorrelator = float4(_PathALAutoCorrelatorR, _PathALAutoCorrelatorG, _PathALAutoCorrelatorB, _PathALAutoCorrelatorA);
+			float2 history[4] = {
+				float2(_PathALHistoryR, _PathALHistoryBandR), float2(_PathALHistoryG, _PathALHistoryBandG), float2(_PathALHistoryB, _PathALHistoryBandB), float2(_PathALHistoryA, _PathALHistoryBandA)
 			};
 			
 			
@@ -351,24 +322,21 @@ _PathChronoSpeedA ("A Speed--{condition_showS:(_PathALChrono==1)}", Float) = 0
 					pathAudioLinkEmission.a += lerp(_AudioLinkPathEmissionAddA.x, _AudioLinkPathEmissionAddA.y, poiMods.audioLink[_AudioLinkPathEmissionAddBandA]);
 				}
 
-				if(_PathALColorChord)
+				if (_PathALCCR)
 				{
-					if (_PathALCCR)
-					{
-						PathColor[0] *= AudioLinkLerp(ALPASS_CCSTRIP + float2(path[0] * AUDIOLINK_WIDTH, 0));
-					}
-					if (_PathALCCG)
-					{
-						PathColor[1] *= AudioLinkLerp(ALPASS_CCSTRIP + float2(path[1] * AUDIOLINK_WIDTH, 0));
-					}
-					if (_PathALCCB)
-					{
-						PathColor[2] *= AudioLinkLerp(ALPASS_CCSTRIP + float2(path[2] * AUDIOLINK_WIDTH, 0));
-					}
-					if (_PathALCCA)
-					{
-						PathColor[3] *= AudioLinkLerp(ALPASS_CCSTRIP + float2(path[3] * AUDIOLINK_WIDTH, 0));
-					}
+					PathColor[0] *= AudioLinkLerp(ALPASS_CCSTRIP + float2(path[0] * AUDIOLINK_WIDTH, 0));
+				}
+				if (_PathALCCG)
+				{
+					PathColor[1] *= AudioLinkLerp(ALPASS_CCSTRIP + float2(path[1] * AUDIOLINK_WIDTH, 0));
+				}
+				if (_PathALCCB)
+				{
+					PathColor[2] *= AudioLinkLerp(ALPASS_CCSTRIP + float2(path[2] * AUDIOLINK_WIDTH, 0));
+				}
+				if (_PathALCCA)
+				{
+					PathColor[3] *= AudioLinkLerp(ALPASS_CCSTRIP + float2(path[3] * AUDIOLINK_WIDTH, 0));
 				}
 			}
 		#endif
@@ -427,57 +395,19 @@ _PathChronoSpeedA ("A Speed--{condition_showS:(_PathALChrono==1)}", Float) = 0
 				#ifdef POI_AUDIOLINK
 					if (poiMods.audioLinkAvailable)
 					{
-						if (_PathALHistory && history[index][0])
+						if (_PathALHistory && history[index].x)
 						{
-							// history[index]: [0]: on/off, [1]: band, [2]/[3] min/max
-							float historyUV = lerp(history[index][2], history[index][3], path[index]);
-
-							if (_PathSegments[index])
-							{
-								float pathSegments = abs(_PathSegments[index]);
-								historyUV = (ceil(historyUV * pathSegments) - .5) / pathSegments;
-							}
-
-							historyUV *= AUDIOLINK_WIDTH;
-
-							float historyValue = AudioLinkLerp(ALPASS_AUDIOLINK + float2(historyUV, history[index][1]))[0];
-
-							if(_PathALHistoryMode == 0) // Mask
-								pathAlpha[index] *= historyValue;
-							else // Override
-								pathAlpha[index] = historyValue;
+							pathAlpha[index] *= AudioLinkLerp(ALPASS_AUDIOLINK + float2(path[index] * AUDIOLINK_WIDTH, history[index].y)).r;
 						}
 
-						if (_PathALAutoCorrelator && autoCorrelator[index][0] != 0)
+						if (_PathALAutoCorrelator && autoCorrelator[index] != 0)
 						{
-							// autoCorrelator[index]: [0]: on/off, [1]/[2]: min/max
-							// Choose from only part of the autocorrelator
-							float autoCorrelatorUV = lerp(autoCorrelator[index][1], autoCorrelator[index][2], path[index]);
-							if (autoCorrelator[index][0] == 2) // Mirror
+							float autoCorrelatorUV = path[index];
+							if (autoCorrelator[index] == 2)
 							{
-								autoCorrelatorUV = abs(1. - autoCorrelatorUV * 2.);
+								autoCorrelatorUV = abs(1. - path[index] * 2.);
 							}
-
-							if (_PathSegments[index])
-							{
-								float pathSegments = abs(_PathSegments[index]);
-								autoCorrelatorUV = (ceil(autoCorrelatorUV * pathSegments) - .5) / pathSegments;
-							}
-
-							// Normalize Autocorrelator Value
-							float autoCorrelatorValue = AudioLinkLerp(ALPASS_AUTOCORRELATOR + float2(autoCorrelatorUV * AUDIOLINK_WIDTH, 0))[0];
-							float autoCorrelatorMax = AudioLinkLerp(ALPASS_AUTOCORRELATOR);
-							autoCorrelatorValue = saturate(abs(autoCorrelatorValue) * rcp(autoCorrelatorMax));
-
-							// Autocorrelator is normalized, so can look weird at lower volume levels. use Filtered VU intensity to make it smoothly fall off at low volume levels.
-							float4 vu = AudioLinkData(ALPASS_FILTEREDVU_INTENSITY + uint2(0, 0));
-							autoCorrelatorValue *= smoothstep(0.01, 0.2, vu);
-
-							if(_PathALAutoCorrelatorMode == 0) // Mask
-								pathAlpha[index] *= autoCorrelatorValue;
-							else // Override
-								pathAlpha[index] = autoCorrelatorValue;
-
+							pathAlpha[index] *= AudioLinkLerp(ALPASS_AUTOCORRELATOR + float2(autoCorrelatorUV * AUDIOLINK_WIDTH, 0)).r;
 						}
 					}
 				#endif

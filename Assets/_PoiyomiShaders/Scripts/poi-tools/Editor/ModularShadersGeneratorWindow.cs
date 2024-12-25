@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 using Button = UnityEngine.UIElements.Button;
 using Toggle = UnityEngine.UIElements.Toggle;
 
-namespace Poi.Tools
+namespace PoiyomiPatreon.Scripts.poi_tools.Editor
 {
     public class ModularShadersGeneratorElement : VisualElement
     {
@@ -38,14 +38,7 @@ namespace Poi.Tools
             _toggle = new Toggle();
             _toggle.RegisterValueChangedCallback(evt => IsSelected = evt.newValue);
             Add(_toggle);
-            var label = new Label(Shader.Name);
-            label.style.flexGrow = 1;
-            Add(label);
-            var shaderObject = new UnityEditor.UIElements.ObjectField();
-            shaderObject.objectType = typeof(ModularShader);
-            shaderObject.value = shader;
-            shaderObject.style.minWidth = new StyleLength(new Length(50f, LengthUnit.Percent));
-            Add(shaderObject);
+            Add(new Label(Shader.Name));
             var issues = ShaderGenerator.CheckShaderIssues(shader);
             if (issues.Count > 0)
             {
@@ -71,7 +64,7 @@ namespace Poi.Tools
         
         private VisualElement _root;
         internal List<ModularShadersGeneratorElement> _elements;
-        private string _folderPath = "Assets/_poiyomiShaders/Shaders/8.2/Pro";
+        private string _folderPath = "Assets/_poiyomiShaders/Shaders/8.1/Pro";
 
         private void CreateGUI()
         {
@@ -166,16 +159,7 @@ namespace Poi.Tools
             fileButton.text = "Open";
             fileButton.clicked += () =>
             {
-                string path = folder.value;
-                if (Directory.Exists(path))
-                {
-                    path = Directory.GetParent(path).FullName;
-                }
-                else
-                {
-                    path = "Assets";
-                }
-                path = EditorUtility.OpenFolderPanel("Select folder to use", path, "");
+                string path = EditorUtility.OpenFolderPanel("Select folder to use", "Assets", "");
                 if (path.Length == 0)
                     return;
 
@@ -250,7 +234,6 @@ namespace Poi.Tools
                     if (msgw._elements != null && msgw._elements.Count(x => x.IsSelected) > 0)
                     {
                         msgw.GenerateShaders();
-                        Thry.ShaderEditor.ReloadActive();
                     }
                 }
             }

@@ -17,7 +17,14 @@ MonoBehaviour:
   Version: 1.0
   Author: Poiyomi
   Description: 
-  EnableProperties: []
+  Enabled:
+    Name: 
+    DisplayName: 
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 0
   Properties: []
   ModuleDependencies: []
   IncompatibleWith: []
@@ -37,7 +44,6 @@ MonoBehaviour:
   - Template: {fileID: 6485966747919507968, guid: db6fb035c5b46e941b0b8ad192fa9aef,
       type: 3}
     Keywords:
-    - EARLYZ_PROPERTY_VARIABLES
     - BASE_PROPERTY_VARIABLES
     - ADD_PROPERTY_VARIABLES
     - SHADOW_PROPERTY_VARIABLES
@@ -63,12 +69,6 @@ MonoBehaviour:
     - FRAGMENT_SHADOW_COLOR
     - FRAGMENT_META_COLOR
     - FRAGMENT_OUTLINE_COLOR
-    NeedsVariant: 0
-    Queue: 100
-  - Template: {fileID: -6783918953632530723, guid: db6fb035c5b46e941b0b8ad192fa9aef,
-      type: 3}
-    Keywords:
-    - VERTEX_INPUT_MODS
     NeedsVariant: 0
     Queue: 100
   Functions: []

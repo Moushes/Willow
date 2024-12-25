@@ -235,6 +235,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "io.github.rurre.pumkinsavatartools": {
+      "version": "file:io.github.rurre.pumkinsavatartools",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "vrchat.blackstartx.gesture-manager": {
       "version": "file:vrchat.blackstartx.gesture-manager",
       "depth": 0,

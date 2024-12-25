@@ -17,7 +17,14 @@ MonoBehaviour:
   Version: 
   Author: 
   Description: 
-  EnableProperties: []
+  Enabled:
+    Name: 
+    DisplayName: 
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 0
   Properties: []
   ModuleDependencies: []
   IncompatibleWith: []
@@ -27,13 +34,13 @@ MonoBehaviour:
     Keywords:
     - LIGHTING_PROPERTIES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 739758214699481729, guid: 77e8ca7519e234b40956d0df5a2d172a,
       type: 3}
     Keywords:
     - SHADER_KEYWORDS
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: -5671169289357256051, guid: 77e8ca7519e234b40956d0df5a2d172a,
       type: 3}
     Keywords:
@@ -41,7 +48,7 @@ MonoBehaviour:
     - FRAGMENT_ADD_INIT
     - FRAGMENT_OUTLINE_INIT
     NeedsVariant: 0
-    Queue: 20
+    Queue: 100
   - Template: {fileID: -4710351450627577817, guid: 77e8ca7519e234b40956d0df5a2d172a,
       type: 3}
     Keywords:
@@ -49,6 +56,6 @@ MonoBehaviour:
     - ADD_PROPERTY_VARIABLES
     - OUTLINE_PROPERTY_VARIABLES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   Functions: []
   AdditionalSerializedData: 

@@ -34,16 +34,5 @@ MonoBehaviour:
     - META_PROPERTY_VARIABLES
     NeedsVariant: 0
     Queue: 100
-  - Template: {fileID: -8889315493198244180, guid: 6edb715790f0c594d9a5fc601bdbe1b6,
-      type: 3}
-    Keywords:
-    - BASE_PASS_KEYWORDS
-    - ADD_PASS_KEYWORDS
-    - SHADOW_PASS_KEYWORDS
-    - OUTLINE_PASS_KEYWORDS
-    - META_PASS_KEYWORDS
-    - EARLYZ_PASS_KEYWORDS
-    NeedsVariant: 0
-    Queue: 100
   Functions: []
   AdditionalSerializedData: 
