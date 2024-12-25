@@ -27,7 +27,7 @@ MonoBehaviour:
     Keywords:
     - TOP_PROPERTIES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 7636714996591849511, guid: 1dd8665fccdb73a4883771ca4f5b6367,
       type: 3}
     Keywords:
@@ -37,6 +37,6 @@ MonoBehaviour:
     - OUTLINE_PROPERTY_VARIABLES
     - META_PROPERTY_VARIABLES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   Functions: []
   AdditionalSerializedData: 

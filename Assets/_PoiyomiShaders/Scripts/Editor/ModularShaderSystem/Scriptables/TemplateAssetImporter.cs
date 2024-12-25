@@ -2,20 +2,16 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-#if UNITY_2020_2_OR_NEWER
-using UnityEditor.AssetImporters;
-#else
-using UnityEditor.Experimental.AssetImporters;
-#endif
+
 using UnityEngine;
 
 namespace Poiyomi.ModularShaderSystem
 {
     
-    [ScriptedImporter(1, MSSConstants.TEMPLATE_EXTENSION)]
-    public class TemplateAssetImporter : ScriptedImporter
+    [UnityEditor.AssetImporters.ScriptedImporter(1, MSSConstants.TEMPLATE_EXTENSION)]
+    public class TemplateAssetImporter : UnityEditor.AssetImporters.ScriptedImporter
     {
-        public override void OnImportAsset(AssetImportContext ctx)
+        public override void OnImportAsset(UnityEditor.AssetImporters.AssetImportContext ctx)
         {
             var subAsset = ScriptableObject.CreateInstance<TemplateAsset>();
             subAsset.Template = File.ReadAllText(ctx.assetPath);

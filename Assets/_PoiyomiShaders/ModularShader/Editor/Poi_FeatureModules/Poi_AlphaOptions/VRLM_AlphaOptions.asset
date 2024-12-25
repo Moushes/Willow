@@ -27,13 +27,13 @@ MonoBehaviour:
     Keywords:
     - MAIN_PROPERTIES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 7896923665127700555, guid: 6c6bcf2ea34623741a36552a6c678ea3,
       type: 3}
     Keywords:
     - SHADER_KEYWORDS
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: -7842061715366162960, guid: 6c6bcf2ea34623741a36552a6c678ea3,
       type: 3}
     Keywords:
@@ -43,7 +43,7 @@ MonoBehaviour:
     - META_PROPERTY_VARIABLES
     - OUTLINE_PROPERTY_VARIABLES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 6382579130851865620, guid: 6c6bcf2ea34623741a36552a6c678ea3,
       type: 3}
     Keywords:
@@ -53,7 +53,7 @@ MonoBehaviour:
     - FRAGMENT_META_FUNCTIONS
     - FRAGMENT_OUTLINE_FUNCTIONS
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 7046177447067330403, guid: 6c6bcf2ea34623741a36552a6c678ea3,
       type: 3}
     Keywords:
@@ -63,7 +63,7 @@ MonoBehaviour:
     - FRAGMENT_META_COLOR
     - FRAGMENT_OUTLINE_COLOR
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: -9026782082732213869, guid: 6c6bcf2ea34623741a36552a6c678ea3,
       type: 3}
     Keywords:
@@ -73,7 +73,7 @@ MonoBehaviour:
     - FRAGMENT_META_RETURN
     - FRAGMENT_OUTLINE_RETURN
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 4379745813462220173, guid: 6c6bcf2ea34623741a36552a6c678ea3,
       type: 3}
     Keywords:
@@ -83,7 +83,7 @@ MonoBehaviour:
     - FRAGMENT_META_RETURN
     - FRAGMENT_OUTLINE_RETURN
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 4466012173581799560, guid: 6c6bcf2ea34623741a36552a6c678ea3,
       type: 3}
     Keywords:
@@ -93,6 +93,6 @@ MonoBehaviour:
     - FRAGMENT_META_RETURN
     - FRAGMENT_OUTLINE_RETURN
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   Functions: []
   AdditionalSerializedData: 

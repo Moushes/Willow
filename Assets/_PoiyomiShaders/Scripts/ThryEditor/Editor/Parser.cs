@@ -22,12 +22,7 @@ namespace Thry
 
         public static T Deserialize<T>(string s)
         {
-            return DeserializeInternal<T>(s);
-        }
-
-        public static object Deserialize(string s, Type t)
-        {
-            return DeserializeInternal(s, t);
+            return ParseToObject<T>(s);
         }
 
         public static string ObjectToString(object obj)
@@ -43,7 +38,7 @@ namespace Thry
             return "";
         }
 
-        private static T DeserializeInternal<T>(string s)
+        public static T ParseToObject<T>(string s)
         {
             object parsed = ParseJson(s);
             object ret = null;
@@ -60,104 +55,48 @@ namespace Thry
             return (T)ret;
         }
 
-        private static object DeserializeInternal(string s, Type t)
-        {
-            object parsed = ParseJson(s);
-            object ret = null;
-            try
-            {
-                ret = ParsedToObject(parsed, t);
-            }
-            catch (Exception e)
-            {
-                Debug.LogWarning(e.ToString());
-                Debug.LogWarning(s + " cannot be parsed to object of type " + t.ToString());
-                ret = Activator.CreateInstance(t);
-            }
-            return ret;
-        }
-
         //Parser methods
 
         public static object ParseJson(string input)
         {
-            return ParseJsonPart(input, 0, input.Length);
+            //input = input.Replace("\\n", "\n");
+            return ParseJsonPart(input);
         }
 
-        private static object ParseJsonPart(string input, int start, int end)
+        private static object ParseJsonPart(string input)
         {
-            int rawStart = start;
-            int rawEnd = end;
-
-            while (start < end && (input[start] == ' ' || input[start] == '\t' || input[start] == '\n' || input[start] == '\r'))
-                start++;
-            if (start == end)
-                return input; // empty string
-            if (input[start] == '{')
-            {
-                start++;
-                end--;
-                while (end > start && (input[end] == ' ' || input[end] == '\t' || input[end] == '\n' || input[end] == '\r'))
-                    end--;
-                if (input[end] == '}')
-                {
-                    return ParseObject(input, start, end);
-                }else
-                {
-                    Debug.LogWarning("Invalid json object: " + input.Substring(rawStart, rawEnd - rawStart));
-                    return null;
-                }
-            }
-            if (input[start] == '[')
-            {
-                start++;
-                end--;
-                while (end > start && (input[end] == ' ' || input[end] == '\t' || input[end] == '\n' || input[end] == '\r'))
-                    end--;
-                if (input[end] == ']')
-                {
-                    return ParseArray(input, start, end);
-                }
-                else
-                {
-                    Debug.LogWarning("Invalid json array: " + input);
-                    return null;
-                }
-            }
-            return ParsePrimitive(input.Substring(start, end - start));
+            input = input.Trim();
+            if (input.StartsWith("{"))
+                return ParseObject(input);
+            else if (input.StartsWith("["))
+                return ParseArray(input);
+            else
+                return ParsePrimitive(input);
         }
 
-        private static Dictionary<object, object> ParseObject(string input, int start, int end)
+        private static Dictionary<object, object> ParseObject(string input)
         {
-            // Debug.Log("Parse Object: "+ input.Substring(start, end - start));
+            input = input.TrimStart(new char[] { '{' });
             int depth = 0;
-            int variableStart = start;
+            int variableStart = 0;
             bool isString = false;
             Dictionary<object, object> variables = new Dictionary<object, object>();
-            for (int i = start; i < end; i++)
+            for (int i = 0; i < input.Length; i++)
             {
                 bool escaped = i != 0 && input[i - 1] == '\\';
                 if (input[i] == '\"' && !escaped)
                     isString = !isString;
                 if (!isString)
                 {
-                    if ((depth == 0 && input[i] == ',' && !escaped) || (!escaped && depth == 0 && input[i] == '}'))
+                    if (i == input.Length - 1 || (depth == 0 && input[i] == ',' && !escaped) || (!escaped && depth == 0 && input[i] == '}'))
                     {
-                        int seperatorIndex = input.IndexOf(':', variableStart, i - variableStart);
-                        if (seperatorIndex == -1)
+                        string[] parts = input.Substring(variableStart, i - variableStart).Split(new char[] { ':' }, 2);
+                        if (parts.Length < 2)
                             break;
-                        string key = "" + ParseJsonPart(input, variableStart, seperatorIndex);
-                        object value = ParseJsonPart(input, seperatorIndex + 1, i);
+                        string key = "" + ParseJsonPart(parts[0].Trim());
+                        object value = ParseJsonPart(parts[1]);
                         variables.Add(key, value);
                         variableStart = i + 1;
-                    }else if(i == end - 1)
-                    {
-                        int seperatorIndex = input.IndexOf(':', variableStart, i - variableStart);
-                        if (seperatorIndex == -1)
-                            break;
-                        string key = "" + ParseJsonPart(input, variableStart, seperatorIndex);
-                        object value = ParseJsonPart(input, seperatorIndex + 1, i + 1);
-                        variables.Add(key, value);
                     }
                     else if ((input[i] == '{' || input[i] == '[') && !escaped)
                         depth++;
@@ -169,21 +108,18 @@ namespace Thry
             return variables;
         }
 
-        private static List<object> ParseArray(string input, int start, int end)
+        private static List<object> ParseArray(string input)
         {
-            // Debug.Log("Parse Array: " + input.Substring(start, end - start));
+            input = input.Trim(new char[] { ' ' });
             int depth = 0;
-            int variableStart = start;
+            int variableStart = 1;
             List<object> variables = new List<object>();
-            for (int i = start; i < end; i++)
+            for (int i = 1; i < input.Length; i++)
             {
-                if(depth == 0 && input[i] == ',' && (i == 0 || input[i - 1] != '\\'))
+                if (i == input.Length - 1 || (depth == 0 && input[i] == ',' && (i == 0 || input[i - 1] != '\\')))
                 {
-                    variables.Add(ParseJsonPart(input, variableStart, i));
+                    variables.Add(ParseJsonPart(input.Substring(variableStart, i - variableStart)));
                     variableStart = i + 1;
-                }else if(i == end - 1)
-                {
-                    variables.Add(ParseJsonPart(input, variableStart, i + 1));
                 }
                 else if (input[i] == '{' || input[i] == '[')
                     depth++;
@@ -195,44 +131,46 @@ namespace Thry
 
         private static object ParsePrimitive(string input)
         {
-            // Debug.Log("Parse Primitive: " + input);
-            // string
-            if (input.StartsWith("\"", StringComparison.Ordinal))
+            if (input.StartsWith("\""))
                 return input.Trim(new char[] { '"' });
-
-            // boolean
-            // StartsWith ordinal, because it's faster than toLower and trim (in case of spaces after)
-            if (input.StartsWith("true", StringComparison.OrdinalIgnoreCase))
+            else if (input.ToLower() == "true")
                 return true;
-            if (input.StartsWith("false", StringComparison.OrdinalIgnoreCase))
+            else if (input.ToLower() == "false")
                 return false;
-            // null
-            if (input == "null" || input == "NULL" || input == "Null")
+            else if (input == "null" || input == "NULL" || input == "Null")
                 return null;
-
-            // number
-            float floatValue;
-            // parse float invariant
-            if(float.TryParse(input, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out floatValue))
+            else
             {
-                if ((int)floatValue == floatValue)
-                    return (int)floatValue;
-                return floatValue;
+                string floatInput = input.Replace(",", ".");
+                if (System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator == ",")
+                    floatInput = input.Replace(".", ",");
+                float floatValue;
+                if (float.TryParse(floatInput,  out floatValue))
+                {
+                    if ((int)floatValue == floatValue)
+                        return (int)floatValue;
+                    return floatValue;
+                }
             }
-
             return input;
         }
 
         //converter methods
 
+        public static string GlobalizationFloat(string s)
+        {
+            s = s.Replace(",", ".");
+            if (System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator == ",")
+                s = s.Replace(".", ",");
+            return s;
+        }
+
         public static float ParseFloat(string s, float defaultF = 0)
         {
-            float f;
-            if(float.TryParse(s, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out f))
-            {
-                return f;
-            }
-            return defaultF;
+            s = GlobalizationFloat(s);
+            float f = defaultF;
+            float.TryParse(s, out f);
+            return f;
         }
 
         public static type ConvertParsedToObject<type>(object parsed)
@@ -302,8 +240,8 @@ namespace Thry
 
         private static object ConvertToArray(object parsed, Type objtype)
         {
-            if (objtype.BaseType == typeof(System.Array) && parsed.GetType() == typeof(string) && objtype.GetElementType().GetMethod("ParseToArrayForThryParser", BindingFlags.Static | BindingFlags.NonPublic) != null)
-                return objtype.GetElementType().GetMethod("ParseToArrayForThryParser", BindingFlags.Static | BindingFlags.NonPublic).Invoke(null, new object[] { parsed });
+            if (parsed.GetType() == typeof(string) && objtype.GetMethod("ParseToArrayForThryParser", BindingFlags.Static | BindingFlags.NonPublic) != null)
+                return objtype.GetMethod("ParseToArrayForThryParser", BindingFlags.Static | BindingFlags.NonPublic).Invoke(null, new object[] { parsed });
             if (parsed == null || (parsed is string && (string)parsed == ""))
                 return null;
             Type array_obj_type = objtype.GetElementType();

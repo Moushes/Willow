@@ -123,6 +123,7 @@ namespace Thry
         public MaterialProperty MaterialProperty;
         public string PropertyIdentifier;
         public System.Object PropertyData = null;
+        public PropertyOptions Options;
         public bool DoReferencePropertiesExist = false;
         public bool DoesReferencePropertyExist = false;
         public bool IsHidden = false;
@@ -136,55 +137,60 @@ namespace Thry
 
         public bool has_not_searchedFor = false; //used for property search
 
-        protected string _optionsRaw;
-        private PropertyOptions _options;
-        private bool _doOptionsNeedInitilization = true;
-        public PropertyOptions Options
-        {
-            get
-            {
-                if (_options == null)
-                {
-                    _options = PropertyOptions.Deserialize(_optionsRaw);
-                }
-                return _options;
-            }
-        }
-
         GenericMenu contextMenu;
 
-        public ShaderPart(string propertyIdentifier, int xOffset, string displayName, string tooltip, ShaderEditor shaderEditor)
+        public ShaderPart(ShaderEditor shaderEditor, string propertyIdentifier, int xOffset, string displayName, string tooltip)
         {
-            this._optionsRaw = null;
             this.ActiveShaderEditor = shaderEditor;
             this.PropertyIdentifier = propertyIdentifier;
             this.XOffset = xOffset;
+            this.Options = new PropertyOptions();
             this.Content = new GUIContent(displayName);
             this.tooltip = new BetterTooltips.Tooltip(tooltip);
             this.IsPreset = shaderEditor.IsPresetEditor && Presets.IsPreset(shaderEditor.Materials[0], this);
         }
 
-        public ShaderPart(ShaderEditor shaderEditor, MaterialProperty prop, int xOffset, string displayName, string optionsRaw)
+        public ShaderPart(ShaderEditor shaderEditor, MaterialProperty prop, int xOffset, string displayName, PropertyOptions options)
         {
-            this._optionsRaw = optionsRaw;
             this.ActiveShaderEditor = shaderEditor;
             this.MaterialProperty = prop;
             this.XOffset = xOffset;
+            this.Options = options;
             this.Content = new GUIContent(displayName);
+            this.tooltip = new BetterTooltips.Tooltip(options.tooltip);
+            this.DoReferencePropertiesExist = options.reference_properties != null && options.reference_properties.Length > 0;
+            this.DoesReferencePropertyExist = options.reference_property != null;
             this.IsPreset = shaderEditor.IsPresetEditor && Presets.IsPreset(shaderEditor.Materials[0], this);
 
             if (prop == null)
                 return;
-
-            this.ExemptFromLockedDisabling |= ShaderOptimizer.IsPropertyExcemptFromLocking(prop);
-        }
-
-        protected virtual void InitOptions()
-        {
-            this.tooltip = new BetterTooltips.Tooltip(Options.tooltip);
-            this.DoReferencePropertiesExist = Options.reference_properties != null && Options.reference_properties.Length > 0;
-            this.DoesReferencePropertyExist = Options.reference_property != null;
-            this.XOffset += Options.offset;
+            if (this is ShaderHeader == false)
+            {
+                this.IsAnimatable = !DrawingData.LastPropertyDoesntAllowAnimation;
+                bool propHasDuplicate = shaderEditor.GetMaterialProperty(prop.name + "_" + shaderEditor.RenamedPropertySuffix) != null;
+                string tag = null;
+                //If prop is og, but is duplicated (locked) dont have it animateable
+                if (propHasDuplicate)
+                {
+                    this.IsAnimatable = false;
+                }
+                else
+                {
+                    //if prop is a duplicated or renamed get og property to check for animted status
+                    if (prop.name.Contains(shaderEditor.RenamedPropertySuffix))
+                    {
+                        string ogName = prop.name.Substring(0, prop.name.Length - shaderEditor.RenamedPropertySuffix.Length - 1);
+                        tag = ShaderOptimizer.GetAnimatedTag(MaterialProperty.targets[0] as Material, ogName);
+                    }
+                    else
+                    {
+                        tag = ShaderOptimizer.GetAnimatedTag(MaterialProperty);
+                    }
+                }
+                
+                this.IsAnimated = IsAnimatable && tag != "";
+                this.IsRenaming = IsAnimatable && tag == "2";
+            }
         }
 
         public void SetReferenceProperty(string s)
@@ -213,12 +219,6 @@ namespace Thry
         bool hasAddedDisabledGroup = false;
         public void Draw(CRect rect = null, GUIContent content = null, bool useEditorIndent = false, bool isInHeader = false)
         {
-            if(_doOptionsNeedInitilization)
-            {
-                InitOptions();
-                _doOptionsNeedInitilization = false;
-            }
-
             if (has_not_searchedFor)
                 return;
             if (DrawingData.IsEnabled && Options.condition_enable != null)
@@ -461,17 +461,17 @@ namespace Thry
     {
         public List<ShaderPart> parts = new List<ShaderPart>();
 
-        public ShaderGroup(ShaderEditor shaderEditor) : base(null, 0, "", null, shaderEditor)
+        public ShaderGroup(ShaderEditor shaderEditor) : base(shaderEditor, null, 0, "", new PropertyOptions())
         {
 
         }
 
-        public ShaderGroup(ShaderEditor shaderEditor, string optionsRaw) : base(null, 0, "", null, shaderEditor)
+        public ShaderGroup(ShaderEditor shaderEditor, PropertyOptions options) : base(shaderEditor, null, 0, "", new PropertyOptions())
         {
-            this._optionsRaw = optionsRaw;
+            this.Options = options;
         }
 
-        public ShaderGroup(ShaderEditor shaderEditor, MaterialProperty prop, MaterialEditor materialEditor, string displayName, int xOffset, string optionsRaw) : base(shaderEditor, prop, xOffset, displayName, optionsRaw)
+        public ShaderGroup(ShaderEditor shaderEditor, MaterialProperty prop, MaterialEditor materialEditor, string displayName, int xOffset, PropertyOptions options) : base(shaderEditor, prop, xOffset, displayName, options)
         {
 
         }
@@ -501,28 +501,9 @@ namespace Thry
 
         public override void DrawInternal(GUIContent content, CRect rect = null, bool useEditorIndent = false, bool isInHeader = false)
         {
-            if(Options.draw_border)
-            {
-                bool has_header = string.IsNullOrWhiteSpace(this.Content.text) == false;
-                Rect border = EditorGUILayout.BeginVertical();
-                GUILayoutUtility.GetRect(0, 5 + (has_header ? 20 : 0));
-                border = new RectOffset(this.XOffset * -15 - 12, 3, -2, -2).Add(border);
-                Vector4 borderWidths = new Vector4(3, (has_header ? 22 : 3), 3, 3);
-                GUI.DrawTexture(border, Texture2D.whiteTexture, ScaleMode.StretchToFill, true, 0, Styles.COLOR_BACKGROUND_1, borderWidths, 10);
-                if(has_header)
-                {
-                    Rect header = new Rect(border.x + 16, border.y, border.width - 16, 22);
-                    GUI.Label(header, this.Content, EditorStyles.boldLabel);
-                }
-            }
             foreach (ShaderPart part in parts)
             {
                 part.Draw();
-            }
-            if (Options.draw_border)
-            {
-                GUILayoutUtility.GetRect(0, 5);
-                EditorGUILayout.EndVertical();
             }
         }
 
@@ -552,22 +533,33 @@ namespace Thry
 
     public class ShaderHeader : ShaderGroup
     {
-        private ThryHeaderHandler _headerDrawer;
+        private ThryHeaderDrawer headerDrawer;
+        private bool isLegacy;
 
         public ShaderHeader(ShaderEditor shaderEditor) : base(shaderEditor)
         {
-            this._headerDrawer = new ThryHeaderHandler();
+            this.headerDrawer = new ThryHeaderDrawer();
         }
 
-        public ShaderHeader(ShaderEditor shaderEditor, MaterialProperty prop, MaterialEditor materialEditor, string displayName, int xOffset, string optionsRaw) : base(shaderEditor, prop, materialEditor, displayName, xOffset, optionsRaw)
+        public ShaderHeader(ShaderEditor shaderEditor, MaterialProperty prop, MaterialEditor materialEditor, string displayName, int xOffset, PropertyOptions options) : base(shaderEditor, prop, materialEditor, displayName, xOffset, options)
         {
-            this._headerDrawer = new ThryHeaderHandler();
-            this._headerDrawer.xOffset = xOffset;
+            if(DrawingData.LastPropertyDrawerType == DrawerType.Header)
+            {
+                //new header setup with drawer
+                this.headerDrawer = DrawingData.LastPropertyDrawer as ThryHeaderDrawer;
+            }
+            else
+            {
+                //legacy setup with HideInInspector
+                this.headerDrawer = new ThryHeaderDrawer();
+                isLegacy = true;
+            }
+            this.headerDrawer.xOffset = xOffset;
         }
 
         public string GetEndProperty()
         {
-            return _headerDrawer.GetEndProperty();
+            return headerDrawer.GetEndProperty();
         }
 
         public override void DrawInternal(GUIContent content, CRect rect = null, bool useEditorIndent = false, bool isInHeader = false)
@@ -575,12 +567,13 @@ namespace Thry
             ActiveShaderEditor.CurrentProperty = this;
             EditorGUI.BeginChangeCheck();
             Rect position = GUILayoutUtility.GetRect(content, Styles.dropDownHeader);
-            _headerDrawer.OnGUI(position, this.MaterialProperty, content, ActiveShaderEditor.Editor);
+            if (isLegacy) headerDrawer.OnGUI(position, this.MaterialProperty, content, ActiveShaderEditor.Editor);
+            else ActiveShaderEditor.Editor.ShaderProperty(position, this.MaterialProperty, content);
             Rect headerRect = DrawingData.LastGuiObjectHeaderRect;
-            if (this._headerDrawer.IsExpanded)
+            if (this.headerDrawer.IsExpanded)
             {
                 EditorGUILayout.Space();
-                EditorGUI.BeginDisabledGroup(_headerDrawer.DisableContent);
+                EditorGUI.BeginDisabledGroup(headerDrawer.DisableContent);
                 foreach (ShaderPart part in parts)
                 {
                     part.Draw();
@@ -608,7 +601,7 @@ namespace Thry
             {
                 isEnabled &= Options.condition_enable.Test();
             }
-            isEnabled &= !_headerDrawer.DisableContent;
+            isEnabled &= !headerDrawer.DisableContent;
             foreach (ShaderPart p in (this as ShaderGroup).parts)
                 p.FindUnusedTextures(unusedList, isEnabled);
         }
@@ -631,29 +624,34 @@ namespace Thry
 
         public string keyword;
 
-        protected MaterialPropertyDrawer[] _customDecorators;
-        protected Rect[] _customDecoratorRects;
-        protected bool _hasDrawer = false;
+        MaterialPropertyDrawer[] _customDecorators;
+        Rect[] _customDecoratorRects;
 
-        bool _needsDrawerInitlization = true;
-
-        public ShaderProperty(ShaderEditor shaderEditor, string propertyIdentifier, int xOffset, string displayName, string tooltip) : base(propertyIdentifier, xOffset, displayName, tooltip, shaderEditor)
+        public ShaderProperty(ShaderEditor shaderEditor, string propertyIdentifier, int xOffset, string displayName, string tooltip) : base(shaderEditor, propertyIdentifier, xOffset, displayName, tooltip)
         {
 
         }
 
-        public ShaderProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, string optionsRaw, bool forceOneLine, int property_index) : base(shaderEditor, materialProperty, xOffset, displayName, optionsRaw)
+        public ShaderProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, PropertyOptions options, bool forceOneLine, int property_index) : base(shaderEditor, materialProperty, xOffset, displayName, options)
         {
             this.doCustomDrawLogic = false;
             this.doForceIntoOneLine = forceOneLine;
 
-            this.property_index = property_index;
-        }
+            if (materialProperty.type == MaterialProperty.PropType.Vector && forceOneLine == false)
+            {
+                this.doCustomHeightOffset = !DrawingData.LastPropertyUsedCustomDrawer;
+                this.customHeightOffset = -EditorGUIUtility.singleLineHeight;
+            }
 
-        protected override void InitOptions()
-        {
-            base.InitOptions();
-            this.doDrawTwoFields = Options.reference_property != null;
+            if(DrawingData.LastPropertyDecorators.Count > 0)
+            {
+                _customDecorators = DrawingData.LastPropertyDecorators.ToArray();
+                _customDecoratorRects = new Rect[DrawingData.LastPropertyDecorators.Count];
+            }
+
+            this.doDrawTwoFields = options.reference_property != null;
+
+            this.property_index = property_index;
         }
 
         public override void CopyFromMaterial(Material m, bool isTopCall = false)
@@ -696,68 +694,11 @@ namespace Thry
             else m.DisableKeyword(keyword);
         }
 
-        public void UpdateKeywordFromValue()
-        {
-            if (keyword != null) SetKeyword(ActiveShaderEditor.Materials, MaterialProperty.floatValue == 1);
-        }
-
-        void InitializeDrawers()
-        {
-            DrawingData.ResetLastDrawerData();
-            ShaderEditor.Active.Editor.GetPropertyHeight(MaterialProperty, MaterialProperty.displayName);
-
-            this.IsAnimatable = !DrawingData.LastPropertyDoesntAllowAnimation;
-            this._hasDrawer = DrawingData.LastPropertyUsedCustomDrawer;
-
-            if (MaterialProperty.type == MaterialProperty.PropType.Vector && doForceIntoOneLine == false)
-            {
-                this.doCustomHeightOffset = !DrawingData.LastPropertyUsedCustomDrawer;
-                this.customHeightOffset = -EditorGUIUtility.singleLineHeight;
-            }
-            if(DrawingData.LastPropertyDecorators.Count > 0)
-            {
-                _customDecorators = DrawingData.LastPropertyDecorators.ToArray();
-                _customDecoratorRects = new Rect[DrawingData.LastPropertyDecorators.Count];
-            }
-
-            // Animatable Stuff
-            bool propHasDuplicate = ShaderEditor.Active.GetMaterialProperty(MaterialProperty.name + "_" + ShaderEditor.Active.RenamedPropertySuffix) != null;
-            string tag = null;
-            //If prop is og, but is duplicated (locked) dont have it animateable
-            if (propHasDuplicate)
-            {
-                this.IsAnimatable = false;
-            }
-            else
-            {
-                //if prop is a duplicated or renamed get og property to check for animted status
-                if (MaterialProperty.name.Contains(ShaderEditor.Active.RenamedPropertySuffix))
-                {
-                    string ogName = MaterialProperty.name.Substring(0, MaterialProperty.name.Length - ShaderEditor.Active.RenamedPropertySuffix.Length - 1);
-                    tag = ShaderOptimizer.GetAnimatedTag(MaterialProperty.targets[0] as Material, ogName);
-                }
-                else
-                {
-                    tag = ShaderOptimizer.GetAnimatedTag(MaterialProperty);
-                }
-            }
-            
-            this.IsAnimated = IsAnimatable && tag != "";
-            this.IsRenaming = IsAnimatable && tag == "2";
-        }
-
         public override void DrawInternal(GUIContent content, CRect rect = null, bool useEditorIndent = false, bool isInHeader = false)
         {
+            PreDraw();
             ActiveShaderEditor.CurrentProperty = this;
             this.MaterialProperty = ActiveShaderEditor.Properties[property_index];
-
-            if(_needsDrawerInitlization)
-            {
-                InitializeDrawers();
-                _needsDrawerInitlization = false;
-            }
-
-            PreDraw();
             if (ActiveShaderEditor.IsLockedMaterial)
                 EditorGUI.BeginDisabledGroup(!(IsAnimatable && (IsAnimated || IsRenaming)) && !ExemptFromLockedDisabling);
             int oldIndentLevel = EditorGUI.indentLevel;
@@ -801,14 +742,7 @@ namespace Thry
             }
             else if (rect != null)
             {
-                // Custom Drawing for Range, because it doesnt draw correctly if inside the big texture property
-                if(!_hasDrawer && MaterialProperty.type == MaterialProperty.PropType.Range)
-                {
-                    MaterialProperty.floatValue = EditorGUI.Slider(rect.r, content, MaterialProperty.floatValue, 0, MaterialProperty.rangeLimits.y);
-                }else
-                {
-                    ActiveShaderEditor.Editor.ShaderProperty(rect.r, this.MaterialProperty, content);
-                }
+                ActiveShaderEditor.Editor.ShaderProperty(rect.r, this.MaterialProperty, content);
             }
             else
             {
@@ -866,18 +800,13 @@ namespace Thry
         public bool hasFoldoutProperties = false;
         public bool hasScaleOffset = false;
         public string VRAMString = "";
-        bool _isVRAMDirty = true;
 
-        public TextureProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, string optionsRaw, bool hasScaleOffset, bool forceThryUI, int property_index) : base(shaderEditor, materialProperty, displayName, xOffset, optionsRaw, false, property_index)
+        public TextureProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, PropertyOptions options, bool hasScaleOffset, bool forceThryUI, int property_index) : base(shaderEditor, materialProperty, displayName, xOffset, options, false, property_index)
         {
             doCustomDrawLogic = forceThryUI;
             this.hasScaleOffset = hasScaleOffset;
-        }
-
-        protected override void InitOptions()
-        {
-            base.InitOptions();
             this.hasFoldoutProperties = hasScaleOffset || DoReferencePropertiesExist;
+            UpdateVRAM();
         }
 
         void UpdateVRAM()
@@ -885,6 +814,7 @@ namespace Thry
             if (MaterialProperty.textureValue != null)
             {
                 var details = TextureHelper.VRAM.CalcSize(MaterialProperty.textureValue);
+                //this.VRAMString = $"{TextureHelper.VRAM.ToByteString(details.size)} ({details.format})";
                 this.VRAMString = $"{TextureHelper.VRAM.ToByteString(details.size)}";
             }
             else
@@ -896,18 +826,12 @@ namespace Thry
         protected override void OnPropertyValueChanged()
         {
             base.OnPropertyValueChanged();
-            _isVRAMDirty = true;
+            UpdateVRAM();
         }
 
         public override void PreDraw()
         {
             DrawingData.CurrentTextureProperty = this;
-            this.doCustomDrawLogic = !this._hasDrawer;
-            if (this._isVRAMDirty)
-            {
-                UpdateVRAM();
-                _isVRAMDirty = false;
-            }
         }
 
         public override void DrawDefault()
@@ -975,22 +899,8 @@ namespace Thry
 
     public class ShaderHeaderProperty : ShaderPart
     {
-        public ShaderHeaderProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, string optionsRaw, bool forceOneLine) : base(shaderEditor, materialProperty, xOffset, displayName, optionsRaw)
+        public ShaderHeaderProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, PropertyOptions options, bool forceOneLine) : base(shaderEditor, materialProperty, xOffset, displayName, options)
         {
-            // guid is defined as <guid:x*>
-            if(displayName.Contains("<guid="))
-            {
-                int start = displayName.IndexOf("<guid=");
-                int end = displayName.IndexOf(">", start);
-                string guid = displayName.Substring(start + 6, end - start - 6);
-                string path = AssetDatabase.GUIDToAssetPath(guid);
-                string replacement = "";
-                if (path != null && System.IO.File.Exists(path))
-                {
-                    replacement = System.IO.File.ReadAllText(path);
-                }
-                Content.text = displayName.Replace($"<guid={guid}>", replacement);
-            }
         }
 
         public override void HandleRightClickToggles(bool isInHeader)
@@ -1102,7 +1012,7 @@ namespace Thry
     }
     public class InstancingProperty : ShaderProperty
     {
-        public InstancingProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, string optionsRaw, bool forceOneLine) : base(shaderEditor, materialProperty, displayName, xOffset, optionsRaw, forceOneLine, 0)
+        public InstancingProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, PropertyOptions options, bool forceOneLine) : base(shaderEditor, materialProperty, displayName, xOffset, options, forceOneLine, 0)
         {
             doCustomDrawLogic = true;
         }
@@ -1114,7 +1024,7 @@ namespace Thry
     }
     public class GIProperty : ShaderProperty
     {
-        public GIProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, string optionsRaw, bool forceOneLine) : base(shaderEditor, materialProperty, displayName, xOffset, optionsRaw, forceOneLine, 0)
+        public GIProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, PropertyOptions options, bool forceOneLine) : base(shaderEditor, materialProperty, displayName, xOffset, options, forceOneLine, 0)
         {
             doCustomDrawLogic = true;
         }
@@ -1186,7 +1096,7 @@ namespace Thry
     }
     public class DSGIProperty : ShaderProperty
     {
-        public DSGIProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, string optionsRaw, bool forceOneLine) : base(shaderEditor, materialProperty, displayName, xOffset, optionsRaw, forceOneLine, 0)
+        public DSGIProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, PropertyOptions options, bool forceOneLine) : base(shaderEditor, materialProperty, displayName, xOffset, options, forceOneLine, 0)
         {
             doCustomDrawLogic = true;
         }
@@ -1198,14 +1108,14 @@ namespace Thry
     }
     public class LocaleProperty : ShaderProperty
     {
-        public LocaleProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, string optionsRaw, bool forceOneLine) : base(shaderEditor, materialProperty, displayName, xOffset, optionsRaw, forceOneLine, 0)
+        public LocaleProperty(ShaderEditor shaderEditor, MaterialProperty materialProperty, string displayName, int xOffset, PropertyOptions options, bool forceOneLine) : base(shaderEditor, materialProperty, displayName, xOffset, options, forceOneLine, 0)
         {
             doCustomDrawLogic = true;
         }
 
         public override void DrawDefault()
         {
-            ShaderEditor.Active.Locale.DrawDropdown();    
+            GuiHelper.DrawLocaleSelection(this.Content, ActiveShaderEditor.Locale.available_locales, ActiveShaderEditor.Locale.selected_locale_index);
         }
     }
 }

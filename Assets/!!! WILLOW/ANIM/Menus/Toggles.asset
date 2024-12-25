@@ -44,11 +44,11 @@ MonoBehaviour:
     subMenu: {fileID: 11400000, guid: 142eff2655a1ef7449cb7987457a43e7, type: 2}
     subParameters: []
     labels: []
-  - name: Hair
+  - name: Short Hair
     icon: {fileID: 2800000, guid: 340019b881802b840a171a77d748cd6a, type: 3}
-    type: 103
+    type: 102
     parameter:
-      name: 
+      name: Hair Short
     value: 1
     style: 0
     subMenu: {fileID: 11400000, guid: 407e8b70b1d32034c95de055344db19a, type: 2}

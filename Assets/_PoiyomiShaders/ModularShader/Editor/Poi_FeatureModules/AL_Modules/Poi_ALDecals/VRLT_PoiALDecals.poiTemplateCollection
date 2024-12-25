@@ -7,7 +7,7 @@
 [ThryHeaderLabel(Transform, 13)]
 [Space(4)]
 [Enum(Normal, 0, Circle, 1)] _ALDecalUVMode ("UV Mode", Float) = 0
-[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _ALDecalUV ("UV", Int) = 0
+[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _ALDecalUV ("UV", Int) = 0
 [Vector2]_ALUVPosition ("Position", Vector) = (.5, .5, 1)
 _ALUVScale ("Scale", Vector) = (1, 1, 1, 1)
 _ALUVRotation ("Rotation", Range(0, 360)) = 0
@@ -40,20 +40,17 @@ _ALDecalTrebleBoost ("Treble Boost", Float) = 1.0
 
 [Space][ThryHeaderLabel(Colors and Blending, 13)]
 [Space(4)]
-[sRGBWarning(true)][ThryRGBAPacker(1, RGB Color, A Mask, 1)]_ALDecalColorMask ("Color & Mask--{reference_properties:[_ALDecalColorMaskPan, _ALDecalColorMaskUV]}", 2D) = "white" { }
+[ThryRGBAPacker(1, RGB Color, A Mask, 1)]_ALDecalColorMask ("Color & Mask--{reference_properties:[_ALDecalColorMaskPan, _ALDecalColorMaskUV]}", 2D) = "white" { }
 [HideInInspector][Vector2]_ALDecalColorMaskPan ("Panning", Vector) = (0, 0, 0, 0)
-[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _ALDecalColorMaskUV ("UV", Int) = 0
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _ALDecalColorMaskUV ("UV", Int) = 0
 [Enum(UVX, 0, UVY, 1, Volume, 2)] _ALDecalVolumeColorSource ("Source", Int) = 1
-_ALDecalVolumeColorLow ("Volume Color Low--{reference_property:_ALDecalVolumeColorLowThemeIndex}", Color) = (0, 0, 1)
-[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _ALDecalVolumeColorLowThemeIndex ("", Int) = 0
+_ALDecalVolumeColorLow ("Volume Color Low", Color) = (0, 0, 1)
 _ALDecalLowEmission ("Low Emission", Range(0, 20)) = 0
-_ALDecalVolumeColorMid ("Volume Color Mid--{reference_property:_ALDecalVolumeColorMidThemeIndex}", Color) = (0, 1, 0)
-[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _ALDecalVolumeColorMidThemeIndex ("", Int) = 0
+_ALDecalVolumeColorMid ("Volume Color Mid", Color) = (0, 1, 0)
 _ALDecalMidEmission ("Mid Emission", Range(0, 20)) = 0
-_ALDecalVolumeColorHigh ("Volume Color High--{reference_property:_ALDecalVolumeColorHighThemeIndex}", Color) = (1, 0, 0)
-[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _ALDecalVolumeColorHighThemeIndex ("", Int) = 0
+_ALDecalVolumeColorHigh ("Volume Color High", Color) = (1, 0, 0)
 _ALDecalHighEmission ("High Emission", Range(0, 20)) = 0
-[ThryWideEnum(Replace, 0, Multiply, 2, Screen, 6, Linear Dodge(Add), 8, Overlay, 9, Mixed, 20)]_ALDecalBlendType ("Blend Type", Range(0, 1)) = 0
+[ThryWideEnum(Replace, 0, Darken, 1, Multiply, 2, Color Burn, 3, Linear Burn, 4, Lighten, 5, Screen, 6, Color Dodge, 7, Linear Dodge(Add), 8, Overlay, 9, Soft Lighten, 10, Hard Light, 11, Vivid Light, 12, Linear Light, 13, Pin Light, 14, Hard Mix, 15, Difference, 16, Exclusion, 17, Subtract, 18, Divide, 19)]_ALDecalBlendType ("Blend Type", Range(0, 1)) = 0
 _ALDecalBlendAlpha ("Alpha", Range(0, 1)) = 1
 _ALDecalControlsAlpha ("Override Alpha", Range(0, 1)) = 0
 [HideInInspector] m_end_ALDecalSpectrum ("AL ♫ Spectrum", Float) = 0
@@ -101,11 +98,8 @@ _ALDecalControlsAlpha ("Override Alpha", Range(0, 1)) = 0
         float _ALDecalLineWidth;
         float _ALDecalVolumeColorSource;
         float3 _ALDecalVolumeColorLow;
-        float _ALDecalVolumeColorLowThemeIndex;
         float3 _ALDecalVolumeColorMid;
-        float _ALDecalVolumeColorMidThemeIndex;
         float3 _ALDecalVolumeColorHigh;
-        float _ALDecalVolumeColorHighThemeIndex;
         float _ALDecalLowEmission;
         float _ALDecalMidEmission;
         float _ALDecalHighEmission;
@@ -202,16 +196,12 @@ _ALDecalControlsAlpha ("Override Alpha", Range(0, 1)) = 0
             float volumeColorSrc = audioLinkMask.g;
             if (_ALDecalVolumeColorSource == 1) volumeColorSrc = audioLinkMask.r;
             if (_ALDecalVolumeColorSource == 2) volumeColorSrc = audioVal;
-
-            float3 lowColor = _ALDecalVolumeColorLow.rgb * poiThemeColor(poiMods, _ALDecalVolumeColorLow.rgb, _ALDecalVolumeColorLowThemeIndex);
-            float3 midColor = _ALDecalVolumeColorMid.rgb * poiThemeColor(poiMods, _ALDecalVolumeColorMid.rgb, _ALDecalVolumeColorMidThemeIndex);
-            float3 highColor = _ALDecalVolumeColorHigh.rgb * poiThemeColor(poiMods, _ALDecalVolumeColorHigh.rgb, _ALDecalVolumeColorHighThemeIndex);
             
-            float3 volumeColor = lerp(lowColor, midColor, saturate(volumeColorSrc * 2));
-            volumeColor = lerp(volumeColor, highColor, saturate(volumeColorSrc * 2 - 1));
+            float3 volumeColor = lerp(_ALDecalVolumeColorLow.rgb, _ALDecalVolumeColorMid.rgb, saturate(volumeColorSrc * 2));
+            volumeColor = lerp(volumeColor, _ALDecalVolumeColorHigh.rgb, saturate(volumeColorSrc * 2 - 1));
 
-            float3 emissionColor = lerp(lowColor * _ALDecalLowEmission, midColor * _ALDecalMidEmission, saturate(volumeColorSrc * 2));
-            emissionColor = lerp(emissionColor, highColor * _ALDecalHighEmission, saturate(volumeColorSrc * 2 - 1));
+            float3 emissionColor = lerp(_ALDecalVolumeColorLow.rgb * _ALDecalLowEmission, _ALDecalVolumeColorMid.rgb * _ALDecalMidEmission, saturate(volumeColorSrc * 2));
+            emissionColor = lerp(emissionColor, _ALDecalVolumeColorHigh.rgb * _ALDecalHighEmission, saturate(volumeColorSrc * 2 - 1));
 
             
             //poiFragData.baseColor = lerp(poiFragData.baseColor, volumeColor, audioLinkValue);

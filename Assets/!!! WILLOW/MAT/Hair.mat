@@ -8,10 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hair
-  m_Shader: {fileID: 4800000, guid: 1787129096f7e4d45814aa4d2a62d45c, type: 3}
+  m_Shader: {fileID: 4800000, guid: 569946a67864ed843b90509ea4425ade, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - COLOR_GRADING_HDR
   - COLOR_GRADING_HDR_3D
   - DEPTH_OF_FIELD_COC_VIEW
@@ -27,16 +28,15 @@ Material:
   - _EMISSION
   - _LIGHTINGMODE_FLAT
   - _RIM2STYLE_POIYOMI
-  - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
   - _SUNDISK_SIMPLE
-  m_InvalidKeywords:
   - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
+    AllLockedGUIDS: e3eadcc034f46214998aab5d535e8852
     OriginalKeywords: COLOR_GRADING_HDR COLOR_GRADING_HDR_3D DEPTH_OF_FIELD_COC_VIEW
       DISTORT GEOM_TYPE_BRANCH GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
       POI_LIGHT_DATA_ADDITIVE_ENABLE POI_MATCAP0 POI_VERTEXLIGHT_ON VIGNETTE_MASKED
@@ -2455,7 +2455,7 @@ Material:
     - _Set_HighColorMaskChannel: 1
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

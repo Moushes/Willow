@@ -26,11 +26,3 @@ float _PPFinalColorMultiplier;
     poiFragData.emission = max(poiFragData.emission * _PPEmissionMultiplier, 0);
     poiFragData.finalColor = max(poiFragData.finalColor * _PPFinalColorMultiplier, 0);
 #endif
-
-#T#PoiPPAnimationRealisticMods
-#ifdef UNITY_PASS_FORWARDBASE
-    light.color = max(light.color * _PPLightingMultiplier, 0);
-    light.color = max(light.color + _PPLightingAddition, 0);
-    indirectLight.diffuse = max(indirectLight.diffuse * _PPLightingMultiplier, 0);
-    indirectLight.diffuse = max(indirectLight.diffuse + _PPLightingAddition, 0);
-#endif

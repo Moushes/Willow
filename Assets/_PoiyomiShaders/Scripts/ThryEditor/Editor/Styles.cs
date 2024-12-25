@@ -35,6 +35,7 @@ namespace Thry
         public static GUIStyle dropDownHeaderLabel { get; private set; } = new GUIStyle(EditorStyles.boldLabel) { alignment = TextAnchor.MiddleCenter };
         public static GUIStyle label_align_right { get; private set; } = new GUIStyle(EditorStyles.label) { alignment = TextAnchor.UpperRight };
         public static GUIStyle dropDownHeaderButton { get; private set; } = new GUIStyle(EditorStyles.toolbarButton);
+        public static GUIStyle bigTextureStyle { get; private set; } = new GUIStyle() { fontSize = 48 };
         public static GUIStyle vectorPropertyStyle { get; private set; } = new GUIStyle() { padding = new RectOffset(0, 0, 2, 2) };
         public static GUIStyle greenStyle { get; private set; } = new GUIStyle() { normal = new GUIStyleState() { textColor = new Color(0, 0.5f, 0) } };
         public static GUIStyle animatedIndicatorStyle { get; private set; } = new GUIStyle() { normal = new GUIStyleState() { textColor = new Color(0.3f, 1, 0.3f) }, alignment = TextAnchor.MiddleRight };
@@ -47,10 +48,8 @@ namespace Thry
         public static GUIStyle style_toggle_left_richtext { get; private set; } = new GUIStyle(EditorStyles.label) { richText = true };
         public static GUIStyle richtext { get; private set; } = new GUIStyle(EditorStyles.label) { richText = true, wordWrap = true };
         public static GUIStyle richtext_center { get; private set; } = new GUIStyle(EditorStyles.label) { richText = true, wordWrap = true, alignment = TextAnchor.MiddleCenter };
-        
-        public static GUIStyle ButtonGreenText { get; private set; } = new GUIStyle(GUI.skin.button) { normal = new GUIStyleState() { textColor = new Color(0, 0.5f, 0) } };
 
-        public static GUIStyle icon_style_help = CreateIconStyle(EditorGUIUtility.IconContent("_Help"));
+        public static GUIStyle icon_style_help = CreateIconStyle(EditorGUIUtility.IconContent("PolygonCollider2D Icon"));
         public static GUIStyle icon_style_menu = CreateIconStyle(EditorGUIUtility.IconContent("_Menu"));
         public static GUIStyle icon_style_settings = CreateIconStyle(EditorGUIUtility.IconContent("_Popup"));
         public static GUIStyle icon_style_search = CreateIconStyle(EditorGUIUtility.IconContent("Search Icon"));
@@ -60,8 +59,8 @@ namespace Thry
         public static GUIStyle icon_style_refresh = CreateIconStyle(EditorGUIUtility.IconContent("d_Refresh"));
         public static GUIStyle icon_style_shaders = CreateIconStyle(EditorGUIUtility.IconContent("d_ShaderVariantCollection Icon"));
         public static GUIStyle icon_style_tools = CreateIconStyle(EditorGUIUtility.IconContent("d_SceneViewTools"));
-        public static GUIStyle icon_style_linked = CreateIconStyle(LoadTextureByGUID(RESOURCE_GUID.ICON_LINK));
-        public static GUIStyle icon_style_thryIcon = CreateIconStyle(LoadTextureByGUID(RESOURCE_GUID.ICON_THRY));
+        public static GUIStyle icon_style_linked = CreateIconStyle(LoadTextureByFileName(RESOURCE_NAME.ICON_NAME_LINK));
+        public static GUIStyle icon_style_thryIcon = CreateIconStyle(LoadTextureByFileName(RESOURCE_NAME.ICON_NAME_THRY));
 
         public static Texture texture_icon_shaders = EditorGUIUtility.IconContent("d_ShaderVariantCollection Icon").image;
 
@@ -84,12 +83,14 @@ namespace Thry
             };
         }
 
+        public static Texture2D rounded_texture { get; private set; } = LoadTextureByFileName(RESOURCE_NAME.RECT);
 
-        private static Texture2D LoadTextureByGUID(string guid)
+        private static Texture2D LoadTextureByFileName(string search_name)
         {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            if(path == null) return Texture2D.whiteTexture;
-            return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+            string[] guids = AssetDatabase.FindAssets(search_name + " t:texture");
+            if (guids.Length == 0)
+                return Texture2D.whiteTexture;
+            return AssetDatabase.LoadAssetAtPath<Texture2D>(AssetDatabase.GUIDToAssetPath(guids[0]));
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
-namespace Poi.Tools
+namespace Poi
 {
     static class PoiHelpers
     {

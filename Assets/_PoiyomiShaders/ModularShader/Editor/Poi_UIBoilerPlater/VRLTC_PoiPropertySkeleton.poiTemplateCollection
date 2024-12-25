@@ -20,7 +20,7 @@
 
 #T#GRABPASS_PROPERTIES
 // Rendering Options
-[HideInInspector] m_grabPassCategory ("Grab Pass--{button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/grab-pass/grabpass},hover:Documentation}}", Float) = 0
+[HideInInspector] m_grabPassCategory ("Grab Pass--{button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/grab-pass/grabpass},hover:Documentation}", Float) = 0
 #K#GRABPASS_PROPERTIES
 
 #T#MODIFIER_PROPERTIES

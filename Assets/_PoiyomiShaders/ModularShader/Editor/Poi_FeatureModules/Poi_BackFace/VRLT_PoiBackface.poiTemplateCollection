@@ -6,13 +6,13 @@
 _BackFaceColor ("Color--{reference_property:_BackFaceColorThemeIndex}", Color) = (1, 1, 1, 1)
 [HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _BackFaceColorThemeIndex ("", Int) = 0
 _BackFaceEmissionStrength ("Emission Strength", Range(0, 20)) = 0
-[sRGBWarning(true)]_BackFaceTexture ("Texture--{reference_properties:[_BackFaceTexturePan, _BackFaceTextureUV]}", 2D) = "white" { }
+_BackFaceAlpha ("Alpha", Range(0, 1)) = 1
+_BackFaceTexture ("Texture--{reference_properties:[_BackFaceTexturePan, _BackFaceTextureUV]}", 2D) = "white" { }
 [HideInInspector][Vector2]_BackFaceTexturePan ("Panning", Vector) = (0, 0, 0, 0)
-[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)]_BackFaceTextureUV ("UV#", Int) = 0
-[sRGBWarning]_BackFaceMask ("Mask--{reference_properties:[_BackFaceMaskPan, _BackFaceMaskUV, _BackFaceMaskChannel]}", 2D) = "white" { }
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)]_BackFaceTextureUV ("UV#", Int) = 0
+_BackFaceMask ("Mask--{reference_properties:[_BackFaceMaskPan, _BackFaceMaskUV]}", 2D) = "white" { }
 [HideInInspector][Vector2]_BackFaceMaskPan ("Panning", Vector) = (0, 0, 0, 0)
-[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)]_BackFaceMaskUV ("UV#", Int) = 0
-[HideInInspector][Enum(R, 0, G, 1, B, 2, A, 3)]_BackFaceMaskChannel ("Channel", Float) = 0
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)]_BackFaceMaskUV ("UV#", Int) = 0
 _BackFaceDetailIntensity ("Detail Intensity", Range(0, 5)) = 1
 [ToggleUI]_BackFaceReplaceAlpha ("Replace Alpha", Float) = 0
 _BackFaceEmissionLimiter ("Emission Limiter", Range(0, 1)) = 1
@@ -37,6 +37,7 @@ _BackFaceHueShiftSpeed ("Hue Shift Speed--{condition_showS:(_BackFaceHueShiftEna
 	float4 _BackFaceColor;
 	float _BackFaceColorThemeIndex;
 	float _BackFaceReplaceAlpha;
+	float _BackFaceAlpha;
 
 	#if defined(PROP_BACKFACETEXTURE) || !defined(OPTIMIZER_ENABLED)
 		Texture2D _BackFaceTexture;
@@ -51,7 +52,6 @@ _BackFaceHueShiftSpeed ("Hue Shift Speed--{condition_showS:(_BackFaceHueShiftEna
 	float4 _BackFaceMask_ST;
 	float2 _BackFaceMaskPan;
 	float _BackFaceMaskUV;
-	float _BackFaceMaskChannel;
 
 	float _BackFaceHueShiftEnabled;
 	float _BackFaceHueShift;
@@ -77,19 +77,16 @@ _BackFaceHueShiftSpeed ("Hue Shift Speed--{condition_showS:(_BackFaceHueShiftEna
 
 			float backFaceMask = 1;
 			#if defined(PROP_BACKFACEMASK) || !defined(OPTIMIZER_ENABLED)
-				backFaceMask *= POI2D_SAMPLER_PAN(_BackFaceMask, _MainTex, poiUV(poiMesh.uv[_BackFaceMaskUV], _BackFaceMask_ST), _BackFaceMaskPan)[_BackFaceMaskChannel];
+				backFaceMask *= POI2D_SAMPLER_PAN(_BackFaceMask, _MainTex, poiUV(poiMesh.uv[_BackFaceMaskUV], _BackFaceMask_ST), _BackFaceMaskPan).r * _BackFaceAlpha * backFaceColor.a;
 			#endif
-			if (!_BackFaceReplaceAlpha)
-			{
-				backFaceMask *= backFaceColor.a;
-			}
+
 
 			poiFragData.baseColor = lerp(poiFragData.baseColor, backFaceColor.rgb, backFaceMask);
 
 			UNITY_BRANCH
 			if (_BackFaceReplaceAlpha)
 			{
-				poiFragData.alpha = backFaceColor.a;
+				poiFragData.alpha = lerp(backFaceColor.a, poiFragData.alpha, backFaceMask);
 			}
 
 			poiFragData.emission += backFaceColor.rgb * _BackFaceEmissionStrength * backFaceMask;

@@ -17,7 +17,14 @@ MonoBehaviour:
   Version: 1.0
   Author: Poiyomi
   Description: 
-  EnableProperties: []
+  Enabled:
+    Name: 
+    DisplayName: 
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 0
   Properties: []
   ModuleDependencies: []
   IncompatibleWith: []
@@ -38,18 +45,21 @@ MonoBehaviour:
       type: 3}
     Keywords:
     - BASE_PROPERTY_VARIABLES
+    - ADD_PROPERTY_VARIABLES
     NeedsVariant: 0
     Queue: 100
   - Template: {fileID: 2670439467891335751, guid: b363d6bc86b03744ba759dc800cb2c01,
       type: 3}
     Keywords:
     - FRAGMENT_BASE_FUNCTIONS
+    - FRAGMENT_ADD_FUNCTIONS
     NeedsVariant: 0
     Queue: 100
   - Template: {fileID: 2808026140713147783, guid: b363d6bc86b03744ba759dc800cb2c01,
       type: 3}
     Keywords:
     - FRAGMENT_BASE_LIGHTING
+    - FRAGMENT_ADD_LIGHTING
     NeedsVariant: 0
     Queue: 100
   Functions: []

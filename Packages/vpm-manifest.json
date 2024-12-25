@@ -14,6 +14,9 @@
     },
     "de.thryrallo.vrc.avatar-performance-tools": {
       "version": "1.3.7"
+    },
+    "io.github.rurre.pumkinsavatartools": {
+      "version": "1.4.7"
     }
   },
   "locked": {
@@ -49,6 +52,10 @@
     },
     "de.thryrallo.vrc.avatar-performance-tools": {
       "version": "1.3.7",
+      "dependencies": {}
+    },
+    "io.github.rurre.pumkinsavatartools": {
+      "version": "1.4.7",
       "dependencies": {}
     }
   }

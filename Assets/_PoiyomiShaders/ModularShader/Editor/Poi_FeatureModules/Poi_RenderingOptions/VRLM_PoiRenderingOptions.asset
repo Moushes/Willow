@@ -27,7 +27,7 @@ MonoBehaviour:
     Keywords:
     - RENDERING_PROPERTIES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: 6216851525493451465, guid: ed47affb5a93a5f40a8062f9754c2dd5,
       type: 3}
     Keywords:
@@ -38,6 +38,6 @@ MonoBehaviour:
     - OUTLINE_PROPERTY_VARIABLES
     - META_PROPERTY_VARIABLES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   Functions: []
   AdditionalSerializedData: 

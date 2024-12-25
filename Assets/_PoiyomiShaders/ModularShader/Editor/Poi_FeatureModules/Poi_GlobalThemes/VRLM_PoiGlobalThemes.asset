@@ -54,6 +54,6 @@ MonoBehaviour:
     - FRAGMENT_META_INIT
     - FRAGMENT_OUTLINE_INIT
     NeedsVariant: 0
-    Queue: 10
+    Queue: 100
   Functions: []
   AdditionalSerializedData: 

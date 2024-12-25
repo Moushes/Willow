@@ -2,65 +2,65 @@
 //ifex _TextEnabled==0
 // MSDF OVERLAY
 [HideInInspector] m_start_Text ("Stats Overlay--{reference_property:_TextEnabled,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/special-fx/stats-overlay},hover:Documentation}}", Float) = 0
-[HideInInspector][ThryToggle(EFFECT_BUMP)]_TextEnabled ("Text", Float) = 0
-[sRGBWarning]_TextGlyphs ("Font Array", 2D) = "black" { }
+[HideInInspector][ThryToggle(EFFECT_BUMP)]_TextEnabled ("Text?", Float) = 0
+_TextGlyphs ("Font Array", 2D) = "black" { }
 _TextPixelRange ("Pixel Range", Float) = 4.0
 
 // FPS
 [HideInInspector] m_start_TextFPS ("FPS--{reference_property:_TextFPSEnabled}", Float) = 0
-[HideInInspector][ToggleUI]_TextFPSEnabled ("FPS Text", Float) = 0
-[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _TextFPSUV ("FPS UV", Int) = 0
+[HideInInspector][ToggleUI]_TextFPSEnabled ("FPS Text?", Float) = 0
+[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _TextFPSUV ("FPS UV", Int) = 0
 _TextFPSColor ("Color--{reference_property:_TextFPSColorThemeIndex}", Color) = (1, 1, 1, 1)
 [HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _TextFPSColorThemeIndex ("", Int) = 0
 _TextFPSEmissionStrength ("Emission Strength", Range(0, 20)) = 0
 [Vector2]_TextFPSOffset ("Offset", Vector) = (0, 0, 0, 0)
 _TextFPSRotation ("Rotation", Range(0, 360)) = 0
 [Vector2]_TextFPSScale ("Scale", Vector) = (1, 1, 1, 1)
-[VectorLabel(L, D, R, U)]_TextFPSPadding ("Padding Reduction", Vector) = (0, 0, 0, 0)
+_TextFPSPadding ("Padding Reduction", Vector) = (0, 0, 0, 0)
 [HideInInspector] m_end_TextFPS ("FPS", Float) = 0
 
 // POSITION
 [HideInInspector] m_start_TextPosition ("Position--{reference_property:_TextPositionEnabled}", Float) = 0
-[HideInInspector][ToggleUI]_TextPositionEnabled ("Position Text", Float) = 0
-[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _TextPositionUV ("Position UV", Int) = 0
-//[ToggleUI]_TextPositionVertical ("Vertical", Float) = 0
+[HideInInspector][ToggleUI]_TextPositionEnabled ("Position Text?", Float) = 0
+[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _TextPositionUV ("Position UV", Int) = 0
+//[ToggleUI]_TextPositionVertical ("Vertical?", Float) = 0
 _TextPositionColor ("Color--{reference_property:_TextPositionColorThemeIndex}", Color) = (1, 0, 1, 1)
 [HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _TextPositionColorThemeIndex ("", Int) = 0
 _TextPositionEmissionStrength ("Emission Strength", Range(0, 20)) = 0
 [Vector2]_TextPositionOffset ("Offset", Vector) = (0, 0, 0, 0)
 _TextPositionRotation ("Rotation", Range(0, 360)) = 0
 [Vector2]_TextPositionScale ("Scale", Vector) = (1, 1, 1, 1)
-[VectorLabel(L, D, R, U)]_TextPositionPadding ("Padding Reduction", Vector) = (0, 0, 0, 0)
+_TextPositionPadding ("Padding Reduction", Vector) = (0, 0, 0, 0)
 [HideInInspector] m_end_TextPosition ("Position", Float) = 0
 
 // INSTANCE TIME
 [HideInInspector] m_start_TextInstanceTime ("Instance Time--{reference_property:_TextTimeEnabled}", Float) = 0
-[HideInInspector][ToggleUI]_TextTimeEnabled ("Time Text", Float) = 0
-[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _TextTimeUV ("Time UV", Int) = 0
+[HideInInspector][ToggleUI]_TextTimeEnabled ("Time Text?", Float) = 0
+[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _TextTimeUV ("Time UV", Int) = 0
 _TextTimeColor ("Color--{reference_property:_TextTimeColorThemeIndex}", Color) = (1, 0, 1, 1)
 [HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _TextTimeColorThemeIndex ("", Int) = 0
 _TextTimeEmissionStrength ("Emission Strength", Range(0, 20)) = 0
 [Vector2]_TextTimeOffset ("Offset", Vector) = (0, 0, 0, 0)
 _TextTimeRotation ("Rotation", Range(0, 360)) = 0
 [Vector2]_TextTimeScale ("Scale", Vector) = (1, 1, 1, 1)
-[VectorLabel(L, D, R, U)]_TextTimePadding ("Padding Reduction", Vector) = (0, 0, 0, 0)
+_TextTimePadding ("Padding Reduction", Vector) = (0, 0, 0, 0)
 [HideInInspector] m_end_TextInstanceTime ("Instance Time", Float) = 0
 
 // NUMERIC OVERLAY
 [HideInInspector] m_start_TextNumeric ("Numeric (WIP)--{reference_property:_TextNumericEnabled}", Float) = 0
-[HideInInspector][ToggleUI]_TextNumericEnabled ("Numeric Text", Float) = 0
-[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _TextNumericUV ("Numeric UV", Int) = 0
+[HideInInspector][ToggleUI]_TextNumericEnabled ("Numeric Text?", Float) = 0
+[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _TextNumericUV ("Numeric UV", Int) = 0
 _TextNumericColor ("Color--{reference_property:_TextNumericColorThemeIndex}", Color) = (1, 1, 1, 1)
 [HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _TextNumericColorThemeIndex ("", Int) = 0
 _TextNumericValue ("Display Value", Float) = 0
-[IntRange]_TextNumericWholeDigits ("Whole Digits", Range(0, 4)) = 4
-[IntRange]_TextNumericDecimalDigits ("Decimal Digits", Range(0, 4)) = 0
-[ToggleUI]_TextNumericTrimZeroes ("Trim Leading Zeroes", Float) = 0
+_TextNumericWholeDigits ("Whole Digits", Range(0, 4)) = 4
+_TextNumericDecimalDigits ("Decimal Digits", Range(0, 4)) = 0
+[ToggleUI]_TextNumericTrimZeroes ("Trim Leading Zeroes?", Float) = 0
 _TextNumericEmissionStrength ("Emission Strength", Range(0, 20)) = 0
 [Vector2]_TextNumericOffset ("Offset", Vector) = (0, 0, 0, 0)
 _TextNumericRotation ("Rotation", Range(0, 360)) = 0
 [Vector2]_TextNumericScale ("Scale", Vector) = (1, 1, 1, 1)
-[VectorLabel(L, D, R, U)]_TextNumericPadding ("Padding Reduction", Vector) = (0, 0, 0, 0)
+_TextNumericPadding ("Padding Reduction", Vector) = (0, 0, 0, 0)
 [HideInInspector] m_end_TextNumeric ("Numeric", Float) = 0
 
 [HideInInspector] m_end_Text ("MSDF Text Overlay", Float) = 0
@@ -329,6 +329,8 @@ _TextNumericRotation ("Rotation", Range(0, 360)) = 0
 		globalTextEmission += poiThemeColor(poiMods, _TextFPSColor.rgb, _TextFPSColorThemeIndex) * opacity * _TextFPSEmissionStrength;
 	}
 
+	#define glsl_mod(x,y) (((x)-(y)*floor((x)/(y)))) 
+
 	void ApplyNumericText(inout PoiFragData poiFragData, float2 uv, in PoiMods poiMods)
 	{
 		// If both digits are set to zero: exit.
@@ -342,14 +344,17 @@ _TextNumericRotation ("Rotation", Range(0, 360)) = 0
 		uint wholeDigits = _TextNumericWholeDigits;
 		uint decimalDigits = _TextNumericDecimalDigits;
 		float NumericArray[10];										// 10 is the max amount of characters = 1 sign + 4 max whole digits + 1 decimal mark + 4 max decimal digits
-		uint arrayIndex = 0;
+		uint arrayIndex = 1;                                        // Start at 1 because position 0 is always the sign.
 		float totalCharacters = 1 + wholeDigits + decimalDigits; 	// Sign Character + Whole Digits + Decimal Digits
 
-		//Determine Sign (_TextNumericValue is usually animated)
-		float charSign = _TextNumericValue >= 0 ? ASCII_SPACE : ASCII_NEGATIVE;
+		//Determine Sign
+		float charSign = ASCII_SPACE; 								//Default to positive
+		if (sign(_TextNumericValue) == -1)
+		{
+			charSign = ASCII_NEGATIVE;
+		}
 
-		NumericArray[arrayIndex] = charSign;						//First character is always the sign
-		arrayIndex++;
+		NumericArray[0] = charSign;									//First character is always the sign
 
 		//Isolate whole number and fill array
 		if (wholeDigits > 0)
@@ -394,11 +399,12 @@ _TextNumericRotation ("Rotation", Range(0, 360)) = 0
 			arrayIndex++;
 			totalCharacters++;
 
+
 			decimalNumber = uint(frac(abs(_TextNumericValue)) * pow(10.00001, decimalDigits));    // Isolate the decimal number
 
 			int expIndex = -1 * (decimalDigits - 1);                                          // Exponent Index
 			//Populate the Array with the remaining digits
-			while (arrayIndex < (totalCharacters))
+			while (arrayIndex <= (totalCharacters))
 			{
 				// Grab the corresponding digit from the whole number going from left to right.
 				int digit = floor(glsl_mod(decimalNumber * pow(10, expIndex), 10));

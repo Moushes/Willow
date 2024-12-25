@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Skin
-  m_Shader: {fileID: 4800000, guid: 554fbedb1999cb34484e7989b41cac91, type: 3}
+  m_Shader: {fileID: 4800000, guid: d49fdc1f1e949724cb0941a607d1f14f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -25,16 +25,15 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
-    AllLockedGUIDS: e4d92024ebac2bb40bb7169d97538425
     OriginalKeywords: GEOM_TYPE_FROND POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
       POI_LIGHT_DATA_ADDITIVE_ENABLE POI_MATCAP0 POI_MATCAP2 POI_VERTEXLIGHT_ON VIGNETTE_MASKED
-      _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
-      _STOCHASTICMODE_DELIOT_HEITZ
+      _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro Outline
     RenderType: Opaque
     _DecalBlendAlpha2Animated: 1
@@ -1160,7 +1159,7 @@ Material:
     - _Decal3MaskChannel: 3
     - _Decal3TPSMaskStrength: 1
     - _DecalBlendAlpha: 0
-    - _DecalBlendAlpha1: 0
+    - _DecalBlendAlpha1: 1
     - _DecalBlendAlpha2: 1
     - _DecalBlendAlpha3: 0
     - _DecalBlendType: 0
@@ -3046,7 +3045,7 @@ Material:
     - m_postprocessing: 0
     - m_renderingCategory: 0
     - m_renderingOptions: 1
-    - m_specialFXCategory: 1
+    - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_Alpha: 0
     - m_start_AlphaGlobalMask: 0
@@ -3063,13 +3062,13 @@ Material:
     - m_start_CubeMap: 0
     - m_start_Decal0: 0
     - m_start_Decal0AudioLink: 0
-    - m_start_Decal1: 0
+    - m_start_Decal1: 1
     - m_start_Decal1AudioLink: 0
     - m_start_Decal2: 1
     - m_start_Decal2AudioLink: 0
     - m_start_Decal3: 0
     - m_start_Decal3AudioLink: 0
-    - m_start_DecalSection: 0
+    - m_start_DecalSection: 1
     - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0
@@ -3202,7 +3201,7 @@ Material:
     - m_start_lightingHSL: 0
     - m_start_lightingModifiers: 0
     - m_start_manualFlipbookControl: 0
-    - m_start_matcap: 0
+    - m_start_matcap: 1
     - m_start_matcap2HueShift: 0
     - m_start_matcapHueShift: 0
     - m_start_mirrorOptions: 0

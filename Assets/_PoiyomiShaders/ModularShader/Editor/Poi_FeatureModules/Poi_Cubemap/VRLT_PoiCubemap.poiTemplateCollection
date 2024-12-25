@@ -2,20 +2,16 @@
 //ifex _CubeMapEnabled==0
 [HideInInspector] m_start_CubeMap ("CubeMap--{reference_property:_CubeMapEnabled,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/shading/cubemap},hover:Documentation}}", Float) = 0
 [HideInInspector][ThryToggle(_CUBEMAP)]_CubeMapEnabled ("Enable CubeMap", Float) = 0
-[ThryWideEnum(Skybox, 0, Reflection, 1, World Normal Direction, 2, Local Normal Direction, 3)] _CubeMapUVMode ("UV Mode", Int) = 1
-_CubeMapWorldNormalsStrength ("Normals Strength--{condition_showS:(_CubeMapUVMode==2)}", Range(0,1)) = 1
+[ThryWideEnum(Skybox, 0, Reflection, 1)] _CubeMapUVMode ("UV Mode", Int) = 1
 _CubeMapColor ("Color--{reference_property:_CubeMapColorThemeIndex}", Color) = (1, 1, 1, 1)
 [HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _CubeMapColorThemeIndex ("", Int) = 0
 [NoScaleOffset]_CubeMap ("CubeMap--{reference_properties:[_CubeMapRotation, _CubeMapRotationPan]}", Cube) = "" { }
-[HideInInspector][Vector3]_CubeMapRotation ("Rotation in Degrees", Vector) = (0, 0, 0, 0)
-[HideInInspector][Vector3]_CubeMapRotationPan ("Panning in Degrees", Vector) = (0, 0, 0, 0)
-[sRGBWarning]_CubeMapMask ("Mask--{reference_properties:[_CubeMapMaskPan, _CubeMapMaskUV, _CubeMapMaskChannel, _CubeMapMaskInvert]}", 2D) = "white" { }
+[HideInInspector][Vector3]_CubeMapRotation ("Rotation in Degrees", Vector) = (0,0,0,0)
+[HideInInspector][Vector3]_CubeMapRotationPan ("Panning in Degrees", Vector) = (0,0,0,0)
+_CubeMapMask ("Mask--{reference_properties:[_CubeMapMaskPan, _CubeMapMaskUV, _CubeMapMaskInvert]}", 2D) = "white" { }
 [HideInInspector][Vector2]_CubeMapMaskPan ("Panning", Vector) = (0, 0, 0, 0)
-[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos, 5, Local Pos, 8, Polar UV, 6, Distorted UV, 7)] _CubeMapMaskUV ("UV", Int) = 0
-[HideInInspector][Enum(R, 0, G, 1, B, 2, A, 3)]_CubeMapMaskChannel ("Channel", Float) = 0
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _CubeMapMaskUV ("UV", Int) = 0
 [HideInInspector][ToggleUI]_CubeMapMaskInvert ("Invert", Float) = 0
-[ThryWideEnum(Off, 0, 1R, 1, 1G, 2, 1B, 3, 1A, 4, 2R, 5, 2G, 6, 2B, 7, 2A, 8, 3R, 9, 3G, 10, 3B, 11, 3A, 12, 4R, 13, 4G, 14, 4B, 15, 4A, 16)] _CubeMapMaskGlobalMask ("Global Mask--{reference_property:_CubeMapMaskGlobalMaskBlendType}", Int) = 0
-[HideInInspector][ThryWideEnum(Add, 0, Subtract, 1, Multiply, 2, Divide, 3, Min, 4, Max, 5, Average, 6)]_CubeMapMaskGlobalMaskBlendType ("Blending", Range(0, 1)) = 2
 _CubeMapEmissionStrength ("Emission Strength", Range(0, 20)) = 0
 _CubeMapIntensity ("Color Strength", Range(0, 5)) = 1
 _CubeMapLightMask ("Hide in Shadow", Range(0, 1)) = 0
@@ -51,13 +47,9 @@ _CubeMapHueShift ("Hue Shift--{condition_showS:(_CubeMapHueShiftEnabled==1)}", R
 		float4 _CubeMapMask_ST;
 		float2 _CubeMapMaskPan;
 		float _CubeMapMaskUV;
-		float _CubeMapMaskChannel;
 	#endif
 	float _CubeMapUVMode;
-	float _CubeMapWorldNormalsStrength;
 	float _CubeMapMaskInvert;
-	float _CubeMapMaskGlobalMask;
-	float _CubeMapMaskGlobalMaskBlendType;
 	float4 _CubeMapColor;
 	float _CubeMapColorThemeIndex;
 	float _CubeMapIntensity;
@@ -79,7 +71,7 @@ _CubeMapHueShift ("Hue Shift--{condition_showS:(_CubeMapHueShiftEnabled==1)}", R
 #ifdef _CUBEMAP
 	#if defined(PROP_CUBEMAP) || !defined(OPTIMIZER_ENABLED)
 		// From Unity's MIT'd Skybox-Cubed.shader
-		float3 RotateAroundYInDegrees(float3 dir, float degrees)
+		float3 RotateAroundYInDegrees (float3 dir, float degrees)
 		{
 			float alpha = degrees * UNITY_PI / 180.0;
 			float sina, cosa;
@@ -94,18 +86,18 @@ _CubeMapHueShift ("Hue Shift--{condition_showS:(_CubeMapHueShiftEnabled==1)}", R
 
 		switch(_CubeMapUVMode)
 		{
-			case 0: // Skybox
-				CubeMapUV = -poiCam.viewDir;
-				break;
-			case 1: // Reflection
-				CubeMapUV = poiCam.reflectionDir;
-				break;
-			case 2: // World Normal Direction
-				CubeMapUV = lerp(poiMesh.normals[0], poiMesh.normals[1], _CubeMapWorldNormalsStrength);
-				break;
-			case 3: // Local Normal Direction
-				CubeMapUV = poiMesh.objNormal;
-				break;
+			// Skybox
+			case 0:
+				{
+					CubeMapUV = -poiCam.viewDir;
+					break;
+			}
+			// Reflection
+			case 1:
+				{
+					CubeMapUV = poiCam.reflectionDir;
+					break;
+			}
 		}
 
 		#if defined(PROP_CUBEMAP) || !defined(OPTIMIZER_ENABLED)
@@ -119,20 +111,15 @@ _CubeMapHueShift ("Hue Shift--{condition_showS:(_CubeMapHueShiftEnabled==1)}", R
 			float4 cubeMap = texCUBE(_CubeMap, CubeMapUV);
 			cubeMap.rgb *= poiThemeColor(poiMods, _CubeMapColor, _CubeMapColorThemeIndex);
 		#else
-			float4 cubeMap = float4(0.21763764082, 0.21763764082, 0.21763764082, .5) * float4(poiThemeColor(poiMods, _CubeMapColor, _CubeMapColorThemeIndex), 1);
+			float4 cubeMap = float4(poiThemeColor(poiMods, _CubeMapColor, _CubeMapColorThemeIndex), 1);
 		#endif
 
 		cubeMap.rgb *= _CubeMapIntensity;
 		#if defined(PROP_CUBEMAPMASK) || !defined(OPTIMIZER_ENABLED)
-			float CubeMapMask = POI2D_SAMPLER_PAN(_CubeMapMask, _MainTex, poiUV(poiMesh.uv[_CubeMapMaskUV], _CubeMapMask_ST), _CubeMapMaskPan)[_CubeMapMaskChannel];
+			float CubeMapMask = POI2D_SAMPLER_PAN(_CubeMapMask, _MainTex, poiUV(poiMesh.uv[_CubeMapMaskUV], _CubeMapMask_ST), _CubeMapMaskPan);
 		#else
 			float CubeMapMask = 1;
 		#endif
-
-		if (_CubeMapMaskGlobalMask > 0)
-		{
-			CubeMapMask = maskBlend(CubeMapMask, poiMods.globalMask[_CubeMapMaskGlobalMask-1], _CubeMapMaskGlobalMaskBlendType);
-		}
 		
 		if (_CubeMapMaskInvert)
 		{

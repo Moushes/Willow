@@ -17,7 +17,14 @@ MonoBehaviour:
   Version: 
   Author: 
   Description: 
-  EnableProperties: []
+  Enabled:
+    Name: 
+    DisplayName: 
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 0
   Properties: []
   ModuleDependencies: []
   IncompatibleWith: []
@@ -48,7 +55,6 @@ MonoBehaviour:
     - SHADOW_PROPERTY_VARIABLES
     - META_PROPERTY_VARIABLES
     - OUTLINE_PROPERTY_VARIABLES
-    - EARLYZ_PROPERTY_VARIABLES
     NeedsVariant: 0
     Queue: 100
   - Template: {fileID: 8714289124560104235, guid: 1be7b43adb0e07543b4687f3e0f50e1f,
@@ -59,7 +65,6 @@ MonoBehaviour:
     - VERTEX_SHADOW_FUNCTIONS_EARLY
     - VERTEX_META_FUNCTIONS_EARLY
     - VERTEX_OUTLINE_FUNCTIONS_EARLY
-    - VERTEX_EARLYZ_FUNCTIONS_EARLY
     NeedsVariant: 0
     Queue: 100
   - Template: {fileID: -2835084315498978105, guid: 1be7b43adb0e07543b4687f3e0f50e1f,

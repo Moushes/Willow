@@ -25,7 +25,7 @@ MonoBehaviour:
   - Template: {fileID: 5324126284433022680, guid: e80027487f186264198feb58a73f8e1d,
       type: 3}
     Keywords:
-    - SPECIALFX_PROPERTIES
+    - PoiExperimentalProperties
     NeedsVariant: 0
     Queue: 100
   - Template: {fileID: 1693693689188269537, guid: e80027487f186264198feb58a73f8e1d,

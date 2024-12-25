@@ -9,6 +9,3 @@ _GIEmissionMultiplier ("GI Emission Multiplier", Float) = 1
 
 #T#PoiGIVariables
 float _GIEmissionMultiplier;
-
-#T#PoiWorldDefine
-#define POI_WORLD

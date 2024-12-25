@@ -19,7 +19,6 @@ namespace Thry
             texture_settings_data = LoadTextureSettings(prop, predefinedTextureSettings, force_texture_options);
             data.Gradient = TextureHelper.GetGradient(prop.textureValue);
             GradientEditor window = (GradientEditor)EditorWindow.GetWindow(typeof(GradientEditor));
-            window.titleContent = new GUIContent("Gradient '" +prop.name +"' of '"+ prop.targets[0].name + "'");
             window.privious_preview_texture = prop.textureValue;
             window.prop = prop;
             window.data = data;
@@ -52,7 +51,7 @@ namespace Thry
                 return predefinedTextureSettings;
             string json_texture_settings = FileHelper.LoadValueFromFile("gradient_texture_options_"+prop.name, PATH.PERSISTENT_DATA);
             if (json_texture_settings != null)
-                return Parser.Deserialize<TextureData>(json_texture_settings);
+                return Parser.ParseToObject<TextureData>(json_texture_settings);
             else if (predefinedTextureSettings != null)
                 return predefinedTextureSettings;
             else
@@ -87,20 +86,6 @@ namespace Thry
                     file_name = Regex.Replace(file_name, @"\.((png)|(jpg))$", "");
                     FileHelper.SaveValueToFile(AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(saved)), Parser.ObjectToString(data.Gradient), PATH.GRADIENT_INFO_FILE);
                     prop.textureValue = saved;
-                    // change importer settings
-                    TextureImporter importer = (TextureImporter)TextureImporter.GetAtPath(AssetDatabase.GetAssetPath(saved));
-                     importer.textureCompression = TextureImporterCompression.CompressedHQ;
-                    if(Config.Singleton.gradientEditorCompressionOverwrite != TextureImporterFormat.Automatic)
-                    {
-                        importer.SetPlatformTextureSettings(new TextureImporterPlatformSettings()
-                        {
-                            name = "PC",
-                            overridden = true,
-                            maxTextureSize = 2048,
-                            format = Config.Singleton.gradientEditorCompressionOverwrite
-                        });
-                    }
-                    importer.SaveAndReimport();
                 }
             }
             else

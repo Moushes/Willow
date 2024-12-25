@@ -27,7 +27,7 @@ MonoBehaviour:
     Keywords:
     - MACROS_AND_DEFINES
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   - Template: {fileID: -544282384758852595, guid: 4d6c9ab1551b31c4ba90cac4b0f8e3cd,
       type: 3}
     Keywords:
@@ -38,6 +38,6 @@ MonoBehaviour:
     - VERTEX_OUTLINE_FUNCTIONS_EARLY
     - VERTEX_META_FUNCTIONS_EARLY
     NeedsVariant: 0
-    Queue: 0
+    Queue: 100
   Functions: []
   AdditionalSerializedData: 

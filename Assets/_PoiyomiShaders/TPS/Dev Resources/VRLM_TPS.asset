@@ -42,7 +42,6 @@ MonoBehaviour:
     - SHADOW_PROPERTY_VARIABLES
     - META_PROPERTY_VARIABLES
     - OUTLINE_PROPERTY_VARIABLES
-    - EARLYZ_PROPERTY_VARIABLES
     NeedsVariant: 0
     Queue: 100
   - Template: {fileID: -214274297719696556, guid: 6ac5f730a8fb0f34cbb7b7ffedbbf310,
@@ -59,18 +58,6 @@ MonoBehaviour:
     - VERTEX_SHADOW_FUNCTIONS
     - VERTEX_META_FUNCTIONS
     - VERTEX_OUTLINE_FUNCTIONS
-    - VERTEX_EARLYZ_FUNCTIONS
-    NeedsVariant: 0
-    Queue: 100
-  - Template: {fileID: -9143878974821956775, guid: 6ac5f730a8fb0f34cbb7b7ffedbbf310,
-      type: 3}
-    Keywords:
-    - FRAGMENT_BASE_INIT
-    - FRAGMENT_ADD_INIT
-    - FRAGMENT_SHADOW_INIT
-    - FRAGMENT_META_INIT
-    - FRAGMENT_OUTLINE_INIT
-    - FRAGMENT_EARLYZ_INIT
     NeedsVariant: 0
     Queue: 100
   Functions: []

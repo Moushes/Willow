@@ -17,7 +17,14 @@ MonoBehaviour:
   Version: 
   Author: Razgriz
   Description: Discard vertices/pixels based on UV tiles (integer coordinate)
-  EnableProperties: []
+  Enabled:
+    Name: 
+    DisplayName: 
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 0
   Properties: []
   ModuleDependencies: []
   IncompatibleWith: []
@@ -42,7 +49,6 @@ MonoBehaviour:
     - SHADOW_PROPERTY_VARIABLES
     - META_PROPERTY_VARIABLES
     - OUTLINE_PROPERTY_VARIABLES
-    - EARLYZ_PROPERTY_VARIABLES
     NeedsVariant: 0
     Queue: 100
   - Template: {fileID: 7587128811217467521, guid: 6c4974195326e474c96bdc2a6f0d0706,
@@ -59,7 +65,6 @@ MonoBehaviour:
     - FRAGMENT_SHADOW_FUNCTIONS
     - FRAGMENT_META_FUNCTIONS
     - FRAGMENT_OUTLINE_FUNCTIONS
-    - FRAGMENT_EARLYZ_FUNCTIONS
     NeedsVariant: 0
     Queue: 100
   - Template: {fileID: 9036976540215735123, guid: 6c4974195326e474c96bdc2a6f0d0706,
@@ -70,7 +75,6 @@ MonoBehaviour:
     - FRAGMENT_SHADOW_INIT_EARLY
     - FRAGMENT_META_INIT_EARLY
     - FRAGMENT_OUTLINE_INIT_EARLY
-    - FRAGMENT_EARLYZ_INIT_EARLY
     NeedsVariant: 0
     Queue: 100
   Functions: []
