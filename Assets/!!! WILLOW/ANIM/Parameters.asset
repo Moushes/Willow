@@ -419,3 +419,13 @@ MonoBehaviour:
     saved: 0
     defaultValue: 0.27
     networkSynced: 0
+  - name: FaceClosed
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 0
+  - name: FaceBlush
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 0

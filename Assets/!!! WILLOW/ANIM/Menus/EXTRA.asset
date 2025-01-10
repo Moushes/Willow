@@ -36,3 +36,25 @@ MonoBehaviour:
     subParameters:
     - name: Eye_Shape
     labels: []
+  - name: Close Face
+    icon: {fileID: 2800000, guid: af9f68bad4a08234f8d98432dbdac80e, type: 3}
+    type: 102
+    parameter:
+      name: FaceClosed
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Eye_Shape
+    labels: []
+  - name: Blush Face
+    icon: {fileID: 2800000, guid: af9f68bad4a08234f8d98432dbdac80e, type: 3}
+    type: 102
+    parameter:
+      name: FaceBlush
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Eye_Shape
+    labels: []

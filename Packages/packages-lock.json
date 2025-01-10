@@ -56,8 +56,8 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.autodesk.fbx": "4.2.1",
-        "com.unity.timeline": "1.7.1"
+        "com.unity.timeline": "1.7.1",
+        "com.autodesk.fbx": "4.2.1"
       },
       "url": "https://packages.unity.com"
     },
@@ -228,18 +228,6 @@
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.0.2"
       }
-    },
-    "de.thryrallo.vrc.avatar-performance-tools": {
-      "version": "file:de.thryrallo.vrc.avatar-performance-tools",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "io.github.rurre.pumkinsavatartools": {
-      "version": "file:io.github.rurre.pumkinsavatartools",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
     },
     "vrchat.blackstartx.gesture-manager": {
       "version": "file:vrchat.blackstartx.gesture-manager",
