@@ -972,7 +972,7 @@ MonoBehaviour:
   blueprintId: avtr_1dd055e3-2d8f-4ca0-bd87-31dd9b8ae68a
   contentType: 0
   assetBundleUnityVersion: 
-  fallbackStatus: 0
+  fallbackStatus: 1
 --- !u!4 &73181770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
