@@ -969,7 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: avtr_1dd055e3-2d8f-4ca0-bd87-31dd9b8ae68a
+  blueprintId: avtr_02fe645b-cd01-4564-9963-4cb4314efe4b
   contentType: 0
   assetBundleUnityVersion: 
   fallbackStatus: 1
@@ -11218,6 +11218,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &169963175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3882711945695429461, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1821697857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &186253596
 GameObject:
   m_ObjectHideFlags: 0
@@ -11441,7 +11447,7 @@ MonoBehaviour:
     - rid: 3166844459135795206
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
-        version: 6
+        version: 7
         propBone: {fileID: 156812340}
         linkTo:
         - useBone: 1
@@ -11453,13 +11459,13 @@ MonoBehaviour:
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
-        recursive: 0
-        alignPosition: 0
-        alignRotation: 0
-        alignScale: 0
-        autoScaleFactor: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 1
         scalingFactorPowersOf10Only: 1
-        skinRewriteScalingFactor: 0
+        skinRewriteScalingFactor: 1
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -14351,7 +14357,7 @@ MonoBehaviour:
       type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 3
-        name: Willow/Cupboard/Bottoms/Dress socks
+        name: Willow/Cupboard/Socks/Dress socks
         state:
           actions:
           - rid: 3166844459135795202
@@ -14434,7 +14440,7 @@ MonoBehaviour:
     - rid: 3166844459135795200
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
-        version: 6
+        version: 7
         propBone: {fileID: 1539509677}
         linkTo:
         - useBone: 1
@@ -14446,13 +14452,13 @@ MonoBehaviour:
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
-        recursive: 0
-        alignPosition: 0
-        alignRotation: 0
-        alignScale: 0
-        autoScaleFactor: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 1
         scalingFactorPowersOf10Only: 1
-        skinRewriteScalingFactor: 0
+        skinRewriteScalingFactor: 1
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -32010,6 +32016,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1560490464}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1669030283}
     - targetCorrespondingSourceObject: {fileID: -7113567860641759636, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       insertIndex: -1
@@ -32222,6 +32232,247 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 579538066}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &971029444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7792841465458170055, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1821697857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &971029447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971029444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 3166844467529383936
+  references:
+    version: 2
+    RefIds:
+    - rid: 3166844467529383936
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 169963175}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 0
+        alignRotation: 1
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
+--- !u!137 &971029451 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7858551386665443300, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1821697857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &971029452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971029444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 3166844468454490112
+  references:
+    version: 2
+    RefIds:
+    - rid: 3166844468454490112
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Bottoms/Fishnets Halfbody
+        state:
+          actions:
+          - rid: 3166844468454490113
+        saved: 0
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 3166844468454490113
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 1669030282}
+        mode: 0
+--- !u!114 &971029453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971029444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 3166844468454490114
+  references:
+    version: 2
+    RefIds:
+    - rid: 3166844468454490114
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Hue/Clothes/HalfbodyFN
+        state:
+          actions:
+          - rid: 3166844468454490115
+        saved: 0
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 3166844468454490115
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 971029451}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: a3c8b5bae7fc1b247aa7558d99616f91|Assets/TightsBySai/Tights/variant.mat
+          objRef: {fileID: 2100000, guid: a3c8b5bae7fc1b247aa7558d99616f91, type: 2}
 --- !u!1001 &981293371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32355,7 +32606,7 @@ MonoBehaviour:
       type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 3
-        name: Willow/Cupboard/Bottoms/ThighFishnets
+        name: Willow/Cupboard/Socks/ThighFishnets
         state:
           actions:
           - rid: 3166844456964194310
@@ -32438,7 +32689,7 @@ MonoBehaviour:
     - rid: 3166844456964194306
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
-        version: 6
+        version: 7
         propBone: {fileID: 1416662876}
         linkTo:
         - useBone: 1
@@ -32450,13 +32701,13 @@ MonoBehaviour:
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
-        recursive: 0
+        recursive: 1
         alignPosition: 0
         alignRotation: 0
         alignScale: 0
-        autoScaleFactor: 0
+        autoScaleFactor: 1
         scalingFactorPowersOf10Only: 1
-        skinRewriteScalingFactor: 0
+        skinRewriteScalingFactor: 1
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -41660,6 +41911,18 @@ MonoBehaviour:
   showGizmos: 1
   boneOpacity: 0.5
   limitOpacity: 0.5
+--- !u!1 &1669030282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1821697857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1669030283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1821697857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1684817765
 GameObject:
   m_ObjectHideFlags: 0
@@ -42466,6 +42729,98 @@ MonoBehaviour:
   showGizmos: 1
   boneOpacity: 0.5
   limitOpacity: 0.5
+--- !u!1001 &1821697857
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 73181770}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000402
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3112462336583079711, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_Name
+      value: TightsZinFit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656259663758885595, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 4776189240830912130, guid: d7b2715221dc46a40bc3bfee25aa1e9f, type: 3}
+    - {fileID: 6032498723399953977, guid: d7b2715221dc46a40bc3bfee25aa1e9f, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -7792841465458170055, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 971029447}
+    - targetCorrespondingSourceObject: {fileID: -7792841465458170055, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 971029452}
+    - targetCorrespondingSourceObject: {fileID: -7792841465458170055, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 971029453}
+  m_SourcePrefab: {fileID: 100100000, guid: d7b2715221dc46a40bc3bfee25aa1e9f, type: 3}
 --- !u!4 &1846755994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1549391173291217729, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
