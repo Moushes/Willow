@@ -3,41 +3,28 @@
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29"
     },
-    "vrchat.blackstartx.gesture-manager": {
-      "version": "3.9.2"
-    },
     "wholesomevr.sps-configurator": {
       "version": "2.0.11"
-    },
-    "com.vrcfury.vrcfury": {
-      "version": "1.1134.0"
     },
     "de.thryrallo.vrc.avatar-performance-tools": {
       "version": "1.3.7"
     },
     "io.github.rurre.pumkinsavatartools": {
       "version": "1.4.7"
+    },
+    "com.vrchat.avatars": {
+      "version": "3.7.5"
+    },
+    "vrchat.blackstartx.gesture-manager": {
+      "version": "3.9.3"
+    },
+    "com.vrcfury.vrcfury": {
+      "version": "1.1160.0"
     }
   },
   "locked": {
     "com.vrchat.core.vpm-resolver": {
       "version": "0.1.29",
-      "dependencies": {}
-    },
-    "vrchat.blackstartx.gesture-manager": {
-      "version": "3.9.2",
-      "dependencies": {
-        "com.vrchat.avatars": ">=3.5.2 < 3.8.X"
-      }
-    },
-    "com.vrchat.avatars": {
-      "version": "3.7.2",
-      "dependencies": {
-        "com.vrchat.base": "3.7.2"
-      }
-    },
-    "com.vrchat.base": {
-      "version": "3.7.2",
       "dependencies": {}
     },
     "wholesomevr.sps-configurator": {
@@ -46,16 +33,32 @@
         "com.vrchat.avatars": "3.*"
       }
     },
-    "com.vrcfury.vrcfury": {
-      "version": "1.1134.0",
-      "dependencies": {}
-    },
     "de.thryrallo.vrc.avatar-performance-tools": {
       "version": "1.3.7",
       "dependencies": {}
     },
     "io.github.rurre.pumkinsavatartools": {
       "version": "1.4.7",
+      "dependencies": {}
+    },
+    "com.vrchat.avatars": {
+      "version": "3.7.5",
+      "dependencies": {
+        "com.vrchat.base": "3.7.5"
+      }
+    },
+    "com.vrchat.base": {
+      "version": "3.7.5",
+      "dependencies": {}
+    },
+    "vrchat.blackstartx.gesture-manager": {
+      "version": "3.9.3",
+      "dependencies": {
+        "com.vrchat.avatars": ">=3.5.2 < 3.8.X"
+      }
+    },
+    "com.vrcfury.vrcfury": {
+      "version": "1.1160.0",
       "dependencies": {}
     }
   }

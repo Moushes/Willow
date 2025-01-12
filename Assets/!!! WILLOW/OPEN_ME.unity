@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -993,7 +993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -1190,7 +1190,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 6
-        linkMode: 4
         propBone: {fileID: 1416662876}
         linkTo:
         - useBone: 1
@@ -1198,13 +1197,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -1212,6 +1215,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!1 &113948482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2885861733426169748, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -11259,7 +11264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -11275,7 +11280,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 5
-        linkMode: 4
         propBone: {fileID: 186253596}
         linkTo:
         - useBone: 1
@@ -11283,13 +11287,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -11297,6 +11305,8 @@ MonoBehaviour:
         boneOnAvatar: 17
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!1 &208870908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: da605258c91830148a99f4a602e60c8c,
@@ -11335,7 +11345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -11419,7 +11429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -11432,7 +11442,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 6
-        linkMode: 4
         propBone: {fileID: 156812340}
         linkTo:
         - useBone: 1
@@ -11440,13 +11449,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -11454,6 +11467,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!114 &210719759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11468,7 +11483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -11619,7 +11634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -11635,7 +11650,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 5
-        linkMode: 4
         propBone: {fileID: 241726587}
         linkTo:
         - useBone: 1
@@ -11643,13 +11657,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -11657,6 +11675,8 @@ MonoBehaviour:
         boneOnAvatar: 8
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!114 &241726590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11671,7 +11691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 3
   name: Special/Titjob
   enableHandTouchZone2: 0
@@ -13452,7 +13472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -13465,7 +13485,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 6
-        linkMode: 4
         propBone: {fileID: 426493937}
         linkTo:
         - useBone: 1
@@ -13473,13 +13492,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -13487,6 +13510,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!114 &426493940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13501,7 +13526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 1
   name: Pussy
   enableHandTouchZone2: 0
@@ -14084,7 +14109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -14168,7 +14193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -14180,8 +14205,7 @@ MonoBehaviour:
     - rid: 3166844456964194308
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
-        version: 6
-        linkMode: 4
+        version: 7
         propBone: {fileID: 1416662876}
         linkTo:
         - useBone: 1
@@ -14189,13 +14213,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 1
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -14203,6 +14231,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!4 &601949198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8613993638121627902, guid: 6e92b02cf8356a8429f42dba9fb3dc87,
@@ -14308,7 +14338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -14392,7 +14422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -14405,7 +14435,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 6
-        linkMode: 4
         propBone: {fileID: 1539509677}
         linkTo:
         - useBone: 1
@@ -14413,13 +14442,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -14427,6 +14460,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!1 &678560926
 GameObject:
   m_ObjectHideFlags: 0
@@ -32307,7 +32342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -32391,7 +32426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -32404,7 +32439,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 6
-        linkMode: 4
         propBone: {fileID: 1416662876}
         linkTo:
         - useBone: 1
@@ -32412,13 +32446,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 1
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -32426,6 +32464,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 1
+        linkMode: 4
 --- !u!1 &1006957569
 GameObject:
   m_ObjectHideFlags: 0
@@ -32472,7 +32512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -32488,7 +32528,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 5
-        linkMode: 4
         propBone: {fileID: 1006957569}
         linkTo:
         - useBone: 1
@@ -32496,13 +32535,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -32510,6 +32553,8 @@ MonoBehaviour:
         boneOnAvatar: 2
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!1 &1028506651
 GameObject:
   m_ObjectHideFlags: 0
@@ -32557,7 +32602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -32573,7 +32618,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 5
-        linkMode: 4
         propBone: {fileID: 1028506651}
         linkTo:
         - useBone: 1
@@ -32581,13 +32625,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -32595,6 +32643,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!114 &1028506654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32609,7 +32659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 2
   name: Special/Assjob
   enableHandTouchZone2: 0
@@ -33507,7 +33557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -33591,7 +33641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -33604,7 +33654,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 6
-        linkMode: 4
         propBone: {fileID: 926506116}
         linkTo:
         - useBone: 1
@@ -33612,13 +33661,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -33626,6 +33679,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!4 &1197168043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4522064441942207714, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -34282,7 +34337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -39228,7 +39283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -39244,7 +39299,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 5
-        linkMode: 4
         propBone: {fileID: 1260990377}
         linkTo:
         - useBone: 1
@@ -39252,13 +39306,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -39266,6 +39324,8 @@ MonoBehaviour:
         boneOnAvatar: 1
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!4 &1287549522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1956410252595298886, guid: c19f147ac93b7914db32a43451b5b379,
@@ -39371,7 +39431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -39384,7 +39444,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 6
-        linkMode: 4
         propBone: {fileID: 1335877025}
         linkTo:
         - useBone: 1
@@ -39392,13 +39451,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -39406,6 +39469,8 @@ MonoBehaviour:
         boneOnAvatar: 10
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!114 &1335877028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39420,7 +39485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 1
   name: Blowjob
   enableHandTouchZone2: 0
@@ -39807,7 +39872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features: []
@@ -39820,7 +39885,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 6
-        linkMode: 4
         propBone: {fileID: 1420492658}
         linkTo:
         - useBone: 1
@@ -39828,13 +39892,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -39842,6 +39910,8 @@ MonoBehaviour:
         boneOnAvatar: 0
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!114 &1420492661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39856,7 +39926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 1
   name: Anal
   enableHandTouchZone2: 0
@@ -39953,7 +40023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -39969,7 +40039,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 5
-        linkMode: 4
         propBone: {fileID: 1426077236}
         linkTo:
         - useBone: 1
@@ -39977,13 +40046,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -39991,6 +40064,8 @@ MonoBehaviour:
         boneOnAvatar: 17
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!114 &1426077239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40005,7 +40080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 3
   name: Handjob/Handjob Left
   enableHandTouchZone2: 0
@@ -40113,7 +40188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 3
   name: Handjob/Double Handjob
   enableHandTouchZone2: 0
@@ -41036,7 +41111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -41052,7 +41127,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 5
-        linkMode: 4
         propBone: {fileID: 1560378609}
         linkTo:
         - useBone: 1
@@ -41060,13 +41134,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -41074,6 +41152,8 @@ MonoBehaviour:
         boneOnAvatar: 18
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!114 &1560378612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41088,7 +41168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 3
   name: Handjob/Handjob Right
   enableHandTouchZone2: 0
@@ -41658,7 +41738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   addLight: 3
   name: Special/Thighjob
   enableHandTouchZone2: 0
@@ -42476,7 +42556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1134.0
+  vrcfuryVersion: 1.1160.0
   somethingIsBroken: 0
   config:
     features:
@@ -42492,7 +42572,6 @@ MonoBehaviour:
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
         version: 5
-        linkMode: 4
         propBone: {fileID: 1967421648}
         linkTo:
         - useBone: 1
@@ -42500,13 +42579,17 @@ MonoBehaviour:
           useObj: 0
           obj: {fileID: 0}
           offset: 
-        keepBoneOffsets2: 0
         removeBoneSuffix: 
-        skinRewriteScalingFactor: 0
-        scalingFactorPowersOf10Only: 1
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
+        recursive: 0
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 0
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -42514,6 +42597,8 @@ MonoBehaviour:
         boneOnAvatar: 18
         bonePathOnAvatar: 
         fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!4 &2019177136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5153596313435659651, guid: 9897a63cc1d29bf4880e832a53337a45,
