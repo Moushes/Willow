@@ -236,6 +236,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "io.github.rurre.editor-screenshot": {
+      "version": "file:io.github.rurre.editor-screenshot",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "io.github.rurre.pumkinsavatartools": {
       "version": "file:io.github.rurre.pumkinsavatartools",
       "depth": 0,

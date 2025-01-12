@@ -7,31 +7,25 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Metal
-  m_Shader: {fileID: 4800000, guid: 82bc4ecd12677d84ab1f8bb8151e4353, type: 3}
+  m_Name: Panties + Bows.002
+  m_Shader: {fileID: 4800000, guid: 1787129096f7e4d45814aa4d2a62d45c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
-  - DISTORT
+  m_ValidKeywords:
   - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
   - POI_LIGHT_DATA_ADDITIVE_ENABLE
-  - POI_MATCAP0
   - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_FLAT
   - _RIMSTYLE_POIYOMI
-  - _SUNDISK_SIMPLE
+  m_InvalidKeywords:
+  - _NORMALMAP
   - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap:
-    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
-    RenderType: TransparentCutout
-    _DissolveAlphaAnimated: 2
-    _DissolveEdgeHueShiftAnimated: 1
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -70,8 +64,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: b8960a088bdbdad478c88078ffab9d8c, type: 3}
-        m_Scale: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: a234b33bf88c3784ba54b00cf867bfb5, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatFallback:
         m_Texture: {fileID: 0}
@@ -162,8 +156,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveNoiseTexture:
-        m_Texture: {fileID: 2800000, guid: d5e4a521aa43ec742a51e66e8da2871a, type: 3}
-        m_Scale: {x: 5, y: 5}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveToTexture:
         m_Texture: {fileID: 0}
@@ -294,11 +288,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e9c6ae5b485773140b4595e71052e741, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
-        m_Texture: {fileID: 2800000, guid: a24496aa77800b24c960741cb4c32203, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap0NormalMap:
@@ -641,7 +635,7 @@ Material:
     - _BlueColorThemeIndex: 0
     - _BlueTextureUV: 0
     - _BumpMapUV: 0
-    - _BumpScale: 0.25
+    - _BumpScale: 1
     - _CCIgnoreCastedShadows: 0
     - _CameraAngleMax: 90
     - _CameraAngleMin: 45
@@ -825,18 +819,17 @@ Material:
     - _DissolveAlpha7: 0
     - _DissolveAlpha8: 0
     - _DissolveAlpha9: 0
-    - _DissolveAlpha_Metal: 0
     - _DissolveDetailNoiseUV: 0
     - _DissolveDetailStrength: 0.1
     - _DissolveEdgeColorThemeIndex: 0
-    - _DissolveEdgeEmission: 5
-    - _DissolveEdgeHardness: 0.62
-    - _DissolveEdgeHueShift: 0.096
-    - _DissolveEdgeHueShiftEnabled: 1
+    - _DissolveEdgeEmission: 0
+    - _DissolveEdgeHardness: 0.5
+    - _DissolveEdgeHueShift: 0
+    - _DissolveEdgeHueShiftEnabled: 0
     - _DissolveEdgeHueShiftSpeed: 0
-    - _DissolveEdgeWidth: 0.2
+    - _DissolveEdgeWidth: 0.025
     - _DissolveHueShift: 0
-    - _DissolveHueShiftEnabled: 1
+    - _DissolveHueShiftEnabled: 0
     - _DissolveHueShiftSpeed: 0
     - _DissolveInvertDetailNoise: 0
     - _DissolveInvertNoise: 0
@@ -968,7 +961,7 @@ Material:
     - _EnableAudioLink: 0
     - _EnableDepthBulge: 0
     - _EnableDepthRimLighting: 0
-    - _EnableDissolve: 1
+    - _EnableDissolve: 0
     - _EnableDissolveAudioLink: 0
     - _EnableDistortion: 0
     - _EnableDistortionAudioLink: 0
@@ -1045,16 +1038,16 @@ Material:
     - _GITDEWorldOrMesh1: 0
     - _GITDEWorldOrMesh2: 0
     - _GITDEWorldOrMesh3: 0
-    - _GlitterAngleRange: 10.9
+    - _GlitterAngleRange: 90
     - _GlitterBias: 0.8
     - _GlitterBlendType: 0
-    - _GlitterBrightness: 5
+    - _GlitterBrightness: 3
     - _GlitterCenterSize: 0.08
     - _GlitterColorMapUV: 0
     - _GlitterColorThemeIndex: 0
-    - _GlitterContrast: 1000
-    - _GlitterEnable: 1
-    - _GlitterFrequency: 200
+    - _GlitterContrast: 300
+    - _GlitterEnable: 0
+    - _GlitterFrequency: 300
     - _GlitterHideInShadow: 0
     - _GlitterHueShift: 0
     - _GlitterHueShiftEnabled: 0
@@ -1068,11 +1061,11 @@ Material:
     - _GlitterRandomRotation: 0
     - _GlitterRandomSize: 0
     - _GlitterShape: 0
-    - _GlitterSize: 0.478
+    - _GlitterSize: 0.3
     - _GlitterSpeed: 10
     - _GlitterTextureRotation: 0
     - _GlitterUV: 0
-    - _GlitterUseSurfaceColor: 1
+    - _GlitterUseSurfaceColor: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -1260,8 +1253,8 @@ Material:
     - _MatcapAlphaOverride: 0
     - _MatcapBorder: 0.43
     - _MatcapColorThemeIndex: 0
-    - _MatcapEmissionStrength: 1
-    - _MatcapEnable: 1
+    - _MatcapEmissionStrength: 0
+    - _MatcapEnable: 0
     - _MatcapHueShift: 0
     - _MatcapHueShiftEnabled: 0
     - _MatcapHueShiftSpeed: 0
@@ -1297,7 +1290,7 @@ Material:
     - _MochieSpecularStrength: 1
     - _MochieSpecularStrength2: 1
     - _MochieSpecularTintThemeIndex: 0
-    - _Mode: 1
+    - _Mode: 0
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _MultilayerMathBlurMapUV: 0
@@ -1443,7 +1436,7 @@ Material:
     - _ScrollingEmission3: 0
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShadingEnabled: 1
     - _ShadingShadeMapBlendType: 0
     - _Shadow2ndBlur: 0.3
@@ -1674,12 +1667,12 @@ Material:
     - m_end_uvPanosphere: 0
     - m_end_uvPolar: 0
     - m_end_vertexManipulation: 0
-    - m_lightingCategory: 1
-    - m_mainCategory: 1
+    - m_lightingCategory: 0
+    - m_mainCategory: 0
     - m_modifierCategory: 0
     - m_postprocessing: 0
-    - m_renderingCategory: 1
-    - m_specialFXCategory: 1
+    - m_renderingCategory: 0
+    - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_Alpha: 0
     - m_start_Aniso: 0
@@ -1727,15 +1720,15 @@ Material:
     - m_start_clearCoat: 0
     - m_start_depthFX: 0
     - m_start_depthRimLightOptions: 0
-    - m_start_dissolve: 1
-    - m_start_dissolveHueShift: 1
+    - m_start_dissolve: 0
+    - m_start_dissolveHueShift: 0
     - m_start_emission1Options: 0
     - m_start_emission2Options: 0
     - m_start_emission3Options: 0
     - m_start_emissionOptions: 0
     - m_start_flipBook: 0
     - m_start_glitter: 0
-    - m_start_matcap: 1
+    - m_start_matcap: 0
     - m_start_mirrorOptions: 0
     - m_start_normalCorrect: 0
     - m_start_parallax: 0
@@ -1871,12 +1864,12 @@ Material:
     - _DetailTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _DetailTint: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveDetailNoisePan: {r: 0, g: 0, b: 0, a: 0}
-    - _DissolveEdgeColor: {r: 1, g: 0.6039216, b: 0.8862746, a: 1}
+    - _DissolveEdgeColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveEndPoint: {r: 0, g: 1, b: 0, a: 0}
     - _DissolveMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _DissolveNoiseTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _DissolveStartPoint: {r: 0, g: -1, b: 0, a: 0}
-    - _DissolveTextureColor: {r: 0, g: 0, b: 0, a: 0}
+    - _DissolveTextureColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveToTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _DistortionFlowTexture1Pan: {r: 0, g: 0, b: 0, a: 0}
     - _DistortionFlowTexturePan: {r: 0, g: 0, b: 0, a: 0}
