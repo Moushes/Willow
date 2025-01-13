@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Fishnet
-  m_Shader: {fileID: 4800000, guid: 60b31c22175fa50418199b873dd760b8, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6e738d949a1095548893ad5c1b646dca, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -3171,7 +3171,7 @@ Material:
     - m_modifierCategory: 0
     - m_outlineOptions: 0
     - m_postprocessing: 0
-    - m_renderingCategory: 0
+    - m_renderingCategory: 1
     - m_renderingOptions: 0
     - m_specialFXCategory: 1
     - m_start_ALDecalSpectrum: 0

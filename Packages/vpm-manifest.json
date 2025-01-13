@@ -15,9 +15,6 @@
     "vrchat.blackstartx.gesture-manager": {
       "version": "3.9.3"
     },
-    "com.vrcfury.vrcfury": {
-      "version": "1.1160.0"
-    },
     "io.github.rurre.editor-screenshot": {
       "version": "1.1.6"
     },
@@ -26,6 +23,9 @@
     },
     "de.thryrallo.vrc.avatar-performance-tools": {
       "version": "1.3.7"
+    },
+    "com.vrcfury.vrcfury": {
+      "version": "1.1160.0"
     }
   },
   "locked": {
@@ -55,10 +55,6 @@
         "com.vrchat.avatars": ">=3.5.2 < 3.8.X"
       }
     },
-    "com.vrcfury.vrcfury": {
-      "version": "1.1160.0",
-      "dependencies": {}
-    },
     "io.github.rurre.editor-screenshot": {
       "version": "1.1.6",
       "dependencies": {}
@@ -69,6 +65,10 @@
     },
     "de.thryrallo.vrc.avatar-performance-tools": {
       "version": "1.3.7",
+      "dependencies": {}
+    },
+    "com.vrcfury.vrcfury": {
+      "version": "1.1160.0",
       "dependencies": {}
     }
   }
