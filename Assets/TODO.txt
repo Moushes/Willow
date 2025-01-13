@@ -1,0 +1,42 @@
+//--------------------------------------
+//------------New stuff-----------------
+//--------------------------------------
+Shirt with fishnets and garterbelt
+
+https://saikura.gumroad.com/l/Teach?layout=discover&recommended_by=search&_gl=1*1mgahs2*_ga*MTUzMTQ3MDE5OS4xNzAwODczODgy*_ga_6LJN6D94N6*MTcxNzk0MjUzMy4xNy4xLjE3MTc5NDI2NDUuMC4wLjA.
+
+I think this top could match those shorts you found (the ones i have nothing to match with)
+
+https://saikura.gumroad.com/l/Criminal?layout=discover&recommended_by=search&_gl=1*quaqft*_ga*MTUzMTQ3MDE5OS4xNzAwODczODgy*_ga_6LJN6D94N6*MTcxNzk0MjUzMy4xNy4xLjE3MTc5NDI2NTguMC4wLjA.
+
+OMG SO CUTE TOO
+
+https://kannabee.gumroad.com/l/CasualOutfit?layout=discover&recommended_by=search&_gl=1*1yr3kcm*_ga*MTUzMTQ3MDE5OS4xNzAwODczODgy*_ga_6LJN6D94N6*MTcxNzk0MjUzMy4xNy4xLjE3MTc5NDI3MzkuMC4wLjA.
+
+
+top/fishnets
+
+https://saikura.gumroad.com/l/Edgytop?layout=discover&recommended_by=search&_gl=1*1ird3lw*_ga*MTUzMTQ3MDE5OS4xNzAwODczODgy*_ga_6LJN6D94N6*MTcxNzk0MjUzMy4xNy4xLjE3MTc5NDI4OTguMC4wLjA.
+
+Heels
+
+https://therealthiccwitch.gumroad.com/l/uedvv?layout=discover&recommended_by=search&_gl=1*z5bxx5*_ga*MTUzMTQ3MDE5OS4xNzAwODczODgy*_ga_6LJN6D94N6*MTcxNzk0MjUzMy4xNy4xLjE3MTc5NDMwNjUuMC4wLjA.
+
+
+Add more textures to the jeans
+
+//--------------------------------------
+//--------------Fixes-------------------
+//--------------------------------------
+
+
+removing the doubling, clipping and other errors of the bra/panties/tights
+
+
+high-polycount chains and letters on tag
+
+Overall size of the model
+
+Reconfigure menus
+
+Start planning how to divide clothes in model
