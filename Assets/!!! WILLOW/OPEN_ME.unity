@@ -1110,7 +1110,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844456964194312
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -1189,7 +1189,7 @@ MonoBehaviour:
     - rid: 3166844456964194307
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
-        version: 6
+        version: 7
         propBone: {fileID: 1416662876}
         linkTo:
         - useBone: 1
@@ -1201,13 +1201,13 @@ MonoBehaviour:
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
-        recursive: 0
-        alignPosition: 0
-        alignRotation: 0
-        alignScale: 0
-        autoScaleFactor: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 1
         scalingFactorPowersOf10Only: 1
-        skinRewriteScalingFactor: 0
+        skinRewriteScalingFactor: 1
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
@@ -11368,7 +11368,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844459135795208
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -11506,7 +11506,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844459135795210
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -14132,7 +14132,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844456964194314
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -14361,7 +14361,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844459135795202
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -32329,7 +32329,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844468454490113
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -32413,7 +32413,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844468454490115
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -32610,7 +32610,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844456964194310
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -33825,7 +33825,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 3166844459135795205
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -33904,7 +33904,7 @@ MonoBehaviour:
     - rid: 3166844459135795203
       type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
       data:
-        version: 6
+        version: 7
         propBone: {fileID: 926506116}
         linkTo:
         - useBone: 1
@@ -33916,13 +33916,13 @@ MonoBehaviour:
         removeParentConstraints: 1
         forceMergedName: 
         forceOneWorldScale: 0
-        recursive: 0
-        alignPosition: 0
-        alignRotation: 0
-        alignScale: 0
-        autoScaleFactor: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 1
         scalingFactorPowersOf10Only: 1
-        skinRewriteScalingFactor: 0
+        skinRewriteScalingFactor: 1
         useOptimizedUpload: 0
         useBoneMerging: 0
         keepBoneOffsets: 0
