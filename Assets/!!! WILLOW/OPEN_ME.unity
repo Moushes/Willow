@@ -969,7 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: 
+  blueprintId: avtr_02fe645b-cd01-4564-9963-4cb4314efe4b
   contentType: 0
   assetBundleUnityVersion: 
   fallbackStatus: 1
@@ -14468,6 +14468,207 @@ MonoBehaviour:
         fallbackBones: 
         keepBoneOffsets2: 0
         linkMode: 4
+--- !u!1 &672077256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7932839439519182709, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 913182118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &672077258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672077256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 3166844512995639296
+  references:
+    version: 2
+    RefIds:
+    - rid: 3166844512995639296
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Bottoms/Jeans/Colorswap
+        state:
+          actions:
+          - rid: 3166844512995639306
+        saved: 1
+        slider: 1
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 3166844512995639306
+      type: {class: FlipBookBuilderAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        states: []
+        pages:
+        - state:
+            actions:
+            - rid: 3166844512995639307
+        - state:
+            actions:
+            - rid: 3166844512995639308
+        - state:
+            actions:
+            - rid: 3166844512995639309
+        - state:
+            actions:
+            - rid: 3166844512995639310
+        - state:
+            actions:
+            - rid: 3166844512995639311
+    - rid: 3166844512995639307
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 672077259}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: caeefaa98e4819a4598881ddd87a5374|Assets/!!STAR/TEX/Jeans/Mom Jeans
+            By Saikura/Textures/Jeans.mat
+          objRef: {fileID: 2100000, guid: caeefaa98e4819a4598881ddd87a5374, type: 2}
+    - rid: 3166844512995639308
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 672077259}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 0407fa0147846b6428a1d6a8370d2c5f|Assets/!!STAR/TEX/Jeans/Mom Jeans
+            By Saikura/Textures/Jeans2.mat
+          objRef: {fileID: 2100000, guid: 0407fa0147846b6428a1d6a8370d2c5f, type: 2}
+    - rid: 3166844512995639309
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 672077259}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 61833ba090cfeb7478e1e45567f6cac3|Assets/!!STAR/TEX/Jeans/Mom Jeans
+            By Saikura/Textures/Jeans3.mat
+          objRef: {fileID: 2100000, guid: 61833ba090cfeb7478e1e45567f6cac3, type: 2}
+    - rid: 3166844512995639310
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 672077259}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: cb1b36c0c63382046bd27861fc9017b9|Assets/!!STAR/TEX/Jeans/Mom Jeans
+            By Saikura/Textures/Jeans4.mat
+          objRef: {fileID: 2100000, guid: cb1b36c0c63382046bd27861fc9017b9, type: 2}
+    - rid: 3166844512995639311
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 672077259}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 09c504e4ef00c6d408504287f3626107|Assets/!!STAR/TEX/Jeans/Mom Jeans
+            By Saikura/Textures/Jeans5.mat
+          objRef: {fileID: 2100000, guid: 09c504e4ef00c6d408504287f3626107, type: 2}
+--- !u!137 &672077259 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3362419705094071014, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 913182118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &678560926
 GameObject:
   m_ObjectHideFlags: 0
@@ -23828,7 +24029,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 752e9a951e68d9d4a95b6f008e380f19, type: 2}
+      objectReference: {fileID: 2100000, guid: caeefaa98e4819a4598881ddd87a5374, type: 2}
     - target: {fileID: -3362419705094071014, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -32225,6 +32426,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2098156266}
+    - targetCorrespondingSourceObject: {fileID: -7932839439519182709, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 672077258}
   m_SourcePrefab: {fileID: 100100000, guid: 72cffffd84c580d4a9e83bb9aa5158ea, type: 3}
 --- !u!1 &926506116 stripped
 GameObject:
