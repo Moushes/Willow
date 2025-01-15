@@ -969,7 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: avtr_02fe645b-cd01-4564-9963-4cb4314efe4b
+  blueprintId: 
   contentType: 0
   assetBundleUnityVersion: 
   fallbackStatus: 1
@@ -22825,6 +22825,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: 0.000000016604941
       objectReference: {fileID: 0}
+    - target: {fileID: -5363634426146523775, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5360949394854287513, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -32483,7 +32488,7 @@ MonoBehaviour:
         forceOneWorldScale: 0
         recursive: 1
         alignPosition: 0
-        alignRotation: 1
+        alignRotation: 0
         alignScale: 0
         autoScaleFactor: 0
         scalingFactorPowersOf10Only: 1
@@ -43315,6 +43320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8596894547734849696, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3112462336583079711, guid: d7b2715221dc46a40bc3bfee25aa1e9f,
         type: 3}
