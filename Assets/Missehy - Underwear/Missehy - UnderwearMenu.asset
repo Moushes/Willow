@@ -34,13 +34,13 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Colours
+  - name: Colour toggle
     icon: {fileID: 0}
-    type: 103
+    type: 102
     parameter:
-      name: 
-    value: 3
+      name: Missehy / Underwear / Colour Toggle
+    value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: cfdcd54498280164eb7c5b58dc535d12, type: 2}
+    subMenu: {fileID: 0}
     subParameters: []
     labels: []

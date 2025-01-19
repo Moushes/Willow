@@ -31,10 +31,10 @@ BlendTree:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toggles / Underwear / BaseColour
+  m_Name: Toggles / Underwear / Colour Toggle
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 1b71cfeb1c4c2b64cb9c3726b1033c2e, type: 2}
+    m_Motion: {fileID: 7400000, guid: dd793323477fc434bbcc53818a0876c2, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -42,14 +42,14 @@ BlendTree:
     m_DirectBlendParameter: enableToggles
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 593137a08871cf34697f86243a170206, type: 2}
+    m_Motion: {fileID: 7400000, guid: c5493eb9aa4a75f4bb99c34d56c31bac, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: enableToggles
     m_Mirror: 0
-  m_BlendParameter: Missehy / Underwear / BaseColour
+  m_BlendParameter: Missehy / Underwear / Colour Toggle
   m_BlendParameterY: enableToggles
   m_MinThreshold: 0
   m_MaxThreshold: 1
@@ -165,7 +165,7 @@ BlendTree:
   m_Name: Toggles / Underwear / Panties
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: ae121801f6af7504dbb221e0fe306f50, type: 2}
+    m_Motion: {fileID: 7400000, guid: 4a4018408a1b5184796f0b1649d82814, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -173,7 +173,7 @@ BlendTree:
     m_DirectBlendParameter: Missehy / Bra
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 4a4018408a1b5184796f0b1649d82814, type: 2}
+    m_Motion: {fileID: 7400000, guid: ae121801f6af7504dbb221e0fe306f50, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -196,7 +196,7 @@ BlendTree:
   m_Name: Toggles / Underwear / Bra
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: f094629d75589664b936c8e952925797, type: 2}
+    m_Motion: {fileID: 7400000, guid: fcd5e14903beee049b4b8653c2b3346e, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -204,7 +204,7 @@ BlendTree:
     m_DirectBlendParameter: Missehy / Bra
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: fcd5e14903beee049b4b8653c2b3346e, type: 2}
+    m_Motion: {fileID: 7400000, guid: f094629d75589664b936c8e952925797, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -245,13 +245,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Missehy / Underwear / Colour
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: Missehy / Underwear / BaseColour
+  - m_Name: Missehy / Underwear / Colour Toggle
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -331,15 +325,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -1210187769821806044}
-    m_Threshold: 0.33333334
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: enableToggles
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7433189179542652498}
-    m_Threshold: 0.6666667
+    m_Threshold: 0.5
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -459,5 +445,20 @@ BlendTree:
   m_MinThreshold: 0
   m_MaxThreshold: 3
   m_UseAutomaticThresholds: 0
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
+--- !u!206 &7795993395726492981
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Toggles / Underwear / Colour Toggle
+  m_Childs: []
+  m_BlendParameter: enableToggles
+  m_BlendParameterY: enableToggles
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 0
