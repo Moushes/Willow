@@ -969,7 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: 
+  blueprintId: avtr_02fe645b-cd01-4564-9963-4cb4314efe4b
   contentType: 0
   assetBundleUnityVersion: 
   fallbackStatus: 1
@@ -13209,6 +13209,90 @@ MonoBehaviour:
   showGizmos: 1
   boneOpacity: 0.5
   limitOpacity: 0.5
+--- !u!1001 &390160534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 73181770}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000402
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1884904272197429112, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_Name
+      value: TeachOutfitZINFIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 427be3579d215cb43ac463412c2f78b9, type: 3}
+--- !u!4 &390160535 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 390160534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &403783438 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3186826115635091563, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -14563,12 +14647,6 @@ MonoBehaviour:
             - rid: 3166844512995639307
         - state:
             actions:
-            - rid: 3166844512995639308
-        - state:
-            actions:
-            - rid: 3166844512995639309
-        - state:
-            actions:
             - rid: 3166844512995639310
         - state:
             actions:
@@ -14591,42 +14669,6 @@ MonoBehaviour:
           id: caeefaa98e4819a4598881ddd87a5374|Assets/!!STAR/TEX/Jeans/Mom Jeans
             By Saikura/Textures/Jeans.mat
           objRef: {fileID: 2100000, guid: caeefaa98e4819a4598881ddd87a5374, type: 2}
-    - rid: 3166844512995639308
-      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
-      data:
-        version: 1
-        desktopActive: 0
-        androidActive: 0
-        localOnly: 0
-        remoteOnly: 0
-        obj: {fileID: 0}
-        renderer: {fileID: 672077259}
-        materialIndex: 0
-        mat:
-          version: 1
-          fileID: 0
-          guid: 
-          id: 0407fa0147846b6428a1d6a8370d2c5f|Assets/!!STAR/TEX/Jeans/Mom Jeans
-            By Saikura/Textures/Jeans2.mat
-          objRef: {fileID: 2100000, guid: 0407fa0147846b6428a1d6a8370d2c5f, type: 2}
-    - rid: 3166844512995639309
-      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
-      data:
-        version: 1
-        desktopActive: 0
-        androidActive: 0
-        localOnly: 0
-        remoteOnly: 0
-        obj: {fileID: 0}
-        renderer: {fileID: 672077259}
-        materialIndex: 0
-        mat:
-          version: 1
-          fileID: 0
-          guid: 
-          id: 61833ba090cfeb7478e1e45567f6cac3|Assets/!!STAR/TEX/Jeans/Mom Jeans
-            By Saikura/Textures/Jeans3.mat
-          objRef: {fileID: 2100000, guid: 61833ba090cfeb7478e1e45567f6cac3, type: 2}
     - rid: 3166844512995639310
       type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
@@ -32226,6 +32268,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1669030283}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 390160535}
     - targetCorrespondingSourceObject: {fileID: -7113567860641759636, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       insertIndex: -1

@@ -13,6 +13,12 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - DISTORT
+  - POI_AUDIOLINK
+  - POI_ENVIRORIM
+  - VIGNETTE_MASKED
+  - _EMISSION
+  - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_FLAT
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
@@ -4135,7 +4141,7 @@ Material:
     - m_end_voronoiRandom: 0
     - m_lightingCategory: 0
     - m_lightingOptions: 1
-    - m_mainCategory: 0
+    - m_mainCategory: 1
     - m_mainOptions: 1
     - m_modifierCategory: 0
     - m_outlineOptions: 0
