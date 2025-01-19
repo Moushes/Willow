@@ -12,23 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: -1506855854, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: Missehy - UnderwearParameters
   m_EditorClassIdentifier: 
+  isEmpty: 0
   parameters:
   - name: Missehy / Underwear / Bra
     valueType: 2
     saved: 1
-    defaultValue: 0
+    defaultValue: 1
     networkSynced: 1
   - name: Missehy / Underwear / Panties
     valueType: 2
     saved: 1
-    defaultValue: 0
+    defaultValue: 1
     networkSynced: 1
-  - name: Missehy / Underwear / Colour
-    valueType: 0
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: Missehy / Underwear / BaseColour
+  - name: Missehy / Underwear / Colour Toggle
     valueType: 2
     saved: 1
     defaultValue: 0
