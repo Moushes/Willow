@@ -969,7 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: avtr_02fe645b-cd01-4564-9963-4cb4314efe4b
+  blueprintId: avtr_81c06692-3280-4ec9-9b06-07144978c647
   contentType: 0
   assetBundleUnityVersion: 
   fallbackStatus: 1
@@ -11567,6 +11567,12 @@ MonoBehaviour:
           id: c051a65447e4ca649b7488a2b11ec31c|Assets/Imperial Dress Outfit/dress/Material.001
             Transparent.mat
           objRef: {fileID: 2100000, guid: c051a65447e4ca649b7488a2b11ec31c, type: 2}
+--- !u!1 &221230449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3882711945695429461, guid: 5b57fcb148d7e104a93f700a5b59001d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1023215437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &235183361 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8762423664317599877, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -13209,6 +13215,156 @@ MonoBehaviour:
   showGizmos: 1
   boneOpacity: 0.5
   limitOpacity: 0.5
+--- !u!1 &366265059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b57fcb148d7e104a93f700a5b59001d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1023215437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &366265060 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1023215437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &366265061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366265059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 3789788509048668160
+  references:
+    version: 2
+    RefIds:
+    - rid: 3789788509048668160
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 221230449}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
+--- !u!114 &366265062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366265059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 3789788509048668161
+  references:
+    version: 2
+    RefIds:
+    - rid: 3789788509048668161
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Goth Damn Shoes
+        state:
+          actions:
+          - rid: 3789788509048668162
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 3789788509048668162
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 366265059}
+        mode: 0
 --- !u!1001 &390160534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32272,6 +32428,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 390160535}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 366265060}
     - targetCorrespondingSourceObject: {fileID: -7113567860641759636, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       insertIndex: -1
@@ -33062,6 +33222,92 @@ MonoBehaviour:
         fallbackBones: 
         keepBoneOffsets2: 0
         linkMode: 4
+--- !u!1001 &1023215437
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 73181770}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000402
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4230556526340620320, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 95bb354fe4e54c0a95a3c878569a440b, type: 2}
+    - target: {fileID: 919132149155446097, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      propertyPath: m_Name
+      value: GothDamn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 366265061}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b57fcb148d7e104a93f700a5b59001d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 366265062}
+  m_SourcePrefab: {fileID: 100100000, guid: 5b57fcb148d7e104a93f700a5b59001d, type: 3}
 --- !u!1 &1028506651
 GameObject:
   m_ObjectHideFlags: 0
