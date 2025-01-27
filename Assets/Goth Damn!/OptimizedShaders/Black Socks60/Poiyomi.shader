@@ -359,6 +359,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
  #define PROP_LIGHTINGAOMAPS 
  #define PROP_CUBEMAP 
  #define PROP_CUBEMAPMASK 
+ #define PROP_MOCHIEMETALLICMAPS 
 			#pragma target 5.0
 			#pragma skip_variants DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SHADOWMASK
 			//ifex float(1)==0
@@ -2727,7 +2728,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
 				float2 mainUV = poiMesh.uv[float(0)].xy;
 				if (float(0))
 				{
-					mainUV = sharpSample(float4(0.0004882813,0.0004882813,2048,2048), mainUV);
+					mainUV = sharpSample(float4(0.0009765625,0.0009765625,1024,1024), mainUV);
 				}
 				float4 mainTexture = UNITY_SAMPLE_TEX2D(_MainTex, poiUV(mainUV, float4(1,1,0,0)) + _Time.x * float4(0,0,0,0));
 				float3 mainNormal = UnpackScaleNormal(POI2D_SAMPLER_PAN(_BumpMap, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)), float(1));
@@ -3083,11 +3084,11 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
 				poiFragData.emission = max(poiFragData.emission * float(1), 0);
 				poiFragData.finalColor = max(poiFragData.finalColor * float(1), 0);
 				#endif
-				if (float(1) == POI_MODE_OPAQUE)
+				if (float(0) == POI_MODE_OPAQUE)
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0.5));
+				clip(poiFragData.alpha - float(0));
 				return float4(poiFragData.finalColor + poiFragData.emission * poiMods.globalEmission, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG
@@ -3125,6 +3126,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
  #define PROP_LIGHTINGAOMAPS 
  #define PROP_CUBEMAP 
  #define PROP_CUBEMAPMASK 
+ #define PROP_MOCHIEMETALLICMAPS 
 			#pragma target 5.0
 			#pragma skip_variants DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SHADOWMASK
 			//ifex float(1)==0
@@ -5488,7 +5490,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
 				float2 mainUV = poiMesh.uv[float(0)].xy;
 				if (float(0))
 				{
-					mainUV = sharpSample(float4(0.0004882813,0.0004882813,2048,2048), mainUV);
+					mainUV = sharpSample(float4(0.0009765625,0.0009765625,1024,1024), mainUV);
 				}
 				float4 mainTexture = UNITY_SAMPLE_TEX2D(_MainTex, poiUV(mainUV, float4(1,1,0,0)) + _Time.x * float4(0,0,0,0));
 				float3 mainNormal = UnpackScaleNormal(POI2D_SAMPLER_PAN(_BumpMap, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)), float(1));
@@ -5839,16 +5841,16 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
 				}
 				poiFragData.alpha = float(0) ? 1 : poiFragData.alpha;
 				poiFragData.finalColor += poiLight.finalLightAdd;
-				if (float(1) == POI_MODE_OPAQUE)
+				if (float(0) == POI_MODE_OPAQUE)
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0.5));
+				clip(poiFragData.alpha - float(0));
 				if (float(0) == 4)
 				{
 					poiFragData.alpha = saturate(poiFragData.alpha * float(10));
 				}
-				if (float(1) != POI_MODE_TRANSPARENT)
+				if (float(0) != POI_MODE_TRANSPARENT)
 				{
 					poiFragData.finalColor *= poiFragData.alpha;
 				}
@@ -5889,6 +5891,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
  #define PROP_LIGHTINGAOMAPS 
  #define PROP_CUBEMAP 
  #define PROP_CUBEMAPMASK 
+ #define PROP_MOCHIEMETALLICMAPS 
 			#pragma target 5.0
 			#pragma skip_variants DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SHADOWMASK
 			//ifex float(1)==0
@@ -7120,7 +7123,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
 				float2 mainUV = poiMesh.uv[float(0)].xy;
 				if (float(0))
 				{
-					mainUV = sharpSample(float4(0.0004882813,0.0004882813,2048,2048), mainUV);
+					mainUV = sharpSample(float4(0.0009765625,0.0009765625,1024,1024), mainUV);
 				}
 				float4 mainTexture = UNITY_SAMPLE_TEX2D(_MainTex, poiUV(mainUV, float4(1,1,0,0)) + _Time.x * float4(0,0,0,0));
 				float3 mainNormal = UnpackScaleNormal(POI2D_SAMPLER_PAN(_BumpMap, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)), float(1));
@@ -7165,11 +7168,11 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.0/Poiyomi Toon/95bb354fe4e54c0a95a3c878
 					UNITY_APPLY_FOG(i.fogCoord, poiFragData.finalColor);
 				}
 				poiFragData.alpha = float(0) ? 1 : poiFragData.alpha;
-				if (float(1) == POI_MODE_OPAQUE)
+				if (float(0) == POI_MODE_OPAQUE)
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0.5));
+				clip(poiFragData.alpha - float(0));
 				return float4(poiFragData.finalColor, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG
