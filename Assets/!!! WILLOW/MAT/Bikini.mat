@@ -8,23 +8,22 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bikini
-  m_Shader: {fileID: 4800000, guid: b04c02a57c6e409479229b704fdf1a11, type: 3}
+  m_Shader: {fileID: 4800000, guid: 45abe778e54832640b41c13bcf6008b8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
   - COLOR_GRADING_HDR_3D
   - DISTORT
-  - GEOM_TYPE_BRANCH
-  - GEOM_TYPE_BRANCH_DETAIL
-  - GEOM_TYPE_FROND
   - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
   - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_MATCAP0
   - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_FLAT
   - _RIMSTYLE_POIYOMI
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32,11 +31,6 @@ Material:
   stringTagMap:
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
     RenderType: TransparentCutout
-    _DecalBlendAlpha1Animated: 1
-    _DecalBlendAlpha2Animated: 1
-    _DecalBlendAlphaAnimated: 1
-    _DecalHueShift1Animated: 1
-    _DecalHueShiftAnimated: 1
     _DissolveAlphaAnimated: 2
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -148,15 +142,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalTexture:
-        m_Texture: {fileID: 2800000, guid: 450773a9ed541984b84c9b694904218d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalTexture1:
-        m_Texture: {fileID: 2800000, guid: 742c7ea379820484aa657274a0fd48dc, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalTexture2:
-        m_Texture: {fileID: 2800000, guid: 4b90733765bdb92468b3c4490b020bc0, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalTexture3:
@@ -364,7 +358,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a24496aa77800b24c960741cb4c32203, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap0NormalMap:
@@ -380,7 +374,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap2Mask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0208297cac4b43041a0bb952bd4fb26b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap2NormalMap:
@@ -408,7 +402,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatcapMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 26b14f4bc7c453a459e149ca70d93575, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -532,7 +526,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RimMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0208297cac4b43041a0bb952bd4fb26b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RimTex:
@@ -995,16 +989,16 @@ Material:
     - _DecalEmissionStrength1: 0
     - _DecalEmissionStrength2: 0
     - _DecalEmissionStrength3: 0
-    - _DecalEnabled: 1
-    - _DecalEnabled1: 1
-    - _DecalEnabled2: 1
+    - _DecalEnabled: 0
+    - _DecalEnabled1: 0
+    - _DecalEnabled2: 0
     - _DecalEnabled3: 0
     - _DecalHueShift: 0
     - _DecalHueShift1: 0
     - _DecalHueShift2: 0
     - _DecalHueShift3: 0
-    - _DecalHueShiftEnabled: 1
-    - _DecalHueShiftEnabled1: 1
+    - _DecalHueShiftEnabled: 0
+    - _DecalHueShiftEnabled1: 0
     - _DecalHueShiftEnabled2: 0
     - _DecalHueShiftEnabled3: 0
     - _DecalHueShiftSpeed: 0
@@ -1613,13 +1607,13 @@ Material:
     - _Matcap4TPSDepthEnabled: 0
     - _Matcap4TPSMaskStrength: 1
     - _Matcap4UVMode: 1
-    - _MatcapAdd: 0
+    - _MatcapAdd: 1
     - _MatcapAddToLight: 0
     - _MatcapAlphaOverride: 0
     - _MatcapBorder: 0.43
     - _MatcapColorThemeIndex: 0
     - _MatcapEmissionStrength: 0
-    - _MatcapEnable: 0
+    - _MatcapEnable: 1
     - _MatcapHueShift: 0
     - _MatcapHueShiftEnabled: 0
     - _MatcapHueShiftSpeed: 0
@@ -2283,13 +2277,13 @@ Material:
     - m_start_CubeMap: 0
     - m_start_Decal0: 0
     - m_start_Decal0AudioLink: 0
-    - m_start_Decal1: 1
+    - m_start_Decal1: 0
     - m_start_Decal1AudioLink: 0
-    - m_start_Decal2: 1
+    - m_start_Decal2: 0
     - m_start_Decal2AudioLink: 0
     - m_start_Decal3: 0
     - m_start_Decal3AudioLink: 0
-    - m_start_DecalSection: 1
+    - m_start_DecalSection: 0
     - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0
@@ -2373,7 +2367,7 @@ Material:
     - m_start_lightingHSL: 0
     - m_start_lightingModifiers: 0
     - m_start_manualFlipbookControl: 0
-    - m_start_matcap: 0
+    - m_start_matcap: 1
     - m_start_matcap2HueShift: 0
     - m_start_matcapHueShift: 0
     - m_start_mirrorOptions: 0
@@ -2394,7 +2388,7 @@ Material:
     - m_start_ralivPenetrator: 0
     - m_start_reflectionRim: 0
     - m_start_rimHueShift: 0
-    - m_start_rimLightOptions: 0
+    - m_start_rimLightOptions: 1
     - m_start_rimWidthNoise: 0
     - m_start_scrollingEmissionOptions: 0
     - m_start_scrollingEmissionOptions1: 0

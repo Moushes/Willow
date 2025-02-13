@@ -27,6 +27,7 @@ Material:
   - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_FLAT
   - _RIMSTYLE_POIYOMI
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -2277,7 +2278,7 @@ Material:
     - m_postprocessing: 0
     - m_renderingCategory: 0
     - m_renderingOptions: 1
-    - m_specialFXCategory: 0
+    - m_specialFXCategory: 1
     - m_start_ALDecalSpectrum: 0
     - m_start_Alpha: 0
     - m_start_Aniso: 0

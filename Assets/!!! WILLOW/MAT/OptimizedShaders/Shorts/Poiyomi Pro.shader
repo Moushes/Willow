@@ -501,6 +501,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cbb75e8cb842072438a7818f0
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
+ #define PROP_CLIPPINGMASK 
  #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_MATCAP2 
@@ -3521,7 +3522,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cbb75e8cb842072438a7818f0
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0.5));
+				clip(poiFragData.alpha - float(0.05));
 				return float4(poiFragData.finalColor + poiFragData.emission * poiMods.globalEmission, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG
@@ -3564,6 +3565,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cbb75e8cb842072438a7818f0
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
+ #define PROP_CLIPPINGMASK 
  #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_MATCAP2 
@@ -6574,7 +6576,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cbb75e8cb842072438a7818f0
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0.5));
+				clip(poiFragData.alpha - float(0.05));
 				if (float(0) == 4)
 				{
 					poiFragData.alpha = saturate(poiFragData.alpha * float(10));
@@ -6625,6 +6627,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cbb75e8cb842072438a7818f0
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
+ #define PROP_CLIPPINGMASK 
  #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_MATCAP2 
@@ -8139,7 +8142,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cbb75e8cb842072438a7818f0
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0.5));
+				clip(poiFragData.alpha - float(0.05));
 				return float4(poiFragData.finalColor, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG

@@ -3063,7 +3063,7 @@ Material:
     - m_start_Metallic: 0
     - m_start_OutlineStencil: 0
     - m_start_PathAudioLink: 0
-    - m_start_PoiLightData: 1
+    - m_start_PoiLightData: 0
     - m_start_PoiShading: 1
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0

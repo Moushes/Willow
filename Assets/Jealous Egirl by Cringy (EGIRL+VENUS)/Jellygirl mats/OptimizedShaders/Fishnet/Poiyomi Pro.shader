@@ -466,8 +466,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/8a913ec4c6d17684d8cafc695
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
  #define _SUNDISK_SIMPLE 
- #define PROP_CLIPPINGMASK 
- #define PROP_MOCHIEMETALLICMAPS 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
 			//ifex float(1)==0
@@ -2994,9 +2992,9 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/8a913ec4c6d17684d8cafc695
 			#ifdef MOCHIE_PBR
 			void MochieBRDF(inout PoiFragData poiFragData, in PoiCam poiCam, inout PoiLight poiLight, in PoiMesh poiMesh, in PoiMods poiMods)
 			{
-				float smoothness = float(0.164);
+				float smoothness = float(0.1);
 				float smoothness2 = float(1);
-				float metallic = float(0.171);
+				float metallic = float(0.1);
 				float specularMask = 1;
 				float reflectionMask = 1;
 				#if defined(PROP_MOCHIEMETALLICMAPS) || !defined(OPTIMIZER_ENABLED)
@@ -3012,8 +3010,8 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/8a913ec4c6d17684d8cafc695
 				reflectionMask *= PRBMaps.b;
 				specularMask *= PRBMaps.a;
 				#endif
-				reflectionMask *= float(0.236);
-				specularMask *= float(0.96);
+				reflectionMask *= float(0);
+				specularMask *= float(1);
 				if (float(0))
 				{
 					specularMask = 1 - specularMask;
@@ -3615,8 +3613,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/8a913ec4c6d17684d8cafc695
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
  #define _SUNDISK_SIMPLE 
- #define PROP_CLIPPINGMASK 
- #define PROP_MOCHIEMETALLICMAPS 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
 			//ifex float(1)==0
@@ -6138,9 +6134,9 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/8a913ec4c6d17684d8cafc695
 			#ifdef MOCHIE_PBR
 			void MochieBRDF(inout PoiFragData poiFragData, in PoiCam poiCam, inout PoiLight poiLight, in PoiMesh poiMesh, in PoiMods poiMods)
 			{
-				float smoothness = float(0.164);
+				float smoothness = float(0.1);
 				float smoothness2 = float(1);
-				float metallic = float(0.171);
+				float metallic = float(0.1);
 				float specularMask = 1;
 				float reflectionMask = 1;
 				#if defined(PROP_MOCHIEMETALLICMAPS) || !defined(OPTIMIZER_ENABLED)
@@ -6156,8 +6152,8 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/8a913ec4c6d17684d8cafc695
 				reflectionMask *= PRBMaps.b;
 				specularMask *= PRBMaps.a;
 				#endif
-				reflectionMask *= float(0.236);
-				specularMask *= float(0.96);
+				reflectionMask *= float(0);
+				specularMask *= float(1);
 				if (float(0))
 				{
 					specularMask = 1 - specularMask;
@@ -6762,8 +6758,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/8a913ec4c6d17684d8cafc695
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
  #define _SUNDISK_SIMPLE 
- #define PROP_CLIPPINGMASK 
- #define PROP_MOCHIEMETALLICMAPS 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
 			//ifex float(1)==0

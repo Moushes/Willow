@@ -8,18 +8,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BasicTee 2
-  m_Shader: {fileID: 4800000, guid: f7e106d431844bf49991ac7b07edded4, type: 3}
+  m_Shader: {fileID: 4800000, guid: 086107e2607ef8f4b844474da61c7610, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - MOCHIE_PBR
+  - COLOR_GRADING_HDR
   - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
   - POI_LIGHT_DATA_ADDITIVE_ENABLE
   - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_FLAT
   - _STOCHASTICMODE_DELIOT_HEITZ
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -28,7 +29,7 @@ Material:
     AllLockedGUIDS: a3c7e36d1b3609c4cb25aa8f0e688146
     OriginalKeywords: MOCHIE_PBR VIGNETTE_MASKED _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI
       _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
-    OriginalShader: .poiyomi/Poiyomi 8.0/Poiyomi Toon
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
     RenderType: Opaque
     _MochieMetallicMaps_texPack_a_channel: 4
     _MochieMetallicMaps_texPack_a_fallback: 1
@@ -86,7 +87,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a4c17ccf38d584640b381575a311b66e, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatFallback:
@@ -514,6 +515,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SkinThicknessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TPS_BakedMesh:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -1681,7 +1686,7 @@ Material:
     - _MainBrightnessGlobalMask: 0
     - _MainBrightnessGlobalMaskBlendType: 2
     - _MainColorAdjustTextureUV: 0
-    - _MainColorAdjustToggle: 0
+    - _MainColorAdjustToggle: 1
     - _MainHueALCTEnabled: 0
     - _MainHueALMotionSpeed: 1
     - _MainHueGlobalMask: 0
@@ -1761,6 +1766,7 @@ Material:
     - _Matcap3MaskSmoothnessApply: 0
     - _Matcap3MaskSmoothnessChannel: 3
     - _Matcap3MaskUV: 0
+    - _Matcap3Mixed: 0
     - _Matcap3Multiply: 0
     - _Matcap3Normal: 1
     - _Matcap3NormalMapScale: 1
@@ -1794,6 +1800,7 @@ Material:
     - _Matcap4MaskSmoothnessApply: 0
     - _Matcap4MaskSmoothnessChannel: 3
     - _Matcap4MaskUV: 0
+    - _Matcap4Mixed: 0
     - _Matcap4Multiply: 0
     - _Matcap4Normal: 1
     - _Matcap4Replace: 0
@@ -1842,7 +1849,7 @@ Material:
     - _MirrorColorThemeIndex: 0
     - _MirrorTextureBlendType: 0
     - _MirrorTextureUV: 0
-    - _MochieBRDF: 1
+    - _MochieBRDF: 0
     - _MochieForceFallback: 0
     - _MochieGSAAEnabled: 1
     - _MochieLitFallback: 1
@@ -1863,7 +1870,7 @@ Material:
     - _MochieReflectionStrengthGlobalMaskBlendType: 2
     - _MochieReflectionTintThemeIndex: 0
     - _MochieRoughnessMapInvert: 0
-    - _MochieRoughnessMultiplier: 1
+    - _MochieRoughnessMultiplier: 0
     - _MochieRoughnessMultiplier2: 1
     - _MochieSmoothnessGlobalMask: 0
     - _MochieSmoothnessGlobalMaskBlendType: 2
@@ -2133,7 +2140,7 @@ Material:
     - _SSSThicknessMapChannel: 0
     - _SSSThicknessMapUV: 0
     - _SSSThicknessMod: 0
-    - _Saturation: 0
+    - _Saturation: -1
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0
     - _ScrollingEmission2: 0
@@ -2207,6 +2214,32 @@ Material:
     - _StylizedSpecularFeather: 0
     - _StylizedSpecularStrength: 1
     - _SubsurfaceScattering: 0
+    - _TPSBezierHeader: 0
+    - _TPSBuldgeHeader: 0
+    - _TPSHelpbox: 0
+    - _TPSIdleHeader: 0
+    - _TPSPenetratorEnabled: 0
+    - _TPSPulsingHeader: 0
+    - _TPSSqueezeHeader: 0
+    - _TPS_AnimatedToggle: 1
+    - _TPS_BezierSmoothness: 0.4
+    - _TPS_BezierStart: 0
+    - _TPS_BufferedDepth: 0
+    - _TPS_BufferedStrength: 0
+    - _TPS_Buldge: 0.3
+    - _TPS_BuldgeDistance: 0.2
+    - _TPS_BuldgeFalloffDistance: 0.05
+    - _TPS_IdleGravity: 0
+    - _TPS_IdleSkrinkLength: 1
+    - _TPS_IdleSkrinkWidth: 1
+    - _TPS_IsSkinnedMeshRenderer: 0
+    - _TPS_PenetratorLength: 1
+    - _TPS_PumpingSpeed: 1
+    - _TPS_PumpingStrength: 0
+    - _TPS_PumpingWidth: 0.2
+    - _TPS_SmoothStart: 1
+    - _TPS_Squeeze: 0.3
+    - _TPS_SqueezeDistance: 0.2
     - _TextEnabled: 0
     - _TextFPSColorThemeIndex: 0
     - _TextFPSEmissionStrength: 0
@@ -2502,6 +2535,7 @@ Material:
     - m_end_normalCorrect: 0
     - m_end_parallax: 0
     - m_end_pathing: 0
+    - m_end_pen_autoConfig: 0
     - m_end_pointToPoint: 0
     - m_end_postprocess: 0
     - m_end_reflectionRim: 0
@@ -2511,6 +2545,7 @@ Material:
     - m_end_rimLightOptions: 0
     - m_end_stylizedSpec: 0
     - m_end_subsurfaceScattering: 0
+    - m_end_tps_penetrator: 0
     - m_end_udimdiscardOptions: 0
     - m_end_uvDistortion: 0
     - m_end_uvLocalWorld: 0
@@ -2582,7 +2617,7 @@ Material:
     - m_start_GlobalThemes: 0
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
-    - m_start_MainHueShift: 0
+    - m_start_MainHueShift: 1
     - m_start_MainHueShiftGlobalMask: 0
     - m_start_MainVertexColors: 0
     - m_start_Matcap2: 0
@@ -2590,7 +2625,7 @@ Material:
     - m_start_Matcap4: 0
     - m_start_PathAudioLink: 0
     - m_start_PoiLightData: 0
-    - m_start_PoiShading: 1
+    - m_start_PoiShading: 0
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
     - m_start_Rim2AudioLink: 0
@@ -2616,7 +2651,7 @@ Material:
     - m_start_backFace: 0
     - m_start_backlight: 0
     - m_start_blending: 0
-    - m_start_brdf: 1
+    - m_start_brdf: 0
     - m_start_brdfadvanced: 0
     - m_start_brdfglobalmask: 0
     - m_start_clearCoat: 0
@@ -2638,6 +2673,7 @@ Material:
     - m_start_normalCorrect: 0
     - m_start_parallax: 0
     - m_start_pathing: 0
+    - m_start_pen_autoConfig: 0
     - m_start_pointToPoint: 0
     - m_start_postprocess: 0
     - m_start_reflectionRim: 0
@@ -2647,6 +2683,7 @@ Material:
     - m_start_rimLightOptions: 0
     - m_start_stylizedSpec: 0
     - m_start_subsurfaceScattering: 0
+    - m_start_tps_penetrator: 0
     - m_start_udimdiscardOptions: 0
     - m_start_uvDistortion: 0
     - m_start_uvLocalWorld: 0
@@ -3008,6 +3045,10 @@ Material:
     - _SphericalDissolveCenter: {r: 0, g: 0, b: 0, a: 1}
     - _SssColorBleedAoWeights: {r: 0.4, g: 0.15, b: 0.13, a: 0}
     - _SssTransmissionAbsorption: {r: -8, g: -40, b: -64, a: 0}
+    - _TPS_PenetratorForward: {r: 0, g: 0, b: 1, a: 0}
+    - _TPS_PenetratorRight: {r: 1, g: 0, b: 0, a: 0}
+    - _TPS_PenetratorScale: {r: 1, g: 1, b: 1, a: 1}
+    - _TPS_PenetratorUp: {r: 0, g: 1, b: 0, a: 0}
     - _TextFPSColor: {r: 1, g: 1, b: 1, a: 1}
     - _TextFPSOffset: {r: 0, g: 0, b: 0, a: 0}
     - _TextFPSPadding: {r: 0, g: 0, b: 0, a: 0}

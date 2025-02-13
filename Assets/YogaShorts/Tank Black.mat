@@ -13,15 +13,20 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - COLOR_GRADING_HDR
   - DISTORT
   - POI_ENVIRORIM
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
   - POI_UDIMDISCARD
+  - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_FLAT
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -31,9 +36,25 @@ Material:
     OptimizedShaderFolder: M_Shorts
     OriginalKeywords: DISTORT POI_ENVIRORIM POI_UDIMDISCARD VIGNETTE_MASKED _GLOSSYREFLECTIONS_OFF
       _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
-    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
     RenderType: Opaque
     _DissolveAlpha1Animated: 1
+    _UDIMDiscardRow0_0Animated: 1
+    _UDIMDiscardRow0_1Animated: 1
+    _UDIMDiscardRow0_2Animated: 1
+    _UDIMDiscardRow0_3Animated: 1
+    _UDIMDiscardRow1_0Animated: 1
+    _UDIMDiscardRow1_1Animated: 1
+    _UDIMDiscardRow1_2Animated: 1
+    _UDIMDiscardRow1_3Animated: 1
+    _UDIMDiscardRow2_0Animated: 1
+    _UDIMDiscardRow2_1Animated: 1
+    _UDIMDiscardRow2_2Animated: 1
+    _UDIMDiscardRow2_3Animated: 1
+    _UDIMDiscardRow3_0Animated: 1
+    _UDIMDiscardRow3_1Animated: 1
+    _UDIMDiscardRow3_2Animated: 1
+    _UDIMDiscardRow3_3Animated: 1
     _UVTileDissolveAlpha_Row0_0Animated: 1
     _UVTileDissolveAlpha_Row0_1Animated: 1
     _UVTileDissolveAlpha_Row0_2Animated: 1
@@ -1075,6 +1096,7 @@ Material:
     - _BRDFTPSDepthEnabled: 0
     - _BRDFTPSReflectionMaskStrength: 1
     - _BRDFTPSSpecularMaskStrength: 1
+    - _BackFaceAlpha: 1
     - _BackFaceColorThemeIndex: 0
     - _BackFaceDetailIntensity: 1
     - _BackFaceEmissionLimiter: 1
@@ -2604,7 +2626,7 @@ Material:
     - _MainColorAdjustTexturePanAnimated: 0
     - _MainColorAdjustTextureUV: 0
     - _MainColorAdjustTextureUVAnimated: 0
-    - _MainColorAdjustToggle: 0
+    - _MainColorAdjustToggle: 1
     - _MainDistanceFadeAnimated: 0
     - _MainDistanceFadeMax: 0
     - _MainDistanceFadeMin: 0
@@ -3324,7 +3346,7 @@ Material:
     - _SSSThicknessModAnimated: 0
     - _SampleWorld: 0
     - _SampleWorldAnimated: 0
-    - _Saturation: 0
+    - _Saturation: -1
     - _SaturationAnimated: 0
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0
@@ -4146,7 +4168,7 @@ Material:
     - m_specialFXCategory: 1
     - m_start_ALDecalSpectrum: 0
     - m_start_ALVolumeColor: 0
-    - m_start_Alpha: 0
+    - m_start_Alpha: 1
     - m_start_AlphaGlobalMask: 0
     - m_start_Aniso: 0
     - m_start_BlackLight: 0
@@ -4212,7 +4234,7 @@ Material:
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
     - m_start_Lighting: 1
-    - m_start_MainHueShift: 0
+    - m_start_MainHueShift: 1
     - m_start_MainHueShiftGlobalMask: 0
     - m_start_MainVertexColors: 0
     - m_start_Matcap2: 0
@@ -4318,12 +4340,12 @@ Material:
     - m_start_ralivAdvanced: 0
     - m_start_ralivOriface: 0
     - m_start_ralivPenetrator: 0
-    - m_start_reflectionRim: 1
+    - m_start_reflectionRim: 0
     - m_start_rgbanormals: 0
     - m_start_rim2LightOptions: 0
     - m_start_rimHueShift: 0
     - m_start_rimLight1Options: 1
-    - m_start_rimLightOptions: 1
+    - m_start_rimLightOptions: 0
     - m_start_rimWidthNoise: 0
     - m_start_scrollingEmissionOptions: 0
     - m_start_scrollingEmissionOptions1: 0

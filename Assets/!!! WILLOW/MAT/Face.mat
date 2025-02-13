@@ -14,7 +14,6 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - COLOR_GRADING_HDR_3D
-  - DEPTH_OF_FIELD_COC_VIEW
   - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
   - POI_LIGHT_DATA_ADDITIVE_ENABLE
   - POI_MATCAP0
@@ -39,8 +38,6 @@ Material:
       _STOCHASTICMODE_DELIOT_HEITZ _SUNDISK_SIMPLE
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro Outline
     RenderType: Opaque
-    _DecalBlendAlpha3Animated: 1
-    _DecalHueShift3Animated: 1
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -167,7 +164,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalTexture3:
-        m_Texture: {fileID: 2800000, guid: 0fa1d00bf35b0f340bdb26a676f84d0d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DepthBulgeMask:
@@ -1164,7 +1161,7 @@ Material:
     - _DecalEnabled: 0
     - _DecalEnabled1: 0
     - _DecalEnabled2: 0
-    - _DecalEnabled3: 1
+    - _DecalEnabled3: 0
     - _DecalHueShift: 0
     - _DecalHueShift1: 0
     - _DecalHueShift2: 0
@@ -1172,7 +1169,7 @@ Material:
     - _DecalHueShiftEnabled: 0
     - _DecalHueShiftEnabled1: 0
     - _DecalHueShiftEnabled2: 0
-    - _DecalHueShiftEnabled3: 1
+    - _DecalHueShiftEnabled3: 0
     - _DecalHueShiftSpeed: 0
     - _DecalHueShiftSpeed1: 0
     - _DecalHueShiftSpeed2: 0
@@ -3053,9 +3050,9 @@ Material:
     - m_start_Decal1AudioLink: 0
     - m_start_Decal2: 0
     - m_start_Decal2AudioLink: 0
-    - m_start_Decal3: 1
+    - m_start_Decal3: 0
     - m_start_Decal3AudioLink: 0
-    - m_start_DecalSection: 1
+    - m_start_DecalSection: 0
     - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0

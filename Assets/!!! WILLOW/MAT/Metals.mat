@@ -20,7 +20,6 @@ Material:
   - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_FLAT
-  - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
   - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
@@ -3099,7 +3098,7 @@ Material:
     - m_end_voronoiRandom: 0
     - m_lightingCategory: 1
     - m_lightingOptions: 1
-    - m_mainCategory: 0
+    - m_mainCategory: 1
     - m_mainOptions: 1
     - m_modifierCategory: 1
     - m_outlineOptions: 0

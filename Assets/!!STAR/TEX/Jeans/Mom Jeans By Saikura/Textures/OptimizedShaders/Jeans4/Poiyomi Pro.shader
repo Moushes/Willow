@@ -623,7 +623,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cb1b36c0c63382046bd27861f
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
- #define PROP_CLIPPINGMASK 
  #define PROP_DECALTEXTURE 
  #define PROP_DECALTEXTURE1 
  #define PROP_DECALTEXTURE2 
@@ -2333,7 +2332,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cb1b36c0c63382046bd27861f
 			}
 			void applyAlphaOptions(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiCam poiCam, in PoiMods poiMods)
 			{
-				poiFragData.alpha = saturate(poiFragData.alpha + float(1));
+				poiFragData.alpha = saturate(poiFragData.alpha + float(0));
 			}
 			#if defined(GEOM_TYPE_BRANCH) || defined(GEOM_TYPE_BRANCH_DETAIL) || defined(GEOM_TYPE_FROND) || defined(DEPTH_OF_FIELD_COC_VIEW)
 			float2 decalUV(float uvNumber, float4 uv_st, float2 position, half rotation, half rotationSpeed, half2 scale, float4 scaleOffset, float depth, in PoiMesh poiMesh, in PoiCam poiCam)
@@ -3861,7 +3860,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cb1b36c0c63382046bd27861f
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
- #define PROP_CLIPPINGMASK 
  #define PROP_DECALTEXTURE 
  #define PROP_DECALTEXTURE1 
  #define PROP_DECALTEXTURE2 
@@ -5566,7 +5564,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cb1b36c0c63382046bd27861f
 			}
 			void applyAlphaOptions(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiCam poiCam, in PoiMods poiMods)
 			{
-				poiFragData.alpha = saturate(poiFragData.alpha + float(1));
+				poiFragData.alpha = saturate(poiFragData.alpha + float(0));
 			}
 			#if defined(GEOM_TYPE_BRANCH) || defined(GEOM_TYPE_BRANCH_DETAIL) || defined(GEOM_TYPE_FROND) || defined(DEPTH_OF_FIELD_COC_VIEW)
 			float2 decalUV(float uvNumber, float4 uv_st, float2 position, half rotation, half rotationSpeed, half2 scale, float4 scaleOffset, float depth, in PoiMesh poiMesh, in PoiCam poiCam)
@@ -7097,7 +7095,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cb1b36c0c63382046bd27861f
  #define _GLOSSYREFLECTIONS_OFF 
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
- #define PROP_CLIPPINGMASK 
  #define PROP_DECALTEXTURE 
  #define PROP_DECALTEXTURE1 
  #define PROP_DECALTEXTURE2 
@@ -8379,7 +8376,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/cb1b36c0c63382046bd27861f
 			}
 			void applyAlphaOptions(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiCam poiCam, in PoiMods poiMods)
 			{
-				poiFragData.alpha = saturate(poiFragData.alpha + float(1));
+				poiFragData.alpha = saturate(poiFragData.alpha + float(0));
 			}
 			//ifex float(1)==0
 			#ifdef DISTORT

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hair
-  m_Shader: {fileID: 4800000, guid: 569946a67864ed843b90509ea4425ade, type: 3}
+  m_Shader: {fileID: 4800000, guid: c5522674e56e3484595775f0a3595d15, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,6 @@ Material:
   - COLOR_GRADING_HDR
   - COLOR_GRADING_HDR_3D
   - DEPTH_OF_FIELD_COC_VIEW
-  - DISTORT
   - GEOM_TYPE_BRANCH
   - GEOM_TYPE_BRANCH_DETAIL
   - GEOM_TYPE_FROND
@@ -51,7 +50,6 @@ Material:
     _DecalHueShift1Animated: 1
     _DecalHueShift2Animated: 1
     _DecalHueShiftAnimated: 1
-    _DissolveAlphaAnimated: 2
     _EmissionColorAnimated: 1
     _EmissionHueShift1Animated: 1
     _EmissionHueShiftAnimated: 2
@@ -233,7 +231,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveNoiseTexture:
-        m_Texture: {fileID: 2800000, guid: d5e4a521aa43ec742a51e66e8da2871a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveToTexture:
@@ -1472,7 +1470,7 @@ Material:
     - _EnableClearCoat: 0
     - _EnableDepthBulge: 0
     - _EnableDepthRimLighting: 0
-    - _EnableDissolve: 1
+    - _EnableDissolve: 0
     - _EnableDissolveAudioLink: 0
     - _EnableDistortion: 0
     - _EnableDistortionAudioLink: 0
@@ -2004,7 +2002,7 @@ Material:
     - _MainHueShift: 0.043
     - _MainHueShiftReplace: 1
     - _MainHueShiftSpeed: 0
-    - _MainHueShiftToggle: 1
+    - _MainHueShiftToggle: 0
     - _MainMaxAlpha: 1
     - _MainMinAlpha: 0
     - _MainMipScale: 0.25
@@ -3081,17 +3079,17 @@ Material:
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
     - m_start_Lighting: 0
-    - m_start_MainHueShift: 1
+    - m_start_MainHueShift: 0
     - m_start_MainHueShiftGlobalMask: 0
     - m_start_MainVertexColors: 0
-    - m_start_Matcap2: 1
+    - m_start_Matcap2: 0
     - m_start_Matcap3: 0
     - m_start_Matcap4: 0
     - m_start_Metallic: 0
     - m_start_OutlineStencil: 0
     - m_start_PathAudioLink: 0
     - m_start_PoiLightData: 0
-    - m_start_PoiShading: 1
+    - m_start_PoiShading: 0
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
     - m_start_Refraction: 0
@@ -3144,7 +3142,7 @@ Material:
     - m_start_depthFX: 0
     - m_start_depthRimLightOptions: 0
     - m_start_detailShadows: 0
-    - m_start_dissolve: 1
+    - m_start_dissolve: 0
     - m_start_dissolveAudioLink: 0
     - m_start_dissolveHueShift: 0
     - m_start_dissolveMasking: 0
@@ -3153,7 +3151,7 @@ Material:
     - m_start_emission1Options: 0
     - m_start_emission2Options: 0
     - m_start_emission3Options: 0
-    - m_start_emissionOptions: 0
+    - m_start_emissionOptions: 1
     - m_start_flipBook: 0
     - m_start_flipbookHueShift: 0
     - m_start_glitter: 1
@@ -3166,7 +3164,7 @@ Material:
     - m_start_lightingHSL: 0
     - m_start_lightingModifiers: 0
     - m_start_manualFlipbookControl: 0
-    - m_start_matcap: 1
+    - m_start_matcap: 0
     - m_start_matcap2HueShift: 0
     - m_start_matcapHueShift: 0
     - m_start_mirrorOptions: 0
