@@ -2,16 +2,28 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Harness
   m_Shader: {fileID: 4800000, guid: 653bf8ca1d4449f42ba6333b6fbfca82, type: 3}
-  m_ShaderKeywords: COLOR_GRADING_HDR_3D DISTORT POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
-    POI_LIGHT_DATA_ADDITIVE_ENABLE POI_MATCAP2 POI_VERTEXLIGHT_ON VIGNETTE_MASKED
-    _GLOSSYREFLECTIONS_OFF
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - COLOR_GRADING_HDR_3D
+  - DISTORT
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_MATCAP2
+  - POI_VERTEXLIGHT_ON
+  - VIGNETTE_MASKED
+  - _GLOSSYREFLECTIONS_OFF
+  - _LIGHTINGMODE_FLAT
+  - _RIMSTYLE_POIYOMI
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -35,6 +47,7 @@ Material:
     _MochieMetallicMaps_texPack_r_guid: 8f94a7b559b49dc44b6a2a8e922a3a60
     _MochieMetallicMaps_texPack_r_inverted: False
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -355,7 +368,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4ec6091d608934348b5a47128677b868, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -387,7 +400,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap3Mask:
-        m_Texture: {fileID: 2800000, guid: 8f94a7b559b49dc44b6a2a8e922a3a60, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0c32941c0d3c71342be6f62d838699a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap3NormalMap:
@@ -403,7 +416,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatcapMask:
-        m_Texture: {fileID: 2800000, guid: 8f94a7b559b49dc44b6a2a8e922a3a60, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0c32941c0d3c71342be6f62d838699a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -658,6 +671,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - DSGI: 0
     - Instancing: 0
@@ -2502,7 +2516,7 @@ Material:
     - _ClearcoatMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClippingMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClothMetallicSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _CubeMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _CubeMapRotation: {r: 0, g: 0, b: 0, a: 0}
@@ -2781,3 +2795,4 @@ Material:
     - _VoronoiRandomMinMaxBrightness: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiRandomMinMaxSaturation: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiSpeed: {r: 3, g: 3, b: 3, a: 1}
+  m_BuildTextureStacks: []

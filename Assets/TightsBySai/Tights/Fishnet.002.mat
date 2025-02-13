@@ -18,7 +18,6 @@ Material:
   - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_FLAT
-  - _RIMSTYLE_POIYOMI
   - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -289,7 +288,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a305a337deb2b974a965751d9da4d5ab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -1672,7 +1671,7 @@ Material:
     - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
-    - m_renderingCategory: 1
+    - m_renderingCategory: 0
     - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_Alpha: 1
@@ -1702,7 +1701,7 @@ Material:
     - m_start_Matcap3: 0
     - m_start_Matcap4: 0
     - m_start_PathAudioLink: 0
-    - m_start_PoiLightData: 0
+    - m_start_PoiLightData: 1
     - m_start_PoiShading: 0
     - m_start_RGBMask: 0
     - m_start_RimAudioLink: 0

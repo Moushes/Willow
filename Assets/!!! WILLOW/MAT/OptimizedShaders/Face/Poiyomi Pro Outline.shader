@@ -54,48 +54,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 		_Decal1TPSMaskStrength ("Mask g Strength--{condition_showS:(_DecalTPSDepthMaskEnabled==1)}", Range(0, 1)) = 1
 		_Decal2TPSMaskStrength ("Mask b Strength--{condition_showS:(_DecalTPSDepthMaskEnabled==1)}", Range(0, 1)) = 1
 		_Decal3TPSMaskStrength ("Mask a Strength--{condition_showS:(_DecalTPSDepthMaskEnabled==1)}", Range(0, 1)) = 1
-		//ifex _DecalEnabled3==0
-		[HideInInspector] m_start_Decal3 ("Decal 3--{reference_property:_DecalEnabled3}", Float) = 0
-		[HideInInspector][ThryToggle(DEPTH_OF_FIELD_COC_VIEW)]_DecalEnabled3 ("Enable", Float) = 0
-		[Enum(R, 0, G, 1, B, 2, A, 3)] _Decal3MaskChannel ("Mask Channel", Int) = 3
-		_DecalColor3 ("Color--{reference_property:_DecalColor3ThemeIndex}", Color) = (1, 1, 1, 1)
-		[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _DecalColor3ThemeIndex ("", Int) = 0
-		_DecalEmissionStrength3 ("Emission Strength", Range(0, 20)) = 0
-		_DecalTexture3 ("Decal--{reference_properties:[_DecalTexture3Pan, _DecalTexture3UV]}", 2D) = "white" { }
-		[HideInInspector][Vector2]_DecalTexture3Pan ("Panning", Vector) = (0, 0, 0, 0)
-		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _DecalTexture3UV ("UV", Int) = 0
-		[ToggleUI]_DecalTiled3 ("Tiled?", Float) = 0
-		_Decal3Depth ("Depth", Float) = 0
-		[Vector2]_DecalScale3 ("Scale", Vector) = (1, 1, 0, 0)
-		_DecalSideOffset3 ("Side Offset ←→↓↑", Vector) = (0, 0, 0, 0)
-		[Vector2]_DecalPosition3 ("Position", Vector) = (.5, .5, 0, 0)
-		_DecalRotation3 ("Rotation", Range(0, 360)) = 0
-		_DecalRotationSpeed3 ("Rotation Speed", Float) = 0
-		[ThryWideEnum(Replace, 0, Darken, 1, Multiply, 2, Color Burn, 3, Linear Burn, 4, Lighten, 5, Screen, 6, Color Dodge, 7, Linear Dodge(Add), 8, Overlay, 9, Soft Lighten, 10, Hard Light, 11, Vivid Light, 12, Linear Light, 13, Pin Light, 14, Hard Mix, 15, Difference, 16, Exclusion, 17, Subtract, 18, Divide, 19)]_DecalBlendType3 ("Blending", Range(0, 1)) = 0
-		_DecalBlendAlpha3 ("Alpha", Range(0, 1)) = 1
-		[ToggleUI]_DecalOverrideAlpha3 ("Override Alpha", Float) = 0
-		[ThryToggleUI(true)]_DecalHueShiftEnabled3 ("<size=13><b>Hue Shift</b></size>", Float) = 0
-		_DecalHueShiftSpeed3 ("Shift Speed--{condition_showS:(_DecalHueShiftEnabled3==1)}", Float) = 0
-		_DecalHueShift3 ("Hue Shift--{condition_showS:(_DecalHueShiftEnabled3==1)}", Range(0, 1)) = 0
-		_Decal3HueAngleStrength ("Hue Angle Power--{condition_showS:(_DecalHueShiftEnabled3==1)}", Float) = 0
-		[HideInInspector] m_start_Decal3AudioLink ("Audio Link ♫--{ condition_showS:_EnableAudioLink==1}", Float) = 0
-		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkDecal3ScaleBand ("Scale Band", Int) = 0
-		_AudioLinkDecal3Scale ("Scale Mod", Vector) = (0, 0, 0, 0)
-		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkDecal3SideBand ("Side Band", Int) = 0
-		_AudioLinkDecal3SideMin ("Side Mod Min", Vector) = (0, 0, 0, 0)
-		_AudioLinkDecal3SideMax ("Side Mod Max", Vector) = (0, 0, 0, 0)
-		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkDecal3RotationBand ("Rotation Band", Int) = 0
-		[Vector2]_AudioLinkDecal3Rotation ("Rotation Mod", Vector) = (0, 0, 0, 0)
-		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkDecal3AlphaBand ("Alpha Band", Int) = 0
-		[Vector2]_AudioLinkDecal3Alpha ("Alpha Mod", Vector) = (0, 0, 0, 0)
-		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _AudioLinkDecal3EmissionBand ("Emission Band", Int) = 0
-		[Vector2]_AudioLinkDecal3Emission ("Emission Mod", Vector) = (0, 0, 0, 0)
-		[ToggleUI]_AudioLinkDecalCC3 ("CC Strip", Float) = 0
-		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)] _DecalRotationCTALBand3 ("Chrono Rotation Band", Int) = 0
-		[ThryWideEnum(Motion increases as intensity of band increases, 0, Above but Smooth, 1, Motion moves back and forth as a function of intensity, 2, Above but Smoooth, 3, Fixed speed increase when the band is dark Stationary when light, 4, Above but Smooooth, 5, Fixed speed increase when the band is dark Fixed speed decrease when light, 6, Above but Smoooooth, 7)]_DecalRotationCTALType3 ("Chrono Motion Type", Int) = 0
-		_DecalRotationCTALSpeed3 ("Chrono Rotation Speed", Float) = 0
-		[HideInInspector] m_end_Decal3AudioLink ("Audio Link", Float) = 0
-		[HideInInspector] m_end_Decal3 ("Decal 0", Float) = 0
 		[HideInInspector] m_end_DecalSection ("Decal", Float) = 0
 		[HideInInspector] m_start_GlobalThemes ("Global Themes--{button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/color-and-normals/global-themes},hover:Documentation}}", Float) = 0
 		[HDR]_GlobalThemeColor0 ("Color 0", Color) = (1, 1, 1, 1)
@@ -566,7 +524,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 			CGPROGRAM
  #define OPTIMIZER_ENABLED 
  #define COLOR_GRADING_HDR_3D 
- #define DEPTH_OF_FIELD_COC_VIEW 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
  #define POI_MATCAP0 
@@ -576,7 +533,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
  #define _SUNDISK_SIMPLE 
- #define PROP_DECALTEXTURE3 
  #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_MATCAP2 
@@ -584,7 +540,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
  #define PROP_GLITTERMASK 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
-			//ifex float(1)==0
 			//ifex float(1)==0
 			//ifex float(1)==0
 			//ifex float(1)==0
@@ -727,105 +682,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 			float _AlphaMod;
 			float _AlphaPremultiply;
 			float _AlphaBoostFA;
-			//ifex float(0)==0 && float(0)==0 && float(0)==0 && float(1)==0
-			#if defined(PROP_DECALMASK) || !defined(OPTIMIZER_ENABLED)
-			Texture2D _DecalMask;
-			float4 _DecalMask_ST;
-			float2 _DecalMaskPan;
-			float _DecalMaskUV;
-			#endif
-			float _DecalTPSDepthMaskEnabled;
-			float _Decal0TPSMaskStrength;
-			float _Decal1TPSMaskStrength;
-			float _Decal2TPSMaskStrength;
-			float _Decal3TPSMaskStrength;
-			#ifdef POI_AUDIOLINK
-			half _AudioLinkDecal0ScaleBand;
-			float4 _AudioLinkDecal0Scale;
-			half _AudioLinkDecal0RotationBand;
-			float2 _AudioLinkDecal0Rotation;
-			half _AudioLinkDecal0AlphaBand;
-			float2 _AudioLinkDecal0Alpha;
-			half _AudioLinkDecal0EmissionBand;
-			float2 _AudioLinkDecal0Emission;
-			float _DecalRotationCTALBand0;
-			float _DecalRotationCTALSpeed0;
-			float _DecalRotationCTALType0;
-			float _AudioLinkDecalCC0;
-			float _AudioLinkDecal0SideBand;
-			float4 _AudioLinkDecal0SideMin;
-			float4 _AudioLinkDecal0SideMax;
-			half _AudioLinkDecal1ScaleBand;
-			float4 _AudioLinkDecal1Scale;
-			half _AudioLinkDecal1RotationBand;
-			float2 _AudioLinkDecal1Rotation;
-			half _AudioLinkDecal1AlphaBand;
-			float2 _AudioLinkDecal1Alpha;
-			half _AudioLinkDecal1EmissionBand;
-			float2 _AudioLinkDecal1Emission;
-			float _DecalRotationCTALBand1;
-			float _DecalRotationCTALSpeed1;
-			float _DecalRotationCTALType1;
-			float _AudioLinkDecalCC1;
-			float _AudioLinkDecal1SideBand;
-			float4 _AudioLinkDecal1SideMin;
-			float4 _AudioLinkDecal1SideMax;
-			half _AudioLinkDecal2ScaleBand;
-			float4 _AudioLinkDecal2Scale;
-			half _AudioLinkDecal2RotationBand;
-			float2 _AudioLinkDecal2Rotation;
-			half _AudioLinkDecal2AlphaBand;
-			float2 _AudioLinkDecal2Alpha;
-			half _AudioLinkDecal2EmissionBand;
-			float2 _AudioLinkDecal2Emission;
-			float _DecalRotationCTALBand2;
-			float _DecalRotationCTALSpeed2;
-			float _DecalRotationCTALType2;
-			float _AudioLinkDecalCC2;
-			float _AudioLinkDecal2SideBand;
-			float4 _AudioLinkDecal2SideMin;
-			float4 _AudioLinkDecal2SideMax;
-			half _AudioLinkDecal3ScaleBand;
-			float4 _AudioLinkDecal3Scale;
-			half _AudioLinkDecal3RotationBand;
-			float2 _AudioLinkDecal3Rotation;
-			half _AudioLinkDecal3AlphaBand;
-			float2 _AudioLinkDecal3Alpha;
-			half _AudioLinkDecal3EmissionBand;
-			float2 _AudioLinkDecal3Emission;
-			float _DecalRotationCTALBand3;
-			float _DecalRotationCTALSpeed3;
-			float _DecalRotationCTALType3;
-			float _AudioLinkDecalCC3;
-			float _AudioLinkDecal3SideBand;
-			float4 _AudioLinkDecal3SideMin;
-			float4 _AudioLinkDecal3SideMax;
-			#endif
-			//ifex float(1)==0
-			#ifdef DEPTH_OF_FIELD_COC_VIEW
-			float _Decal3MaskChannel;
-			sampler2D _DecalTexture3;
-			float4 _DecalTexture3_ST;
-			float2 _DecalTexture3Pan;
-			float _DecalTexture3UV;
-			float4 _DecalColor3;
-			float _DecalColor3ThemeIndex;
-			fixed _DecalTiled3;
-			float _DecalBlendType3;
-			half _DecalRotation3;
-			half2 _DecalScale3;
-			float4 _DecalSideOffset3;
-			half2 _DecalPosition3;
-			half _DecalRotationSpeed3;
-			float _DecalEmissionStrength3;
-			float _DecalBlendAlpha3;
-			float _DecalOverrideAlpha3;
-			float _DecalHueShiftEnabled3;
-			float _DecalHueShift3;
-			float _DecalHueShiftSpeed3;
-			float _Decal3Depth;
-			float _Decal3HueAngleStrength;
-			#endif
 			//ifex float(1)==0
 			float _ShadowOffset;
 			float _ShadowStrength;
@@ -2369,55 +2225,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 				float2 ddxuv = 0;
 				float2 ddyuv = 0;
 				float4 sideMod = 0;
-				//ifex float(1)==0
-				#ifdef DEPTH_OF_FIELD_COC_VIEW
-				decalScale = float4(1,1,0,0);
-				decalRotation = 0;
-				sideMod = 0;
-				#ifdef POI_AUDIOLINK
-				if (poiMods.audioLinkAvailable)
-				{
-					decalScale += lerp(float4(0,0,0,0).xy, float4(0,0,0,0).zw, poiMods.audioLink[float(0)]);
-					sideMod += lerp(float4(0,0,0,0), float4(0,0,0,0), poiMods.audioLink[float(0)]);
-					decalRotation += lerp(float4(0,0,0,0).x, float4(0,0,0,0).y, poiMods.audioLink[float(0)]);
-					decalRotation += AudioLinkGetChronoTime(float(0), float(0)) * float(0) * 360;
-				}
-				#endif
-				#if defined(PROP_DECALTEXTURE3) || !defined(OPTIMIZER_ENABLED)
-				uv = decalUV(float(0), float4(1,1,0,0), float4(0.5,0.5,0,0), float(0) + decalRotation, float(0), decalScale, float4(0,0,0,0) + sideMod, float(0), poiMesh, poiCam);
-				ddxuv = ddx(uv);
-				ddyuv = ddy(uv);
-				if (any(fwidth(uv) > .5))
-				{
-					ddxuv = ddyuv = 0.001;
-				}
-				decalColor = tex2D(_DecalTexture3, uv + float4(0,0,0,0) * _Time.x, ddxuv, ddyuv) * float4(poiThemeColor(poiMods, float4(1,0,0,1).rgb, float(0)), float4(1,0,0,1).a);
-				#else
-				uv = decalUV(float(0), float4(1,1,0,0), float4(0.5,0.5,0,0), float(0) + decalRotation, float(0), decalScale, float4(0,0,0,0) + sideMod, float(0), poiMesh, poiCam);
-				decalColor = float4(poiThemeColor(poiMods, float4(1,0,0,1).rgb, float(0)), float4(1,0,0,1).a);
-				#endif
-				decalColor.rgb = decalHueShift(float(1), decalColor.rgb, _DecalHueShift3 + poiLight.nDotV * float(0), float(0));
-				decalColor.a *= applyTilingClipping(float(0), uv) * decalMask[float(3)];
-				float audioLinkDecalAlpha3 = 0;
-				#ifdef POI_AUDIOLINK
-				if (float(0) && poiMods.audioLinkAvailable)
-				{
-					decalColor.rgb *= AudioLinkLerp(ALPASS_CCSTRIP + float2(uv.x * AUDIOLINK_WIDTH, 0)).rgb;
-				}
-				audioLinkDecalAlpha3 = lerp(float4(0,0,0,0).x, float4(0,0,0,0).y, poiMods.audioLink[float(0)]) * poiMods.audioLinkAvailable;
-				#endif
-				poiFragData.baseColor.rgb = lerp(poiFragData.baseColor.rgb, customBlend(poiFragData.baseColor.rgb, decalColor.rgb, float(2)), decalColor.a * saturate(_DecalBlendAlpha3 + audioLinkDecalAlpha3));
-				if (float(0))
-				{
-					alphaOverride += 1;
-					decalAlpha = lerp(decalAlpha, min(decalAlpha, decalColor.a), decalMask[float(3)]);
-				}
-				float audioLinkDecalEmission3 = 0;
-				#ifdef POI_AUDIOLINK
-				audioLinkDecalEmission3 = lerp(float4(0,0,0,0).x, float4(0,0,0,0).y, poiMods.audioLink[float(0)]) * poiMods.audioLinkAvailable;
-				#endif
-				poiFragData.emission += decalColor.rgb * decalColor.a * max(float(1) + audioLinkDecalEmission3, 0);
-				#endif
 				if (alphaOverride)
 				{
 					poiFragData.alpha *= decalAlpha;
@@ -3866,7 +3673,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 			CGPROGRAM
  #define OPTIMIZER_ENABLED 
  #define COLOR_GRADING_HDR_3D 
- #define DEPTH_OF_FIELD_COC_VIEW 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
  #define POI_MATCAP0 
@@ -3876,7 +3682,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
  #define _SUNDISK_SIMPLE 
- #define PROP_DECALTEXTURE3 
  #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_MATCAP2 
@@ -3884,7 +3689,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
  #define PROP_GLITTERMASK 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
-			//ifex float(1)==0
 			//ifex float(1)==0
 			//ifex float(1)==0
 			//ifex float(1)==0
@@ -6374,7 +6178,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 			CGPROGRAM
  #define OPTIMIZER_ENABLED 
  #define COLOR_GRADING_HDR_3D 
- #define DEPTH_OF_FIELD_COC_VIEW 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
  #define POI_MATCAP0 
@@ -6384,7 +6187,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
  #define _SUNDISK_SIMPLE 
- #define PROP_DECALTEXTURE3 
  #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_MATCAP2 
@@ -6392,7 +6194,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
  #define PROP_GLITTERMASK 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
-			//ifex float(1)==0
 			//ifex float(1)==0
 			//ifex float(1)==0
 			//ifex float(1)==0
@@ -6534,105 +6335,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 			float _AlphaMod;
 			float _AlphaPremultiply;
 			float _AlphaBoostFA;
-			//ifex float(0)==0 && float(0)==0 && float(0)==0 && float(1)==0
-			#if defined(PROP_DECALMASK) || !defined(OPTIMIZER_ENABLED)
-			Texture2D _DecalMask;
-			float4 _DecalMask_ST;
-			float2 _DecalMaskPan;
-			float _DecalMaskUV;
-			#endif
-			float _DecalTPSDepthMaskEnabled;
-			float _Decal0TPSMaskStrength;
-			float _Decal1TPSMaskStrength;
-			float _Decal2TPSMaskStrength;
-			float _Decal3TPSMaskStrength;
-			#ifdef POI_AUDIOLINK
-			half _AudioLinkDecal0ScaleBand;
-			float4 _AudioLinkDecal0Scale;
-			half _AudioLinkDecal0RotationBand;
-			float2 _AudioLinkDecal0Rotation;
-			half _AudioLinkDecal0AlphaBand;
-			float2 _AudioLinkDecal0Alpha;
-			half _AudioLinkDecal0EmissionBand;
-			float2 _AudioLinkDecal0Emission;
-			float _DecalRotationCTALBand0;
-			float _DecalRotationCTALSpeed0;
-			float _DecalRotationCTALType0;
-			float _AudioLinkDecalCC0;
-			float _AudioLinkDecal0SideBand;
-			float4 _AudioLinkDecal0SideMin;
-			float4 _AudioLinkDecal0SideMax;
-			half _AudioLinkDecal1ScaleBand;
-			float4 _AudioLinkDecal1Scale;
-			half _AudioLinkDecal1RotationBand;
-			float2 _AudioLinkDecal1Rotation;
-			half _AudioLinkDecal1AlphaBand;
-			float2 _AudioLinkDecal1Alpha;
-			half _AudioLinkDecal1EmissionBand;
-			float2 _AudioLinkDecal1Emission;
-			float _DecalRotationCTALBand1;
-			float _DecalRotationCTALSpeed1;
-			float _DecalRotationCTALType1;
-			float _AudioLinkDecalCC1;
-			float _AudioLinkDecal1SideBand;
-			float4 _AudioLinkDecal1SideMin;
-			float4 _AudioLinkDecal1SideMax;
-			half _AudioLinkDecal2ScaleBand;
-			float4 _AudioLinkDecal2Scale;
-			half _AudioLinkDecal2RotationBand;
-			float2 _AudioLinkDecal2Rotation;
-			half _AudioLinkDecal2AlphaBand;
-			float2 _AudioLinkDecal2Alpha;
-			half _AudioLinkDecal2EmissionBand;
-			float2 _AudioLinkDecal2Emission;
-			float _DecalRotationCTALBand2;
-			float _DecalRotationCTALSpeed2;
-			float _DecalRotationCTALType2;
-			float _AudioLinkDecalCC2;
-			float _AudioLinkDecal2SideBand;
-			float4 _AudioLinkDecal2SideMin;
-			float4 _AudioLinkDecal2SideMax;
-			half _AudioLinkDecal3ScaleBand;
-			float4 _AudioLinkDecal3Scale;
-			half _AudioLinkDecal3RotationBand;
-			float2 _AudioLinkDecal3Rotation;
-			half _AudioLinkDecal3AlphaBand;
-			float2 _AudioLinkDecal3Alpha;
-			half _AudioLinkDecal3EmissionBand;
-			float2 _AudioLinkDecal3Emission;
-			float _DecalRotationCTALBand3;
-			float _DecalRotationCTALSpeed3;
-			float _DecalRotationCTALType3;
-			float _AudioLinkDecalCC3;
-			float _AudioLinkDecal3SideBand;
-			float4 _AudioLinkDecal3SideMin;
-			float4 _AudioLinkDecal3SideMax;
-			#endif
-			//ifex float(1)==0
-			#ifdef DEPTH_OF_FIELD_COC_VIEW
-			float _Decal3MaskChannel;
-			sampler2D _DecalTexture3;
-			float4 _DecalTexture3_ST;
-			float2 _DecalTexture3Pan;
-			float _DecalTexture3UV;
-			float4 _DecalColor3;
-			float _DecalColor3ThemeIndex;
-			fixed _DecalTiled3;
-			float _DecalBlendType3;
-			half _DecalRotation3;
-			half2 _DecalScale3;
-			float4 _DecalSideOffset3;
-			half2 _DecalPosition3;
-			half _DecalRotationSpeed3;
-			float _DecalEmissionStrength3;
-			float _DecalBlendAlpha3;
-			float _DecalOverrideAlpha3;
-			float _DecalHueShiftEnabled3;
-			float _DecalHueShift3;
-			float _DecalHueShiftSpeed3;
-			float _Decal3Depth;
-			float _Decal3HueAngleStrength;
-			#endif
 			//ifex float(1)==0
 			float _ShadowOffset;
 			float _ShadowStrength;
@@ -8172,55 +7874,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 				float2 ddxuv = 0;
 				float2 ddyuv = 0;
 				float4 sideMod = 0;
-				//ifex float(1)==0
-				#ifdef DEPTH_OF_FIELD_COC_VIEW
-				decalScale = float4(1,1,0,0);
-				decalRotation = 0;
-				sideMod = 0;
-				#ifdef POI_AUDIOLINK
-				if (poiMods.audioLinkAvailable)
-				{
-					decalScale += lerp(float4(0,0,0,0).xy, float4(0,0,0,0).zw, poiMods.audioLink[float(0)]);
-					sideMod += lerp(float4(0,0,0,0), float4(0,0,0,0), poiMods.audioLink[float(0)]);
-					decalRotation += lerp(float4(0,0,0,0).x, float4(0,0,0,0).y, poiMods.audioLink[float(0)]);
-					decalRotation += AudioLinkGetChronoTime(float(0), float(0)) * float(0) * 360;
-				}
-				#endif
-				#if defined(PROP_DECALTEXTURE3) || !defined(OPTIMIZER_ENABLED)
-				uv = decalUV(float(0), float4(1,1,0,0), float4(0.5,0.5,0,0), float(0) + decalRotation, float(0), decalScale, float4(0,0,0,0) + sideMod, float(0), poiMesh, poiCam);
-				ddxuv = ddx(uv);
-				ddyuv = ddy(uv);
-				if (any(fwidth(uv) > .5))
-				{
-					ddxuv = ddyuv = 0.001;
-				}
-				decalColor = tex2D(_DecalTexture3, uv + float4(0,0,0,0) * _Time.x, ddxuv, ddyuv) * float4(poiThemeColor(poiMods, float4(1,0,0,1).rgb, float(0)), float4(1,0,0,1).a);
-				#else
-				uv = decalUV(float(0), float4(1,1,0,0), float4(0.5,0.5,0,0), float(0) + decalRotation, float(0), decalScale, float4(0,0,0,0) + sideMod, float(0), poiMesh, poiCam);
-				decalColor = float4(poiThemeColor(poiMods, float4(1,0,0,1).rgb, float(0)), float4(1,0,0,1).a);
-				#endif
-				decalColor.rgb = decalHueShift(float(1), decalColor.rgb, _DecalHueShift3 + poiLight.nDotV * float(0), float(0));
-				decalColor.a *= applyTilingClipping(float(0), uv) * decalMask[float(3)];
-				float audioLinkDecalAlpha3 = 0;
-				#ifdef POI_AUDIOLINK
-				if (float(0) && poiMods.audioLinkAvailable)
-				{
-					decalColor.rgb *= AudioLinkLerp(ALPASS_CCSTRIP + float2(uv.x * AUDIOLINK_WIDTH, 0)).rgb;
-				}
-				audioLinkDecalAlpha3 = lerp(float4(0,0,0,0).x, float4(0,0,0,0).y, poiMods.audioLink[float(0)]) * poiMods.audioLinkAvailable;
-				#endif
-				poiFragData.baseColor.rgb = lerp(poiFragData.baseColor.rgb, customBlend(poiFragData.baseColor.rgb, decalColor.rgb, float(2)), decalColor.a * saturate(_DecalBlendAlpha3 + audioLinkDecalAlpha3));
-				if (float(0))
-				{
-					alphaOverride += 1;
-					decalAlpha = lerp(decalAlpha, min(decalAlpha, decalColor.a), decalMask[float(3)]);
-				}
-				float audioLinkDecalEmission3 = 0;
-				#ifdef POI_AUDIOLINK
-				audioLinkDecalEmission3 = lerp(float4(0,0,0,0).x, float4(0,0,0,0).y, poiMods.audioLink[float(0)]) * poiMods.audioLinkAvailable;
-				#endif
-				poiFragData.emission += decalColor.rgb * decalColor.a * max(float(1) + audioLinkDecalEmission3, 0);
-				#endif
 				if (alphaOverride)
 				{
 					poiFragData.alpha *= decalAlpha;
@@ -9681,7 +9334,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
 			CGPROGRAM
  #define OPTIMIZER_ENABLED 
  #define COLOR_GRADING_HDR_3D 
- #define DEPTH_OF_FIELD_COC_VIEW 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
  #define POI_MATCAP0 
@@ -9691,7 +9343,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
  #define _LIGHTINGMODE_FLAT 
  #define _RIMSTYLE_POIYOMI 
  #define _SUNDISK_SIMPLE 
- #define PROP_DECALTEXTURE3 
  #define PROP_MATCAP 
  #define PROP_MATCAPMASK 
  #define PROP_MATCAP2 
@@ -9699,7 +9350,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro Outline/889098f2d56b78044
  #define PROP_GLITTERMASK 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
-			//ifex float(1)==0
 			//ifex float(1)==0
 			//ifex float(1)==0
 			//ifex float(1)==0

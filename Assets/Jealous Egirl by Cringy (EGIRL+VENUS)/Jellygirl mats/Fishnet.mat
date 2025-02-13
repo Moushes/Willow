@@ -152,7 +152,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClippingMask:
-        m_Texture: {fileID: 2800000, guid: 17d7f6cd143f22b4ba03c72f144268ca, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClothDFG:
@@ -396,7 +396,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 12594c39f813365449878e468572f5ca, type: 3}
+        m_Texture: {fileID: 2800000, guid: 91474966d52f87b4e8bfbd1d13e888db, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -464,7 +464,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MochieMetallicMaps:
-        m_Texture: {fileID: 2800000, guid: 5dea19377a5803a45b17e635f7101664, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MochieReflCube:
@@ -2225,19 +2225,19 @@ Material:
     - _MochieMetallicMapsStochastic: 0
     - _MochieMetallicMapsUV: 0
     - _MochieMetallicMasksUV: 0
-    - _MochieMetallicMultiplier: 0.171
+    - _MochieMetallicMultiplier: 0.1
     - _MochieReflectionMaskInvert: 0
-    - _MochieReflectionStrength: 0.236
+    - _MochieReflectionStrength: 0
     - _MochieReflectionStrengthGlobalMask: 0
     - _MochieReflectionStrengthGlobalMaskBlendType: 2
     - _MochieReflectionTintThemeIndex: 0
     - _MochieRoughnessMapInvert: 0
-    - _MochieRoughnessMultiplier: 0.164
+    - _MochieRoughnessMultiplier: 0.1
     - _MochieRoughnessMultiplier2: 1
     - _MochieSmoothnessGlobalMask: 0
     - _MochieSmoothnessGlobalMaskBlendType: 2
     - _MochieSpecularMaskInvert: 0
-    - _MochieSpecularStrength: 0.96
+    - _MochieSpecularStrength: 1
     - _MochieSpecularStrength2: 1
     - _MochieSpecularStrengthGlobalMask: 0
     - _MochieSpecularStrengthGlobalMaskBlendType: 2

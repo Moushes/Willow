@@ -13,6 +13,14 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - DISTORT
+  - GEOM_TYPE_BRANCH
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_RIM2
+  - POI_VERTEXLIGHT_ON
+  - VIGNETTE_MASKED
+  - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_FLAT
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
@@ -21,7 +29,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: -1
   stringTagMap:
     AllLockedGUIDS: 6db9f7410487ab54c9e6241ee6f6ebc8
     OriginalKeywords: BSSBLOOMFOGTYPE_HEIGHT DISTORT GEOM_TYPE_BRANCH POI_RIM2 VIGNETTE_MASKED
@@ -29,7 +37,6 @@ Material:
       _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi Pro
     OriginalShaderGUID: 8da3d90ffd42e624499ae6a1ca478bee
-    RenderType: TransparentCutout
     _DissolveAlphaAnimated: 2
     _GlobalThemeHue0Animated: 1
     _GlobalThemeHueSpeed0Animated: 1
@@ -819,6 +826,7 @@ Material:
     - _BSSSpacer1: 0
     - _BSSSpacer2: 0
     - _BSSSpacer3: 0
+    - _BackFaceAlpha: 1
     - _BackFaceColorThemeIndex: 0
     - _BackFaceDetailIntensity: 1
     - _BackFaceEmissionLimiter: 1
@@ -2489,8 +2497,13 @@ Material:
     - _StylizedSpecularIgnoreShadow: 0
     - _StylizedSpecularStrength: 1
     - _SubsurfaceScattering: 0
+    - _TPSBezierHeader: 0
+    - _TPSBuldgeHeader: 0
     - _TPSHelpbox: 0
+    - _TPSIdleHeader: 0
     - _TPSPenetratorEnabled: 0
+    - _TPSPulsingHeader: 0
+    - _TPSSqueezeHeader: 0
     - _TPS_AnimatedToggle: 1
     - _TPS_BezierSmoothness: 0.4
     - _TPS_BezierStart: 0
@@ -2979,7 +2992,7 @@ Material:
     - m_start_Decal2AudioLink: 0
     - m_start_Decal3: 0
     - m_start_Decal3AudioLink: 0
-    - m_start_DecalSection: 1
+    - m_start_DecalSection: 0
     - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0
@@ -3034,7 +3047,7 @@ Material:
     - m_start_OutlineStencilPassBackOptions: 0
     - m_start_OutlineStencilPassFrontOptions: 0
     - m_start_PathAudioLink: 0
-    - m_start_PoiLightData: 1
+    - m_start_PoiLightData: 0
     - m_start_PoiShading: 1
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
@@ -3708,7 +3721,7 @@ Material:
     - _RimColorTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimEnviroMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimIndirColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimLightColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimShadowAlpha: {r: 0, g: 0, b: 0, a: 1}
     - _RimTexPan: {r: 0, g: 0, b: 0, a: 0}

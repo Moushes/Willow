@@ -2674,7 +2674,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/1462365bba0e1a246917ea0b6
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0));
+				clip(poiFragData.alpha - float(0.16));
 				return float4(poiFragData.finalColor + poiFragData.emission * poiMods.globalEmission, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG
@@ -5065,7 +5065,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/1462365bba0e1a246917ea0b6
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0));
+				clip(poiFragData.alpha - float(0.16));
 				if (float(0) == 4)
 				{
 					poiFragData.alpha = saturate(poiFragData.alpha * float(10));
@@ -6391,7 +6391,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/1462365bba0e1a246917ea0b6
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - float(0));
+				clip(poiFragData.alpha - float(0.16));
 				return float4(poiFragData.finalColor, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG

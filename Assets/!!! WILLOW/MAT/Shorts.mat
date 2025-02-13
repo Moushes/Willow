@@ -2,14 +2,28 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shorts
   m_Shader: {fileID: 4800000, guid: 2f45ef8483b1e414997ec899276e9af2, type: 3}
-  m_ShaderKeywords: 
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - COLOR_GRADING_HDR_3D
+  - DISTORT
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_MATCAP0
+  - POI_VERTEXLIGHT_ON
+  - VIGNETTE_MASKED
+  - _GLOSSYREFLECTIONS_OFF
+  - _LIGHTINGMODE_FLAT
+  - _RIMSTYLE_POIYOMI
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,6 +33,7 @@ Material:
     RenderType: TransparentCutout
     _DissolveAlphaAnimated: 2
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -103,7 +118,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClippingMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 35a94ec0ff47b7c4fbc6b7b470761fbf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClothDFG:
@@ -339,7 +354,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7168a60ab50f4ef4095ab3a921861702, type: 3}
+        m_Texture: {fileID: 2800000, guid: 04faa32cec44fa34c91d4d162c05233d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -642,6 +657,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - DSGI: 0
     - Instancing: 0
@@ -936,7 +952,7 @@ Material:
     - _Curvature: 0
     - _CurvatureU: 0
     - _CurvatureV: 0
-    - _Cutoff: 0.5
+    - _Cutoff: 0.05
     - _DebugCameraData: 0
     - _DebugEnabled: 0
     - _DebugLightingData: 0
@@ -2292,7 +2308,7 @@ Material:
     - m_start_OutlineStencil: 0
     - m_start_PathAudioLink: 0
     - m_start_PoiLightData: 0
-    - m_start_PoiShading: 1
+    - m_start_PoiShading: 0
     - m_start_RGBMask: 0
     - m_start_Refraction: 0
     - m_start_RimAudioLink: 0
@@ -2765,3 +2781,4 @@ Material:
     - _VoronoiRandomMinMaxBrightness: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiRandomMinMaxSaturation: {r: 0.8, g: 1, b: 0, a: 1}
     - _VoronoiSpeed: {r: 3, g: 3, b: 3, a: 1}
+  m_BuildTextureStacks: []

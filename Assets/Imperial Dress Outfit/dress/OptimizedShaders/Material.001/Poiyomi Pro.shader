@@ -39,6 +39,24 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _ClippingMaskUV ("UV", Int) = 0
 		[HideInInspector][ToggleUI]_Inverse_Clipping ("Invert", Float) = 0
 		_Cutoff ("Alpha Cutoff", Range(0, 1.001)) = 0.5
+		//ifex _MainColorAdjustToggle==0
+		[HideInInspector] m_start_MainHueShift ("Color Adjust--{reference_property:_MainColorAdjustToggle,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/color-and-normals/color-adjust},hover:Documentation}}", Float) = 0
+		[HideInInspector][ThryToggle(COLOR_GRADING_HDR)] _MainColorAdjustToggle ("Adjust Colors", Float) = 0
+		[ThryRGBAPacker(R Hue Mask, G Brightness Mask, B Saturation Mask, A Nothing)]_MainColorAdjustTexture ("Mask (Expand)--{reference_properties:[_MainColorAdjustTexturePan, _MainColorAdjustTextureUV]}", 2D) = "white" { }
+		[HideInInspector][Vector2]_MainColorAdjustTexturePan ("Panning", Vector) = (0, 0, 0, 0)
+		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _MainColorAdjustTextureUV ("UV", Int) = 0
+		_Saturation ("Saturation", Range(-1, 10)) = 0
+		_MainBrightness ("Brightness", Range(-1, 1)) = 0
+		[ThryToggleUI(true)] _MainHueShiftToggle ("<size=13><b>  Hue Shift</b></size>", Float) = 0
+		[ToggleUI]_MainHueShiftReplace ("Hue Replace?--{condition_showS:(_MainHueShiftToggle==1)}", Float) = 1
+		_MainHueShift ("Hue Shift--{condition_showS:(_MainHueShiftToggle==1)}", Range(0, 1)) = 0
+		_MainHueShiftSpeed ("Hue Shift Speed--{condition_showS:(_MainHueShiftToggle==1)}", Float) = 0
+		[Space(4)]
+		[ThryToggleUI(true)]_MainHueALCTEnabled ("<size=13><b>  Hue Shift Audio Link</b></size>--{condition_showS:(_MainHueShiftToggle==1 && _EnableAudioLink==1)}", Float) = 0
+		[Enum(Bass, 0, Low Mid, 1, High Mid, 2, Treble, 3)]_MainALHueShiftBand ("Band--{condition_showS:(_MainHueShiftToggle==1 && _EnableAudioLink==1 && _MainHueALCTEnabled==1)}", Int) = 0
+		[ThryWideEnum(Motion increases as intensity of band increases, 0, Above but Smooth, 1, Motion moves back and forth as a function of intensity, 2, Above but Smoooth, 3, Fixed speed increase when the band is dark Stationary when light, 4, Above but Smooooth, 5, Fixed speed increase when the band is dark Fixed speed decrease when light, 6, Above but Smoooooth, 7)]_MainALHueShiftCTIndex ("Motion Type--{condition_showS:(_MainHueShiftToggle==1 && _EnableAudioLink==1 && _MainHueALCTEnabled==1)}", Int) = 0
+		_MainHueALMotionSpeed ("Motion Speed--{condition_showS:(_MainHueShiftToggle==1 && _EnableAudioLink==1 && _MainHueALCTEnabled==1)}", Float) = 1
+		[HideInInspector] m_end_MainHueShift ("Hue Shift", Float) = 0
 		[HideInInspector] m_start_Alpha ("Alpha Options--{button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/color-and-normals/alpha-options},hover:Documentation}}", Float) = 0
 		[ToggleUI]_AlphaForceOpaque ("Force Opaque", Float) = 0
 		_AlphaMod ("Alpha Mod", Range(-1, 1)) = 0.0
@@ -306,14 +324,15 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 			Blend [_SrcBlend] [_DstBlend]
 			CGPROGRAM
  #define OPTIMIZER_ENABLED 
+ #define COLOR_GRADING_HDR 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
  #define POI_VERTEXLIGHT_ON 
  #define VIGNETTE_MASKED 
  #define _LIGHTINGMODE_FLAT 
- #define PROP_CLIPPINGMASK 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
+			//ifex float(1)==0
 			//ifex float(1)==0
 			#pragma multi_compile_fwdbase
 			#pragma multi_compile_instancing
@@ -446,6 +465,24 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 			float _ClippingMaskUV;
 			float _Inverse_Clipping;
 			float _Cutoff;
+			//ifex float(1)==0
+			float _MainColorAdjustToggle;
+			#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _MainColorAdjustTexture;
+			#endif
+			float4 _MainColorAdjustTexture_ST;
+			float2 _MainColorAdjustTexturePan;
+			float _MainColorAdjustTextureUV;
+			float _MainHueShiftToggle;
+			float _MainHueShiftReplace;
+			float _MainHueShift;
+			float _MainHueShiftSpeed;
+			float _Saturation;
+			float _MainBrightness;
+			float _MainHueALCTEnabled;
+			float _MainALHueShiftBand;
+			float _MainALHueShiftCTIndex;
+			float _MainHueALMotionSpeed;
 			SamplerState sampler_linear_clamp;
 			SamplerState sampler_linear_repeat;
 			float _AlphaForceOpaque;
@@ -2612,6 +2649,34 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 				#endif
 				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(1,1,1,1).rgb, float(0));
 				poiFragData.alpha = mainTexture.a * float4(1,1,1,1).a;
+				//ifex float(1)==0
+				#ifdef COLOR_GRADING_HDR
+				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
+				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0));
+				#else
+				float4 hueShiftAlpha = 1;
+				#endif
+				if (float(0))
+				{
+					float shift = float(0);
+					#ifdef POI_AUDIOLINK
+					if (poiMods.audioLinkAvailable && float(0))
+					{
+						shift += AudioLinkGetChronoTime(float(0), float(0)) * float(1);
+					}
+					#endif
+					if (float(1))
+					{
+						poiFragData.baseColor = lerp(poiFragData.baseColor, hueShift(poiFragData.baseColor, shift + float(0) * _Time.x), hueShiftAlpha.r);
+					}
+					else
+					{
+						poiFragData.baseColor = hueShift(poiFragData.baseColor, frac((shift - (1 - hueShiftAlpha.r) + float(0) * _Time.x)));
+					}
+				}
+				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -float(-1) * hueShiftAlpha.b);
+				poiFragData.baseColor = saturate(poiFragData.baseColor + float(0) * hueShiftAlpha.g);
+				#endif
 				#if defined(PROP_CLIPPINGMASK) || !defined(OPTIMIZER_ENABLED)
 				float alphaMask = POI2D_SAMPLER_PAN(_ClippingMask, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)).r;
 				if (float(0))
@@ -2707,14 +2772,15 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 			Blend [_AddSrcBlend] [_AddDstBlend]
 			CGPROGRAM
  #define OPTIMIZER_ENABLED 
+ #define COLOR_GRADING_HDR 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
  #define POI_VERTEXLIGHT_ON 
  #define VIGNETTE_MASKED 
  #define _LIGHTINGMODE_FLAT 
- #define PROP_CLIPPINGMASK 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
+			//ifex float(1)==0
 			//ifex float(1)==0
 			#pragma multi_compile_fwdadd_fullshadows
 			#pragma multi_compile_instancing
@@ -2846,6 +2912,24 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 			float _ClippingMaskUV;
 			float _Inverse_Clipping;
 			float _Cutoff;
+			//ifex float(1)==0
+			float _MainColorAdjustToggle;
+			#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _MainColorAdjustTexture;
+			#endif
+			float4 _MainColorAdjustTexture_ST;
+			float2 _MainColorAdjustTexturePan;
+			float _MainColorAdjustTextureUV;
+			float _MainHueShiftToggle;
+			float _MainHueShiftReplace;
+			float _MainHueShift;
+			float _MainHueShiftSpeed;
+			float _Saturation;
+			float _MainBrightness;
+			float _MainHueALCTEnabled;
+			float _MainALHueShiftBand;
+			float _MainALHueShiftCTIndex;
+			float _MainHueALMotionSpeed;
 			SamplerState sampler_linear_clamp;
 			SamplerState sampler_linear_repeat;
 			float _AlphaForceOpaque;
@@ -5008,6 +5092,34 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 				#endif
 				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(1,1,1,1).rgb, float(0));
 				poiFragData.alpha = mainTexture.a * float4(1,1,1,1).a;
+				//ifex float(1)==0
+				#ifdef COLOR_GRADING_HDR
+				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
+				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0));
+				#else
+				float4 hueShiftAlpha = 1;
+				#endif
+				if (float(0))
+				{
+					float shift = float(0);
+					#ifdef POI_AUDIOLINK
+					if (poiMods.audioLinkAvailable && float(0))
+					{
+						shift += AudioLinkGetChronoTime(float(0), float(0)) * float(1);
+					}
+					#endif
+					if (float(1))
+					{
+						poiFragData.baseColor = lerp(poiFragData.baseColor, hueShift(poiFragData.baseColor, shift + float(0) * _Time.x), hueShiftAlpha.r);
+					}
+					else
+					{
+						poiFragData.baseColor = hueShift(poiFragData.baseColor, frac((shift - (1 - hueShiftAlpha.r) + float(0) * _Time.x)));
+					}
+				}
+				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -float(-1) * hueShiftAlpha.b);
+				poiFragData.baseColor = saturate(poiFragData.baseColor + float(0) * hueShiftAlpha.g);
+				#endif
 				#if defined(PROP_CLIPPINGMASK) || !defined(OPTIMIZER_ENABLED)
 				float alphaMask = POI2D_SAMPLER_PAN(_ClippingMask, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)).r;
 				if (float(0))
@@ -5106,14 +5218,15 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 			Blend [_SrcBlend] [_DstBlend]
 			CGPROGRAM
  #define OPTIMIZER_ENABLED 
+ #define COLOR_GRADING_HDR 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
  #define POI_VERTEXLIGHT_ON 
  #define VIGNETTE_MASKED 
  #define _LIGHTINGMODE_FLAT 
- #define PROP_CLIPPINGMASK 
 			#pragma target 5.0
 			#pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
+			//ifex float(1)==0
 			//ifex float(1)==0
 			#pragma skip_variants FOG_LINEAR FOG_EXP FOG_EXP2
 			#pragma multi_compile_instancing
@@ -5189,6 +5302,24 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 			float _ClippingMaskUV;
 			float _Inverse_Clipping;
 			float _Cutoff;
+			//ifex float(1)==0
+			float _MainColorAdjustToggle;
+			#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
+			Texture2D _MainColorAdjustTexture;
+			#endif
+			float4 _MainColorAdjustTexture_ST;
+			float2 _MainColorAdjustTexturePan;
+			float _MainColorAdjustTextureUV;
+			float _MainHueShiftToggle;
+			float _MainHueShiftReplace;
+			float _MainHueShift;
+			float _MainHueShiftSpeed;
+			float _Saturation;
+			float _MainBrightness;
+			float _MainHueALCTEnabled;
+			float _MainALHueShiftBand;
+			float _MainALHueShiftCTIndex;
+			float _MainHueALMotionSpeed;
 			SamplerState sampler_linear_clamp;
 			SamplerState sampler_linear_repeat;
 			float _AlphaForceOpaque;
@@ -6370,6 +6501,34 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/9b6b2a8e76bad024c89c51328
 				poiCam.worldDirection = i.worldDirection;
 				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(1,1,1,1).rgb, float(0));
 				poiFragData.alpha = mainTexture.a * float4(1,1,1,1).a;
+				//ifex float(1)==0
+				#ifdef COLOR_GRADING_HDR
+				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
+				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0));
+				#else
+				float4 hueShiftAlpha = 1;
+				#endif
+				if (float(0))
+				{
+					float shift = float(0);
+					#ifdef POI_AUDIOLINK
+					if (poiMods.audioLinkAvailable && float(0))
+					{
+						shift += AudioLinkGetChronoTime(float(0), float(0)) * float(1);
+					}
+					#endif
+					if (float(1))
+					{
+						poiFragData.baseColor = lerp(poiFragData.baseColor, hueShift(poiFragData.baseColor, shift + float(0) * _Time.x), hueShiftAlpha.r);
+					}
+					else
+					{
+						poiFragData.baseColor = hueShift(poiFragData.baseColor, frac((shift - (1 - hueShiftAlpha.r) + float(0) * _Time.x)));
+					}
+				}
+				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -float(-1) * hueShiftAlpha.b);
+				poiFragData.baseColor = saturate(poiFragData.baseColor + float(0) * hueShiftAlpha.g);
+				#endif
 				#if defined(PROP_CLIPPINGMASK) || !defined(OPTIMIZER_ENABLED)
 				float alphaMask = POI2D_SAMPLER_PAN(_ClippingMask, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)).r;
 				if (float(0))

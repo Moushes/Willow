@@ -13,31 +13,52 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - COLOR_GRADING_HDR
   - DISTORT
   - POI_AUDIOLINK
   - POI_ENVIRORIM
+  - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
+  - POI_LIGHT_DATA_ADDITIVE_ENABLE
+  - POI_UDIMDISCARD
+  - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _EMISSION
   - _GLOSSYREFLECTIONS_OFF
   - _LIGHTINGMODE_FLAT
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: -1
   stringTagMap:
     AllLockedGUIDS: 6c817953acd1e9d43a7bf4acf9a60e6f
     OptimizedShaderFolder: M_Shorts
     OriginalKeywords: DISTORT POI_AUDIOLINK POI_ENVIRORIM VIGNETTE_MASKED _EMISSION
       _GLOSSYREFLECTIONS_OFF _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
       _STOCHASTICMODE_DELIOT_HEITZ
-    OriginalShader: .poiyomi/Poiyomi 8.2/Poiyomi Pro
-    RenderType: TransparentCutout
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
     _EmissionAL0EnabledAnimated: 1
     _EmissionHueShiftAnimated: 1
     _EmissionHueShiftEnabledAnimated: 1
     _EmissionStrengthAnimated: 1
+    _UDIMDiscardRow0_0Animated: 1
+    _UDIMDiscardRow0_1Animated: 1
+    _UDIMDiscardRow0_2Animated: 1
+    _UDIMDiscardRow0_3Animated: 1
+    _UDIMDiscardRow1_0Animated: 1
+    _UDIMDiscardRow1_1Animated: 1
+    _UDIMDiscardRow1_2Animated: 1
+    _UDIMDiscardRow1_3Animated: 1
+    _UDIMDiscardRow2_0Animated: 1
+    _UDIMDiscardRow2_1Animated: 1
+    _UDIMDiscardRow2_2Animated: 1
+    _UDIMDiscardRow2_3Animated: 1
+    _UDIMDiscardRow3_0Animated: 1
+    _UDIMDiscardRow3_1Animated: 1
+    _UDIMDiscardRow3_2Animated: 1
+    _UDIMDiscardRow3_3Animated: 1
     _UVTileDissolveAlpha_Row0_0Animated: 1
     _UVTileDissolveAlpha_Row0_1Animated: 1
     _UVTileDissolveAlpha_Row0_2Animated: 1
@@ -1940,7 +1961,7 @@ Material:
     - _EnableTouchGlow: 0
     - _EnableTouchGlowAnimated: 0
     - _EnableTruchet: 0
-    - _EnableUDIMDiscardOptions: 0
+    - _EnableUDIMDiscardOptions: 1
     - _EnableVertexGlitch: 0
     - _EnableVertexGlitchAnimated: 0
     - _EnableVideo: 0
@@ -2609,7 +2630,7 @@ Material:
     - _MainColorAdjustTexturePanAnimated: 0
     - _MainColorAdjustTextureUV: 0
     - _MainColorAdjustTextureUVAnimated: 0
-    - _MainColorAdjustToggle: 0
+    - _MainColorAdjustToggle: 1
     - _MainDistanceFadeAnimated: 0
     - _MainDistanceFadeMax: 0
     - _MainDistanceFadeMin: 0
@@ -3329,7 +3350,7 @@ Material:
     - _SSSThicknessModAnimated: 0
     - _SampleWorld: 0
     - _SampleWorldAnimated: 0
-    - _Saturation: 0
+    - _Saturation: -1
     - _SaturationAnimated: 0
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0
@@ -4143,10 +4164,10 @@ Material:
     - m_lightingOptions: 1
     - m_mainCategory: 1
     - m_mainOptions: 1
-    - m_modifierCategory: 0
+    - m_modifierCategory: 1
     - m_outlineOptions: 0
-    - m_postprocessing: 0
-    - m_renderingCategory: 0
+    - m_postprocessing: 1
+    - m_renderingCategory: 1
     - m_renderingOptions: 0
     - m_specialFXCategory: 1
     - m_start_ALDecalSpectrum: 0
@@ -4217,7 +4238,7 @@ Material:
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
     - m_start_Lighting: 1
-    - m_start_MainHueShift: 0
+    - m_start_MainHueShift: 1
     - m_start_MainHueShiftGlobalMask: 0
     - m_start_MainVertexColors: 0
     - m_start_Matcap2: 0
@@ -4263,7 +4284,7 @@ Material:
     - m_start_alphaBlending: 0
     - m_start_ambientOcclusion: 1
     - m_start_angularFade: 0
-    - m_start_audioLink: 0
+    - m_start_audioLink: 1
     - m_start_audioLinkDebug: 0
     - m_start_backFace: 0
     - m_start_backlight: 0
@@ -4328,7 +4349,7 @@ Material:
     - m_start_rim2LightOptions: 0
     - m_start_rimHueShift: 0
     - m_start_rimLight1Options: 0
-    - m_start_rimLightOptions: 1
+    - m_start_rimLightOptions: 0
     - m_start_rimWidthNoise: 0
     - m_start_scrollingEmissionOptions: 0
     - m_start_scrollingEmissionOptions1: 0
@@ -4340,7 +4361,7 @@ Material:
     - m_start_subsurfaceScattering: 0
     - m_start_tps_penetrator: 0
     - m_start_truchet: 0
-    - m_start_udimdiscardOptions: 0
+    - m_start_udimdiscardOptions: 1
     - m_start_uvDistortion: 0
     - m_start_uvLocalWorld: 0
     - m_start_uvPanosphere: 0
@@ -4352,7 +4373,7 @@ Material:
     - m_start_voronoi: 0
     - m_start_voronoiRandom: 0
     - m_thirdparty: 0
-    - m_thirdpartyCategory: 0
+    - m_thirdpartyCategory: 1
     - shader_is_using_thry_editor: 69
     - shader_locale: 0
     - shader_master_label: 0
