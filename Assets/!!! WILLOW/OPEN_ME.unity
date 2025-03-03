@@ -5831,7 +5831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: avtr_11467bb4-da40-4e6f-bcdf-dfdfe7d68371
+  blueprintId: avtr_02fe645b-cd01-4564-9963-4cb4314efe4b
   contentType: 0
   assetBundleUnityVersion: 
   fallbackStatus: 1
@@ -18209,7 +18209,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000402
+      value: -0.000402
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 427be3579d215cb43ac463412c2f78b9,
         type: 3}
@@ -18256,11 +18256,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8384803449449240946, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6736419998865333705, guid: 427be3579d215cb43ac463412c2f78b9,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: a7f514cfc2e719e458e9ca2dac229e4b, type: 2}
+    - target: {fileID: -2900824472288910129, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1884904272197429112, guid: 427be3579d215cb43ac463412c2f78b9,
         type: 3}
       propertyPath: m_IsActive
@@ -18274,7 +18284,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 427be3579d215cb43ac463412c2f78b9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7559777336122310201, guid: 427be3579d215cb43ac463412c2f78b9,
         type: 3}
@@ -18290,11 +18300,50 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a7f514cfc2e719e458e9ca2dac229e4b, type: 2}
+      objectReference: {fileID: 2100000, guid: 93ea10b41c4b03041896a77dc9a17ab2, type: 2}
+    - target: {fileID: 8414645866963709399, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000402
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9184498012683276257, guid: 427be3579d215cb43ac463412c2f78b9, type: 3}
+    - {fileID: 3585610984503439638, guid: 427be3579d215cb43ac463412c2f78b9, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -6346075466117578221, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 390160545}
+    - targetCorrespondingSourceObject: {fileID: -6346075466117578221, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 390160544}
+    - targetCorrespondingSourceObject: {fileID: -1884904272197429112, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2074139151}
+    - targetCorrespondingSourceObject: {fileID: -1884904272197429112, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2074139150}
+    - targetCorrespondingSourceObject: {fileID: -3641249431535719180, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 390160543}
+    - targetCorrespondingSourceObject: {fileID: -3641249431535719180, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 390160542}
+    - targetCorrespondingSourceObject: {fileID: -4766325900661328286, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 390160541}
+    - targetCorrespondingSourceObject: {fileID: -4766325900661328286, guid: 427be3579d215cb43ac463412c2f78b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 390160540}
   m_SourcePrefab: {fileID: 100100000, guid: 427be3579d215cb43ac463412c2f78b9, type: 3}
 --- !u!4 &390160535 stripped
 Transform:
@@ -18302,6 +18351,444 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 390160534}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &390160536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4472727485410197602, guid: 427be3579d215cb43ac463412c2f78b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 390160534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &390160537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3641249431535719180, guid: 427be3579d215cb43ac463412c2f78b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 390160534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &390160538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1884904272197429112, guid: 427be3579d215cb43ac463412c2f78b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 390160534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &390160539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6346075466117578221, guid: 427be3579d215cb43ac463412c2f78b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 390160534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &390160540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684618966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 177932288001048594
+  references:
+    version: 2
+    RefIds:
+    - rid: 177932288001048594
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Underwear/SSUndie
+        state:
+          actions:
+          - rid: 177932288001048595
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 177932288001048595
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 1684618966}
+        mode: 0
+--- !u!114 &390160541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684618966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 177932288001048593
+  references:
+    version: 2
+    RefIds:
+    - rid: 177932288001048593
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 390160536}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
+--- !u!114 &390160542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390160537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 177932288001048592
+  references:
+    version: 2
+    RefIds:
+    - rid: 177932288001048592
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 390160536}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
+--- !u!114 &390160543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390160537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 177932288001048588
+  references:
+    version: 2
+    RefIds:
+    - rid: 177932288001048588
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Socks/TeachTights
+        state:
+          actions:
+          - rid: 177932288001048589
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 177932288001048589
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 390160537}
+        mode: 0
+--- !u!114 &390160544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390160539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 177932288001048590
+  references:
+    version: 2
+    RefIds:
+    - rid: 177932288001048590
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 390160536}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
+--- !u!114 &390160545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390160539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 177932288001048581
+  references:
+    version: 2
+    RefIds:
+    - rid: 177932288001048581
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Tops/Shirt
+        state:
+          actions:
+          - rid: 177932288001048582
+        saved: 0
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 177932288001048582
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 390160539}
+        mode: 0
 --- !u!1 &391353307
 GameObject:
   m_ObjectHideFlags: 0
@@ -26196,6 +26683,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7112274354418944786, guid: ad92322654517d14d9dc5b396c4fd5d4,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -497225568183085001, guid: ad92322654517d14d9dc5b396c4fd5d4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -26215,6 +26707,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2788220732030472908, guid: ad92322654517d14d9dc5b396c4fd5d4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 833914371}
     - targetCorrespondingSourceObject: {fileID: 4246033775202154418, guid: ad92322654517d14d9dc5b396c4fd5d4,
         type: 3}
       insertIndex: -1
@@ -26420,6 +26916,187 @@ MonoBehaviour:
   position: {x: 0.03, y: 0.04, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+--- !u!1 &833914369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2788220732030472908, guid: ad92322654517d14d9dc5b396c4fd5d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 800764639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &833914371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833914369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1661641543, guid: 2a2c05204084d904aa4945ccff20d8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foldout_transforms: 1
+  foldout_forces: 1
+  foldout_collision: 1
+  foldout_stretchsquish: 1
+  foldout_limits: 1
+  foldout_grabpose: 1
+  foldout_options: 1
+  foldout_gizmos: 1
+  version: 1
+  integrationType: 1
+  rootTransform: {fileID: 0}
+  ignoreTransforms: []
+  endpointPosition: {x: 0, y: 0.001, z: 0}
+  multiChildType: 0
+  pull: 0.234
+  pullCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spring: 0.648
+  springCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  stiffness: 0.466
+  stiffnessCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  gravity: 0.65
+  gravityCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  gravityFalloff: 1
+  gravityFalloffCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  immobileType: 1
+  immobile: 0.691
+  immobileCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  allowCollision: 0
+  collisionFilter:
+    allowSelf: 1
+    allowOthers: 1
+  radius: 0.0001
+  radiusCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  colliders:
+  - {fileID: 1288697706}
+  - {fileID: 1155053883}
+  - {fileID: 1758160375}
+  - {fileID: 832291942}
+  - {fileID: 1950546041}
+  limitType: 3
+  maxAngleX: 45
+  maxAngleXCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxAngleZ: 15
+  maxAngleZCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.035308838
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9215698
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  limitRotation: {x: 0, y: 0, z: 0}
+  limitRotationXCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  limitRotationYCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  limitRotationZCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  allowGrabbing: 1
+  grabFilter:
+    allowSelf: 1
+    allowOthers: 1
+  allowPosing: 1
+  poseFilter:
+    allowSelf: 1
+    allowOthers: 1
+  snapToHand: 0
+  grabMovement: 0.5
+  maxStretch: 0
+  maxStretchCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxSquish: 0
+  maxSquishCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  stretchMotion: 0
+  stretchMotionCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isAnimated: 0
+  resetWhenDisabled: 0
+  parameter: 
+  showGizmos: 1
+  boneOpacity: 0.5
+  limitOpacity: 0.5
 --- !u!1 &842449425
 GameObject:
   m_ObjectHideFlags: 0
@@ -26559,8 +27236,8 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 1
-  latestValidExecutionGroupIndex: 1
+  cachedExecutionGroupIndex: 2
+  latestValidExecutionGroupIndex: 2
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
   AffectsPositionY: 1
@@ -40714,7 +41391,7 @@ MonoBehaviour:
   foldout_limits: 1
   foldout_grabpose: 1
   foldout_options: 1
-  foldout_gizmos: 0
+  foldout_gizmos: 1
   version: 1
   integrationType: 1
   rootTransform: {fileID: 0}
@@ -70083,6 +70760,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1821697857}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1684618966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4766325900661328286, guid: 427be3579d215cb43ac463412c2f78b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 390160534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1684817765
 GameObject:
   m_ObjectHideFlags: 0
@@ -77248,6 +77931,144 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2074139150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390160538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 177932288001048591
+  references:
+    version: 2
+    RefIds:
+    - rid: 177932288001048591
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 390160536}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
+--- !u!114 &2074139151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390160538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 177932288001048586
+  references:
+    version: 2
+    RefIds:
+    - rid: 177932288001048586
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Bottoms/ShortSkirt
+        state:
+          actions:
+          - rid: 177932288001048587
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 177932288001048587
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 390160538}
+        mode: 0
 --- !u!1 &2096305674
 GameObject:
   m_ObjectHideFlags: 0
