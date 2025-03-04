@@ -366,15 +366,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -3083014744575638009}
-    m_Threshold: 0.28000003
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: pcs/weight
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: -2528105258711399424}
-    m_Threshold: 0.3
+    m_Threshold: 0.28
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -382,7 +374,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -1714453807614491487}
-    m_Threshold: 0.32000002
+    m_Threshold: 0.3
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -391,7 +383,7 @@ BlendTree:
   m_BlendParameter: pcs/weight
   m_BlendParameterY: Blend
   m_MinThreshold: 0.2
-  m_MaxThreshold: 0.32000002
+  m_MaxThreshold: 0.3
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 4
@@ -455,6 +447,37 @@ BlendTree:
   m_MinThreshold: 0.99
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 0
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
+--- !u!206 &5753410674160659068
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Direction Offset
+  m_Childs:
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 196138d15e5dc814b8e239822581141c, type: 2}
+    m_Threshold: 0
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: pcs/weight
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 6bc8dc3cb9874df4990b7911c8a31622, type: 2}
+    m_Threshold: 1
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: pcs/weight
+    m_Mirror: 0
+  m_BlendParameter: pcs/directionOffset
+  m_BlendParameterY: Blend
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 0
 --- !u!206 &6820883852166866946
