@@ -62,11 +62,16 @@ MonoBehaviour:
   - name: pcs/local/lustMultiplier
     valueType: 1
     saved: 0
-    defaultValue: 0.3
+    defaultValue: 0.4
     networkSynced: 0
+  - name: pcs/local/eventIsReady
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
   - name: pcs/satisfaction/lust
     valueType: 1
-    saved: 0
+    saved: 1
     defaultValue: -1
     networkSynced: 1
   - name: pcs/satisfaction/edging

@@ -54,7 +54,7 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Right Hand
+  - name: Handjob Left
     icon: {fileID: 2800000, guid: 521fbf9919da4c34b869fbcf5e029173, type: 3}
     type: 102
     parameter:
@@ -64,7 +64,7 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Left Hand
+  - name: Handjob Right
     icon: {fileID: 2800000, guid: 521fbf9919da4c34b869fbcf5e029173, type: 3}
     type: 102
     parameter:

@@ -24,21 +24,21 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Edging (Pause Event)
-    icon: {fileID: 2800000, guid: 8b5387c4a7125144aab983ab87b760e3, type: 3}
-    type: 102
-    parameter:
-      name: pcs/satisfaction/edging
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
   - name: Squirt Insert
     icon: {fileID: 2800000, guid: 319afdedd2b51724f818b6b3b637105c, type: 3}
     type: 102
     parameter:
       name: pcs/mode/insertSquirt
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Edging (Pause Event)
+    icon: {fileID: 2800000, guid: 8b5387c4a7125144aab983ab87b760e3, type: 3}
+    type: 102
+    parameter:
+      name: pcs/satisfaction/edging
     value: 1
     style: 0
     subMenu: {fileID: 0}

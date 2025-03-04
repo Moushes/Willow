@@ -24,26 +24,6 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Smash Hit
-    icon: {fileID: 2800000, guid: 9a45cb917c696634c9d2ee48cb6d1a69, type: 3}
-    type: 102
-    parameter:
-      name: pcs/sound/smash
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Self-Touch
-    icon: {fileID: 2800000, guid: 772c85082292e354b816106a82630f97, type: 3}
-    type: 102
-    parameter:
-      name: pcs/mode/selfTouch
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
   - name: Self-Service
     icon: {fileID: 2800000, guid: 343a4005765d48148b9b2bae7b27c555, type: 3}
     type: 102
@@ -54,24 +34,14 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Auto-Detect
-    icon: {fileID: 2800000, guid: aa94a83a009952d4aa9c92c22ea43d01, type: 3}
-    type: 102
-    parameter:
-      name: pcs/mode/autoDetect
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Sound & Location
-    icon: {fileID: 2800000, guid: 521fbf9919da4c34b869fbcf5e029173, type: 3}
+  - name: Options
+    icon: {fileID: 2800000, guid: 0ac167847a17ec848a9a8d2740b07614, type: 3}
     type: 103
     parameter:
       name: 
     value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: ad0234c9bc95bbd4bbb7647693c434d7, type: 2}
+    subMenu: {fileID: 11400000, guid: 39380317ca143484baa005967ce90781, type: 2}
     subParameters: []
     labels: []
   - name: Satisfaction
@@ -81,6 +51,16 @@ MonoBehaviour:
       name: 
     value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: 5dee9a73ba3f31743a1bdc926ad944ce, type: 2}
+    subMenu: {fileID: 11400000, guid: a6ee54cb3c074fc4a9d9e4d5fafb49f9, type: 2}
+    subParameters: []
+    labels: []
+  - name: Sound & Location
+    icon: {fileID: 2800000, guid: 521fbf9919da4c34b869fbcf5e029173, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: be7de09beb7c7994ca25f5821e74733e, type: 2}
     subParameters: []
     labels: []

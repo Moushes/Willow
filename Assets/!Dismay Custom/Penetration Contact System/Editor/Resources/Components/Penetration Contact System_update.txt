@@ -1,1 +1,1 @@
-PCS v1.8.0 requires avatar SDK version 3.7.0 and there is no longer a setup tutorial video for this version. Please see the tutorial image inside PCS folder instead.
+This version requires avatar SDK version 3.7.0 up to newer.
