@@ -446,7 +446,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 0
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 0
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
@@ -905,7 +905,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 6
     overflowList: []
-  cachedExecutionGroupIndex: 0
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 0
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
@@ -11936,6 +11936,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 800764639}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &157400819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8431828476256904830, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1834055489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &163105137
 GameObject:
   m_ObjectHideFlags: 0
@@ -18077,7 +18083,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 0
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 0
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
@@ -24862,7 +24868,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 0
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 0
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
@@ -26251,85 +26257,6 @@ Transform:
   - {fileID: 1967421649}
   m_Father: {fileID: 1227907422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &681247163
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 73181770}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000014106499
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7257c71afcc5b1645a316c4890b31dff, type: 2}
-    - target: {fileID: 919132149155446097, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-        type: 3}
-      propertyPath: m_Name
-      value: Holy Matrimony FBX blender
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f, type: 3}
---- !u!4 &681247164 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9bde5db0b40e0734c8f1fb1aa7cf526f,
-    type: 3}
-  m_PrefabInstance: {fileID: 681247163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &686206706
 GameObject:
   m_ObjectHideFlags: 0
@@ -49162,7 +49089,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 681247164}
+      addedObject: {fileID: 1783320642}
     - targetCorrespondingSourceObject: {fileID: -7113567860641759636, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       insertIndex: -1
@@ -59827,7 +59754,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 0
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 0
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
@@ -60682,7 +60609,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 0
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 0
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
@@ -61774,7 +61701,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 0
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 0
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
@@ -61925,7 +61852,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 0
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 0
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
@@ -62520,6 +62447,72 @@ MonoBehaviour:
   showGizmos: 1
   boneOpacity: 0.5
   limitOpacity: 0.5
+--- !u!1 &1783320641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1834055489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1783320642 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1834055489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1783320643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783320641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7962561314406268931
+  references:
+    version: 2
+    RefIds:
+    - rid: 7962561314406268931
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 157400819}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!1 &1792496788
 GameObject:
   m_ObjectHideFlags: 0
@@ -62705,6 +62698,83 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 971029453}
   m_SourcePrefab: {fileID: 100100000, guid: d7b2715221dc46a40bc3bfee25aa1e9f, type: 3}
+--- !u!1001 &1834055489
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 73181770}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      propertyPath: m_Name
+      value: Holy Matrimony Armature Fix
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d6e3c32a3b1138c40ab75e82e1195c98,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1783320643}
+  m_SourcePrefab: {fileID: 100100000, guid: d6e3c32a3b1138c40ab75e82e1195c98, type: 3}
 --- !u!1 &1839284395
 GameObject:
   m_ObjectHideFlags: 0
@@ -63509,7 +63579,7 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 1
+  cachedExecutionGroupIndex: -1
   latestValidExecutionGroupIndex: 1
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1

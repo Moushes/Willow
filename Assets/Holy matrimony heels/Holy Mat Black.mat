@@ -8,10 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Holy Mat Black
-  m_Shader: {fileID: 4800000, guid: 231d95ff7213dd74f82af136b256fb32, type: 3}
+  m_Shader: {fileID: 4800000, guid: 33e2787d283e5854792645cfefd91ac9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - MOCHIE_PBR
   - POI_ENVIRORIM
   - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
@@ -22,13 +23,13 @@ Material:
   - VIGNETTE_MASKED
   - _CUBEMAP
   - _LIGHTINGMODE_WRAPPED
-  - _RIMSTYLE_POIYOMI
-  m_InvalidKeywords: []
+  - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
     RenderType: Opaque
     _MochieMetallicMaps_texPack_a_channel: 4
     _MochieMetallicMaps_texPack_a_fallback: 1
@@ -129,6 +130,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalTexture3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DepthBulgeMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -432,6 +437,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SSSThicknessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Set_HighColorMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -454,6 +463,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _SkinLUT:
         m_Texture: {fileID: 2800000, guid: d13510bb2be49aa40a66a0101efb6a36, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TPS_BakedMesh:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextGlyphs:
@@ -778,6 +791,8 @@ Material:
     - _DepthAlphaMinDepth: 0
     - _DepthAlphaMinValue: 1
     - _DepthAlphaToggle: 0
+    - _DepthBulgeFadeLength: 0.02
+    - _DepthBulgeHeight: 0.02
     - _DepthColorBlendMode: 0
     - _DepthColorMaxDepth: 1
     - _DepthColorMaxValue: 1
@@ -787,6 +802,20 @@ Material:
     - _DepthColorToggle: 0
     - _DepthEmissionStrength: 0
     - _DepthMaskUV: 0
+    - _DepthRimAdd: 0
+    - _DepthRimAdditiveLighting: 0
+    - _DepthRimBrightness: 1
+    - _DepthRimColorThemeIndex: 0
+    - _DepthRimEmission: 0
+    - _DepthRimHideInShadow: 0
+    - _DepthRimMixBaseColor: 0
+    - _DepthRimMixLightColor: 0
+    - _DepthRimMultiply: 0
+    - _DepthRimNormalToUse: 1
+    - _DepthRimReplace: 0
+    - _DepthRimSharpness: 0.2
+    - _DepthRimType: 0
+    - _DepthRimWidth: 0.2
     - _DepthTextureUV: 0
     - _DetailBrightness: 1
     - _DetailEnabled: 0
@@ -948,6 +977,8 @@ Material:
     - _EnableALDecal: 0
     - _EnableAniso: 0
     - _EnableAudioLink: 0
+    - _EnableDepthBulge: 0
+    - _EnableDepthRimLighting: 0
     - _EnableDissolve: 0
     - _EnableDissolveAudioLink: 0
     - _EnableDistortion: 0
@@ -1282,6 +1313,8 @@ Material:
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _MultilayerMathBlurMapUV: 0
+    - _NormalCorrect: 0
+    - _NormalCorrectAmount: 0.9
     - _OcclusionStrength: 1
     - _OffsetFactor: 0
     - _OffsetUnits: 0
@@ -1410,6 +1443,11 @@ Material:
     - _SDFBlur: 0.1
     - _SDFShadingTextureUV: 0
     - _SSIgnoreCastedShadows: 0
+    - _SSSDistortion: 1
+    - _SSSSpread: 5
+    - _SSSStrength: 0.25
+    - _SSSThicknessMapUV: 0
+    - _SSSThicknessMod: 0
     - _Saturation: 0
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0
@@ -1417,7 +1455,7 @@ Material:
     - _ScrollingEmission3: 0
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -1461,6 +1499,33 @@ Material:
     - _StylizedSpecular2Feather: 0
     - _StylizedSpecularFeather: 0
     - _StylizedSpecularStrength: 1
+    - _SubsurfaceScattering: 0
+    - _TPSBezierHeader: 0
+    - _TPSBuldgeHeader: 0
+    - _TPSHelpbox: 0
+    - _TPSIdleHeader: 0
+    - _TPSPenetratorEnabled: 0
+    - _TPSPulsingHeader: 0
+    - _TPSSqueezeHeader: 0
+    - _TPS_AnimatedToggle: 1
+    - _TPS_BezierSmoothness: 0.4
+    - _TPS_BezierStart: 0
+    - _TPS_BufferedDepth: 0
+    - _TPS_BufferedStrength: 0
+    - _TPS_Buldge: 0.3
+    - _TPS_BuldgeDistance: 0.2
+    - _TPS_BuldgeFalloffDistance: 0.05
+    - _TPS_IdleGravity: 0
+    - _TPS_IdleSkrinkLength: 1
+    - _TPS_IdleSkrinkWidth: 1
+    - _TPS_IsSkinnedMeshRenderer: 0
+    - _TPS_PenetratorLength: 1
+    - _TPS_PumpingSpeed: 1
+    - _TPS_PumpingStrength: 0
+    - _TPS_PumpingWidth: 0.2
+    - _TPS_SmoothStart: 1
+    - _TPS_Squeeze: 0.3
+    - _TPS_SqueezeDistance: 0.2
     - _TextEnabled: 0
     - _TextFPSColorThemeIndex: 0
     - _TextFPSEmissionStrength: 0
@@ -1583,6 +1648,7 @@ Material:
     - m_end_Decal3: 0
     - m_end_Decal3AudioLink: 0
     - m_end_DecalSection: 0
+    - m_end_DepthBulge: 0
     - m_end_DetailOptions: 0
     - m_end_DistortionAudioLink: 0
     - m_end_FXProximityColor: 0
@@ -1619,6 +1685,7 @@ Material:
     - m_end_brdf: 0
     - m_end_clearCoat: 0
     - m_end_depthFX: 0
+    - m_end_depthRimLightOptions: 0
     - m_end_dissolve: 0
     - m_end_dissolveHueShift: 0
     - m_end_emission1Options: 0
@@ -1629,13 +1696,17 @@ Material:
     - m_end_glitter: 0
     - m_end_matcap: 0
     - m_end_mirrorOptions: 0
+    - m_end_normalCorrect: 0
     - m_end_parallax: 0
     - m_end_pathing: 0
+    - m_end_pen_autoConfig: 0
     - m_end_pointToPoint: 0
     - m_end_postprocess: 0
     - m_end_reflectionRim: 0
     - m_end_rimLightOptions: 0
     - m_end_stylizedSpec: 0
+    - m_end_subsurfaceScattering: 0
+    - m_end_tps_penetrator: 0
     - m_end_udimdiscardOptions: 0
     - m_end_uvDistortion: 0
     - m_end_uvPanosphere: 0
@@ -1661,6 +1732,7 @@ Material:
     - m_start_Decal3: 0
     - m_start_Decal3AudioLink: 0
     - m_start_DecalSection: 0
+    - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0
     - m_start_FXProximityColor: 0
@@ -1697,6 +1769,7 @@ Material:
     - m_start_brdf: 0
     - m_start_clearCoat: 0
     - m_start_depthFX: 0
+    - m_start_depthRimLightOptions: 0
     - m_start_dissolve: 0
     - m_start_dissolveHueShift: 0
     - m_start_emission1Options: 0
@@ -1707,13 +1780,17 @@ Material:
     - m_start_glitter: 0
     - m_start_matcap: 1
     - m_start_mirrorOptions: 0
+    - m_start_normalCorrect: 0
     - m_start_parallax: 0
     - m_start_pathing: 0
+    - m_start_pen_autoConfig: 0
     - m_start_pointToPoint: 0
     - m_start_postprocess: 0
     - m_start_reflectionRim: 0
     - m_start_rimLightOptions: 0
     - m_start_stylizedSpec: 1
+    - m_start_subsurfaceScattering: 0
+    - m_start_tps_penetrator: 0
     - m_start_udimdiscardOptions: 0
     - m_start_uvDistortion: 0
     - m_start_uvPanosphere: 0
@@ -1830,6 +1907,7 @@ Material:
     - _DecalTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _DepthColor: {r: 1, g: 1, b: 1, a: 1}
     - _DepthMaskPan: {r: 0, g: 0, b: 0, a: 0}
+    - _DepthRimColor: {r: 1, g: 1, b: 1, a: 1}
     - _DepthTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _DetailMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _DetailNormalMapPan: {r: 0, g: 0, b: 0, a: 0}
@@ -1929,6 +2007,7 @@ Material:
     - _MochieReflectionTint: {r: 1, g: 1, b: 1, a: 1}
     - _MochieSpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _MultilayerMathBlurMapPan: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalCorrectOrigin: {r: 0, g: 0.4, b: -0.025, a: 1}
     - _PBRMaskScaleTiling: {r: 1, g: 1, b: 0, a: 0}
     - _PPMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _PPRGB: {r: 1, g: 1, b: 1, a: 1}
@@ -1962,6 +2041,8 @@ Material:
     - _SDFForward: {r: 0, g: 0, b: 1, a: 0}
     - _SDFLeft: {r: -1, g: 0, b: 0, a: 0}
     - _SDFShadingTexturePan: {r: 0, g: 0, b: 0, a: 0}
+    - _SSSColor: {r: 1, g: 0, b: 0, a: 1}
+    - _SSSThicknessMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _Set_HighColorMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _Shadow2ndColor: {r: 0, g: 0, b: 0, a: 0}
     - _Shadow2ndColorTexPan: {r: 0, g: 0, b: 0, a: 0}
@@ -1972,6 +2053,10 @@ Material:
     - _ShadowColorTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _SssColorBleedAoWeights: {r: 0.4, g: 0.15, b: 0.13, a: 0}
     - _SssTransmissionAbsorption: {r: -8, g: -40, b: -64, a: 0}
+    - _TPS_PenetratorForward: {r: 0, g: 0, b: 1, a: 0}
+    - _TPS_PenetratorRight: {r: 1, g: 0, b: 0, a: 0}
+    - _TPS_PenetratorScale: {r: 1, g: 1, b: 1, a: 1}
+    - _TPS_PenetratorUp: {r: 0, g: 1, b: 0, a: 0}
     - _TextFPSColor: {r: 1, g: 1, b: 1, a: 1}
     - _TextFPSOffset: {r: 0, g: 0, b: 0, a: 0}
     - _TextFPSPadding: {r: 0, g: 0, b: 0, a: 0}
