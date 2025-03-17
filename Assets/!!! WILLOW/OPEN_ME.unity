@@ -24254,7 +24254,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.000402
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
         type: 3}
@@ -24301,6 +24301,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6152585965547932318, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
         type: 3}
       propertyPath: m_Name
@@ -24310,7 +24315,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 50d382885610b0e448b667e5df6cfd5c, type: 2}
+      objectReference: {fileID: 2100000, guid: ce36a9132b99cd248a856fb381849bca, type: 2}
+    - target: {fileID: 4800545675622748477, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7327b65d1a66e774a943b4e68e54c874, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25613,7 +25623,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: ce36a9132b99cd248a856fb381849bca|Assets/FishnetShirtSaikura/FBX/fishnet.001.mat
+          id: ce36a9132b99cd248a856fb381849bca|Assets/FishnetShirtSaikura/Materials/fishnet.001.mat
           objRef: {fileID: 2100000, guid: ce36a9132b99cd248a856fb381849bca, type: 2}
     - rid: 3166844512995639310
       type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
@@ -25630,7 +25640,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 50d382885610b0e448b667e5df6cfd5c|Assets/FishnetShirtSaikura/FBX/fishnet.002.mat
+          id: 50d382885610b0e448b667e5df6cfd5c|Assets/FishnetShirtSaikura/Materials/fishnet.002.mat
           objRef: {fileID: 2100000, guid: 50d382885610b0e448b667e5df6cfd5c, type: 2}
     - rid: 3166844512995639311
       type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
@@ -25647,7 +25657,7 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 76fb5d85af293464e892064a05689557|Assets/FishnetShirtSaikura/FBX/fishnet.003.mat
+          id: 76fb5d85af293464e892064a05689557|Assets/FishnetShirtSaikura/Materials/fishnet.003.mat
           objRef: {fileID: 2100000, guid: 76fb5d85af293464e892064a05689557, type: 2}
 --- !u!1 &510145236
 GameObject:
@@ -26886,8 +26896,9 @@ MonoBehaviour:
         version: 3
         name: Willow/Cupboard/Underwear/Pasties
         state:
-          actions: []
-        saved: 0
+          actions:
+          - rid: 7962561359146647552
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -26930,6 +26941,16 @@ MonoBehaviour:
         holdButton: 0
         invertRestLogic: 0
         expandIntoTransition: 1
+    - rid: 7962561359146647552
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 675948826}
+        mode: 0
 --- !u!1 &678560926
 GameObject:
   m_ObjectHideFlags: 0
