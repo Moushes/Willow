@@ -7,26 +7,28 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fishnet.003
-  m_Shader: {fileID: 4800000, guid: c67af32af4acc2741af8effaf57bcd1c, type: 3}
+  m_Name: fishnet.001
+  m_Shader: {fileID: 4800000, guid: 17aefb010f7424745b8b15fa236ec6c2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - COLOR_GRADING_HDR
   - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
   - POI_LIGHT_DATA_ADDITIVE_ENABLE
   - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_FLAT
   - _NORMALMAP
+  - _RIMSTYLE_POIYOMI
   - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2000
   stringTagMap:
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
-    RenderType: Transparent
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -65,7 +67,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a95f86331018754459ace733d5d39aa0, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatFallback:
@@ -77,7 +79,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClippingMask:
-        m_Texture: {fileID: 2800000, guid: 8eeb828b258cb404fbeb84d88949c151, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClothDFG:
@@ -125,10 +127,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DepthTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -289,7 +287,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5e0230b6afea13c45bd7744acbf365a2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 60b5679707ac0e644a44e3a5104560cc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -340,10 +338,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MirrorTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -360,15 +354,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _PPMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -524,8 +510,8 @@ Material:
     - _AlphaFresnelSharpness: 0.5
     - _AlphaFresnelWidth: 0.5
     - _AlphaMipScale: 0.25
-    - _AlphaMod: 0.366
-    - _AlphaPremultiply: 1
+    - _AlphaMod: 0
+    - _AlphaPremultiply: 0
     - _AlphaSharpenedA2C: 0
     - _AlphaTextureUV: 0
     - _AlphaToCoverage: 0
@@ -686,7 +672,7 @@ Material:
     - _CurvFix: 1
     - _CurvatureU: 0
     - _CurvatureV: 0
-    - _Cutoff: 0
+    - _Cutoff: 0.5
     - _Decal0Depth: 0
     - _Decal0HueAngleStrength: 0
     - _Decal0MaskChannel: 0
@@ -852,7 +838,7 @@ Material:
     - _DistortionStrength1AudioLinkBand: 0
     - _DistortionStrengthAudioLinkBand: 0
     - _DistortionUvToDistort: 0
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _EmissionAL0Enabled: 0
     - _EmissionAL0MultipliersBand: 0
     - _EmissionAL0StrengthBand: 0
@@ -1161,7 +1147,7 @@ Material:
     - _MainALHueShiftCTIndex: 0
     - _MainBrightness: 0
     - _MainColorAdjustTextureUV: 0
-    - _MainColorAdjustToggle: 0
+    - _MainColorAdjustToggle: 1
     - _MainHueALCTEnabled: 0
     - _MainHueALMotionSpeed: 1
     - _MainHueShift: 0
@@ -1291,7 +1277,7 @@ Material:
     - _MochieSpecularStrength: 1
     - _MochieSpecularStrength2: 1
     - _MochieSpecularTintThemeIndex: 0
-    - _Mode: 3
+    - _Mode: 0
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _MultilayerMathBlurMapUV: 0
@@ -1430,7 +1416,7 @@ Material:
     - _SSSStrength: 0.25
     - _SSSThicknessMapUV: 0
     - _SSSThicknessMod: 0
-    - _Saturation: 0
+    - _Saturation: -1
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0
     - _ScrollingEmission2: 0
@@ -1587,7 +1573,7 @@ Material:
     - _VertexRoundingRangeBand: 0
     - _VertexWorldTranslationALBand: 0
     - _ZTest: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _glitterFrequencyLinearEmissive: 20
     - footer_discord: 0
     - footer_github: 0
@@ -1670,12 +1656,12 @@ Material:
     - m_end_vertexManipulation: 0
     - m_lightingCategory: 0
     - m_mainCategory: 1
-    - m_modifierCategory: 0
-    - m_postprocessing: 0
-    - m_renderingCategory: 0
+    - m_modifierCategory: 1
+    - m_postprocessing: 1
+    - m_renderingCategory: 1
     - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
-    - m_start_Alpha: 1
+    - m_start_Alpha: 0
     - m_start_Aniso: 0
     - m_start_BonusSliders: 0
     - m_start_CubeMap: 0
