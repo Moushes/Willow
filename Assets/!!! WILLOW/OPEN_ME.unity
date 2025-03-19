@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: avtr_02fe645b-cd01-4564-9963-4cb4314efe4b
+  blueprintId: 
   contentType: 0
   assetBundleUnityVersion: 
   fallbackStatus: 1
@@ -24325,14 +24325,14 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 393814425}
     - targetCorrespondingSourceObject: {fileID: 4064416621767113192, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 675948829}
-    - targetCorrespondingSourceObject: {fileID: 4064416621767113192, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 675948828}
     - targetCorrespondingSourceObject: {fileID: -4213761076027111091, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
         type: 3}
       insertIndex: -1
@@ -24340,12 +24340,68 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4213761076027111091, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 497038227}
-    - targetCorrespondingSourceObject: {fileID: -4213761076027111091, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 497038230}
   m_SourcePrefab: {fileID: 100100000, guid: 7c11937c73e2eee4cb772a1501bb2b2b, type: 3}
+--- !u!1 &393814424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c11937c73e2eee4cb772a1501bb2b2b,
+    type: 3}
+  m_PrefabInstance: {fileID: 393814423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &393814425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393814424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7962561405203775488
+  references:
+    version: 2
+    RefIds:
+    - rid: 7962561405203775488
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 1172668428}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!1 &403560364
 GameObject:
   m_ObjectHideFlags: 0
@@ -25371,60 +25427,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 393814423}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &497038227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497038224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 3
-  unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
-  somethingIsBroken: 0
-  config:
-    features: []
-  content:
-    rid: 5693760892633612292
-  references:
-    version: 2
-    RefIds:
-    - rid: 5693760892633612292
-      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
-      data:
-        version: 7
-        propBone: {fileID: 1172668428}
-        linkTo:
-        - useBone: 1
-          bone: 0
-          useObj: 0
-          obj: {fileID: 0}
-          offset: 
-        removeBoneSuffix: 
-        removeParentConstraints: 1
-        forceMergedName: 
-        forceOneWorldScale: 0
-        recursive: 1
-        alignPosition: 1
-        alignRotation: 1
-        alignScale: 1
-        autoScaleFactor: 0
-        scalingFactorPowersOf10Only: 1
-        skinRewriteScalingFactor: 1
-        useOptimizedUpload: 0
-        useBoneMerging: 0
-        keepBoneOffsets: 0
-        physbonesOnAvatarBones: 0
-        boneOnAvatar: 0
-        bonePathOnAvatar: 
-        fallbackBones: 
-        keepBoneOffsets2: 0
-        linkMode: 4
 --- !u!114 &497038228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26813,60 +26815,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 393814423}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &675948828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675948826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 3
-  unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
-  somethingIsBroken: 0
-  config:
-    features: []
-  content:
-    rid: 5693760892633612293
-  references:
-    version: 2
-    RefIds:
-    - rid: 5693760892633612293
-      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
-      data:
-        version: 7
-        propBone: {fileID: 1172668428}
-        linkTo:
-        - useBone: 1
-          bone: 0
-          useObj: 0
-          obj: {fileID: 0}
-          offset: 
-        removeBoneSuffix: 
-        removeParentConstraints: 1
-        forceMergedName: 
-        forceOneWorldScale: 0
-        recursive: 1
-        alignPosition: 1
-        alignRotation: 1
-        alignScale: 1
-        autoScaleFactor: 0
-        scalingFactorPowersOf10Only: 1
-        skinRewriteScalingFactor: 1
-        useOptimizedUpload: 0
-        useBoneMerging: 0
-        keepBoneOffsets: 0
-        physbonesOnAvatarBones: 0
-        boneOnAvatar: 0
-        bonePathOnAvatar: 
-        fallbackBones: 
-        keepBoneOffsets2: 0
-        linkMode: 4
 --- !u!114 &675948829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51442,7 +51390,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 510145237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62106,7 +62054,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 510145237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63970,7 +63918,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 510145237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
