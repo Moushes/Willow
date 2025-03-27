@@ -1379,7 +1379,7 @@ Material:
     - _EmissionHueShift1: 0
     - _EmissionHueShift2: 0
     - _EmissionHueShift3: 0
-    - _EmissionHueShiftEnabled: 0
+    - _EmissionHueShiftEnabled: 1
     - _EmissionHueShiftEnabled1: 0
     - _EmissionHueShiftEnabled2: 0
     - _EmissionHueShiftEnabled3: 0
@@ -3000,7 +3000,7 @@ Material:
     - m_end_voronoiRandom: 0
     - m_lightingCategory: 0
     - m_lightingOptions: 0
-    - m_mainCategory: 1
+    - m_mainCategory: 0
     - m_mainOptions: 1
     - m_modifierCategory: 0
     - m_outlineOptions: 0
@@ -3147,7 +3147,7 @@ Material:
     - m_start_emission1Options: 0
     - m_start_emission2Options: 0
     - m_start_emission3Options: 0
-    - m_start_emissionOptions: 1
+    - m_start_emissionOptions: 0
     - m_start_flipBook: 0
     - m_start_flipbookHueShift: 0
     - m_start_glitter: 0

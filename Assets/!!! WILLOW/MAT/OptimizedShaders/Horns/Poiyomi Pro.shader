@@ -3159,7 +3159,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/dc46afa87f09fea4db94c09b1
 					emissionStrength0 *= calculateBlinkingEmission(float(0), float(1), float(4), float(0));
 				}
 				applyLumaGradient(poiMods, emissionColor0, float(0), poiLight.nDotV);
-				emissionColor0 = hueShift(emissionColor0, frac(_EmissionHueShift_Horns + float(0) * _Time.x) * float(0));
+				emissionColor0 = hueShift(emissionColor0, frac(_EmissionHueShift_Horns + float(0) * _Time.x) * float(1));
 				#if defined(PROP_EMISSIONMASK) || !defined(OPTIMIZER_ENABLED)
 				float emissionMask0 = UNITY_SAMPLE_TEX2D_SAMPLER(_EmissionMask, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)) + _Time.x * float4(0,0,0,0)).r;
 				#else
