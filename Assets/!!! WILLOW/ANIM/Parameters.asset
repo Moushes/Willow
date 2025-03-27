@@ -429,3 +429,8 @@ MonoBehaviour:
     saved: 0
     defaultValue: 0
     networkSynced: 0
+  - name: Horns_Emmision_Hue
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 0
