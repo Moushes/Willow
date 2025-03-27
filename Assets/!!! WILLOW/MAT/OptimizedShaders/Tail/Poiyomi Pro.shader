@@ -416,7 +416,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/d18bc3527bd6a734aae8e776c
 		_EmissionStrength ("Emission Strength", Range(0, 20)) = 0
 		[Space(4)]
 		[ThryToggleUI(true)]_EmissionHueShiftEnabled ("<size=13><b>  Hue Shift</b></size>", Float) = 0
-		_EmissionHueShift ("Hue Shift--{condition_showS:(_EmissionHueShiftEnabled==1)}", Range(0, 1)) = 0
+		_EmissionHueShift_Tail ("Hue Shift--{condition_showS:(_EmissionHueShiftEnabled==1)}", Range(0, 1)) = 0
 		_EmissionHueShiftSpeed ("Hue Shift Speed--{condition_showS:(_EmissionHueShiftEnabled==1)}", Float) = 0
 		[Space(4)]
 		[ThryToggleUI(true)]_EmissionCenterOutEnabled ("<size=13><b>  Center Out</b></size>", Float) = 0
@@ -964,7 +964,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/d18bc3527bd6a734aae8e776c
 			float _EmissionBaseColorAsMap;
 			float _EmissionStrength;
 			float _EmissionHueShiftEnabled;
-			float _EmissionHueShift;
+			float _EmissionHueShift_Tail;
 			float _EmissionHueShiftSpeed;
 			float _EmissionCenterOutEnabled;
 			float _EmissionCenterOutSpeed;
@@ -3159,7 +3159,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/d18bc3527bd6a734aae8e776c
 					emissionStrength0 *= calculateBlinkingEmission(float(0), float(1), float(4), float(0));
 				}
 				applyLumaGradient(poiMods, emissionColor0, float(0), poiLight.nDotV);
-				emissionColor0 = hueShift(emissionColor0, frac(float(0) + float(0) * _Time.x) * float(0));
+				emissionColor0 = hueShift(emissionColor0, frac(_EmissionHueShift_Tail + float(0) * _Time.x) * float(1));
 				#if defined(PROP_EMISSIONMASK) || !defined(OPTIMIZER_ENABLED)
 				float emissionMask0 = UNITY_SAMPLE_TEX2D_SAMPLER(_EmissionMask, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)) + _Time.x * float4(0,0,0,0)).r;
 				#else
