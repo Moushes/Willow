@@ -1231,6 +1231,8 @@ MonoBehaviour:
     name: Hair_Emimssion_Brightness
   - hash: -229424747
     name: Hair_Emission_Hue
+  - hash: -2085955378
+    name: Blend Tree
   - hash: -907607673
     name: Hair_Hue
   - hash: 1266067419
@@ -11941,6 +11943,194 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8431828476256904830, guid: d6e3c32a3b1138c40ab75e82e1195c98,
     type: 3}
   m_PrefabInstance: {fileID: 1834055489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &159610430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4263669238040348038, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &159610432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159610430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7004911656007893000
+  references:
+    version: 2
+    RefIds:
+    - rid: 7004911656007893000
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Underwear/Beach/Shawl/Color Swap
+        state:
+          actions:
+          - rid: 7004911656007893001
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 7004911656007893001
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 159610434}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 9cb2e41e6e4396140851b6d5f68cc7c0|Assets/Strapless Bikini by GiniMew/Strapless
+            Bikini by GiniMew/FBX/Black&White/Shawl.002.mat
+          objRef: {fileID: 2100000, guid: 9cb2e41e6e4396140851b6d5f68cc7c0, type: 2}
+--- !u!114 &159610433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159610430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7004911656007892998
+  references:
+    version: 2
+    RefIds:
+    - rid: 7004911656007892998
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Underwear/Beach/Shawl/Shawl
+        state:
+          actions:
+          - rid: 7004911656007892999
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 7004911656007892999
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 159610430}
+        mode: 0
+--- !u!137 &159610434 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6995596814964469984, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &163105137
 GameObject:
@@ -41170,7 +41360,7 @@ PrefabInstance:
     - target: {fileID: -3966308932025445779, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3942021755951449198, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
@@ -49770,6 +49960,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 173869417}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1610782412}
     - targetCorrespondingSourceObject: {fileID: -7113567860641759636, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       insertIndex: -1
@@ -61024,6 +61218,12 @@ MonoBehaviour:
   showGizmos: 1
   boneOpacity: 0.5
   limitOpacity: 0.5
+--- !u!1 &1534961000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1535740549
 GameObject:
   m_ObjectHideFlags: 0
@@ -61481,6 +61681,178 @@ MonoBehaviour:
   AffectsRotationX: 1
   AffectsRotationY: 1
   AffectsRotationZ: 1
+--- !u!1001 &1610782411
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 73181770}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000402
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3159070658063164220, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2adddadefcb2a464eaa98d76e7d07564, type: 2}
+    - target: {fileID: 919132149155446097, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_Name
+      value: Strapless Bikini_ZINFIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263669238040348038, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995596814964469984, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4a9ff18a2965db48a9189f9fd8936a1, type: 2}
+    - target: {fileID: 8267017592135964368, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2adddadefcb2a464eaa98d76e7d07564, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1610782413}
+    - targetCorrespondingSourceObject: {fileID: -899107763280711705, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2063343145}
+    - targetCorrespondingSourceObject: {fileID: 4263669238040348038, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 159610433}
+    - targetCorrespondingSourceObject: {fileID: 4263669238040348038, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 159610432}
+    - targetCorrespondingSourceObject: {fileID: 49777304052851073, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1719678868}
+    - targetCorrespondingSourceObject: {fileID: 49777304052851073, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1719678867}
+  m_SourcePrefab: {fileID: 100100000, guid: fe5efcf49f4ec9e448615eb5e61b4cc7, type: 3}
+--- !u!4 &1610782412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1610782413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534961000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7004911656007893010
+  references:
+    version: 2
+    RefIds:
+    - rid: 7004911656007893010
+      type: {class: ArmatureLink, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 7
+        propBone: {fileID: 2051239233}
+        linkTo:
+        - useBone: 1
+          bone: 0
+          useObj: 0
+          obj: {fileID: 0}
+          offset: 
+        removeBoneSuffix: 
+        removeParentConstraints: 1
+        forceMergedName: 
+        forceOneWorldScale: 0
+        recursive: 1
+        alignPosition: 1
+        alignRotation: 1
+        alignScale: 1
+        autoScaleFactor: 0
+        scalingFactorPowersOf10Only: 1
+        skinRewriteScalingFactor: 1
+        useOptimizedUpload: 0
+        useBoneMerging: 0
+        keepBoneOffsets: 0
+        physbonesOnAvatarBones: 0
+        boneOnAvatar: 0
+        bonePathOnAvatar: 
+        fallbackBones: 
+        keepBoneOffsets2: 0
+        linkMode: 4
 --- !u!1 &1631415910 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3157846473767953822, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -62300,6 +62672,213 @@ Transform:
   - {fileID: 156083071}
   m_Father: {fileID: 42688638}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1719678865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 49777304052851073, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1719678867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719678865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7004911656007893004
+  references:
+    version: 2
+    RefIds:
+    - rid: 7004911656007893004
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Underwear/Beach/Color Swap
+        state:
+          actions:
+          - rid: 7004911656007893005
+          - rid: 7004911656007893006
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 7004911656007893005
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 2063343144}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 2565fb36eb415124ebcec6497e415634|Assets/Strapless Bikini by GiniMew/Strapless
+            Bikini by GiniMew/FBX/Black&White/Strapless Bikini.002 1.mat
+          objRef: {fileID: 2100000, guid: 2565fb36eb415124ebcec6497e415634, type: 2}
+    - rid: 7004911656007893006
+      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 0}
+        renderer: {fileID: 1719678869}
+        materialIndex: 0
+        mat:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 2565fb36eb415124ebcec6497e415634|Assets/Strapless Bikini by GiniMew/Strapless
+            Bikini by GiniMew/FBX/Black&White/Strapless Bikini.002 1.mat
+          objRef: {fileID: 2100000, guid: 2565fb36eb415124ebcec6497e415634, type: 2}
+--- !u!114 &1719678868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719678865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7004911656007893002
+  references:
+    version: 2
+    RefIds:
+    - rid: 7004911656007893002
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Underwear/Beach/Top
+        state:
+          actions:
+          - rid: 7004911656007893003
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 7004911656007893003
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 1719678865}
+        mode: 0
+--- !u!137 &1719678869 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3159070658063164220, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1719992627
 GameObject:
   m_ObjectHideFlags: 0
@@ -64547,6 +65126,12 @@ MonoBehaviour:
   AffectsRotationX: 1
   AffectsRotationY: 1
   AffectsRotationZ: 1
+--- !u!1 &2051239233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3882711945695429461, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2056494287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7307891793032841833, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -64946,6 +65531,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060645381}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2063343143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -899107763280711705, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2063343144 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8267017592135964368, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610782411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2063343145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063343143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1160.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 7004911656007892994
+  references:
+    version: 2
+    RefIds:
+    - rid: 7004911656007892994
+      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 3
+        name: Willow/Cupboard/Underwear/Beach/Bottom
+        state:
+          actions:
+          - rid: 7004911656007892997
+        saved: 1
+        slider: 0
+        sliderInactiveAtZero: 0
+        securityEnabled: 0
+        defaultOn: 0
+        includeInRest: 0
+        exclusiveOffState: 0
+        enableExclusiveTag: 0
+        exclusiveTag: 
+        resetPhysbones: []
+        hasExitTime: 0
+        enableIcon: 0
+        icon:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        enableDriveGlobalParam: 0
+        driveGlobalParam: 
+        separateLocal: 0
+        localState:
+          actions: []
+        hasTransition: 0
+        transitionStateIn:
+          actions: []
+        transitionStateOut:
+          actions: []
+        transitionTimeIn: 0
+        transitionTimeOut: 0
+        localTransitionStateIn:
+          actions: []
+        localTransitionStateOut:
+          actions: []
+        localTransitionTimeIn: 0
+        localTransitionTimeOut: 0
+        simpleOutTransition: 1
+        defaultSliderValue: 0
+        useGlobalParam: 0
+        globalParam: 
+        holdButton: 0
+        invertRestLogic: 0
+        expandIntoTransition: 1
+    - rid: 7004911656007892997
+      type: {class: ObjectToggleAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 1
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        obj: {fileID: 2063343143}
+        mode: 0
 --- !u!1 &2067659916
 GameObject:
   m_ObjectHideFlags: 0
