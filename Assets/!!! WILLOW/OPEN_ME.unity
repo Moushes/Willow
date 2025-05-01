@@ -61739,11 +61739,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3159070658063164220, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2adddadefcb2a464eaa98d76e7d07564, type: 2}
+      objectReference: {fileID: 2100000, guid: 2565fb36eb415124ebcec6497e415634, type: 2}
     - target: {fileID: 919132149155446097, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
         type: 3}
       propertyPath: m_Name
@@ -61763,7 +61768,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2adddadefcb2a464eaa98d76e7d07564, type: 2}
+      objectReference: {fileID: 2100000, guid: 2565fb36eb415124ebcec6497e415634, type: 2}
+    - target: {fileID: 9022017089602453464, guid: fe5efcf49f4ec9e448615eb5e61b4cc7,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61838,9 +61848,9 @@ MonoBehaviour:
         forceMergedName: 
         forceOneWorldScale: 0
         recursive: 1
-        alignPosition: 1
-        alignRotation: 1
-        alignScale: 1
+        alignPosition: 0
+        alignRotation: 0
+        alignScale: 0
         autoScaleFactor: 0
         scalingFactorPowersOf10Only: 1
         skinRewriteScalingFactor: 1
