@@ -13,6 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - COLOR_GRADING_HDR
   - COLOR_GRADING_HDR_3D
   - POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
   - POI_LIGHT_DATA_ADDITIVE_ENABLE
@@ -68,7 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 83a914dd9112ec349ae0b4a821678499, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatFallback:
@@ -639,7 +640,7 @@ Material:
     - _BlueColorThemeIndex: 0
     - _BlueTextureUV: 0
     - _BumpMapUV: 0
-    - _BumpScale: 0
+    - _BumpScale: 1
     - _CCIgnoreCastedShadows: 0
     - _CameraAngleMax: 90
     - _CameraAngleMin: 45
@@ -685,7 +686,7 @@ Material:
     - _CubeMapNormal: 1
     - _CubeMapReplace: 1
     - _CubeMapUVMode: 1
-    - _Cull: 2
+    - _Cull: 0
     - _CurvFix: 1
     - _CurvatureU: 0
     - _CurvatureV: 0
@@ -1164,7 +1165,7 @@ Material:
     - _MainALHueShiftCTIndex: 0
     - _MainBrightness: 0
     - _MainColorAdjustTextureUV: 0
-    - _MainColorAdjustToggle: 0
+    - _MainColorAdjustToggle: 1
     - _MainHueALCTEnabled: 0
     - _MainHueALMotionSpeed: 1
     - _MainHueShift: 0
@@ -1433,7 +1434,7 @@ Material:
     - _SSSStrength: 0.25
     - _SSSThicknessMapUV: 0
     - _SSSThicknessMod: 0
-    - _Saturation: 0.05
+    - _Saturation: -1
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0
     - _ScrollingEmission2: 0
@@ -1675,7 +1676,7 @@ Material:
     - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
-    - m_renderingCategory: 0
+    - m_renderingCategory: 1
     - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_Alpha: 1
@@ -1699,14 +1700,14 @@ Material:
     - m_start_GlobalThemes: 0
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
-    - m_start_MainHueShift: 1
+    - m_start_MainHueShift: 0
     - m_start_MainVertexColors: 0
-    - m_start_Matcap2: 1
+    - m_start_Matcap2: 0
     - m_start_Matcap3: 0
     - m_start_Matcap4: 0
     - m_start_PathAudioLink: 0
     - m_start_PoiLightData: 0
-    - m_start_PoiShading: 1
+    - m_start_PoiShading: 0
     - m_start_RGBMask: 0
     - m_start_RimAudioLink: 0
     - m_start_StencilPassBackOptions: 0
@@ -1741,7 +1742,7 @@ Material:
     - m_start_pointToPoint: 0
     - m_start_postprocess: 0
     - m_start_reflectionRim: 0
-    - m_start_rimLightOptions: 1
+    - m_start_rimLightOptions: 0
     - m_start_stylizedSpec: 0
     - m_start_subsurfaceScattering: 0
     - m_start_tps_penetrator: 0

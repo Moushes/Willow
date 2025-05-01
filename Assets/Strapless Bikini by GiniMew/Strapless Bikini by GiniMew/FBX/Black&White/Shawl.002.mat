@@ -18,6 +18,7 @@ Material:
   - POI_VERTEXLIGHT_ON
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_FLAT
+  - _RIMSTYLE_POIYOMI
   - _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -64,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: f05b918273579f94ba48a5b5ffe37dcd, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatFallback:
@@ -681,7 +682,7 @@ Material:
     - _CubeMapNormal: 1
     - _CubeMapReplace: 1
     - _CubeMapUVMode: 1
-    - _Cull: 2
+    - _Cull: 0
     - _CurvFix: 1
     - _CurvatureU: 0
     - _CurvatureV: 0
@@ -1671,7 +1672,7 @@ Material:
     - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
-    - m_renderingCategory: 0
+    - m_renderingCategory: 1
     - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_Alpha: 0
