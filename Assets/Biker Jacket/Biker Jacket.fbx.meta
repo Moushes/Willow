@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe5efcf49f4ec9e448615eb5e61b4cc7
+guid: 2fefadfafa6461f48a29df4ff2b39afc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Shawl.002
-    second: {fileID: 2100000, guid: dcbfe9aff3c895a4394e47dff440d5a1, type: 2}
+      name: Metal
+    second: {fileID: 2100000, guid: 7327b65d1a66e774a943b4e68e54c874, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Strapless Bikini.002
-    second: {fileID: 2100000, guid: a824ff6f803c64e44aaca08b84f143d1, type: 2}
+      name: Top Shirt
+    second: {fileID: 2100000, guid: 0030bc026fa85b14089046bcb10b412d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: jacket
+    second: {fileID: 2100000, guid: 3ff6ec258524c9746a24744212d14e22, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
