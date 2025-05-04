@@ -2084,6 +2084,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 1
+          - rid: 7136743168285343760
         saved: 1
         slider: 0
         sliderInactiveAtZero: 0
@@ -2137,6 +2138,18 @@ MonoBehaviour:
         remoteOnly: 0
         obj: {fileID: 8327905430221603985}
         mode: 0
+    - rid: 7136743168285343760
+      type: {class: BlendShapeAction, ns: VF.Model.StateAction, asm: VRCFury}
+      data:
+        version: 0
+        desktopActive: 0
+        androidActive: 0
+        localOnly: 0
+        remoteOnly: 0
+        blendShape: Basic Tee ON
+        blendShapeValue: 100
+        renderer: {fileID: 0}
+        allRenderers: 1
 --- !u!114 &9078471193201306854
 MonoBehaviour:
   m_ObjectHideFlags: 0
