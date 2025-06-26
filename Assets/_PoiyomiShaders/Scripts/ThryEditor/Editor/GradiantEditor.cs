@@ -2,48 +2,56 @@
 // Copyright (C) 2019 Thryrallo
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using Thry.ThryEditor.Helpers;
 using UnityEditor;
 using UnityEngine;
 
-namespace Thry
+namespace Thry.ThryEditor
 {
     public class GradientEditor : EditorWindow
     {
-
-        public static void Open(GradientData data, MaterialProperty prop, TextureData predefinedTextureSettings, bool force_texture_options = false, bool show_texture_options=true)
+        public class GradientData
+        {
+            public bool UsePreviewTexture;
+            public Texture PreviewTexture;
+            public Gradient Gradient;
+        }
+        public static void Open(GradientData data, MaterialProperty prop, TextureData predefinedTextureSettings, bool force_texture_options = false, bool show_texture_options=true, ColorSpace colorSpace=ColorSpace.Linear)
         {
             texture_settings_data = LoadTextureSettings(prop, predefinedTextureSettings, force_texture_options);
             data.Gradient = TextureHelper.GetGradient(prop.textureValue);
+            data.UsePreviewTexture = true;
             GradientEditor window = (GradientEditor)EditorWindow.GetWindow(typeof(GradientEditor));
-            window.privious_preview_texture = prop.textureValue;
-            window.prop = prop;
-            window.data = data;
-            window.show_texture_options = show_texture_options;
+            window.titleContent = new GUIContent("Gradient '" +prop.name +"' of '"+ prop.targets[0].name + "'");
+            window._colorSpace = colorSpace;
+            window._privious_preview_texture = prop.textureValue;
+            window._prop = prop;
+            window._data = data;
+            window._show_texture_options = show_texture_options;
             window.minSize = new Vector2(350, 350);
             window.Show();
         }
 
-        GradientData data;
-        MaterialProperty prop;
+        private ColorSpace _colorSpace = ColorSpace.Linear;
+        private GradientData _data;
+        private MaterialProperty _prop;
 
-        object gradient_editor;
-        MethodInfo ongui;
-        MethodInfo gradient_editor_init;
+        private object _gradient_editor;
+        private MethodInfo _ongui;
+        private MethodInfo _gradient_editor_init;
 
-        object preset_libary_editor;
-        MethodInfo preset_libary_onGUI;
-        object preset_libary_editor_state;
+        private object _preset_libary_editor;
+        private MethodInfo _preset_libary_onGUI;
+        private object _preset_libary_editor_state;
 
-        private bool inited = false;
+        private bool _inited = false;
 
-        private bool show_texture_options = true;
+        private bool _show_texture_options = true;
 
-        private bool gradient_has_been_edited = false;
-        private Texture privious_preview_texture;
+        private bool _gradient_has_been_edited = false;
+        private Texture _privious_preview_texture;
 
         private static TextureData LoadTextureSettings(MaterialProperty prop, TextureData predefinedTextureSettings, bool force_texture_options)
         {
@@ -51,7 +59,7 @@ namespace Thry
                 return predefinedTextureSettings;
             string json_texture_settings = FileHelper.LoadValueFromFile("gradient_texture_options_"+prop.name, PATH.PERSISTENT_DATA);
             if (json_texture_settings != null)
-                return Parser.ParseToObject<TextureData>(json_texture_settings);
+                return Parser.Deserialize<TextureData>(json_texture_settings);
             else if (predefinedTextureSettings != null)
                 return predefinedTextureSettings;
             else
@@ -69,29 +77,47 @@ namespace Thry
         public void Awake()
         {
             Type gradient_editor_type = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.GradientEditor");
-            gradient_editor = Activator.CreateInstance(gradient_editor_type);
-            gradient_editor_init = gradient_editor_type.GetMethod("Init");
+            _gradient_editor = Activator.CreateInstance(gradient_editor_type);
+            _gradient_editor_init = gradient_editor_type.GetMethod("Init");
 
-            ongui = gradient_editor_type.GetMethod("OnGUI");
+            _ongui = gradient_editor_type.GetMethod("OnGUI");
         }
 
         public void OnDestroy()
         {
-            if (gradient_has_been_edited)
+            if (_gradient_has_been_edited)
             {
-                if (data.PreviewTexture.GetType() == typeof(Texture2D))
+                if (_data.PreviewTexture.GetType() == typeof(Texture2D))
                 {
-                    string file_name = GradientFileName(data.Gradient, prop.targets[0].name);
-                    Texture saved = TextureHelper.SaveTextureAsPNG((Texture2D)data.PreviewTexture, PATH.TEXTURES_DIR+"/Gradients/" + file_name, textureSettings);
+                    string file_name = GradientFileName(_data.Gradient, _prop.targets[0].name);
+                    Texture2D toSave = (Texture2D)_data.PreviewTexture;
+                    if(_colorSpace == ColorSpace.Gamma)
+                    {
+                        toSave = TextureHelper.ConvertToGamma(toSave);
+                    }
+                    Texture saved = TextureHelper.SaveTextureAsPNG(toSave, PATH.TEXTURES_DIR+"/Gradients/" + file_name, textureSettings);
                     file_name = Regex.Replace(file_name, @"\.((png)|(jpg))$", "");
-                    FileHelper.SaveValueToFile(AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(saved)), Parser.ObjectToString(data.Gradient), PATH.GRADIENT_INFO_FILE);
-                    prop.textureValue = saved;
+                    FileHelper.SaveValueToFile(AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(saved)), Parser.Serialize(_data.Gradient), PATH.GRADIENT_INFO_FILE);
+                    _prop.textureValue = saved;
+                    // change importer settings
+                    TextureImporter importer = (TextureImporter)TextureImporter.GetAtPath(AssetDatabase.GetAssetPath(saved));
+                     importer.textureCompression = TextureImporterCompression.CompressedHQ;
+                     importer.sRGBTexture = _colorSpace != ColorSpace.Linear;
+                    if(Config.Instance.gradientEditorCompressionOverwrite != TextureImporterFormat.Automatic)
+                    {
+                        importer.SetPlatformTextureSettings(new TextureImporterPlatformSettings()
+                        {
+                            name = "PC",
+                            overridden = true,
+                            maxTextureSize = 2048,
+                            format = Config.Instance.gradientEditorCompressionOverwrite
+                        });
+                    }
+                    importer.SaveAndReimport();
                 }
             }
-            else
-            {
-                UpdatePreviewTexture(privious_preview_texture);
-            }
+            _data.UsePreviewTexture = false;
+            ShaderEditor.RepaintActive();
         }
 
         private string GradientFileName(Gradient gradient, string material_name)
@@ -102,7 +128,7 @@ namespace Thry
 
         private string GradientFileName(string hash, string material_name)
         {
-            Config config = Config.Singleton;
+            Config config = Config.Instance;
             string ret = config.gradient_name;
             ret = Regex.Replace(ret, "<hash>", hash);
             ret = Regex.Replace(ret, "<material>", material_name);
@@ -112,9 +138,9 @@ namespace Thry
         private void InitSomeStuff()
         {
             Type presetLibraryEditorState_type = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.PresetLibraryEditorState");
-            preset_libary_editor_state = Activator.CreateInstance(presetLibraryEditorState_type, "Gradient");
+            _preset_libary_editor_state = Activator.CreateInstance(presetLibraryEditorState_type, "Gradient");
             MethodInfo transfer_editor_prefs_state = presetLibraryEditorState_type.GetMethod("TransferEditorPrefsState");
-            transfer_editor_prefs_state.Invoke(preset_libary_editor_state, new object[] { true });
+            transfer_editor_prefs_state.Invoke(_preset_libary_editor_state, new object[] { true });
 
             Type scriptable_save_load_helper_type = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.ScriptableObjectSaveLoadHelper`1");
             Type gradient_preset_libary_type = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.GradientPresetLibrary");
@@ -125,18 +151,18 @@ namespace Thry
             object saveLoadHelper = Activator.CreateInstance(save_load_helper_type, "gradients", SaveType.Text);
 
             Action<int, object> preset_libary_editor_callback = PresetClickedCallback;
-            preset_libary_editor = Activator.CreateInstance(gradient_preset_libary_editor_type, saveLoadHelper, preset_libary_editor_state, preset_libary_editor_callback);
+            _preset_libary_editor = Activator.CreateInstance(gradient_preset_libary_editor_type, saveLoadHelper, _preset_libary_editor_state, preset_libary_editor_callback);
             PropertyInfo show_header = gradient_preset_libary_editor_type.GetProperty("showHeader");
-            show_header.SetValue(preset_libary_editor, true, null);
+            show_header.SetValue(_preset_libary_editor, true, null);
             PropertyInfo minMaxPreviewHeight = gradient_preset_libary_editor_type.GetProperty("minMaxPreviewHeight");
-            minMaxPreviewHeight.SetValue(preset_libary_editor, new Vector2(14f, 14f), null);
+            minMaxPreviewHeight.SetValue(_preset_libary_editor, new Vector2(14f, 14f), null);
 
-            preset_libary_onGUI = gradient_preset_libary_editor_type.GetMethod("OnGUI");
+            _preset_libary_onGUI = gradient_preset_libary_editor_type.GetMethod("OnGUI");
 
-            SetGradient(data.Gradient);
-            gradient_has_been_edited = false;
+            SetGradient(_data.Gradient);
+            _gradient_has_been_edited = false;
 
-            inited = true;
+            _inited = true;
         }
 
         public void PresetClickedCallback(int clickCount, object presetObject)
@@ -149,18 +175,18 @@ namespace Thry
 
         void SetGradient(Gradient gradient)
         {
-            data.Gradient = gradient;
+            _data.Gradient = gradient;
 #if UNITY_2020_1_OR_NEWER
-            gradient_editor_init.Invoke(gradient_editor, new object[] { gradient, 0, true, ColorSpace.Linear });
+            _gradient_editor_init.Invoke(_gradient_editor, new object[] { gradient, 0, true, ColorSpace.Linear });
 #else
-            gradient_editor_init.Invoke(gradient_editor, new object[] { gradient, 0, true });
+            _gradient_editor_init.Invoke(_gradient_editor, new object[] { gradient, 0, true });
 #endif
             UpdateGradientPreviewTexture();
         }
 
         void OnGUI()
         {
-            if (!inited)
+            if (!_inited)
                 InitSomeStuff();
             float gradientEditorHeight = Mathf.Min(position.height, 146);
             float distBetween = 10f;
@@ -170,13 +196,13 @@ namespace Thry
             Rect gradientLibraryRect = new Rect(0, gradientEditorHeight + distBetween, position.width, presetLibraryHeight);
 
             EditorGUI.BeginChangeCheck();
-            ongui.Invoke(gradient_editor, new object[] { gradientEditorRect });
+            _ongui.Invoke(_gradient_editor, new object[] { gradientEditorRect });
             if (EditorGUI.EndChangeCheck())
                 UpdateGradientPreviewTexture();
 
             OverrideGradientTexture(gradientEditorRect);
 
-            preset_libary_onGUI.Invoke(preset_libary_editor, new object[] { gradientLibraryRect, data.Gradient });
+            _preset_libary_onGUI.Invoke(_preset_libary_editor, new object[] { gradientLibraryRect, _data.Gradient });
 
             GUILayout.BeginVertical();
             GUILayout.Space(gradientEditorHeight+ presetLibraryHeight+ distBetween);
@@ -187,15 +213,15 @@ namespace Thry
             if(GUILayout.Button("Discard Changes",GUILayout.ExpandWidth(false)))
                 DiscardChanges();
             GUILayout.EndHorizontal();
-            if(show_texture_options)
+            if(_show_texture_options)
                 TextureSettingsGUI();
         }
 
-        private void DiscardChanges()
+        private new void DiscardChanges()
         {
-            prop.textureValue = privious_preview_texture;
-            SetGradient(TextureHelper.GetGradient(privious_preview_texture));
-            gradient_has_been_edited = false;
+            _prop.textureValue = _privious_preview_texture;
+            SetGradient(TextureHelper.GetGradient(_privious_preview_texture));
+            _gradient_has_been_edited = false;
             ShaderEditor.RepaintActive();
         }
 
@@ -204,27 +230,20 @@ namespace Thry
             EditorGUIUtility.labelWidth = 100;
             EditorGUIUtility.fieldWidth = 150;
             EditorGUILayout.LabelField("Texture options:",EditorStyles.boldLabel);
-            bool changed = GuiHelper.GUIDataStruct<TextureData>(textureSettings, new string[]{"name"});
+            bool changed = GUILib.GUIDataStruct<TextureData>(textureSettings, new string[]{"name"});
             if (changed)
             {
-                FileHelper.SaveValueToFile("gradient_texture_options_" + prop.name, Parser.ObjectToString(textureSettings), PATH.PERSISTENT_DATA);
+                FileHelper.SaveValueToFile("gradient_texture_options_" + _prop.name, Parser.Serialize(textureSettings), PATH.PERSISTENT_DATA);
                 UpdateGradientPreviewTexture();
             }
         }
 
         private void UpdateGradientPreviewTexture()
         {
-            data.PreviewTexture = Converter.GradientToTexture(data.Gradient, textureSettings.width, textureSettings.height);
-            textureSettings.ApplyModes(data.PreviewTexture);
-            prop.textureValue = data.PreviewTexture;
-            gradient_has_been_edited = true;
-            ShaderEditor.RepaintActive();
-        }
-
-        private void UpdatePreviewTexture(Texture texture)
-        {
-            data.PreviewTexture = texture;
-            prop.textureValue = texture;
+            _data.PreviewTexture = Converter.GradientToTexture(_data.Gradient, textureSettings.width, textureSettings.height);
+            textureSettings.ApplyModes(_data.PreviewTexture);
+            _prop.textureValue = _data.PreviewTexture;
+            _gradient_has_been_edited = true;
             ShaderEditor.RepaintActive();
         }
 
@@ -247,11 +266,11 @@ namespace Thry
             Rect texCoordsRect = new Rect(0, 0, r2.width / backgroundTexture.width, r2.height / backgroundTexture.height);
             GUI.DrawTextureWithTexCoords(r2, backgroundTexture, texCoordsRect, false);
 
-            TextureWrapMode wrap_mode = data.PreviewTexture.wrapMode;
-            data.PreviewTexture.wrapMode = TextureWrapMode.Clamp;
-            GUI.DrawTexture(r2, data.PreviewTexture, ScaleMode.StretchToFill, true);
-            GUI.DrawTexture(gradient_texture_position, data.PreviewTexture, ScaleMode.StretchToFill, false, 0, Color.grey, 1, 1);
-            data.PreviewTexture.wrapMode = wrap_mode;
+            TextureWrapMode wrap_mode = _data.PreviewTexture.wrapMode;
+            _data.PreviewTexture.wrapMode = TextureWrapMode.Clamp;
+            GUI.DrawTexture(r2, _data.PreviewTexture, ScaleMode.StretchToFill, true);
+            GUI.DrawTexture(gradient_texture_position, _data.PreviewTexture, ScaleMode.StretchToFill, false, 0, Color.grey, 1, 1);
+            _data.PreviewTexture.wrapMode = wrap_mode;
         }
 
     }
