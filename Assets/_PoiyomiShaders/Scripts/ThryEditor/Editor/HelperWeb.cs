@@ -2,18 +2,17 @@
 // Copyright (C) 2019 Thryrallo
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Net;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
+using Thry.ThryEditor.Helpers;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Thry
+namespace Thry.ThryEditor
 {
     public class WebHelper
     {
@@ -41,11 +40,13 @@ namespace Thry
                 bool fetching = true;
                 while (fetching)
                 {
+#pragma warning disable CS0618 // Type or member is obsolete
                     if (request.isHttpError || request.isNetworkError)
                     {
                         fetching = false;
                         Debug.Log(request.error);
                     }
+#pragma warning restore CS0618 // Type or member is obsolete
                     if (request.isDone)
                     {
                         fetching = false;
@@ -65,6 +66,47 @@ namespace Thry
         {
             if (fileCache.ContainsKey(url) == false) fileCache[url] = DownloadString(url);
             return fileCache[url];
+        }
+
+        public static string Translate(string text, string targetLanguage)
+        {
+            string sourceLang = "auto";
+            string url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" 
+                + sourceLang + "&tl=" + targetLanguage + "&dt=t&q=" + UnityWebRequest.EscapeURL(text);
+            string resp = DownloadAsString(url);
+
+            // parse response. it is a json array with the first elements being the translation. but not good json that my existing parser can parse
+            List<string> parts = new List<string>();
+            int indent = 0;
+            bool inString = false;
+            for(int i = 0; i< resp.Length; i++)
+            {
+                if (resp[i] == '[') indent++;
+                if (resp[i] == ']') indent--;
+                if (resp[i] == '"' && resp[i - 1] != '\\')
+                {
+                    inString = !inString;
+                    if(inString && indent == 3)
+                        parts.Add("");
+                    if(!inString && indent == 3 && resp[i+1] != ',')
+                        parts.RemoveAt(parts.Count - 1);
+                }else 
+                if (inString && indent == 3)
+                {
+                    parts[parts.Count - 1] += resp[i];
+                }
+            }
+            string result = "";
+            for(int i = 0; i< parts.Count; i++)
+            {
+                if (i % 2 == 0)
+                    result += parts[i];
+            }
+
+            // double unescape to fix some weird characters
+            result = System.Text.RegularExpressions.Regex.Unescape(result);
+            result = UnityWebRequest.UnEscapeURL(result, System.Text.Encoding.UTF8);
+            return result;
         }
 
         //-------------------Downloaders-----------------------------

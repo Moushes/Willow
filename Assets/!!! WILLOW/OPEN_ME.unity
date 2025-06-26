@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: 
+  blueprintId: avtr_fbc4a0b1-e952-42c6-ac6a-e5c562eaa7c7
   contentType: 0
   assetBundleUnityVersion: 
   fallbackStatus: 1
@@ -17783,8 +17783,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0030bc026fa85b14089046bcb10b412d, type: 2}
+    - target: {fileID: 9196289134902353638, guid: 2fefadfafa6461f48a29df4ff2b39afc,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2757764083058144463, guid: 2fefadfafa6461f48a29df4ff2b39afc, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2fefadfafa6461f48a29df4ff2b39afc,
@@ -17795,10 +17801,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 253137660}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2fefadfafa6461f48a29df4ff2b39afc,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 253137659}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2fefadfafa6461f48a29df4ff2b39afc,
         type: 3}
       insertIndex: -1
@@ -17835,12 +17837,6 @@ GameObject:
 --- !u!1 &253137654 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9048794901157447202, guid: 2fefadfafa6461f48a29df4ff2b39afc,
-    type: 3}
-  m_PrefabInstance: {fileID: 253137649}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &253137655 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5631970234333447461, guid: 2fefadfafa6461f48a29df4ff2b39afc,
     type: 3}
   m_PrefabInstance: {fileID: 253137649}
   m_PrefabAsset: {fileID: 0}
@@ -17881,7 +17877,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 7136743164400893961
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -17973,7 +17969,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 7136743164400893959
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -18026,98 +18022,6 @@ MonoBehaviour:
         remoteOnly: 0
         obj: {fileID: 253137651}
         mode: 0
---- !u!114 &253137659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253137656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 3
-  unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
-  somethingIsBroken: 0
-  config:
-    features: []
-  content:
-    rid: 7136743164400893955
-  references:
-    version: 2
-    RefIds:
-    - rid: 7136743164400893955
-      type: {class: Toggle, ns: VF.Model.Feature, asm: VRCFury}
-      data:
-        version: 3
-        name: Willow/Cupboard/Tops/Biker Jacket/Jacket Material
-        state:
-          actions:
-          - rid: 7136743164400893956
-        saved: 0
-        slider: 0
-        sliderInactiveAtZero: 0
-        securityEnabled: 0
-        defaultOn: 0
-        includeInRest: 0
-        exclusiveOffState: 0
-        enableExclusiveTag: 0
-        exclusiveTag: 
-        resetPhysbones: []
-        hasExitTime: 0
-        enableIcon: 0
-        icon:
-          version: 1
-          fileID: 0
-          guid: 
-          id: 
-          objRef: {fileID: 0}
-        enableDriveGlobalParam: 0
-        driveGlobalParam: 
-        separateLocal: 0
-        localState:
-          actions: []
-        hasTransition: 0
-        transitionStateIn:
-          actions: []
-        transitionStateOut:
-          actions: []
-        transitionTimeIn: 0
-        transitionTimeOut: 0
-        localTransitionStateIn:
-          actions: []
-        localTransitionStateOut:
-          actions: []
-        localTransitionTimeIn: 0
-        localTransitionTimeOut: 0
-        simpleOutTransition: 1
-        defaultSliderValue: 0
-        useGlobalParam: 0
-        globalParam: 
-        holdButton: 0
-        invertRestLogic: 0
-        expandIntoTransition: 1
-    - rid: 7136743164400893956
-      type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
-      data:
-        version: 1
-        desktopActive: 0
-        androidActive: 0
-        localOnly: 0
-        remoteOnly: 0
-        obj: {fileID: 0}
-        renderer: {fileID: 253137655}
-        materialIndex: 0
-        mat:
-          version: 1
-          fileID: 0
-          guid: 
-          id: 39ec397806fd48545ad5000410835727|Assets/Biker Jacket/Materials/Jacket
-            W.mat
-          objRef: {fileID: 2100000, guid: 39ec397806fd48545ad5000410835727, type: 2}
 --- !u!114 &253137660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18149,7 +18053,7 @@ MonoBehaviour:
         state:
           actions:
           - rid: 7136743164400893954
-        saved: 0
+        saved: 1
         slider: 0
         sliderInactiveAtZero: 0
         securityEnabled: 0
@@ -42302,7 +42206,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: caeefaa98e4819a4598881ddd87a5374, type: 2}
+      objectReference: {fileID: 2100000, guid: 09c504e4ef00c6d408504287f3626107, type: 2}
     - target: {fileID: -3362419705094071014, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -63338,9 +63242,9 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 2565fb36eb415124ebcec6497e415634|Assets/Strapless Bikini by GiniMew/Strapless
-            Bikini by GiniMew/FBX/Black&White/Strapless Bikini.002 1.mat
-          objRef: {fileID: 2100000, guid: 2565fb36eb415124ebcec6497e415634, type: 2}
+          id: 2adddadefcb2a464eaa98d76e7d07564|Assets/Strapless Bikini by GiniMew/Strapless
+            Bikini by GiniMew/FBX/Black&White/Strapless Bikini.002 2.mat
+          objRef: {fileID: 2100000, guid: 2adddadefcb2a464eaa98d76e7d07564, type: 2}
     - rid: 7004911656007893006
       type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
       data:
@@ -63356,9 +63260,9 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 2565fb36eb415124ebcec6497e415634|Assets/Strapless Bikini by GiniMew/Strapless
-            Bikini by GiniMew/FBX/Black&White/Strapless Bikini.002 1.mat
-          objRef: {fileID: 2100000, guid: 2565fb36eb415124ebcec6497e415634, type: 2}
+          id: 2adddadefcb2a464eaa98d76e7d07564|Assets/Strapless Bikini by GiniMew/Strapless
+            Bikini by GiniMew/FBX/Black&White/Strapless Bikini.002 2.mat
+          objRef: {fileID: 2100000, guid: 2adddadefcb2a464eaa98d76e7d07564, type: 2}
 --- !u!114 &1719678868
 MonoBehaviour:
   m_ObjectHideFlags: 0

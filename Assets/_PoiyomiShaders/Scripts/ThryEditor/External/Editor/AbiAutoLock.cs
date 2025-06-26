@@ -6,8 +6,9 @@ using ABI.CCK.Scripts.Editor;
 using ABI.CCK.Components;
 using UnityEditor;
 using System.Linq;
+using Thry.ThryEditor.Helpers;
 
-namespace Thry.ShaderEditor
+namespace Thry.ThryEditor.UploadCallbacks
 {
     public class AbiAutoLock
     {

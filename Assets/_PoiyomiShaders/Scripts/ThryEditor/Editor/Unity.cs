@@ -2,18 +2,26 @@
 // Copyright (C) 2019 Thryrallo
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
+using Thry.ThryEditor.Helpers;
 using UnityEditor;
 using UnityEngine;
 
-namespace Thry
+namespace Thry.ThryEditor
 {
     public class UnityHelper
     {
+        [MenuItem("Assets/Thry/Copy GUID")]
+        public static void CopyGUID()
+        {
+            string guid = AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Selection.activeObject));
+            EditorGUIUtility.systemCopyBuffer = guid;
+        }
+
         public static List<string> FindAssetsWithFilename(string filename)
         {
             string[] guids = AssetDatabase.FindAssets(Path.GetFileNameWithoutExtension(filename));
@@ -94,6 +102,123 @@ namespace Thry
             string path = AssetDatabase.GetAssetPath(Selection.activeObject);
             if (Directory.Exists(path)) return path;
             else return Path.GetDirectoryName(path);
+        }
+        
+        public static void AddShaderPropertyToSourceCode(string path, string property, string value)
+        {
+            string shaderCode = FileHelper.ReadFileIntoString(path);
+            string pattern = @"Properties.*\n?\s*{";
+            RegexOptions options = RegexOptions.Multiline;
+            shaderCode = Regex.Replace(shaderCode, pattern, "Properties \r\n  {" + " \r\n      " + property + "=" + value, options);
+
+            FileHelper.WriteStringToFile(shaderCode, path);
+        }
+
+        static MethodInfo[] method_PropertyBeginOriginal = typeof(MaterialProperty).GetMethods(BindingFlags.Static | BindingFlags.NonPublic).Where(m => m.Name == "BeginProperty").ToArray();
+        static MethodInfo method_PropertyEnd = typeof(MaterialProperty).GetMethod("EndProperty", BindingFlags.Static | BindingFlags.NonPublic);
+        static MethodInfo[] method_PropertyBeginPatch = typeof(UnityHelper).GetMethods(BindingFlags.Static | BindingFlags.NonPublic).Where(m => m.Name == "BeginPropertyPatch").ToArray();
+        static MethodInfo method_PropertyEndPatch = typeof(UnityHelper).GetMethod(nameof(EndPropertyPatch), BindingFlags.NonPublic | BindingFlags.Static);
+
+        static void EndPropertyPatch() { }
+        static void BeginPropertyPatch(UnityEditor.MaterialProperty prop, UnityEngine.Object[] objs) { }
+        static void BeginPropertyPatch(int prop, UnityEngine.Object[] objs) { }
+        static void BeginPropertyPatch(UnityEngine.Rect r, UnityEditor.MaterialProperty prop, int serialized, UnityEngine.Object[] obs, System.Single f) { }
+
+        public class DetourMaterialPropertyVariantIcon : IDisposable
+        {
+            public DetourMaterialPropertyVariantIcon()
+            {
+#if UNITY_2022_1_OR_NEWER
+                for (int i = 0; i < method_PropertyBeginOriginal.Length; i++)
+                    Helper.TryDetourFromTo(method_PropertyBeginOriginal[i], method_PropertyBeginPatch[i]);
+                Helper.TryDetourFromTo(method_PropertyEnd, method_PropertyEndPatch);
+#endif
+            }
+
+            public void Dispose()
+            {
+#if UNITY_2022_1_OR_NEWER
+                for (int i = 0; i < method_PropertyBeginOriginal.Length; i++)
+                    Helper.RestoreDetour(method_PropertyBeginOriginal[i]);
+                Helper.RestoreDetour(method_PropertyEnd);
+#endif
+            }
+        }
+
+
+
+        static MethodInfo m_StopAnimationRecording = typeof(UnityEditor.AnimationMode).GetMethod("StopAnimationRecording", BindingFlags.Static | BindingFlags.NonPublic);
+        public static void StopAnimationRecording()
+        {
+            if (m_StopAnimationRecording == null)
+                Debug.LogError("StopAnimationRecording not found");
+            else
+                m_StopAnimationRecording.Invoke(null, null);
+        }
+
+        static MethodInfo m_StartAnimationRecording = typeof(UnityEditor.AnimationMode).GetMethod("StartAnimationRecording", BindingFlags.Static | BindingFlags.NonPublic);
+        public static void StartAnimationRecording()
+        {
+            if (m_StartAnimationRecording == null)
+                Debug.LogError("StartAnimationRecording not found");
+            else
+                m_StartAnimationRecording.Invoke(null, null);
+        }
+        
+        static MethodInfo m_InAnimationRecording = typeof(UnityEditor.AnimationMode).GetMethod("InAnimationRecording", BindingFlags.Static | BindingFlags.NonPublic);
+        public static bool InAnimationRecording()
+        {
+            if (m_InAnimationRecording == null)
+                Debug.LogError("StartAnimationRecording not found");
+            else
+                return (bool)m_InAnimationRecording.Invoke(null, null);
+            return false;
+        }
+
+    }
+
+    public static class UnityExtensions
+    {
+        // MaterialProperty extension for setting floats / ints
+        public static void SetNumber(this MaterialProperty prop, float value)
+        {
+#if UNITY_2022_1_OR_NEWER
+            if(prop.type == MaterialProperty.PropType.Int)
+                prop.intValue = (int)value;
+            else
+#endif
+                prop.floatValue = value;
+        }
+
+        public static float GetNumber(this MaterialProperty prop)
+        {
+#if UNITY_2022_1_OR_NEWER
+            if(prop.type == MaterialProperty.PropType.Int)
+                return prop.intValue;
+            else
+#endif  
+                return prop.floatValue;
+        }
+
+        public static void SetNumber(this Material mat, string name, float value)
+        {
+#if UNITY_2022_1_OR_NEWER
+            MaterialProperty prop = MaterialEditor.GetMaterialProperty(new UnityEngine.Object[] { mat }, name);
+            if(prop.type == MaterialProperty.PropType.Int)
+                mat.SetInteger(name, (int)value);
+            else
+#endif
+                mat.SetFloat(name, value);
+        }
+        
+        public static float GetNumber(this Material mat, MaterialProperty prop)
+        {
+#if UNITY_2022_1_OR_NEWER
+            if(prop.type == MaterialProperty.PropType.Int)
+                return mat.GetInt(prop.name);
+            else
+#endif
+                return mat.GetFloat(prop.name);
         }
     }
 
@@ -188,7 +313,6 @@ namespace Thry
             ShaderEditor.GetShaderEditorDirectoryPath();
 
             Config.OnCompile();
-            ModuleHandler.OnCompile();
             TrashHandler.EmptyThryTrash();
 
             UnityFixer.CheckAPICompatibility(); //check that Net_2.0 is ApiLevel
@@ -200,34 +324,17 @@ namespace Thry
     {
         static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
         {
-            if (importedAssets.Length > 0)
-                AssetsImported(importedAssets);
             if (deletedAssets.Length > 0)
                 AssetsDeleted(deletedAssets);
-            if (movedAssets.Length > 0)
-                AssetsMoved(movedAssets, movedFromAssetPaths);
-        }
-
-        private static void AssetsImported(string[] assets)
-        {
-            ShaderHelper.AssetsImported(assets);
-        }
-
-        private static void AssetsMoved(string[] movedAssets, string[] movedFromAssetPaths)
-        {
-            ShaderHelper.AssetsMoved(movedFromAssetPaths, movedAssets);
         }
 
         private static void AssetsDeleted(string[] assets)
         {
-            ShaderHelper.AssetsDeleted(assets);
             UnityFixer.OnAssetDeleteCheckDrawingDLL(assets);
             if (CheckForEditorRemove(assets))
             {
-                Debug.Log("ShaderEditor is being deleted.");
-                Config.Singleton.verion = "0";
-                Config.Singleton.Save();
-                ModuleHandler.OnEditorRemove();
+                Debug.Log("[Thry] ShaderEditor is being deleted.");
+                Config.Instance.ClearVersion();
             }
         }
 
