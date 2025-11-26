@@ -1,1 +1,1 @@
-This version requires avatar SDK version 3.7.0 up to newer.
+This PCS version was made on [Avatar SDK 3.7.6] and latest version of Modular or VRCFury.

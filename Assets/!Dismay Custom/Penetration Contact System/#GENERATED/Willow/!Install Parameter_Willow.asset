@@ -62,7 +62,7 @@ MonoBehaviour:
   - name: pcs/local/lustMultiplier
     valueType: 1
     saved: 0
-    defaultValue: 0.4
+    defaultValue: 0.1
     networkSynced: 0
   - name: pcs/local/eventIsReady
     valueType: 2
@@ -79,32 +79,37 @@ MonoBehaviour:
     saved: 0
     defaultValue: 0
     networkSynced: 1
-  - name: pcs/select/mouth
+  - name: pcs/sound/moan
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: pcs/menu/mouth
     valueType: 2
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: pcs/select/boobs
+  - name: pcs/menu/boobs
     valueType: 2
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: pcs/select/pussy
+  - name: pcs/menu/pussy
     valueType: 2
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: pcs/select/ass
+  - name: pcs/menu/ass
     valueType: 2
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: pcs/select/custom1
+  - name: pcs/menu/custom1
     valueType: 2
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: pcs/select/custom2
+  - name: pcs/menu/custom2
     valueType: 2
     saved: 1
     defaultValue: 0

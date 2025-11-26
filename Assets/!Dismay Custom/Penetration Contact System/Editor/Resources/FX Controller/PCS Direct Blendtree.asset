@@ -93,6 +93,21 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 0
+--- !u!206 &-7273319768066345259
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlendTree
+  m_Childs: []
+  m_BlendParameter: pcs/SmoothingFactor
+  m_BlendParameterY: Blend
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
 --- !u!206 &-4632130726690781927
 BlendTree:
   m_ObjectHideFlags: 1
@@ -338,52 +353,60 @@ BlendTree:
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: pcs/weight
+    m_DirectBlendParameter: pcs/isEnable
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -7591393731655705118}
-    m_Threshold: 0.22
+    m_Threshold: 0.21388888
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: pcs/weight
+    m_DirectBlendParameter: pcs/isEnable
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -4632130726690781927}
-    m_Threshold: 0.24000001
+    m_Threshold: 0.22777778
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: pcs/weight
+    m_DirectBlendParameter: pcs/isEnable
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 2158383384759006923}
-    m_Threshold: 0.26000002
+    m_Threshold: 0.24166667
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: pcs/weight
+    m_DirectBlendParameter: pcs/isEnable
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -3083014744575638009}
-    m_Threshold: 0.28
+    m_Threshold: 0.25555557
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: pcs/weight
+    m_DirectBlendParameter: pcs/isEnable
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -1714453807614491487}
-    m_Threshold: 0.3
+    m_Threshold: 0.26944444
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: pcs/weight
+    m_DirectBlendParameter: pcs/isEnable
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 3921416931343535822}
+    m_Threshold: 0.28333333
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: pcs/isEnable
     m_Mirror: 0
   m_BlendParameter: pcs/weight
   m_BlendParameterY: Blend
   m_MinThreshold: 0.2
-  m_MaxThreshold: 0.3
+  m_MaxThreshold: 0.28333333
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 4
@@ -412,6 +435,54 @@ BlendTree:
     m_DirectBlendParameter: pcs/weight
     m_Mirror: 0
   m_BlendParameter: pcs/sound/smash
+  m_BlendParameterY: Blend
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
+--- !u!206 &2540149455714053366
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlendTree
+  m_Childs: []
+  m_BlendParameter: pcs/SmoothingFactor
+  m_BlendParameterY: Blend
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
+--- !u!206 &3921416931343535822
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Smooth Float
+  m_Childs:
+  - serializedVersion: 2
+    m_Motion: {fileID: 5723039220351552049, guid: 82f064512a192d04783aa0bfd612f1ad,
+      type: 2}
+    m_Threshold: 0
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: pcs/isEnable
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 2298997896724498479, guid: 82f064512a192d04783aa0bfd612f1ad,
+      type: 2}
+    m_Threshold: 1
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: pcs/isEnable
+    m_Mirror: 0
+  m_BlendParameter: pcs/SmoothingFactor
   m_BlendParameterY: Blend
   m_MinThreshold: 0
   m_MaxThreshold: 1
