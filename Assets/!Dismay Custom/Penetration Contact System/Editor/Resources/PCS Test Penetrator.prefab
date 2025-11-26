@@ -50,6 +50,7 @@ MonoBehaviour:
   height: 0.15
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
   collisionTags:
   - PCS_Penetrating
 --- !u!1 &3666480020567872717
@@ -95,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 3666480020567872717}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 59faea8443cf0de43b7324a3909420bb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f438c0d0b978b1468611b813c998548, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parameters: {fileID: 0}
   controls:
-  - name: <b>PCS v1.9.0</b>
+  - name: <b>PCS v1.10</b>
     icon: {fileID: 2800000, guid: d49ed22e221e3f649a60d216ea22b662, type: 3}
     type: 103
     parameter:
       name: 
     value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: baf7fe71ad6a3a949b510635f11bd9ac, type: 2}
+    subMenu: {fileID: 11400000, guid: 6d512ff09c7d6874fa12753d2c9594e8, type: 2}
     subParameters: []
     labels: []

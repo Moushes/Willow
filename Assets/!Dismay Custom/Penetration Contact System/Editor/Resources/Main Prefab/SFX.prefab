@@ -83,14 +83,14 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 5
   DopplerLevel: 1
-  MinDistance: 0.05
-  MaxDistance: 10
+  MinDistance: 0.1
+  MaxDistance: 3
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -175,12 +175,12 @@ MonoBehaviour:
   m_Script: {fileID: 1610797297, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gain: 0
-  Far: 0
+  Gain: 5
+  Far: 3
   Near: 0
   VolumetricRadius: 0
-  EnableSpatialization: 0
-  UseAudioSourceVolumeCurve: 0
+  EnableSpatialization: 1
+  UseAudioSourceVolumeCurve: 1
 --- !u!1 &7484409251653411450
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,14 +230,14 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 10
   DopplerLevel: 1
-  MinDistance: 0.05
-  MaxDistance: 12
+  MinDistance: 0.1
+  MaxDistance: 3
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -322,12 +322,12 @@ MonoBehaviour:
   m_Script: {fileID: 1610797297, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gain: 0
-  Far: 0
+  Gain: 5
+  Far: 3
   Near: 0
   VolumetricRadius: 0
-  EnableSpatialization: 0
-  UseAudioSourceVolumeCurve: 0
+  EnableSpatialization: 1
+  UseAudioSourceVolumeCurve: 1
 --- !u!1 &8871927004402939314
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,18 +373,18 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 10
   DopplerLevel: 1
-  MinDistance: 0.05
-  MaxDistance: 10
+  MinDistance: 0.1
+  MaxDistance: 3
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -469,9 +469,9 @@ MonoBehaviour:
   m_Script: {fileID: 1610797297, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gain: 0
-  Far: 0
+  Gain: 5
+  Far: 3
   Near: 0
   VolumetricRadius: 0
-  EnableSpatialization: 0
-  UseAudioSourceVolumeCurve: 0
+  EnableSpatialization: 1
+  UseAudioSourceVolumeCurve: 1

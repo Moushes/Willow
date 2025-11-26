@@ -18,7 +18,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 616c8310c2af8b445b3faf21070c1564, type: 3}
     type: 102
     parameter:
-      name: pcs/select/mouth
+      name: pcs/menu/mouth
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -28,7 +28,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: d15d8453f7ca82e448633688994a8542, type: 3}
     type: 102
     parameter:
-      name: pcs/select/boobs
+      name: pcs/menu/boobs
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: 147c35fee2720c84ab937c82464f78f8, type: 3}
     type: 102
     parameter:
-      name: pcs/select/pussy
+      name: pcs/menu/pussy
     value: 1
     style: 0
     subMenu: {fileID: 0}
@@ -48,27 +48,27 @@ MonoBehaviour:
     icon: {fileID: 2800000, guid: f267ab70d49383b439e5dfca8b987052, type: 3}
     type: 102
     parameter:
-      name: pcs/select/ass
+      name: pcs/menu/ass
     value: 1
     style: 0
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Handjob Left
+  - name: Left Hand
     icon: {fileID: 2800000, guid: 521fbf9919da4c34b869fbcf5e029173, type: 3}
     type: 102
     parameter:
-      name: pcs/select/custom1
+      name: pcs/menu/custom1
     value: 1
     style: 0
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Handjob Right
+  - name: Right Hand
     icon: {fileID: 2800000, guid: 521fbf9919da4c34b869fbcf5e029173, type: 3}
     type: 102
     parameter:
-      name: pcs/select/custom2
+      name: pcs/menu/custom2
     value: 1
     style: 0
     subMenu: {fileID: 0}
