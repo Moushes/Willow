@@ -20,6 +20,12 @@
     },
     "com.vrchat.avatars": {
       "version": "3.10.1"
+    },
+    "com.poiyomi.pro": {
+      "version": "9.3.65"
+    },
+    "wholesome.dependencies": {
+      "version": "1.0.27"
     }
   },
   "locked": {
@@ -60,6 +66,16 @@
     "com.vrchat.base": {
       "version": "3.10.1",
       "dependencies": {}
+    },
+    "com.poiyomi.pro": {
+      "version": "9.3.65",
+      "dependencies": {}
+    },
+    "wholesome.dependencies": {
+      "version": "1.0.27",
+      "dependencies": {
+        "com.vrchat.avatars": "3.*"
+      }
     }
   }
 }

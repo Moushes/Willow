@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -409,6 +409,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -494,6 +495,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -568,10 +570,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -1137,7 +1141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -1237,7 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -1321,7 +1325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -1538,6 +1542,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -1623,6 +1628,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -1697,10 +1703,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -6703,7 +6711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -6864,7 +6872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -6956,7 +6964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -12079,7 +12087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features:
@@ -12160,7 +12168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -12244,7 +12252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -12298,7 +12306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -12491,6 +12499,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.0002, z: 0.0001}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &241726587
 GameObject:
   m_ObjectHideFlags: 0
@@ -12539,7 +12548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -12593,7 +12602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 3
   name: Special/Titjob
   enableHandTouchZone2: 0
@@ -12783,7 +12792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -12875,7 +12884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -12959,7 +12968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -13043,7 +13052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -13291,6 +13300,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -13376,6 +13386,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.020000001
   radiusCurve:
     serializedVersion: 2
@@ -13450,10 +13461,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -13513,6 +13526,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -13598,6 +13612,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -13672,10 +13687,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -23206,11 +23223,12 @@ MonoBehaviour:
   height: 2
   position: {x: 0, y: 0.014, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - Finger
   allowSelf: 1
   allowOthers: 1
-  localOnly: 0
   receiverType: 0
   parameter: Bell
   minVelocity: 0.001
@@ -23241,6 +23259,7 @@ MonoBehaviour:
   - {fileID: 1719992628}
   - {fileID: 696006132}
   - {fileID: 1222017595}
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0.014, z: 0}
   multiChildType: 0
   pull: 0.2
@@ -23290,6 +23309,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.012
   radiusCurve:
     serializedVersion: 2
@@ -23354,10 +23374,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -23439,11 +23461,12 @@ MonoBehaviour:
   height: 199.99997
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - Finger
   allowSelf: 1
   allowOthers: 1
-  localOnly: 0
   receiverType: 0
   parameter: nose
   minVelocity: 0.05
@@ -23589,6 +23612,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -23674,6 +23698,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -23748,10 +23773,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -23807,7 +23834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -23861,7 +23888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -24122,7 +24149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -24206,7 +24233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -24260,7 +24287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -24314,7 +24341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -24398,7 +24425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -24452,7 +24479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -24641,7 +24668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -24828,6 +24855,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -24913,6 +24941,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -24987,10 +25016,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -25067,7 +25098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -25155,7 +25186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -25209,7 +25240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 1
   name: Pussy
   enableHandTouchZone2: 0
@@ -25372,6 +25403,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0.001, z: 0}
   multiChildType: 0
   pull: 0.234
@@ -25421,6 +25453,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.0001
   radiusCurve:
     serializedVersion: 2
@@ -25490,10 +25523,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -25543,7 +25578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -25633,7 +25668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -25789,6 +25824,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.00055, z: -0.00005}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &529247248
 GameObject:
   m_ObjectHideFlags: 0
@@ -26055,6 +26091,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.066
@@ -26104,6 +26141,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -26169,10 +26207,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -26321,6 +26361,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -26406,6 +26447,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -26480,10 +26522,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -26670,7 +26714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -26730,7 +26774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -26814,7 +26858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -26987,11 +27031,12 @@ MonoBehaviour:
   height: 0.15
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - PCS - Detection
   allowSelf: 1
   allowOthers: 0
-  localOnly: 0
   receiverType: 0
   parameter: pcs/contact/detect-hit
   minVelocity: 0.01
@@ -27111,7 +27156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -27195,7 +27240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -27261,7 +27306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -27503,7 +27548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -27817,11 +27862,12 @@ MonoBehaviour:
   height: 0.1
   position: {x: 0, y: 0, z: 0.03}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - PCS - Detection
   allowSelf: 1
   allowOthers: 0
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/slide-out
   minVelocity: 0.01
@@ -27855,6 +27901,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.066
@@ -27904,6 +27951,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.0039
   radiusCurve:
     serializedVersion: 2
@@ -27951,10 +27999,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -38029,12 +38079,13 @@ MonoBehaviour:
   height: 2
   position: {x: 0, y: 0, z: -0.025}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - TPS_Pen_Penetrating
   - PCS_Penetrating
   allowSelf: 0
   allowOthers: 1
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/auto-ass
   minVelocity: 0.05
@@ -38147,6 +38198,7 @@ MonoBehaviour:
   position: {x: 0.03, y: 0.04, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &833914369 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2788220732030472908, guid: ad92322654517d14d9dc5b396c4fd5d4,
@@ -38177,6 +38229,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0.001, z: 0}
   multiChildType: 0
   pull: 0.234
@@ -38226,6 +38279,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.0001
   radiusCurve:
     serializedVersion: 2
@@ -38295,10 +38349,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -51137,7 +51193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -51197,7 +51253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -51281,7 +51337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -51514,7 +51570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -51598,7 +51654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -51684,7 +51740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features:
@@ -51894,7 +51950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features:
@@ -51951,7 +52007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 2
   name: Special/Assjob
   enableHandTouchZone2: 0
@@ -52435,6 +52491,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -52520,6 +52577,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.019999998
   radiusCurve:
     serializedVersion: 2
@@ -52594,10 +52652,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -52657,6 +52717,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0.1, z: 0}
   multiChildType: 0
   pull: 0.037
@@ -52706,6 +52767,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.06
   radiusCurve:
     serializedVersion: 2
@@ -52802,10 +52864,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -52865,6 +52929,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.066
@@ -52914,6 +52979,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.014999999
   radiusCurve:
     serializedVersion: 2
@@ -52960,10 +53026,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -53102,6 +53170,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.15, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &1170668364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4766325900661328286, guid: da605258c91830148a99f4a602e60c8c,
@@ -53122,7 +53191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -53206,7 +53275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -53284,6 +53353,7 @@ MonoBehaviour:
   position: {x: 0.0002, y: -0.00025, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &1211200359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2906686853219104560, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -53314,6 +53384,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -53399,6 +53470,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -53473,10 +53545,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -53536,6 +53610,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 1218203383}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.04
@@ -53621,6 +53696,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.019999996
   radiusCurve:
     serializedVersion: 2
@@ -53692,10 +53768,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -53908,7 +53986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -53960,6 +54038,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.001, z: 0.0001}
   rotation: {x: 0.21643972, y: 0, z: 0, w: -0.976296}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!4 &1256280714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5470106559387683399, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -58854,7 +58933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features:
@@ -58929,6 +59008,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.15, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &1297207455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7983318360678740391, guid: d6e3c32a3b1138c40ab75e82e1195c98,
@@ -58959,6 +59039,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0.001, z: 0}
   multiChildType: 0
   pull: 0.234
@@ -59008,6 +59089,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.0001
   radiusCurve:
     serializedVersion: 2
@@ -59072,10 +59154,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -59158,7 +59242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -59268,6 +59352,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.0012, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &1327018221
 GameObject:
   m_ObjectHideFlags: 0
@@ -59461,7 +59546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 1
   name: Blowjob
   enableHandTouchZone2: 0
@@ -59525,7 +59610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -59865,6 +59950,7 @@ MonoBehaviour:
   rootTransform: {fileID: 0}
   ignoreTransforms:
   - {fileID: 1486713640}
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -59914,6 +60000,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.030000007
   radiusCurve:
     serializedVersion: 2
@@ -59987,10 +60074,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 0
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -60076,13 +60165,14 @@ MonoBehaviour:
   height: 0.16
   position: {x: 0, y: 0, z: -0.05}
   rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - Finger
   - TPS_Pen_Penetrating
   - PCS_Penetrating
   allowSelf: 1
   allowOthers: 1
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/enterPass
   minVelocity: 0.05
@@ -60201,6 +60291,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.0009, z: -0.00002}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &1416662876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -34199026932337176, guid: 635adb1403f1b194bb07863df8227e63,
@@ -60255,7 +60346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -60309,7 +60400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 1
   name: Anal
   enableHandTouchZone2: 0
@@ -60407,7 +60498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -60461,7 +60552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 3
   name: Handjob/Handjob Left
   enableHandTouchZone2: 0
@@ -60569,7 +60660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 7
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 3
   name: Handjob/Double Handjob
   enableHandTouchZone2: 0
@@ -60629,6 +60720,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -60714,6 +60806,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -60788,10 +60881,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -61010,6 +61105,7 @@ MonoBehaviour:
   integrationType: 0
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0.01, z: 0}
   multiChildType: 0
   pull: 0.2
@@ -61059,6 +61155,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.01
   radiusCurve:
     serializedVersion: 2
@@ -61105,10 +61202,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -61162,6 +61261,7 @@ MonoBehaviour:
   integrationType: 0
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0.01, z: 0}
   multiChildType: 0
   pull: 0.2
@@ -61211,6 +61311,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.01
   radiusCurve:
     serializedVersion: 2
@@ -61257,10 +61358,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -61340,12 +61443,13 @@ MonoBehaviour:
   height: 0.55
   position: {x: 0, y: 0, z: -0.24}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - TPS_Pen_Penetrating
   - PCS_Penetrating
   allowSelf: 1
   allowOthers: 1
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/proximity
   minVelocity: 0.05
@@ -61592,6 +61696,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -61677,6 +61782,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.019999998
   radiusCurve:
     serializedVersion: 2
@@ -61751,10 +61857,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -62058,7 +62166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -62112,7 +62220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 3
   name: Handjob/Handjob Right
   enableHandTouchZone2: 0
@@ -62204,11 +62312,12 @@ MonoBehaviour:
   height: 0.15
   position: {x: 0, y: 0, z: -0.075}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - PCS - Detection
   allowSelf: 1
   allowOthers: 0
-  localOnly: 0
   receiverType: 0
   parameter: pcs/contact/detect-in
   minVelocity: 0.01
@@ -62244,6 +62353,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.00046, z: 0.0003}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &1600474886
 GameObject:
   m_ObjectHideFlags: 0
@@ -62294,11 +62404,12 @@ MonoBehaviour:
   height: 0.15
   position: {x: 0, y: 0, z: -0.025}
   rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - PCS - Detection
   allowSelf: 1
   allowOthers: 0
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/smash-velocity
   minVelocity: 0.01
@@ -62352,11 +62463,12 @@ MonoBehaviour:
   height: 0.1
   position: {x: 0, y: 0, z: -0.03}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - PCS - Detection
   allowSelf: 1
   allowOthers: 0
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/slide-in
   minVelocity: 0.01
@@ -62585,7 +62697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -62709,11 +62821,12 @@ MonoBehaviour:
   height: 0.15
   position: {x: 0, y: 0, z: 0.075}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - PCS - Detection
   allowSelf: 1
   allowOthers: 0
-  localOnly: 0
   receiverType: 0
   parameter: pcs/contact/detect-out
   minVelocity: 0.01
@@ -62743,6 +62856,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.00055, z: -0.00005}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &1643490730 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8562900283619096517, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -62773,6 +62887,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 534148528}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.02
@@ -62876,6 +62991,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.030000003
   radiusCurve:
     serializedVersion: 2
@@ -62942,10 +63058,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -67764,6 +67882,7 @@ MonoBehaviour:
   ignoreTransforms:
   - {fileID: 0}
   - {fileID: 0}
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.017
@@ -67813,6 +67932,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.0069999993
   radiusCurve:
     serializedVersion: 2
@@ -67859,10 +67979,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -68071,7 +68193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 8
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   addLight: 3
   name: Special/Thighjob
   enableHandTouchZone2: 0
@@ -73272,7 +73394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -73383,7 +73505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -73623,6 +73745,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -73708,6 +73831,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.020000005
   radiusCurve:
     serializedVersion: 2
@@ -73782,10 +73906,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -73841,6 +73967,7 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &1759484562
 GameObject:
   m_ObjectHideFlags: 0
@@ -73891,11 +74018,12 @@ MonoBehaviour:
   height: 0.55
   position: {x: 0, y: 0, z: -0.05}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - Finger
   allowSelf: 1
   allowOthers: 1
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/handTouch
   minVelocity: 0.05
@@ -73929,6 +74057,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -74014,6 +74143,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -74088,10 +74218,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -74147,7 +74279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -74201,7 +74333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -74321,6 +74453,8 @@ MonoBehaviour:
   height: 2
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - PCS - Detection
 --- !u!1 &1816253026
@@ -74373,12 +74507,13 @@ MonoBehaviour:
   height: 2
   position: {x: 0, y: 0, z: -0.025}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - TPS_Pen_Penetrating
   - PCS_Penetrating
   allowSelf: 0
   allowOthers: 1
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/auto-boobs
   minVelocity: 0.05
@@ -74706,12 +74841,13 @@ MonoBehaviour:
   height: 2
   position: {x: 0, y: 0, z: -0.025}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - TPS_Pen_Penetrating
   - PCS_Penetrating
   allowSelf: 0
   allowOthers: 1
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/auto-pussy
   minVelocity: 0.05
@@ -75058,7 +75194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -75089,12 +75225,13 @@ MonoBehaviour:
   height: 2
   position: {x: 0, y: 0, z: -0.025}
   rotation: {x: 0, y: 0, z: 0, w: 1}
+  localOnly: 0
+  contentTypes: -1
   collisionTags:
   - TPS_Pen_Penetrating
   - PCS_Penetrating
   allowSelf: 0
   allowOthers: 1
-  localOnly: 0
   receiverType: 2
   parameter: pcs/contact/auto-mouth
   minVelocity: 0.05
@@ -75124,6 +75261,7 @@ MonoBehaviour:
   position: {x: -0.03, y: 0.04, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!4 &1952876797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4331057300932778644, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -75182,7 +75320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features:
@@ -75384,6 +75522,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.0655
@@ -75433,6 +75572,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.030000001
   radiusCurve:
     serializedVersion: 2
@@ -75479,10 +75619,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 0
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -75542,6 +75684,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.066
@@ -75591,6 +75734,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.014999991
   radiusCurve:
     serializedVersion: 2
@@ -75637,10 +75781,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -75696,7 +75842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -80622,7 +80768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -80676,7 +80822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 3
   unityVersion: 2022.3.22f1
-  vrcfuryVersion: 1.1160.0
+  vrcfuryVersion: 1.1279.0
   somethingIsBroken: 0
   config:
     features: []
@@ -80776,6 +80922,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.035
@@ -80825,6 +80972,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0
   radiusCurve:
     serializedVersion: 2
@@ -80871,10 +81019,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 0
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
@@ -80930,6 +81080,7 @@ MonoBehaviour:
   position: {x: 0, y: 0.0012, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!1 &2119154020
 GameObject:
   m_ObjectHideFlags: 0
@@ -81039,6 +81190,7 @@ MonoBehaviour:
   position: {x: -0.0002, y: -0.00025, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 1}
   bonesAsSpheres: 0
+  globalCollisionFlags: 0
 --- !u!4 &2134945176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2143813022196696390, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -81075,6 +81227,7 @@ MonoBehaviour:
   integrationType: 1
   rootTransform: {fileID: 0}
   ignoreTransforms: []
+  ignoreOtherPhysBones: 0
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
   pull: 0.05
@@ -81160,6 +81313,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   radius: 0.02
   radiusCurve:
     serializedVersion: 2
@@ -81234,10 +81388,12 @@ MonoBehaviour:
   grabFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   allowPosing: 1
   poseFilter:
     allowSelf: 1
     allowOthers: 1
+    contentTypes: -1
   snapToHand: 0
   grabMovement: 0.5
   maxStretch: 0
