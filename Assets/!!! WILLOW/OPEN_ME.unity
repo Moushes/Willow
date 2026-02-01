@@ -27355,8 +27355,8 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: caeefaa98e4819a4598881ddd87a5374|Assets/!!STAR/TEX/Jeans/Mom Jeans
-            By Saikura/Textures/Jeans.mat
+          id: caeefaa98e4819a4598881ddd87a5374|Assets/Jeans/TEX/Jeans/Mom Jeans By
+            Saikura/Textures/Jeans.mat
           objRef: {fileID: 2100000, guid: caeefaa98e4819a4598881ddd87a5374, type: 2}
     - rid: 3166844512995639310
       type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
@@ -27373,8 +27373,8 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: cb1b36c0c63382046bd27861fc9017b9|Assets/!!STAR/TEX/Jeans/Mom Jeans
-            By Saikura/Textures/Jeans4.mat
+          id: cb1b36c0c63382046bd27861fc9017b9|Assets/Jeans/TEX/Jeans/Mom Jeans By
+            Saikura/Textures/Jeans4.mat
           objRef: {fileID: 2100000, guid: cb1b36c0c63382046bd27861fc9017b9, type: 2}
     - rid: 3166844512995639311
       type: {class: MaterialAction, ns: VF.Model.StateAction, asm: VRCFury}
@@ -27391,8 +27391,8 @@ MonoBehaviour:
           version: 1
           fileID: 0
           guid: 
-          id: 09c504e4ef00c6d408504287f3626107|Assets/!!STAR/TEX/Jeans/Mom Jeans
-            By Saikura/Textures/Jeans5.mat
+          id: 09c504e4ef00c6d408504287f3626107|Assets/Jeans/TEX/Jeans/Mom Jeans By
+            Saikura/Textures/Jeans5.mat
           objRef: {fileID: 2100000, guid: 09c504e4ef00c6d408504287f3626107, type: 2}
 --- !u!137 &672077259 stripped
 SkinnedMeshRenderer:
@@ -38386,7 +38386,7 @@ Transform:
   m_GameObject: {fileID: 874368606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00000038472086}
+  m_LocalPosition: {x: 1.0583211e-10, y: 0.000000008466569, z: -0.0000004389069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38499,8 +38499,8 @@ MonoBehaviour:
       ParentRotationOffset: {x: 0, y: 0, z: 0}
     totalLength: 2
     overflowList: []
-  cachedExecutionGroupIndex: 2
-  latestValidExecutionGroupIndex: 2
+  cachedExecutionGroupIndex: 1
+  latestValidExecutionGroupIndex: 1
   PositionAtRest: {x: 0, y: 0, z: 0}
   AffectsPositionX: 1
   AffectsPositionY: 1
@@ -59707,7 +59707,7 @@ PrefabInstance:
     - target: {fileID: 379209305799467348, guid: f42a96d98095dd04cad6af6c53414253,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.842171e-14
+      value: -3.27658e-14
       objectReference: {fileID: 0}
     - target: {fileID: 379209305799467348, guid: f42a96d98095dd04cad6af6c53414253,
         type: 3}
@@ -59726,8 +59726,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 712620328954504829, guid: f42a96d98095dd04cad6af6c53414253,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0009220663
+      objectReference: {fileID: 0}
+    - target: {fileID: 712620328954504829, guid: f42a96d98095dd04cad6af6c53414253,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.656613e-10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 712620328954504829, guid: f42a96d98095dd04cad6af6c53414253,
         type: 3}
@@ -59761,18 +59766,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8527857526920893036, guid: f42a96d98095dd04cad6af6c53414253,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.86742
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527857526920893036, guid: f42a96d98095dd04cad6af6c53414253,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.86742
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527857526920893036, guid: f42a96d98095dd04cad6af6c53414253,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.86742
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527857526920893036, guid: f42a96d98095dd04cad6af6c53414253,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 8527857526920893036, guid: f42a96d98095dd04cad6af6c53414253,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.025
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 8527857526920893036, guid: f42a96d98095dd04cad6af6c53414253,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.005
       objectReference: {fileID: 0}
     - target: {fileID: 8527857526920893036, guid: f42a96d98095dd04cad6af6c53414253,
         type: 3}
