@@ -7,8 +7,8 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.poiyomi.pro": {
-      "version": "file:com.poiyomi.pro",
+    "com.poiyomi.toon": {
+      "version": "file:com.poiyomi.toon",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

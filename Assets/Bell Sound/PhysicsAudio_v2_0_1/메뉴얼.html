@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>[VRChat] Sound Cat Bell</title>
+</head>
+
+<body style='line-height:1.5'>
+    <script>
+    	var applyPage = {value : 1};
+		var customPage = {value : 1};
+    	
+    	function MovePrev(id, name, max, currentPage)
+    	{
+    		if (currentPage.value > 1)
+    		{
+    			currentPage.value -= 1;
+    			ChangeText(id, name, currentPage.value, max, currentPage);
+    		}
+    	}
+    	
+    	function MoveNext(id, name, max, currentPage)
+    	{
+    		if (currentPage.value <max)
+    		{
+    			currentPage.value += 1;
+    			ChangeText(id, name, currentPage.value, max, currentPage);
+    		}
+    	}
+    	
+    	function ChangeText(id, name, page, max, currentPage)
+    	{
+    		currentPage.value = page;
+    		
+	    	var imagePath = "Manual/KR/" + name + currentPage.value + ".png";
+    		document.getElementById(id).src = imagePath;
+    		for (let i=1 ; i<=max ; i++)
+    		{
+				let image = document.getElementById(name + "" + i);
+				if (!image) continue;
+    			image.style = (i==page) ? "text-decoration:underline-line;" : "text-decoration-line:none;";
+    		}
+		}
+		
+		function SetPageOnClick(imgId, id, max, currentPage)
+		{
+			var idPath = id + " ";
+		
+			// prev
+			
+			var prev = document.getElementById(idPath + "prev");
+			if (prev)
+			{			
+				prev.addEventListener('click', function()
+				{
+					MovePrev(imgId, idPath, max, customPage)
+				});
+			}
+			
+			// next
+			var next = document.getElementById(idPath + "next");
+			if (next)
+			{
+				next.addEventListener('click', function()
+				{
+					MoveNext(imgId, idPath, max, customPage)
+				});
+			}		
+			
+			// ChangeText
+			for (let i=1 ;i<=max ; i++)
+			{
+				let number = document.getElementById(idPath + i);
+				if (!number) continue;
+				document.getElementById(idPath + i).addEventListener('click', function()
+				{
+					ChangeText(imgId, idPath, i, max, currentPage);
+				});
+				
+				document.getElementById(idPath + i).style = "text-decoration-line:none;";
+				document.getElementById(idPath + 1).style = "text-decoration-line:underline;";
+			}
+		}
+	</script>
+	
+    	<h1>[VRChat] Sound Cat Bell</h1>
+    	
+    	<hr>
+    		<p>
+			<a href="#1" style="margin-left: 1em;">1</a><a  style="margin-right: 2em;">. 제품정보</a><br>
+			<br>
+			<a href="#2" style="margin-left: 1em;">2</a><a  style="margin-right: 2em;">. 이용약관</a><br>
+			<br>
+			<a href="#3" style="margin-left: 1em;">3</a>. 적용방법</a><br>
+			<a href="#3_1" style="margin-left: 3em;">3.1</a>. Video Manual<br>
+			<a href="#3_2" style="margin-left: 3em;">3.2</a>. Image Manual<br>
+			<br>
+			<a href="#4" style="margin-left: 1em;">4</a>. 세부설정</a><br>
+			<br>
+			<a href="#5" style="margin-left: 1em;">5</a>. 문의</a><br>
+		</p>
+	<br>
+	<br>
+    	<div id="1">
+		<h2><a href="#">1</a>. 제품 정보</h2>
+		<hr>
+		<p>
+			<a style="margin-left: 1em;">- VRChat Avatar 3.0 전용입니다.</a><br>
+			<a style="margin-left: 1em;">- 이 에셋은 Unity 2022.3.22f1으로 제작되었습니다. 다른 버전에서는 동작을 보장 할 수 없습니다.</a><br>
+			<a style="margin-left: 1em;">- 이 에셋은 VRCSDK-Avatar 3.7.0 이상의 버전이 필요합니다. 낮은 버전에서는 동작을 보장 할 수 없습니다.</a><br>
+		</p>
+	</div>
+	<br>
+	<br>	
+    	<div id="2">
+		<h2><a href="#">2</a>. 이용 약관</h2>
+		<hr>
+		<p>
+			<a style="margin-left: 1em;">- 해당 약관은 VN3 라이선스(https://www.vn3.org)의 템플릿을 사용하고 있습니다.
+</a><br>
+			<a style="margin-left: 1em;">- 제품을 구입한 시점에서 이용약관에 동의한 것으로 간주합니다. 사용 전 꼭 확인 해주세요.</a><br>
+			<a style="margin-left: 1em;">- (JA) : <a href="https://drive.google.com/file/d/1-sAFsjUcoGil1vCkIbOAaqgyE9U4zrkb/view?usp=drive_link" target='_blank'> CurissVRCTools_vn3license_JA</a><br>
+			<a style="margin-left: 1em;">- (KO) : <a href=https://drive.google.com/file/d/10rtLDCG13BEeP3KNi_jSsI8d0hCIH4Hp/view?usp=drive_link" target='_blank'>CurissVRCTools_vn3license_KO</a></a><br>
+			<a style="margin-left: 1em;">- (EN) : <a href=https://drive.google.com/file/d/14MZAXhZ8qtgE9bRiej60E4cF1CyZ03ne/view?usp=drive_link" target='_blank'>CurissVRCTools_vn3license_EN</a> </a><br>
+			<a style="margin-left: 1em;">- (ZH) : <a href=https://drive.google.com/file/d/185RG5_HYAcOs-L7fMib8EGo7cZ_x4RKF/view?usp=drive_link" target='_blank'>CurissVRCTools_vn3license_ZH</a> </a><br>
+		</p>
+	</div>
+	<br>
+	<br>
+    	<div id="3">
+    		<h2><a href="#">3</a>. 적용 방법</h2>
+	    	<hr>
+		<p><h4 id="3_1"><li>Video Manual</li></h4></p>
+		<p><iframe width="1206" height="690" src="https://www.youtube.com/embed/rxBOCqjXK8M" title="[VRChat] SoundCatBell Manual" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+		
+		<p id="3_2"><h4><li>Image Manual</li></h4></p>
+		<p><img src="Manual/KR/Manual 1.png"  width="1206" style="max-width:100%; height: auto;" id="imgId_Manual" ></p>		
+		<p>
+			<div>
+			<font size="5em">			
+			<a href="#none" id='Manual prev' style='text-decoration-line:none;'><</a>			
+			<a href="#none" id='Manual 1'>1</a>
+			<a href="#none" id='Manual 2'>2</a>
+			<a href="#none" id='Manual 3'>3</a>
+			<a href="#none" id='Manual 4'>4</a>
+			<a href="#none" id='Manual 5'>5</a>
+			<a href="#none" id='Manual next' style='text-decoration-line:none;'>></a>
+			<script> SetPageOnClick('imgId_Manual', 'Manual', 5, applyPage); </script>
+			</font>
+			</div>
+		</p>
+    	</div>
+    	
+	<br>
+	<br>
+	
+	<div id="4">
+    		<h2><a href="#">4</a>. 세부 설정 </h2>
+	    	<hr>
+		<p><img src="Manual/KR/Custom 1.png"  width="1206" style="max-width:100%; height: auto;" id="imgId_Custom" ></p>
+		<p>
+			<div>
+			<font size="5em">
+			<a href="#none" id='Custom prev' style='text-decoration-line:none;'><</a>			
+			<a href="#none" id='Custom 1'>1</a>
+			<a href="#none" id='Custom 2'>2</a>
+			<a href="#none" id='Custom next' style='text-decoration-line:none;'>></a>
+			<script> SetPageOnClick('imgId_Custom', 'Custom', 2, customPage); </script>
+			</font>
+			</div>
+		</p>
+    	</div>
+    	
+	<br>
+	<br>
+
+	<div id="5">		
+    		<h2><a href="#">5</a>. 문의</h2>
+		<hr>
+		<p>
+			<li>Twitter : <a href="https://twitter.com/_Curiss/" target="_blank" style='text-decoration-line:none;'>@_Curiss</a><br></li>
+			<li>Discord : Curiss#4695<br></li>
+			<li>Booth :<a href="https://curiss.booth.pm/" target="_blank" style='text-decoration-line:none;'> https://curiss.booth.pm/</li>
+		</p>
+	</div>
+	<br><br><br><br><br>
+	
+</body>
+</html>
