@@ -434,3 +434,13 @@ MonoBehaviour:
     saved: 0
     defaultValue: 0
     networkSynced: 0
+  - name: Bell/Toggle
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Bell/TouchMode
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1

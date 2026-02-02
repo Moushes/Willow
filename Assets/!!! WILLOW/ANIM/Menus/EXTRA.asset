@@ -58,3 +58,13 @@ MonoBehaviour:
     subParameters:
     - name: Eye_Shape
     labels: []
+  - name: Bell
+    icon: {fileID: 2800000, guid: 7df2dc84585c418439af5e9e43098ad1, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 7566ae408ca3f5e4fb75967190b4a21b, type: 2}
+    subParameters: []
+    labels: []

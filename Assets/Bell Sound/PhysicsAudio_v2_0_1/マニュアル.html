@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>[VRChat] Sound Cat Bell</title>
+</head>
+
+<body style='line-height:1.5'>
+    <script>
+    	var applyPage = {value : 1};
+		var customPage = {value : 1};
+    	
+    	function MovePrev(id, name, max, currentPage)
+    	{
+    		if (currentPage.value > 1)
+    		{
+    			currentPage.value -= 1;
+    			ChangeText(id, name, currentPage.value, max, currentPage);
+    		}
+    	}
+    	
+    	function MoveNext(id, name, max, currentPage)
+    	{
+    		if (currentPage.value <max)
+    		{
+    			currentPage.value += 1;
+    			ChangeText(id, name, currentPage.value, max, currentPage);
+    		}
+    	}
+    	
+    	function ChangeText(id, name, page, max, currentPage)
+    	{
+    		currentPage.value = page;
+    		
+	    	var imagePath = "Manual/JP/" + name + currentPage.value + ".png";
+    		document.getElementById(id).src = imagePath;
+    		for (let i=1 ; i<=max ; i++)
+    		{
+				let image = document.getElementById(name + "" + i);
+				if (!image) continue;
+    			image.style = (i==page) ? "text-decoration:underline-line;" : "text-decoration-line:none;";
+    		}
+		}
+		
+		function SetPageOnClick(imgId, id, max, currentPage)
+		{
+			var idPath = id + " ";
+		
+			// prev
+			
+			var prev = document.getElementById(idPath + "prev");
+			if (prev)
+			{			
+				prev.addEventListener('click', function()
+				{
+					MovePrev(imgId, idPath, max, customPage)
+				});
+			}
+			
+			// next
+			var next = document.getElementById(idPath + "next");
+			if (next)
+			{
+				next.addEventListener('click', function()
+				{
+					MoveNext(imgId, idPath, max, customPage)
+				});
+			}		
+			
+			// ChangeText
+			for (let i=1 ;i<=max ; i++)
+			{
+				let number = document.getElementById(idPath + i);
+				if (!number) continue;
+				document.getElementById(idPath + i).addEventListener('click', function()
+				{
+					ChangeText(imgId, idPath, i, max, currentPage);
+				});
+				
+				document.getElementById(idPath + i).style = "text-decoration-line:none;";
+				document.getElementById(idPath + 1).style = "text-decoration-line:underline;";
+			}
+		}
+	
+	</script>
+	
+    	<h1>[VRChat] Sound Cat Bell</h1>
+    	
+    	<hr>
+    		<p>
+			<a href="#1" style="margin-left: 1em;">1</a><a  style="margin-right: 2em;">. 製品情報</a><br>
+			<br>
+			<a href="#2" style="margin-left: 1em;">2</a><a  style="margin-right: 2em;">. 利用規約</a><br>
+			<br>
+			<a href="#3" style="margin-left: 1em;">3</a>. 適用方法</a><br>
+			<a href="#3_1" style="margin-left: 3em;">3.1</a>. Video Manual<br>
+			<a href="#3_2" style="margin-left: 3em;">3.2</a>. Image Manual<br>
+			<br>
+			<a href="#4" style="margin-left: 1em;">4</a>. 詳細設定</a><br>
+			<br>
+			<a href="#5" style="margin-left: 1em;">5</a>. お問い合わせ</a><br>
+		</p>
+	<br>
+	<br>
+    	<div id="1">
+		<h2><a href="#">1</a>. 製品情報</h2>
+		<hr>
+		<p>
+			<a style="margin-left: 1em;">- VRChat Avatar 3.0専用です。</a><br>
+			<a style="margin-left: 1em;">- Unity2022.3.22f1で製作されました。 他のバージョンでは動作を保障できません。</a><br>
+			<a style="margin-left: 1em;">- VRCSDK-Avatar 3.7.0以上のバージョンが必要です。 低いバージョンでは動作を保証できません。</a><br>
+		</p>
+	</div>
+	<br>
+	<br>	
+    	<div id="2">
+		<h2><a href="#">2</a>. 利用規約</h2>
+		<hr>
+		<p><a style="margin-left: 1em;">- 本規約は、VN3ライセンス(<a href='https://www.vn3.org'>https://www.vn3.org)</a>のテンプレートを使用しています。
+</a><br>
+			<a style="margin-left: 1em;">- 製品を購入した時点で、利用規約に同意したものとみなします。 ご使用前に必ずご確認ください。</a><br>
+			<a style="margin-left: 1em;">- (JA) : <a href="https://drive.google.com/file/d/1-sAFsjUcoGil1vCkIbOAaqgyE9U4zrkb/view?usp=drive_link" target='_blank'> CurissVRCTools_vn3license_JA</a><br>
+			<a style="margin-left: 1em;">- (KO) : <a href="https://drive.google.com/file/d/10rtLDCG13BEeP3KNi_jSsI8d0hCIH4Hp/view?usp=drive_link" target='_blank'>CurissVRCTools_vn3license_KO</a></a><br>
+			<a style="margin-left: 1em;">- (EN) : <a href="https://drive.google.com/file/d/14MZAXhZ8qtgE9bRiej60E4cF1CyZ03ne/view?usp=drive_link" target='_blank'>CurissVRCTools_vn3license_EN</a> </a><br>
+			<a style="margin-left: 1em;">- (ZH) : <a href="https://drive.google.com/file/d/185RG5_HYAcOs-L7fMib8EGo7cZ_x4RKF/view?usp=drive_link" target='_blank'>CurissVRCTools_vn3license_ZH</a> </a><br>
+		</p>
+	</div>
+	<br>
+	<br>		
+    	<div id="3">
+    		<h2><a href="#">3</a>. 導入方法</h2>
+
+	    	<hr>
+		<p><h4 id="3_1"><li>Video Manual</li></h4></p>
+		<p><iframe width="1206" height="690" src="https://www.youtube.com/embed/rxBOCqjXK8M" title="[VRChat] SoundCatBell Manual" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+		
+		<p id="3_2"><h4><li>Image Manual</li></h4></p>
+		<p><img src="Manual/JP/Manual 1.png"  width="1206" style="max-width:100%; height: auto;" id="imgId_Manual" ></p>		
+		<p>
+			<div>
+			<font size="5em">
+			<a href="#none" id='Manual prev' style='text-decoration-line:none;'><</a>			
+			<a href="#none" id='Manual 1'>1</a>
+			<a href="#none" id='Manual 2'>2</a>
+			<a href="#none" id='Manual 3'>3</a>
+			<a href="#none" id='Manual 4'>4</a>
+			<a href="#none" id='Manual 5'>5</a>
+			<a href="#none" id='Manual next' style='text-decoration-line:none;'>></a>
+			<script> SetPageOnClick('imgId_Manual', 'Manual', 5, applyPage); </script>
+			</font>
+			</div>
+		</p>
+    	</div>
+    	
+	<br>
+	<br>
+	
+	<div id="4">
+    		<h2><a href="#">4</a>. 詳細設定 </h2>
+	    	<hr>
+		<p id="4_2"><h4><li>Image Manual</li></h4></p>
+		<p><img src="Manual/JP/Custom 1.png"  width="1206" style="max-width:100%; height: auto;" id="imgId_Custom" ></p>
+		<p>
+			<div>
+			<font size="5em">
+			<a href="#none" id='Custom prev' style='text-decoration-line:none;'><</a>			
+			<a href="#none" id='Custom 1'>1</a>
+			<a href="#none" id='Custom 2'>2</a>
+			<a href="#none" id='Custom next' style='text-decoration-line:none;'>></a>
+			<script> SetPageOnClick('imgId_Custom', 'Custom', 2, customPage); </script>
+			</font>
+			</div>
+		</p>
+    	</div>
+    	
+	<br>
+	<br>
+
+	<div id="5">		
+    		<h2><a href="#">5</a>. お問い合わせ</h2>
+		<hr>
+		<p>
+			<li>Twitter : <a href="https://twitter.com/_Curiss/" target="_blank" style='text-decoration-line:none;'>@_Curiss</a><br></li>
+			<li>Discord : Curiss#4695<br></li>
+			<li>Booth :<a href="https://curiss.booth.pm/" target="_blank" style='text-decoration-line:none;'> https://curiss.booth.pm/</li>
+		</p>
+	</div>
+	<br><br><br><br><br>
+	
+</body>
+</html>
