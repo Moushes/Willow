@@ -817,6 +817,8 @@ MonoBehaviour:
     name: Thumbs up
   - hash: -1592414362
     name: RockNRoll
+  - hash: 677131350
+    name: SpecialPeace
   - hash: -661296582
     name: Initialize
   - hash: 460783476
@@ -967,16 +969,6 @@ MonoBehaviour:
     name: New State
   - hash: 1363330919
     name: New State 0
-  - hash: 1090167544
-    name: New State
-  - hash: -1478524368
-    name: Bell_YES
-  - hash: -1850813154
-    name: Sound 1
-  - hash: 145196196
-    name: Sound 2
-  - hash: 2141238322
-    name: Sound 3
   - hash: 1347210746
     name: New State
   - hash: -1767507044
@@ -1175,6 +1167,34 @@ MonoBehaviour:
       data:
         version: 0
         keepMmdShapes: 0
+--- !u!114 &73181774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73181766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1279.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 379157987360505856
+  references:
+    version: 2
+    RefIds:
+    - rid: 379157987360505856
+      type: {class: FixWriteDefaults, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 0
+        mode: 0
 --- !u!4 &77644763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1147870721786070447, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
@@ -48843,6 +48863,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7e9fefc2a4eeba94eacf343d8db61f4b, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2d4328ef50ace6a4c99025e28fd916eb, type: 2}
     - target: {fileID: 5908160863352278831, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -50830,6 +50855,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 73181772}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 73181774}
     - targetCorrespondingSourceObject: {fileID: 827075974287967996, guid: 72cffffd84c580d4a9e83bb9aa5158ea,
         type: 3}
       insertIndex: -1
